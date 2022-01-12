@@ -8,6 +8,7 @@ summary: >-
   read [Add data validation to Excel
   ranges](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-data-validation)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -20,6 +21,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -72,6 +74,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -84,6 +87,7 @@ properties:
     fullName: ignoreBlanks
     summary: Specifies if data validation will be performed on blank cells. Default is `true`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -140,6 +144,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -186,6 +191,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -198,6 +204,7 @@ properties:
     fullName: type
     summary: 'Type of the data validation, see `Excel.DataValidationType` for details.'
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -217,6 +224,7 @@ properties:
       are valid, or `false` if all cell values are invalid. Returns `null` if there are both valid and invalid cell
       values within the range.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -230,6 +238,7 @@ methods:
     fullName: clear()
     summary: Clears the data validation from the current range.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -245,6 +254,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -264,6 +274,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -283,6 +294,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -312,6 +324,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -334,6 +347,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -356,6 +370,7 @@ methods:
       plain JavaScript object (typed as `Excel.Interfaces.DataValidationData`<!-- -->) that contains shallow copies of
       any loaded child properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

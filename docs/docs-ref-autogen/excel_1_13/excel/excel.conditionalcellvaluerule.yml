@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.ConditionalCellValueRule
 summary: Represents a cell value conditional format rule.
 remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -38,6 +39,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -50,6 +52,7 @@ properties:
     fullName: formula2
     summary: 'The formula, if required, on which to evaluate the conditional format rule.'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -85,6 +88,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

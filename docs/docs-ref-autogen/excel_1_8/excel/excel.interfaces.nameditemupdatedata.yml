@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.NamedItemUpdateData
 summary: 'An interface for updating data on the NamedItem object, for use in `namedItem.set({ ... })`<!-- -->.'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: comment
     summary: Specifies the comment associated with this name.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,6 +29,7 @@ properties:
     fullName: formula
     summary: The formula of the named item. Formulas always start with an equal sign ("=").
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -39,6 +42,7 @@ properties:
     fullName: visible
     summary: Specifies if the object is visible.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

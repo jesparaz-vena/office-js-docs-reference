@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.SaveBehavior
 summary: Specifies the save behavior for `Workbook.save`<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 fields:

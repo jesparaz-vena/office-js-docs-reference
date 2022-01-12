@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.FilterData
 summary: An interface describing the data returned by calling `filter.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: criteria
     summary: The currently applied filter on the given column.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

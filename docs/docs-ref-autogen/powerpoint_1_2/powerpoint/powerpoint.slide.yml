@@ -5,6 +5,7 @@ package: powerpoint!
 fullName: PowerPoint.Slide
 summary: Represents a single slide of a presentation.
 remarks: '\[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: id
     summary: Gets the unique ID of the slide.
     remarks: '\[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -73,6 +76,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -88,6 +92,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -107,6 +112,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -126,6 +132,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -158,6 +165,7 @@ methods:
       JavaScript object (typed as `PowerPoint.Interfaces.SlideData`<!-- -->) that contains shallow copies of any loaded
       child properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

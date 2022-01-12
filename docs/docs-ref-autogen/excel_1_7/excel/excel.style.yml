@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Style
 summary: An object encapsulating a style's format and other properties.
 remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -15,6 +16,7 @@ properties:
     fullName: borders
     summary: A collection of four border objects that represent the style of the four borders.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,6 +29,7 @@ properties:
     fullName: builtIn
     summary: Specifies if the style is a built-in style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,6 +44,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,6 +57,7 @@ properties:
     fullName: fill
     summary: The fill of the style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -92,6 +97,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -104,6 +110,7 @@ properties:
     fullName: formulaHidden
     summary: Specifies if the formula will be hidden when the worksheet is protected.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -140,6 +147,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -158,6 +166,7 @@ properties:
       Specifies if the style includes the auto indent, horizontal alignment, vertical alignment, wrap text, indent
       level, and text orientation properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -170,6 +179,7 @@ properties:
     fullName: includeBorder
     summary: 'Specifies if the style includes the color, color index, line style, and weight border properties.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -184,6 +194,7 @@ properties:
       Specifies if the style includes the background, bold, color, color index, font style, italic, name, size,
       strikethrough, subscript, superscript, and underline font properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -196,6 +207,7 @@ properties:
     fullName: includeNumber
     summary: Specifies if the style includes the number format property.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -210,6 +222,7 @@ properties:
       Specifies if the style includes the color, color index, invert if negative, pattern, pattern color, and pattern
       color index interior properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -222,6 +235,7 @@ properties:
     fullName: includeProtection
     summary: Specifies if the style includes the formula hidden and locked protection properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -234,6 +248,7 @@ properties:
     fullName: indentLevel
     summary: An integer from 0 to 250 that indicates the indent level for the style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -246,6 +261,7 @@ properties:
     fullName: locked
     summary: Specifies if the object is locked when the worksheet is protected.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -258,6 +274,7 @@ properties:
     fullName: name
     summary: The name of the style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -270,6 +287,7 @@ properties:
     fullName: numberFormat
     summary: The format code of the number format for the style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -282,6 +300,7 @@ properties:
     fullName: numberFormatLocal
     summary: The localized format code of the number format for the style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -294,6 +313,7 @@ properties:
     fullName: readingOrder
     summary: The reading order for the style.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -306,6 +326,7 @@ properties:
     fullName: shrinkToFit
     summary: Specifies if text automatically shrinks to fit in the available column width.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -318,6 +339,7 @@ properties:
     fullName: verticalAlignment
     summary: Specifies the vertical alignment for the style. See `Excel.VerticalAlignment` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -330,6 +352,7 @@ properties:
     fullName: wrapText
     summary: Specifies if Excel wraps the text in the object.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -367,6 +390,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -382,6 +406,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -428,6 +453,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -447,6 +473,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -476,6 +503,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -498,6 +526,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -520,6 +549,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.StyleData`<!-- -->) that contains shallow copies of any loaded child
       properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

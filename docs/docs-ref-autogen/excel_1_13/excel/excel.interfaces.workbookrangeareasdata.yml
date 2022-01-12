@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.WorkbookRangeAreasData
 summary: An interface describing the data returned by calling `workbookRangeAreas.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Returns an array of addresses in A1-style. Address values contain the worksheet name for each rectangular block of
       cells (e.g., "Sheet1!A1:B4, Sheet1!D1:D4"). Read-only.
     remarks: '\[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
       Returns the `RangeAreasCollection` object. Each `RangeAreas` in the collection represent one or more rectangle
       ranges in one worksheet.
     remarks: '\[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
     fullName: ranges
     summary: Returns ranges that comprise this object in a `RangeCollection` object.
     remarks: '\[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

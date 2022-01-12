@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.WorksheetUpdateData
 summary: 'An interface for updating data on the Worksheet object, for use in `worksheet.set({ ... })`<!-- -->.'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: name
     summary: The display name of the worksheet.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,6 +29,7 @@ properties:
     fullName: position
     summary: The zero-based position of the worksheet within the workbook.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,6 +44,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi 1.1 for reading visibility; 1.2 for setting
       it.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

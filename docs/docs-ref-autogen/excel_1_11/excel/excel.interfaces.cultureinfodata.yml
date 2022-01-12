@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.CultureInfoData
 summary: An interface describing the data returned by calling `cultureInfo.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Gets the culture name in the format languagecode2-country/regioncode2 (e.g., "zh-cn" or "en-us"). This is based on
       current system settings.
     remarks: '\[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: numberFormat
     summary: Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
     remarks: '\[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

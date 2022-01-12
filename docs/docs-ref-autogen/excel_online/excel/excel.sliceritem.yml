@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.SlicerItem
 summary: Represents a slicer item in a slicer.
 remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: hasData
     summary: Value is `true` if the slicer item has data.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -44,6 +47,7 @@ properties:
       slicer items. By default, if the slicer item is the only one selected, when it is deselected, all items will be
       selected.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -56,6 +60,7 @@ properties:
     fullName: key
     summary: Represents the unique value representing the slicer item.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,6 +73,7 @@ properties:
     fullName: name
     summary: Represents the title displayed in the Excel UI.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -83,6 +89,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -102,6 +109,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -121,6 +129,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -150,6 +159,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -172,6 +182,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -194,6 +205,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.SlicerItemData`<!-- -->) that contains shallow copies of any loaded
       child properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

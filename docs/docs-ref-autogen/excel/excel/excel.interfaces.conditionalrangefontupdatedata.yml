@@ -7,6 +7,7 @@ summary: >-
   An interface for updating data on the ConditionalRangeFont object, for use in `conditionalRangeFont.set({ ... })`<!--
   -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
     fullName: bold
     summary: Specifies if the font is bold.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: color
     summary: 'HTML color code representation of the text color (e.g., \#FF0000 represents Red).'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,6 +44,7 @@ properties:
     fullName: italic
     summary: Specifies if the font is italic.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,6 +57,7 @@ properties:
     fullName: strikethrough
     summary: Specifies the strikethrough status of the font.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -65,6 +70,7 @@ properties:
     fullName: underline
     summary: The type of underline applied to the font. See `Excel.ConditionalRangeFontUnderlineStyle` for details.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

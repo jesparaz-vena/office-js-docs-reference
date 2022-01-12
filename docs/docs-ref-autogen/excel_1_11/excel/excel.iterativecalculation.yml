@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.IterativeCalculation
 summary: Represents the iterative calculation settings.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: enabled
     summary: True if Excel will use iteration to resolve circular references.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,6 +44,7 @@ properties:
     fullName: maxChange
     summary: Specifies the maximum amount of change between each iteration as Excel resolves circular references.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,6 +57,7 @@ properties:
     fullName: maxIteration
     summary: Specifies the maximum number of iterations that Excel can use to resolve a circular reference.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,6 +73,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -87,6 +93,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -106,6 +113,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -135,6 +143,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -157,6 +166,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -179,6 +189,7 @@ methods:
       returns a plain JavaScript object (typed as `Excel.Interfaces.IterativeCalculationData`<!-- -->) that contains
       shallow copies of any loaded child properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

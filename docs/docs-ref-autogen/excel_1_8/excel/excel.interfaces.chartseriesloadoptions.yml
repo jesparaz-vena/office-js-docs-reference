@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ChartSeriesLoadOptions
 summary: Represents a series in a chart.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: axisGroup
     summary: Specifies the group for the specified series.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,6 +44,7 @@ properties:
     fullName: chartType
     summary: Represents the chart type of a series. See `Excel.ChartType` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,6 +57,7 @@ properties:
     fullName: dataLabels
     summary: Represents a collection of all data labels in the series.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -67,6 +72,7 @@ properties:
       Represents the doughnut hole size of a chart series. Only valid on doughnut and doughnut exploded charts. Throws
       an `InvalidArgument` error on invalid charts.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -81,6 +87,7 @@ properties:
       Specifies the explosion value for a pie-chart or doughnut-chart slice. Returns 0 (zero) if there's no explosion
       (the tip of the slice is in the center of the pie).
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -93,6 +100,7 @@ properties:
     fullName: filtered
     summary: Specifies if the series is filtered. Not applicable for surface charts.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -107,6 +115,7 @@ properties:
       Specifies the angle of the first pie-chart or doughnut-chart slice, in degrees (clockwise from vertical). Applies
       only to pie, 3-D pie, and doughnut charts. Can be a value from 0 through 360.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -119,6 +128,7 @@ properties:
     fullName: format
     summary: 'Represents the formatting of a chart series, which includes fill and line formatting.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -133,6 +143,7 @@ properties:
       Represents the gap width of a chart series. Only valid on bar and column charts, as well as specific classes of
       line and pie charts. Throws an invalid argument exception on invalid charts.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -145,6 +156,7 @@ properties:
     fullName: hasDataLabels
     summary: Specifies if the series has data labels.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -157,6 +169,7 @@ properties:
     fullName: invertIfNegative
     summary: True if Excel inverts the pattern in the item when it corresponds to a negative number.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -169,6 +182,7 @@ properties:
     fullName: markerBackgroundColor
     summary: Specifies the marker background color of a chart series.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -181,6 +195,7 @@ properties:
     fullName: markerForegroundColor
     summary: Specifies the marker foreground color of a chart series.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -193,6 +208,7 @@ properties:
     fullName: markerSize
     summary: Specifies the marker size of a chart series.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -205,6 +221,7 @@ properties:
     fullName: markerStyle
     summary: Specifies the marker style of a chart series. See `Excel.ChartMarkerStyle` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -217,6 +234,7 @@ properties:
     fullName: name
     summary: Specifies the name of a series in a chart. The name's length should not be greater than 255 characters.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -231,6 +249,7 @@ properties:
       Specifies how bars and columns are positioned. Can be a value between –100 and 100. Applies only to 2-D bar and
       2-D column charts.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -243,6 +262,7 @@ properties:
     fullName: plotOrder
     summary: Specifies the plot order of a chart series within the chart group.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -255,6 +275,7 @@ properties:
     fullName: points
     summary: Returns a collection of all points in the series.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -269,6 +290,7 @@ properties:
       Specifies the size of the secondary section of either a pie-of-pie chart or a bar-of-pie chart, as a percentage of
       the size of the primary pie. Can be a value from 5 to 200.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -281,6 +303,7 @@ properties:
     fullName: showShadow
     summary: Specifies if the series has a shadow.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -293,6 +316,7 @@ properties:
     fullName: smooth
     summary: Specifies if the series is smooth. Only applicable to line and scatter charts.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -305,6 +329,7 @@ properties:
     fullName: splitType
     summary: Specifies the way the two sections of either a pie-of-pie chart or a bar-of-pie chart are split.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -317,6 +342,7 @@ properties:
     fullName: varyByCategories
     summary: True if Excel assigns a different color or pattern to each data marker. The chart must contain only one series.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

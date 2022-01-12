@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.WorkbookUpdateData
 summary: 'An interface for updating data on the Workbook object, for use in `workbook.set({ ... })`<!-- -->.'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: properties
     summary: Gets the workbook properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

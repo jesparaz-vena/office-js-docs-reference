@@ -17,6 +17,7 @@ functions:
     package: custom-functions-runtime!
     summary: Associates the JavaScript function to the name given by the "id" property in the metadata JSON file.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -36,6 +37,7 @@ functions:
     package: custom-functions-runtime!
     summary: Associates the JavaScript functions to the names given by the "id" properties in the metadata JSON file.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

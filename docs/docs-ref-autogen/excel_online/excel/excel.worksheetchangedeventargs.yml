@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.WorksheetChangedEventArgs
 summary: Provides information about the worksheet that raised the changed event.
 remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: address
     summary: Gets the range address that represents the changed area of a specific worksheet.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -84,6 +86,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -96,6 +99,7 @@ properties:
     fullName: changeType
     summary: Gets the change type that represents how the changed event is triggered. See `Excel.DataChangeType` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -133,6 +137,7 @@ properties:
           });
       }
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -145,6 +150,7 @@ properties:
     fullName: source
     summary: Gets the source of the event. See `Excel.EventSource` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -196,6 +202,7 @@ properties:
       }  
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -208,6 +215,7 @@ properties:
     fullName: type
     summary: Gets the type of the event. See `Excel.EventType` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -220,6 +228,7 @@ properties:
     fullName: worksheetId
     summary: Gets the ID of the worksheet in which the data changed.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -236,6 +245,7 @@ methods:
 
       \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -256,6 +266,7 @@ methods:
 
       \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

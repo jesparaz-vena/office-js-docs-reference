@@ -5,6 +5,7 @@ package: powerpoint!
 fullName: PowerPoint.Interfaces.TextRangeLoadOptions
 summary: 'Contains the text that is attached to a shape, in addition to properties and methods for manipulating the text.'
 remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+example: []
 isPreview: true
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: font
     summary: Returns a `ShapeFont` object that represents the font attributes for the text range.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
       Represents the paragraph format of the text range. See
       [PowerPoint.ParagraphFormat](xref:powerpoint!PowerPoint.ParagraphFormat:class) for details.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -55,6 +59,7 @@ properties:
     fullName: text
     summary: Represents the plain text content of the text range.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:

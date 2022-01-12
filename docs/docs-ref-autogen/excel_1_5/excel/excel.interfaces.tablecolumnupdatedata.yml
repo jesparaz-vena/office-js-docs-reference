@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.TableColumnUpdateData
 summary: 'An interface for updating data on the TableColumn object, for use in `tableColumn.set({ ... })`<!-- -->.'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi 1.1 for getting the name; 1.4 for setting
       it.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -32,6 +34,7 @@ properties:
       that contain an error will return the error string. If the returned value starts with a plus ("+"), minus ("-"),
       or equal sign ("="), Excel interprets this value as a formula.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.WorksheetFreezePanes
 summary: ''
 remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,6 +55,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -91,6 +94,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -129,6 +133,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -148,6 +153,7 @@ methods:
       Gets a range that describes the frozen cells in the active worksheet view. The frozen range corresponds to cells
       that are frozen in the top- and left-most pane.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -192,6 +198,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -210,6 +217,7 @@ methods:
       returns a plain JavaScript object (typed as `Excel.Interfaces.WorksheetFreezePanesData`<!-- -->) that contains
       shallow copies of any loaded child properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -248,6 +256,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

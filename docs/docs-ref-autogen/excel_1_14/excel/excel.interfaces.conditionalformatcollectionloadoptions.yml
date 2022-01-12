@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ConditionalFormatCollectionLoadOptions
 summary: Represents a collection of all the conditional formats that are overlap the range.
 remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
       For EACH ITEM in the collection: Returns the cell value conditional format properties if the current conditional
       format is a `CellValue` type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -45,6 +48,7 @@ properties:
       For EACH ITEM in the collection: Returns the cell value conditional format properties if the current conditional
       format is a `CellValue` type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -59,6 +63,7 @@ properties:
       For EACH ITEM in the collection: Returns the color scale conditional format properties if the current conditional
       format is a `ColorScale` type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -73,6 +78,7 @@ properties:
       For EACH ITEM in the collection: Returns the color scale conditional format properties if the current conditional
       format is a `ColorScale` type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -87,6 +93,7 @@ properties:
       For EACH ITEM in the collection: Returns the custom conditional format properties if the current conditional
       format is a custom type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -101,6 +108,7 @@ properties:
       For EACH ITEM in the collection: Returns the custom conditional format properties if the current conditional
       format is a custom type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -113,6 +121,7 @@ properties:
     fullName: dataBar
     summary: 'For EACH ITEM in the collection: Returns the data bar properties if the current conditional format is a data bar.'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -125,6 +134,7 @@ properties:
     fullName: dataBarOrNullObject
     summary: 'For EACH ITEM in the collection: Returns the data bar properties if the current conditional format is a data bar.'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -139,6 +149,7 @@ properties:
       For EACH ITEM in the collection: Returns the icon set conditional format properties if the current conditional
       format is an `IconSet` type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -153,6 +164,7 @@ properties:
       For EACH ITEM in the collection: Returns the icon set conditional format properties if the current conditional
       format is an `IconSet` type.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -167,6 +179,7 @@ properties:
       For EACH ITEM in the collection: The priority of the conditional format in the current
       `ConditionalFormatCollection`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -181,6 +194,7 @@ properties:
       For EACH ITEM in the collection: Returns the preset criteria conditional format. See
       `Excel.PresetCriteriaConditionalFormat` for more details.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -195,6 +209,7 @@ properties:
       For EACH ITEM in the collection: Returns the preset criteria conditional format. See
       `Excel.PresetCriteriaConditionalFormat` for more details.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -213,6 +228,7 @@ properties:
       priority, you have to re-fetch a new copy of the object at that new priority location if you want to make further
       changes to it.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -228,6 +244,7 @@ properties:
       shall take effect on that cell. Value is `null` on data bars, icon sets, and color scales as there's no concept of
       `StopIfTrue` for these.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -242,6 +259,7 @@ properties:
       For EACH ITEM in the collection: Returns the specific text conditional format properties if the current
       conditional format is a text type. For example, to format cells matching the word "Text".
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -256,6 +274,7 @@ properties:
       For EACH ITEM in the collection: Returns the specific text conditional format properties if the current
       conditional format is a text type. For example, to format cells matching the word "Text".
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -270,6 +289,7 @@ properties:
       For EACH ITEM in the collection: Returns the top/bottom conditional format properties if the current conditional
       format is a `TopBottom` type. For example, to format the top 10% or bottom 10 items.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -284,6 +304,7 @@ properties:
       For EACH ITEM in the collection: Returns the top/bottom conditional format properties if the current conditional
       format is a `TopBottom` type. For example, to format the top 10% or bottom 10 items.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -296,6 +317,7 @@ properties:
     fullName: type
     summary: 'For EACH ITEM in the collection: A type of conditional format. Only one can be set at a time.'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

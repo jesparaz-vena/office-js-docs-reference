@@ -7,6 +7,7 @@ summary: ''
 remarks: >-
   \[ [API set: ExcelApi 1.1 for All, Formats, and Contents. 1.7 for Hyperlinks and
   RemoveHyperlinks.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+example: []
 isPreview: false
 isDeprecated: false
 fields:

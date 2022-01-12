@@ -7,6 +7,7 @@ summary: >-
   Represents a defined name for a range of cells or value. Names can be primitive named objects (as seen in the type
   below), range object, or a reference to a range. This object can be used to obtain range object associated with names.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -19,6 +20,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
     fullName: comment
     summary: Specifies the comment associated with this name.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
     fullName: name
     summary: The name of the object.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -57,6 +61,7 @@ properties:
       Specifies if the name is scoped to the workbook or to a specific worksheet. Possible values are: Worksheet,
       Workbook.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -71,6 +76,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi 1.1 for String,Integer,Double,Boolean,Range,Error; 1.7 for
       Array](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -83,6 +89,7 @@ properties:
     fullName: value
     summary: 'Represents the value computed by the name''s formula. For a named range, will return the range address.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -95,6 +102,7 @@ properties:
     fullName: visible
     summary: Specifies if the object is visible.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -109,6 +117,7 @@ properties:
       Returns the worksheet on which the named item is scoped to. Throws an error if the item is scoped to the workbook
       instead.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -126,6 +135,7 @@ properties:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

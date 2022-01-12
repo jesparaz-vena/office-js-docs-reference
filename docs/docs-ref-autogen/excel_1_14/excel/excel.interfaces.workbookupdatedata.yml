@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.WorkbookUpdateData
 summary: 'An interface for updating data on the Workbook object, for use in `workbook.set({ ... })`<!-- -->.'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       True if all charts in the workbook are tracking the actual data points to which they are attached. False if the
       charts track the index of the data points.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
       Specifies if changes have been made since the workbook was last saved. You can set this property to `true` if you
       want to close a modified workbook without either saving it or being prompted to save it.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
     fullName: properties
     summary: Gets the workbook properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -57,6 +61,7 @@ properties:
       True if calculations in this workbook will be done using only the precision of the numbers as they're displayed.
       Data will permanently lose accuracy when switching this property from `false` to `true`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

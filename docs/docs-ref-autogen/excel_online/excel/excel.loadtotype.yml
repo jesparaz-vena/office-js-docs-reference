@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.LoadToType
 summary: An enum that specifies the query load to destination.
 remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 fields:

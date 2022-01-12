@@ -8,6 +8,7 @@ summary: >-
   more about how ranges are used throughout the API, start with [Ranges in the Excel JavaScript
   API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts#ranges)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -18,6 +19,7 @@ properties:
     fullName: address
     summary: 'Specifies the range reference in A1-style. Address value contains the sheet reference (e.g., "Sheet1!A1:B4").'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -30,6 +32,7 @@ properties:
     fullName: addressLocal
     summary: Represents the range reference for the specified range in the language of the user.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -44,6 +47,7 @@ properties:
       Specifies the number of cells in the range. This API will return -1 if the cell count exceeds 2^31-1
       (2,147,483,647).
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -56,6 +60,7 @@ properties:
     fullName: columnCount
     summary: Specifies the total number of columns in the range.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -71,6 +76,7 @@ properties:
       Value is `false` when no columns in the range are hidden. Value is `null` when some columns in a range are hidden
       and other columns in the same range are not hidden.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -83,6 +89,7 @@ properties:
     fullName: columnIndex
     summary: Specifies the column number of the first cell in the range. Zero-indexed.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -95,6 +102,7 @@ properties:
     fullName: conditionalFormats
     summary: The collection of `ConditionalFormats` that intersect the range.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -109,6 +117,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -121,6 +130,7 @@ properties:
     fullName: dataValidation
     summary: Returns a data validation object.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -133,6 +143,7 @@ properties:
     fullName: format
     summary: 'Returns a format object, encapsulating the range''s font, fill, borders, alignment, and other properties.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -145,6 +156,7 @@ properties:
     fullName: formulas
     summary: 'Represents the formula in A1-style notation. If a cell has no formula, its value is returned instead.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -160,6 +172,7 @@ properties:
       English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German. If a cell has no formula, its value is
       returned instead.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -172,6 +185,7 @@ properties:
     fullName: formulasR1C1
     summary: 'Represents the formula in R1C1-style notation. If a cell has no formula, its value is returned instead.'
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -187,6 +201,7 @@ properties:
       Value is `false` when no cells in the range are hidden. Value is `null` when some cells in a range are hidden and
       other cells in the same range are not hidden.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -236,6 +251,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -248,6 +264,7 @@ properties:
     fullName: isEntireColumn
     summary: Represents if the current range is an entire column.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -260,6 +277,7 @@ properties:
     fullName: isEntireRow
     summary: Represents if the current range is an entire row.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -272,6 +290,7 @@ properties:
     fullName: linkedDataTypeState
     summary: Represents the data type state of each cell.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -311,6 +330,7 @@ properties:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -326,6 +346,7 @@ properties:
       not perform any language or format coercion when getting or setting the `numberFormatLocal` property. Any returned
       text uses the locally-formatted strings based on the language specified in the system settings.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -338,6 +359,7 @@ properties:
     fullName: rowCount
     summary: Returns the total number of rows in the range.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -353,6 +375,7 @@ properties:
       is `false` when no rows in the range are hidden. Value is `null` when some rows in a range are hidden and other
       rows in the same range are not hidden.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -365,6 +388,7 @@ properties:
     fullName: rowIndex
     summary: Returns the row number of the first cell in the range. Zero-indexed.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -414,6 +438,7 @@ properties:
       }
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -453,6 +478,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -467,6 +493,7 @@ properties:
       Text values of the specified range. The text value will not depend on the cell width. The number sign (\#)
       substitution that happens in the Excel UI will not affect the text value returned by the API.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -482,6 +509,7 @@ properties:
       that contain an error will return the error string. If the returned value starts with a plus ("+"), minus ("-"),
       or equal sign ("="), Excel interprets this value as a formula.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -494,6 +522,7 @@ properties:
     fullName: valueTypes
     summary: Specifies the type of data in each cell.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -506,6 +535,7 @@ properties:
     fullName: worksheet
     summary: The worksheet containing the current range.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -550,6 +580,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -584,6 +615,7 @@ methods:
     remarks: >-
       \[ [API set: ExcelApi 1.9, ExcelApi Preview for null `destinationRange`<!--
       -->](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -613,6 +645,7 @@ methods:
     fullName: calculate()
     summary: Calculates a range of cells on a worksheet.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -645,6 +678,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -662,6 +696,7 @@ methods:
     fullName: clear(applyToString)
     summary: 'Clear range values, format, fill, border, etc.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -679,6 +714,7 @@ methods:
     fullName: convertDataTypeToText()
     summary: Converts the range cells with data types into text.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -692,6 +728,7 @@ methods:
     fullName: 'convertToLinkedDataType(serviceID, languageCulture)'
     summary: Converts the range cells into linked data types in the worksheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -738,6 +775,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -771,6 +809,7 @@ methods:
       can be a different size than the source range or `RangeAreas`<!-- -->. The destination will be expanded
       automatically if it is smaller than the source.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -819,6 +858,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -836,6 +876,7 @@ methods:
     fullName: delete(shiftString)
     summary: Deletes the cells associated with the range.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -887,6 +928,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -947,6 +989,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -971,6 +1014,7 @@ methods:
       Does a Flash Fill to the current range. Flash Fill automatically fills data when it senses a pattern, so the range
       must be a single column range and have data around it in order to find a pattern.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -986,6 +1030,7 @@ methods:
       Gets a `Range` object with the same top-left cell as the current `Range` object, but with the specified numbers of
       rows and columns.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1029,6 +1074,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1071,6 +1117,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1127,6 +1174,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1168,6 +1216,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1188,6 +1237,7 @@ methods:
       other properties. For properties that are not consistent across each cell within a given column, null will be
       returned.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1209,6 +1259,7 @@ methods:
     fullName: getColumnsAfter(count)
     summary: Gets a certain number of columns to the right of the current `Range` object.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1229,6 +1280,7 @@ methods:
     fullName: getColumnsBefore(count)
     summary: Gets a certain number of columns to the left of the current `Range` object.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1274,6 +1326,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1313,6 +1366,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1328,6 +1382,7 @@ methods:
       Renders the range as a base64-encoded png image. *Important**: This API is currently unsupported in Excel for Mac.
       Visit [OfficeDev/office-js Issue \#235](https://github.com/OfficeDev/office-js/issues/235) for the current status.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1362,6 +1417,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1451,6 +1507,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1488,6 +1545,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1521,6 +1579,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1554,6 +1613,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1591,6 +1651,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1617,6 +1678,7 @@ methods:
       Gets a `Range` object similar to the current `Range` object, but with its bottom-right corner expanded (or
       contracted) by some number of rows and columns.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1661,6 +1723,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1681,6 +1744,7 @@ methods:
       other properties. For properties that are not consistent across each cell within a given row, `null` will be
       returned.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1702,6 +1766,7 @@ methods:
     fullName: getRowsAbove(count)
     summary: Gets a certain number of rows above the current `Range` object.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1722,6 +1787,7 @@ methods:
     fullName: getRowsBelow(count)
     summary: Gets a certain number of rows below the current `Range` object.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1768,6 +1834,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1793,6 +1860,7 @@ methods:
       Gets the `RangeAreas` object, comprising one or more rectangular ranges, that represents all the cells that match
       the specified type and value. If no special cells are found, an `ItemNotFound` error will be thrown.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1830,6 +1898,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1860,6 +1929,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1895,6 +1965,7 @@ methods:
       Returns a `Range` object that represents the surrounding region for the top-left cell in this range. A surrounding
       region is a range bounded by any combination of blank rows and blank columns relative to this range.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1908,6 +1979,7 @@ methods:
     fullName: getTables(fullyContained)
     summary: Gets a scoped collection of tables that overlap with the range.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1996,6 +2068,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2063,6 +2136,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2080,6 +2154,7 @@ methods:
     fullName: getVisibleView()
     summary: Represents the visible rows of the current range.
     remarks: '\[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2114,6 +2189,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2133,6 +2209,7 @@ methods:
       Inserts a cell or a range of cells into the worksheet in place of this range, and shifts the other cells to make
       space. Returns a new `Range` object at the now blank space.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2152,6 +2229,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2171,6 +2249,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2212,6 +2291,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2283,6 +2363,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2326,6 +2407,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2348,6 +2430,7 @@ methods:
     fullName: 'replaceAll(text, replacement, criteria)'
     summary: Finds and replaces the given string based on the criteria specified within the current range.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2391,6 +2474,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2406,6 +2490,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2480,6 +2565,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2583,6 +2669,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2602,6 +2689,7 @@ methods:
       Updates the range based on a single-dimensional array of column properties, encapsulating things like font, fill,
       borders, and alignment.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2619,6 +2707,7 @@ methods:
     fullName: setDirty()
     summary: Set a range to be recalculated when the next recalculation occurs.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2634,6 +2723,7 @@ methods:
       Updates the range based on a single-dimensional array of row properties, encapsulating things like font, fill,
       borders, and alignment.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2651,6 +2741,7 @@ methods:
     fullName: showCard()
     summary: Displays the card for an active cell if it has rich value content.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2669,6 +2760,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.RangeData`<!-- -->) that contains shallow copies of any loaded child
       properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2687,6 +2779,7 @@ methods:
       or invoking a method on the object, you needed to have added the object to the tracked object collection when the
       object was first created.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2718,6 +2811,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2735,6 +2829,7 @@ methods:
       so please remember to free any objects you add, once you're done using them. You will need to call
       `context.sync()` before the memory release takes effect.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

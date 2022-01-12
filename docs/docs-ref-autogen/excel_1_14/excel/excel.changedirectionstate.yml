@@ -7,6 +7,7 @@ summary: >-
   Represents the direction that existing or remaining cells in a worksheet will shift when cells are inserted into or
   deleted from a worksheet.
 remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -20,6 +21,7 @@ properties:
       deleted. Note：`insertShiftDirection` and `deleteShiftDirection` are exclusive and both enums can't have a value at
       the same time. If one has a value, then the other will return `undefined`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -35,6 +37,7 @@ properties:
       cells are inserted. Note：`insertShiftDirection` and `deleteShiftDirection` are exclusive and both enums can't have
       a value at the same time. If one has a value, then the other will return `undefined`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,6 +5,7 @@ package: powerpoint!
 fullName: PowerPoint.Interfaces.TextRangeData
 summary: An interface describing the data returned by calling `textRange.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: text
     summary: Represents the plain text content of the text range.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:

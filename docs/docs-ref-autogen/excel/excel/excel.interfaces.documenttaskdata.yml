@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.DocumentTaskData
 summary: An interface describing the data returned by calling `documentTask.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -45,6 +48,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -59,6 +63,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -73,6 +78,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -89,6 +95,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -103,6 +110,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -117,6 +125,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -131,6 +140,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:

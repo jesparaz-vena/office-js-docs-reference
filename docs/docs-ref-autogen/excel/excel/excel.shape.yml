@@ -8,6 +8,7 @@ summary: >-
   etc. To learn more about the shape object model, read [Work with shapes using the Excel JavaScript
   API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-shapes)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -18,6 +19,7 @@ properties:
     fullName: altTextDescription
     summary: Specifies the alternative description text for a `Shape` object.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -30,6 +32,7 @@ properties:
     fullName: altTextTitle
     summary: Specifies the alternative title text for a `Shape` object.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -42,6 +45,7 @@ properties:
     fullName: connectionSiteCount
     summary: Returns the number of connection sites on this shape.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -56,6 +60,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -72,6 +77,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -107,6 +113,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -121,6 +128,7 @@ properties:
       Returns the geometric shape associated with the shape. An error will be thrown if the shape type is not
       "GeometricShape".
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -135,6 +143,7 @@ properties:
       Specifies the geometric shape type of this geometric shape. See `Excel.GeometricShapeType` for details. Returns
       `null` if the shape type is not "GeometricShape".
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -232,6 +241,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -246,6 +256,7 @@ properties:
       Specifies the height, in points, of the shape. Throws an `InvalidArgument` exception when set with a negative
       value or zero as an input.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -258,6 +269,7 @@ properties:
     fullName: id
     summary: Specifies the shape identifier.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -270,6 +282,7 @@ properties:
     fullName: image
     summary: Returns the image associated with the shape. An error will be thrown if the shape type is not "Image".
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -284,6 +297,7 @@ properties:
       The distance, in points, from the left side of the shape to the left side of the worksheet. Throws an
       `InvalidArgument` exception when set with a negative value as an input.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -299,6 +313,7 @@ properties:
       groups, a level of 1 means the shape is part of a top-level group, and a level of 2 means the shape is part of a
       sub-group of the top level.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -337,6 +352,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -349,6 +365,7 @@ properties:
     fullName: lineFormat
     summary: Returns the line formatting of this shape.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -381,6 +398,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -393,6 +411,7 @@ properties:
     fullName: name
     summary: Specifies the name of the shape.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -405,6 +424,7 @@ properties:
     fullName: parentGroup
     summary: Specifies the parent group of this shape.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -417,6 +437,7 @@ properties:
     fullName: placement
     summary: Represents how the object is attached to the cells below it.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -453,6 +474,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -465,6 +487,7 @@ properties:
     fullName: textFrame
     summary: Returns the text frame object of this shape.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -479,6 +502,7 @@ properties:
       The distance, in points, from the top edge of the shape to the top edge of the worksheet. Throws an
       `InvalidArgument` exception when set with a negative value as an input.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -491,6 +515,7 @@ properties:
     fullName: type
     summary: Returns the type of this shape. See `Excel.ShapeType` for details.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -503,6 +528,7 @@ properties:
     fullName: visible
     summary: Specifies if the shape is visible.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -517,6 +543,7 @@ properties:
       Specifies the width, in points, of the shape. Throws an `InvalidArgument` exception when set with a negative value
       or zero as an input.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -529,6 +556,7 @@ properties:
     fullName: zOrderPosition
     summary: 'Returns the position of the specified shape in the z-order, with 0 representing the bottom of the order stack.'
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -542,6 +570,7 @@ methods:
     fullName: copyTo(destinationSheet)
     summary: Copies and pastes a `Shape` object. The pasted shape is copied to the same pixel location as this shape.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -585,6 +614,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -624,6 +654,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -644,6 +675,7 @@ methods:
       formats are `Excel.PictureFormat.BMP`<!-- -->, `Excel.PictureFormat.PNG`<!-- -->, `Excel.PictureFormat.JPEG`<!--
       -->, and `Excel.PictureFormat.GIF`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -682,6 +714,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -723,6 +756,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -761,6 +795,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -782,6 +817,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -801,6 +837,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -820,6 +857,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -870,6 +908,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -900,6 +939,7 @@ methods:
       shape relative to the original or the current size. Shapes other than pictures are always scaled relative to their
       current height.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -932,6 +972,7 @@ methods:
       shape relative to the original or the current size. Shapes other than pictures are always scaled relative to their
       current width.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -962,6 +1003,7 @@ methods:
       shape relative to the original or the current size. Shapes other than pictures are always scaled relative to their
       current width.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -993,6 +1035,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1015,6 +1058,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1051,6 +1095,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1070,6 +1115,7 @@ methods:
     fullName: setZOrder(positionString)
     summary: 'Moves the specified shape up or down the collection''s z-order, which shifts it in front of or behind other shapes.'
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1094,6 +1140,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.ShapeData`<!-- -->) that contains shallow copies of any loaded child
       properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1108,6 +1155,7 @@ events:
     fullName: onActivated
     summary: Occurs when the shape is activated.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1122,6 +1170,7 @@ events:
     fullName: onDeactivated
     summary: Occurs when the shape is deactivated.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

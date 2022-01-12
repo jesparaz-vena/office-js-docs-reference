@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.PageBreakData
 summary: An interface describing the data returned by calling `pageBreak.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: columnIndex
     summary: Specifies the column index for the page break.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,6 +29,7 @@ properties:
     fullName: rowIndex
     summary: Specifies the row index for the page break.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

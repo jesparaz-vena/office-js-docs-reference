@@ -7,6 +7,7 @@ summary: Properties of a card layout relevant to most card layouts.
 remarks: >-
   \[ [API set: ExcelApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets)
   \]
+example: []
 isPreview: true
 isDeprecated: false
 type: interface
@@ -19,6 +20,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -35,6 +37,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -49,6 +52,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -63,6 +67,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:

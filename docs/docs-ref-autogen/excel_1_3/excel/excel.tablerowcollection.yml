@@ -11,6 +11,7 @@ summary: >-
   object represents the physical location of the table row, but not the data. That is, if the data is sorted or if new
   rows are added, a table row will continue to point at the index for which it was created.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -23,6 +24,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -35,6 +37,7 @@ properties:
     fullName: count
     summary: Returns the number of rows in the table.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -47,6 +50,7 @@ properties:
     fullName: items
     summary: Gets the loaded child items in this collection.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -91,6 +95,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -142,6 +147,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -161,6 +167,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -184,6 +191,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -242,6 +250,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -266,6 +275,7 @@ methods:
       returns a plain JavaScript object (typed as `Excel.Interfaces.TableRowCollectionData`<!-- -->) that contains an
       "items" array with shallow copies of any loaded properties from the collection's items.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

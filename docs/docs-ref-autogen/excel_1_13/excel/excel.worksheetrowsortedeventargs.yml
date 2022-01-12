@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.WorksheetRowSortedEventArgs
 summary: Provides information about the row-sorted event and its related worksheet.
 remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Gets the range address that represents the sorted areas of a specific worksheet. Only rows changed as a result of
       the sort operation are returned.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: source
     summary: Gets the source of the event. See `Excel.EventSource` for details.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,6 +44,7 @@ properties:
     fullName: type
     summary: Gets the type of the event. See `Excel.EventType` for details.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,6 +57,7 @@ properties:
     fullName: worksheetId
     summary: Gets the ID of the worksheet where the sorting happened.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

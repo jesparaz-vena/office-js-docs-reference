@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.FiveQuartersSet
 summary: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: blackCircle
     summary: ''
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,6 +29,7 @@ properties:
     fullName: circleWithOneWhiteQuarter
     summary: ''
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -39,6 +42,7 @@ properties:
     fullName: circleWithThreeWhiteQuarters
     summary: ''
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -51,6 +55,7 @@ properties:
     fullName: circleWithTwoWhiteQuarters
     summary: ''
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,6 +68,7 @@ properties:
     fullName: whiteCircleAllWhiteQuarters
     summary: ''
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

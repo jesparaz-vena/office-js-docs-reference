@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ChartPointFormatUpdateData
 summary: 'An interface for updating data on the ChartPointFormat object, for use in `chartPointFormat.set({ ... })`<!-- -->.'
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface

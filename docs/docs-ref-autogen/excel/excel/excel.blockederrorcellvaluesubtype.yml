@@ -7,6 +7,7 @@ summary: 'Represents types of \#BLOCKED! errors.'
 remarks: >-
   \[ [API set: ExcelApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets)
   \]
+example: []
 isPreview: true
 isDeprecated: false
 fields:

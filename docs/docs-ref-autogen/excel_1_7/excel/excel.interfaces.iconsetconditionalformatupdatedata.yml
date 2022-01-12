@@ -7,6 +7,7 @@ summary: >-
   An interface for updating data on the IconSetConditionalFormat object, for use in `iconSetConditionalFormat.set({ ...
   })`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -20,6 +21,7 @@ properties:
       the first criterion only the custom icon can be modified, while type, formula, and operator will be ignored when
       set.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -34,6 +36,7 @@ properties:
       If `true`<!-- -->, reverses the icon orders for the icon set. Note that this cannot be set if custom icons are
       used.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -46,6 +49,7 @@ properties:
     fullName: showIconOnly
     summary: 'If `true`<!-- -->, hides the values and only shows icons.'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -58,6 +62,7 @@ properties:
     fullName: style
     summary: 'If set, displays the icon set option for the conditional format.'
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

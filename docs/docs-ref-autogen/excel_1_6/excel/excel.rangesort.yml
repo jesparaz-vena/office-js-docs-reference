@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.RangeSort
 summary: Manages sorting operations on `Range` objects.
 remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -30,6 +32,7 @@ methods:
     fullName: 'apply(fields, matchCase, hasHeaders, orientation, method)'
     summary: Perform a sort operation.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -61,6 +64,7 @@ methods:
     fullName: 'apply(fields, matchCase, hasHeaders, orientationString, method)'
     summary: Perform a sort operation.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -97,6 +101,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.RangeSortData`<!-- -->) that contains shallow copies of any loaded
       child properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.CustomPropertyCollection
 summary: Contains the collection of custom properties.
 remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: items
     summary: Gets the loaded child items in this collection.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,6 +71,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -92,6 +96,7 @@ methods:
     fullName: deleteAll()
     summary: Deletes all custom properties in this collection.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -105,6 +110,7 @@ methods:
     fullName: getCount()
     summary: Gets the count of custom properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -120,6 +126,7 @@ methods:
       Gets a custom property object by its key, which is case-insensitive. Throws an error if the custom property does
       not exist.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -142,6 +149,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -161,6 +169,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -184,6 +193,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -203,6 +213,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -227,6 +238,7 @@ methods:
       returns a plain JavaScript object (typed as `Excel.Interfaces.CustomPropertyCollectionData`<!-- -->) that contains
       an "items" array with shallow copies of any loaded properties from the collection's items.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

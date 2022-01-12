@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.PivotLayoutLoadOptions
 summary: Represents the visual layout of the PivotTable.
 remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
       This property indicates the PivotLayoutType of all fields on the PivotTable. If fields have different states, this
       will be null.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
     fullName: showColumnGrandTotals
     summary: Specifies if the PivotTable report shows grand totals for columns.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -55,6 +59,7 @@ properties:
     fullName: showRowGrandTotals
     summary: Specifies if the PivotTable report shows grand totals for rows.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -69,6 +74,7 @@ properties:
       This property indicates the `SubtotalLocationType` of all fields on the PivotTable. If fields have different
       states, this will be `null`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

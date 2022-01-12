@@ -8,6 +8,7 @@ summary: |-
 
   \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -21,6 +22,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -36,6 +38,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -51,6 +54,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -66,6 +70,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -81,6 +86,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -96,6 +102,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -111,6 +118,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -126,6 +134,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -141,6 +150,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -156,6 +166,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -171,6 +182,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -186,6 +198,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -201,6 +214,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -216,6 +230,7 @@ properties:
 
       \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

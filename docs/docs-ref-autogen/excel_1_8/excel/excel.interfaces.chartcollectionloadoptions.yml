@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ChartCollectionLoadOptions
 summary: A collection of all the chart objects on a worksheet.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: axes
     summary: 'For EACH ITEM in the collection: Represents chart axes.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
       For EACH ITEM in the collection: Specifies a chart category label level enumeration constant, referring to the
       level of the source category labels.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -55,6 +59,7 @@ properties:
     fullName: chartType
     summary: 'For EACH ITEM in the collection: Specifies the type of the chart. See `Excel.ChartType` for details.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -67,6 +72,7 @@ properties:
     fullName: dataLabels
     summary: 'For EACH ITEM in the collection: Represents the data labels on the chart.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -79,6 +85,7 @@ properties:
     fullName: displayBlanksAs
     summary: 'For EACH ITEM in the collection: Specifies the way that blank cells are plotted on a chart.'
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -91,6 +98,7 @@ properties:
     fullName: format
     summary: 'For EACH ITEM in the collection: Encapsulates the format properties for the chart area.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -103,6 +111,7 @@ properties:
     fullName: height
     summary: 'For EACH ITEM in the collection: Specifies the height, in points, of the chart object.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -115,6 +124,7 @@ properties:
     fullName: id
     summary: 'For EACH ITEM in the collection: The unique ID of chart.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -127,6 +137,7 @@ properties:
     fullName: left
     summary: 'For EACH ITEM in the collection: The distance, in points, from the left side of the chart to the worksheet origin.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -139,6 +150,7 @@ properties:
     fullName: legend
     summary: 'For EACH ITEM in the collection: Represents the legend for the chart.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -151,6 +163,7 @@ properties:
     fullName: name
     summary: 'For EACH ITEM in the collection: Specifies the name of a chart object.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -163,6 +176,7 @@ properties:
     fullName: plotArea
     summary: 'For EACH ITEM in the collection: Represents the plot area for the chart.'
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -175,6 +189,7 @@ properties:
     fullName: plotBy
     summary: 'For EACH ITEM in the collection: Specifies the way columns or rows are used as data series on the chart.'
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -189,6 +204,7 @@ properties:
       For EACH ITEM in the collection: True if only visible cells are plotted. False if both visible and hidden cells
       are plotted.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -201,6 +217,7 @@ properties:
     fullName: series
     summary: 'For EACH ITEM in the collection: Represents either a single series or collection of series in the chart.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -215,6 +232,7 @@ properties:
       For EACH ITEM in the collection: Specifies a chart series name level enumeration constant, referring to the level
       of the source series names.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -227,6 +245,7 @@ properties:
     fullName: showAllFieldButtons
     summary: 'For EACH ITEM in the collection: Specifies whether to display all field buttons on a PivotChart.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -242,6 +261,7 @@ properties:
       maximum value on the value axis. If the value axis becomes smaller than the size of the data points, you can use
       this property to set whether to show the data labels. This property applies to 2-D charts only.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -254,6 +274,7 @@ properties:
     fullName: style
     summary: 'For EACH ITEM in the collection: Specifies the chart style for the chart.'
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -268,6 +289,7 @@ properties:
       For EACH ITEM in the collection: Represents the title of the specified chart, including the text, visibility,
       position, and formatting of the title.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -282,6 +304,7 @@ properties:
       For EACH ITEM in the collection: Specifies the distance, in points, from the top edge of the object to the top of
       row 1 (on a worksheet) or the top of the chart area (on a chart).
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -294,6 +317,7 @@ properties:
     fullName: width
     summary: 'For EACH ITEM in the collection: Specifies the width, in points, of the chart object.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -306,6 +330,7 @@ properties:
     fullName: worksheet
     summary: 'For EACH ITEM in the collection: The worksheet containing the current chart.'
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

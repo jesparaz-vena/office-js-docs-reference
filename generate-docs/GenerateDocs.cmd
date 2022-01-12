@@ -18,7 +18,7 @@ IF NOT EXIST "yaml" (
     call md yaml
 )
 
-call npm install
+call npm install -S
 
 pushd scripts
 call npm install

@@ -7,6 +7,7 @@ summary: >-
   Provides information about the worksheet that raised the protection status changed event, which fires when the
   protection status is updated in a worksheet.
 remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -19,6 +20,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -55,6 +57,7 @@ properties:
       }
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -69,6 +72,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -83,6 +87,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -119,6 +124,7 @@ properties:
       }
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -131,6 +137,7 @@ properties:
     fullName: type
     summary: Gets the type of the event. See `Excel.EventType` for details.
     remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -167,6 +174,7 @@ properties:
       }
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

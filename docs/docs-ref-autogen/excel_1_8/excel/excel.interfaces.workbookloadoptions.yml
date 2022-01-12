@@ -8,6 +8,7 @@ summary: >-
   learn more about the workbook object model, read [Work with workbooks using the Excel JavaScript
   API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-workbooks)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -20,6 +21,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -32,6 +34,7 @@ properties:
     fullName: application
     summary: Represents the Excel application instance that contains this workbook.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -44,6 +47,7 @@ properties:
     fullName: bindings
     summary: Represents a collection of bindings that are part of the workbook.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -56,6 +60,7 @@ properties:
     fullName: name
     summary: Gets the workbook name.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,6 +73,7 @@ properties:
     fullName: properties
     summary: Gets the workbook properties.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -80,6 +86,7 @@ properties:
     fullName: protection
     summary: Returns the protection object for a workbook.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -92,6 +99,7 @@ properties:
     fullName: readOnly
     summary: Returns `true` if the workbook is open in read-only mode.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -104,6 +112,7 @@ properties:
     fullName: tables
     summary: Represents a collection of tables associated with the workbook.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

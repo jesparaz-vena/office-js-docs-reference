@@ -7,6 +7,7 @@ summary: >-
   Enum representing all accepted conditions by which a date filter can be applied. Used to configure the type of
   PivotFilter that is applied to the field.
 remarks: '\[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 fields:

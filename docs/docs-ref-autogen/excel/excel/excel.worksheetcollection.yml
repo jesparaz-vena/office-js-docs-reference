@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.WorksheetCollection
 summary: Represents a collection of worksheet objects that are part of the workbook.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: items
     summary: Gets the loaded child items in this collection.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,6 +66,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -89,6 +93,7 @@ methods:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -131,6 +136,7 @@ methods:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -184,6 +190,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -197,6 +204,7 @@ methods:
     fullName: getCount(visibleOnly)
     summary: Gets the number of worksheets in the collection.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -251,6 +259,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -268,6 +277,7 @@ methods:
     fullName: getItem(key)
     summary: Gets a worksheet object using its name or ID.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -289,6 +299,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -343,6 +354,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -362,6 +374,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -385,6 +398,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -426,6 +440,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -450,6 +465,7 @@ methods:
       returns a plain JavaScript object (typed as `Excel.Interfaces.WorksheetCollectionData`<!-- -->) that contains an
       "items" array with shallow copies of any loaded properties from the collection's items.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -484,6 +500,7 @@ events:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -518,6 +535,7 @@ events:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -532,6 +550,7 @@ events:
     fullName: onCalculated
     summary: Occurs when any worksheet in the workbook is calculated.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -546,6 +565,7 @@ events:
     fullName: onChanged
     summary: Occurs when any worksheet in the workbook is changed.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -560,6 +580,7 @@ events:
     fullName: onColumnSorted
     summary: Occurs when one or more columns have been sorted. This happens as the result of a left-to-right sort operation.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -594,6 +615,7 @@ events:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -608,6 +630,7 @@ events:
     fullName: onDeleted
     summary: Occurs when a worksheet is deleted from the workbook.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -624,6 +647,7 @@ events:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    example: []
     isPreview: true
     isDeprecated: false
     syntax:
@@ -638,6 +662,7 @@ events:
     fullName: onFormatChanged
     summary: Occurs when any worksheet in the workbook has a format changed.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -654,6 +679,7 @@ events:
       Occurs when one or more formulas are changed in any worksheet of this collection. This event is for when the
       formula itself changes, not the data value resulting from the formula's calculation.
     remarks: '\[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -668,6 +694,7 @@ events:
     fullName: onMoved
     summary: Occurs when a worksheet is moved by a user within a workbook.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -682,6 +709,7 @@ events:
     fullName: onNameChanged
     summary: Occurs when the worksheet name is changed in the worksheet collection.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -696,6 +724,7 @@ events:
     fullName: onProtectionChanged
     summary: Occurs when the worksheet protection state is changed.
     remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -710,6 +739,7 @@ events:
     fullName: onRowHiddenChanged
     summary: Occurs when the hidden state of one or more rows has changed on a specific worksheet.
     remarks: '\[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -724,6 +754,7 @@ events:
     fullName: onRowSorted
     summary: Occurs when one or more rows have been sorted. This happens as the result of a top-to-bottom sort operation.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -738,6 +769,7 @@ events:
     fullName: onSelectionChanged
     summary: Occurs when the selection changes on any worksheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -755,6 +787,7 @@ events:
       clicking in the following cases: - The user drags the mouse for multi-selection. - The user selects a cell in the
       mode when cell arguments are selected for formula references.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -769,6 +802,7 @@ events:
     fullName: onVisibilityChanged
     summary: Occurs when the worksheet visibility is changed in the worksheet collection.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

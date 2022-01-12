@@ -7,6 +7,7 @@ summary: >-
   Represents a chart object in a workbook. To learn more about the chart object model, see [Work with charts using the
   Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-charts)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
     fullName: axes
     summary: Represents chart axes.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: chartType
     summary: Specifies the type of the chart. See `Excel.ChartType` for details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -72,6 +75,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -84,6 +88,7 @@ properties:
     fullName: dataLabels
     summary: Represents the data labels on the chart.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -96,6 +101,7 @@ properties:
     fullName: format
     summary: Encapsulates the format properties for the chart area.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -108,6 +114,7 @@ properties:
     fullName: height
     summary: 'Specifies the height, in points, of the chart object.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -120,6 +127,7 @@ properties:
     fullName: id
     summary: The unique ID of chart.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -132,6 +140,7 @@ properties:
     fullName: left
     summary: 'The distance, in points, from the left side of the chart to the worksheet origin.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -165,6 +174,7 @@ properties:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -199,6 +209,7 @@ properties:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -211,6 +222,7 @@ properties:
     fullName: series
     summary: Represents either a single series or collection of series in the chart.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -223,6 +235,7 @@ properties:
     fullName: showAllFieldButtons
     summary: Specifies whether to display all field buttons on a PivotChart.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -237,6 +250,7 @@ properties:
       Represents the title of the specified chart, including the text, visibility, position, and formatting of the
       title.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -251,6 +265,7 @@ properties:
       Specifies the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top
       of the chart area (on a chart).
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -263,6 +278,7 @@ properties:
     fullName: width
     summary: 'Specifies the width, in points, of the chart object.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -275,6 +291,7 @@ properties:
     fullName: worksheet
     summary: The worksheet containing the current chart.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -304,6 +321,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -335,6 +353,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -362,6 +381,7 @@ methods:
       Renders the chart as a base64-encoded image by scaling the chart to fit the specified dimensions. The aspect ratio
       is preserved as part of the resizing.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -389,6 +409,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -408,6 +429,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -446,6 +468,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -475,6 +498,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -497,6 +521,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -532,6 +557,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -554,6 +580,7 @@ methods:
     fullName: 'setData(sourceData, seriesByString)'
     summary: Resets the source data for the chart.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -598,6 +625,7 @@ methods:
           }
       });
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -627,6 +655,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.ChartData`<!-- -->) that contains shallow copies of any loaded child
       properties from the original object.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

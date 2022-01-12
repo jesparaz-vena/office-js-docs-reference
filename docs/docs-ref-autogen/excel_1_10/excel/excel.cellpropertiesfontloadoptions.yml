@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.CellPropertiesFontLoadOptions
 summary: Specifies which properties to load on the `format.font` object.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: bold
     summary: Specifies whether to load the `bold` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,6 +65,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -75,6 +78,7 @@ properties:
     fullName: italic
     summary: Specifies whether to load the `italic` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -87,6 +91,7 @@ properties:
     fullName: name
     summary: Specifies whether to load the `name` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -99,6 +104,7 @@ properties:
     fullName: size
     summary: Specifies whether to load the `size` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -111,6 +117,7 @@ properties:
     fullName: strikethrough
     summary: Specifies whether to load the `strikethrough` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -123,6 +130,7 @@ properties:
     fullName: subscript
     summary: Specifies whether to load the `subscript` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -135,6 +143,7 @@ properties:
     fullName: superscript
     summary: Specifies whether to load the `superscript` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -147,6 +156,7 @@ properties:
     fullName: tintAndShade
     summary: Specifies whether to load the `tintAndShade` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -159,6 +169,7 @@ properties:
     fullName: underline
     summary: Specifies whether to load the `underline` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

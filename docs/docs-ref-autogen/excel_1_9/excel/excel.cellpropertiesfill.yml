@@ -8,6 +8,7 @@ summary: >-
   `getColumnProperties` or the `format.fill` input parameter of `setCellProperties`<!-- -->, `setRowProperties`<!-- -->,
   and `setColumnProperties`<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -102,6 +103,7 @@ properties:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -114,6 +116,7 @@ properties:
     fullName: pattern
     summary: Represents the `format.fill.pattern` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -132,6 +135,7 @@ properties:
     fullName: patternColor
     summary: Represents the `format.fill.patternColor` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -144,6 +148,7 @@ properties:
     fullName: patternTintAndShade
     summary: Represents the `format.fill.patternTintAndShade` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -156,6 +161,7 @@ properties:
     fullName: tintAndShade
     summary: Represents the `format.fill.tintAndShade` property.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

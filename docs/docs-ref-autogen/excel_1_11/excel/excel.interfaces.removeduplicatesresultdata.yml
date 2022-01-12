@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.RemoveDuplicatesResultData
 summary: An interface describing the data returned by calling `removeDuplicatesResult.toJSON()`<!-- -->.
 remarks: ''
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: removed
     summary: Number of duplicated rows removed by the operation.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,6 +29,7 @@ properties:
     fullName: uniqueRemaining
     summary: Number of remaining unique rows present in the resulting range.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

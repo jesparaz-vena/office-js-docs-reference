@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.CommentCollection
 summary: Represents a collection of comment objects that are part of the workbook.
 remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,6 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: items
     summary: Gets the loaded child items in this collection.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -64,6 +67,7 @@ methods:
       });
 
       ```
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -98,6 +102,7 @@ methods:
       Creates a new comment with the given content on the given cell. An `InvalidArgument` error is thrown if the
       provided range is larger than one cell.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -130,6 +135,7 @@ methods:
     fullName: getCount()
     summary: Gets the number of comments in the collection.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -143,6 +149,7 @@ methods:
     fullName: getItem(commentId)
     summary: Gets a comment from the collection based on its ID.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -160,6 +167,7 @@ methods:
     fullName: getItemAt(index)
     summary: Gets a comment from the collection based on its position.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -177,6 +185,7 @@ methods:
     fullName: getItemByCell(cellAddress)
     summary: Gets the comment from the specified cell.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -197,6 +206,7 @@ methods:
     fullName: getItemByReplyId(replyId)
     summary: Gets the comment to which the given reply is connected.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -216,6 +226,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -239,6 +250,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -258,6 +270,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -282,6 +295,7 @@ methods:
       a plain JavaScript object (typed as `Excel.Interfaces.CommentCollectionData`<!-- -->) that contains an "items"
       array with shallow copies of any loaded properties from the collection's items.
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.TableCollectionLoadOptions
 summary: 'Represents a collection of all the tables that are part of the workbook or worksheet, depending on how it was reached.'
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,6 +31,7 @@ properties:
     fullName: columns
     summary: 'For EACH ITEM in the collection: Represents a collection of all the columns in the table.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
       For EACH ITEM in the collection: Returns a value that uniquely identifies the table in a given workbook. The value
       of the identifier remains the same even when the table is renamed.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -60,6 +64,7 @@ properties:
       The set name of the table must follow the guidelines specified in the [Rename an Excel
       table](https://support.office.com/article/Rename-an-Excel-table-FBF49A4F-82A3-43EB-8BA2-44D21233B114) article.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -72,6 +77,7 @@ properties:
     fullName: rows
     summary: 'For EACH ITEM in the collection: Represents a collection of all the rows in the table.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -86,6 +92,7 @@ properties:
       For EACH ITEM in the collection: Specifies if the header row is visible. This value can be set to show or remove
       the header row.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -100,6 +107,7 @@ properties:
       For EACH ITEM in the collection: Specifies if the total row is visible. This value can be set to show or remove
       the total row.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
@@ -116,6 +124,7 @@ properties:
       "TableStyleDark1" through "TableStyleDark11". A custom user-defined style present in the workbook can also be
       specified.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,6 +5,7 @@ package: excel!
 fullName: Excel.RangeReference
 summary: 'Represents a string reference of the form "SheetName!A1:B5", or a global or local named range.'
 remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+example: []
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,6 +16,7 @@ properties:
     fullName: address
     summary: 'The address of the range, for example "SheetName!A1:B5".'
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
+    example: []
     isPreview: false
     isDeprecated: false
     syntax:
