@@ -7,7 +7,7 @@ summary: Represents a collection of linked data types.
 remarks: >-
   \[ [API set: ExcelApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets)
   \]
-example: []
+
 isPreview: true
 isDeprecated: false
 type: interface
@@ -20,7 +20,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -37,7 +37,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -54,7 +54,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -71,7 +71,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -88,7 +88,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -103,7 +103,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -118,7 +118,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -135,7 +135,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:

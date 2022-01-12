@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the ConditionalRangeFont object, for use in `conditionalRangeFont.set({ ... })`<!--
   -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

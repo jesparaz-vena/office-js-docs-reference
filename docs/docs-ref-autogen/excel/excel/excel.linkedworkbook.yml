@@ -7,7 +7,7 @@ summary: >-
   Contains information about a linked workbook. If a workbook has links pointing to data in another workbook, the second
   workbook is linked to the first workbook. In this scenario, the second workbook is called the "linked workbook".
 remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -20,7 +20,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -33,7 +33,7 @@ properties:
     fullName: id
     summary: The original URL pointing to the linked workbook. It is unique across all linked workbooks in the collection.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -50,7 +50,7 @@ methods:
       fetched data. The current `LinkedWorkbook` object is invalidated and removed from `LinkedWorkbookCollection`<!--
       -->.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -66,7 +66,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -86,7 +86,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -106,7 +106,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -134,7 +134,7 @@ methods:
     fullName: refresh()
     summary: Makes a request to refresh the data retrieved from the linked workbook.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -153,7 +153,7 @@ methods:
       plain JavaScript object (typed as `Excel.Interfaces.LinkedWorkbookData`<!-- -->) that contains shallow copies of
       any loaded child properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

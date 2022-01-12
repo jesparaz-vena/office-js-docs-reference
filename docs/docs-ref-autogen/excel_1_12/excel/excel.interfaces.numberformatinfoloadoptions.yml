@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.NumberFormatInfoLoadOptions
 summary: Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
 remarks: '\[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,7 +31,7 @@ properties:
     fullName: numberDecimalSeparator
     summary: Gets the string used as the decimal separator for numeric values. This is based on current system settings.
     remarks: '\[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -46,7 +46,7 @@ properties:
       Gets the string used to separate groups of digits to the left of the decimal for numeric values. This is based on
       current system settings.
     remarks: '\[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

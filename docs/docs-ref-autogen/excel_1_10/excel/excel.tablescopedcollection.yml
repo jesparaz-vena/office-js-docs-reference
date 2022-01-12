@@ -7,7 +7,7 @@ summary: >-
   Represents a scoped collection of tables. For each table its top-left corner is considered its anchor location, and
   the tables are sorted top-to-bottom and then left-to-right.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -20,7 +20,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -33,7 +33,7 @@ properties:
     fullName: items
     summary: Gets the loaded child items in this collection.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -47,7 +47,7 @@ methods:
     fullName: getCount()
     summary: Gets the number of tables in the collection.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,7 +63,7 @@ methods:
       Gets the first table in the collection. The tables in the collection are sorted top-to-bottom and left-to-right,
       such that top-left table is the first table in the collection.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -77,7 +77,7 @@ methods:
     fullName: getItem(key)
     summary: Gets a table by name or ID.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -97,7 +97,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -121,7 +121,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -141,7 +141,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -166,7 +166,7 @@ methods:
       returns a plain JavaScript object (typed as `Excel.Interfaces.TableScopedCollectionData`<!-- -->) that contains an
       "items" array with shallow copies of any loaded properties from the collection's items.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

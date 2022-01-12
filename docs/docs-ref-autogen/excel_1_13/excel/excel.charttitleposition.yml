@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.ChartTitlePosition
 summary: Represents the position of the chart title.
 remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

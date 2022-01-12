@@ -10,7 +10,7 @@ summary: >-
   Custom error messages appear in addition to these error codes. Custom messages display in the error indicator menu,
   which is accessed by hovering over the error flag on each cell with an error.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

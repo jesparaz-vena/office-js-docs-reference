@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ChartTrendlineCollectionLoadOptions
 summary: Represents a collection of chart trendlines.
 remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,7 +31,7 @@ properties:
     fullName: format
     summary: 'For EACH ITEM in the collection: Represents the formatting of a chart trendline.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -46,7 +46,7 @@ properties:
       For EACH ITEM in the collection: Represents the intercept value of the trendline. Can be set to a numeric value or
       an empty string (for automatic values). The returned value is always a number.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -61,7 +61,7 @@ properties:
       For EACH ITEM in the collection: Represents the period of a chart trendline. Only applicable to trendlines with
       the type `MovingAverage`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -76,7 +76,7 @@ properties:
       For EACH ITEM in the collection: Represents the name of the trendline. Can be set to a string value, a `null`
       value represents automatic values. The returned value is always a string
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -91,7 +91,7 @@ properties:
       For EACH ITEM in the collection: Represents the order of a chart trendline. Only applicable to trendlines with the
       type `Polynomial`<!-- -->.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -104,7 +104,7 @@ properties:
     fullName: type
     summary: 'For EACH ITEM in the collection: Represents the type of a chart trendline.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

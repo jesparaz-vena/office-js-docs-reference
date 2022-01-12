@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ChartSeriesUpdateData
 summary: 'An interface for updating data on the ChartSeries object, for use in `chartSeries.set({ ... })`<!-- -->.'
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -16,7 +16,7 @@ properties:
     fullName: format
     summary: 'Represents the formatting of a chart series, which includes fill and line formatting.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,7 +29,7 @@ properties:
     fullName: name
     summary: Specifies the name of a series in a chart. The name's length should not be greater than 255 characters.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

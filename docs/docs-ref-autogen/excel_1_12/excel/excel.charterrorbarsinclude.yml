@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.ChartErrorBarsInclude
 summary: Represents which parts of the error bar to include.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.ChartSeriesDimension
 summary: Represents the dimensions when getting values from chart series.
 remarks: '\[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

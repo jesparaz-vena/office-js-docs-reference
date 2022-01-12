@@ -7,7 +7,7 @@ summary: >-
   Represents an Excel table. To learn more about the table object model, read [Work with tables using the Excel
   JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-tables)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -18,7 +18,7 @@ properties:
     fullName: columns
     summary: Represents a collection of all the columns in the table.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -33,7 +33,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -48,7 +48,7 @@ properties:
       Returns a value that uniquely identifies the table in a given workbook. The value of the identifier remains the
       same even when the table is renamed.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -66,7 +66,7 @@ properties:
       The set name of the table must follow the guidelines specified in the [Rename an Excel
       table](https://support.office.com/article/Rename-an-Excel-table-FBF49A4F-82A3-43EB-8BA2-44D21233B114) article.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -79,7 +79,7 @@ properties:
     fullName: rows
     summary: Represents a collection of all the rows in the table.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -92,7 +92,7 @@ properties:
     fullName: showHeaders
     summary: Specifies if the header row is visible. This value can be set to show or remove the header row.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -105,7 +105,7 @@ properties:
     fullName: showTotals
     summary: Specifies if the total row is visible. This value can be set to show or remove the total row.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -144,7 +144,7 @@ properties:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -175,7 +175,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -209,7 +209,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -243,7 +243,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -277,7 +277,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -311,7 +311,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -327,7 +327,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -347,7 +347,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -403,7 +403,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -433,7 +433,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -456,7 +456,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -479,7 +479,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.TableData`<!-- -->) that contains shallow copies of any loaded child
       properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

@@ -14,7 +14,7 @@ summary: >-
 
   If the metadata JSON file is being generated from JSDoc comments, include the tag `@cancelable`<!-- -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -27,7 +27,7 @@ properties:
       Event handler called when the custom function is canceled. \[ [API set: CustomFunctionsRuntime
       1.1](/office/dev/add-ins/excel/custom-functions-requirement-sets) \]
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

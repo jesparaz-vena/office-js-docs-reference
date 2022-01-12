@@ -234,7 +234,7 @@ methods:
     fullName: applyIconFilter(icon)
     summary: Apply an "Icon" filter to the column for the given icon.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -252,7 +252,7 @@ methods:
     fullName: applyTopItemsFilter(count)
     summary: Apply a "Top Item" filter to the column for the given number of elements.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -270,7 +270,7 @@ methods:
     fullName: applyTopPercentFilter(percent)
     summary: Apply a "Top Percent" filter to the column for the given percentage of elements.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -288,7 +288,7 @@ methods:
     fullName: applyValuesFilter(values)
     summary: Apply a "Values" filter to the column for the given values.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -306,7 +306,7 @@ methods:
     fullName: clear()
     summary: Clear the filter on the given column.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -322,7 +322,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -342,7 +342,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -362,7 +362,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -395,7 +395,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.FilterData`<!-- -->) that contains shallow copies of any loaded
       child properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

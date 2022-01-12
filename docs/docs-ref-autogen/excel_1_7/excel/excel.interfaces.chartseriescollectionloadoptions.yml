@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.ChartSeriesCollectionLoadOptions
 summary: Represents a collection of chart series.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
       Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`<!-- -->) but not the
       navigational properties (e.g.: `Range.format.fill.color`<!-- -->).
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,7 +31,7 @@ properties:
     fullName: chartType
     summary: 'For EACH ITEM in the collection: Represents the chart type of a series. See `Excel.ChartType` for details.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -46,7 +46,7 @@ properties:
       For EACH ITEM in the collection: Represents the doughnut hole size of a chart series. Only valid on doughnut and
       doughnut exploded charts. Throws an `InvalidArgument` error on invalid charts.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -59,7 +59,7 @@ properties:
     fullName: filtered
     summary: 'For EACH ITEM in the collection: Specifies if the series is filtered. Not applicable for surface charts.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -74,7 +74,7 @@ properties:
       For EACH ITEM in the collection: Represents the formatting of a chart series, which includes fill and line
       formatting.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -89,7 +89,7 @@ properties:
       For EACH ITEM in the collection: Represents the gap width of a chart series. Only valid on bar and column charts,
       as well as specific classes of line and pie charts. Throws an invalid argument exception on invalid charts.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -102,7 +102,7 @@ properties:
     fullName: hasDataLabels
     summary: 'For EACH ITEM in the collection: Specifies if the series has data labels.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -115,7 +115,7 @@ properties:
     fullName: markerBackgroundColor
     summary: 'For EACH ITEM in the collection: Specifies the marker background color of a chart series.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -128,7 +128,7 @@ properties:
     fullName: markerForegroundColor
     summary: 'For EACH ITEM in the collection: Specifies the marker foreground color of a chart series.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -141,7 +141,7 @@ properties:
     fullName: markerSize
     summary: 'For EACH ITEM in the collection: Specifies the marker size of a chart series.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -156,7 +156,7 @@ properties:
       For EACH ITEM in the collection: Specifies the marker style of a chart series. See `Excel.ChartMarkerStyle` for
       details.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -171,7 +171,7 @@ properties:
       For EACH ITEM in the collection: Specifies the name of a series in a chart. The name's length should not be
       greater than 255 characters.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -184,7 +184,7 @@ properties:
     fullName: plotOrder
     summary: 'For EACH ITEM in the collection: Specifies the plot order of a chart series within the chart group.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -197,7 +197,7 @@ properties:
     fullName: points
     summary: 'For EACH ITEM in the collection: Returns a collection of all points in the series.'
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -210,7 +210,7 @@ properties:
     fullName: showShadow
     summary: 'For EACH ITEM in the collection: Specifies if the series has a shadow.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -223,7 +223,7 @@ properties:
     fullName: smooth
     summary: 'For EACH ITEM in the collection: Specifies if the series is smooth. Only applicable to line and scatter charts.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.InsertWorksheetOptions
 summary: The options that define which worksheets to insert and where in the workbook the new worksheets will be inserted.
 remarks: '\[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
       The insert position, in the current workbook, of the new worksheets. See `Excel.WorksheetPositionType` for
       details. The default position is "End".
     remarks: '\[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -34,7 +34,7 @@ properties:
       `null`<!-- -->. If the `relativeTo` parameter is not set, worksheets will be inserted based on `positionType`<!--
       -->, at the start or end of the current workbook.
     remarks: '\[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -49,7 +49,7 @@ properties:
       The names of individual worksheets to insert. By default, all the worksheets from the source workbook are
       inserted.
     remarks: '\[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

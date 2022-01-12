@@ -8,7 +8,7 @@ summary: >-
   object model, read [Work with worksheets using the Excel JavaScript
   API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-worksheets)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -48,7 +48,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -61,7 +61,7 @@ properties:
     fullName: charts
     summary: Returns a collection of charts that are part of the worksheet.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -74,7 +74,7 @@ properties:
     fullName: comments
     summary: Returns a collection of all the Comments objects on the worksheet.
     remarks: '\[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -89,7 +89,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -127,7 +127,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -142,7 +142,7 @@ properties:
       Determines if Excel should recalculate the worksheet when necessary. True if Excel recalculates the worksheet when
       necessary. False if Excel doesn't recalculate the sheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -155,7 +155,7 @@ properties:
     fullName: freezePanes
     summary: Gets an object that can be used to manipulate frozen panes on the worksheet.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -168,7 +168,7 @@ properties:
     fullName: horizontalPageBreaks
     summary: Gets the horizontal page break collection for the worksheet. This collection only contains manual page breaks.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -183,7 +183,7 @@ properties:
       Returns a value that uniquely identifies the worksheet in a given workbook. The value of the identifier remains
       the same even when the worksheet is renamed or moved.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -196,7 +196,7 @@ properties:
     fullName: name
     summary: The display name of the worksheet.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -209,7 +209,7 @@ properties:
     fullName: namedSheetViews
     summary: Returns a collection of sheet views that are present in the worksheet.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -222,7 +222,7 @@ properties:
     fullName: names
     summary: Collection of names scoped to the current worksheet.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -235,7 +235,7 @@ properties:
     fullName: pageLayout
     summary: Gets the `PageLayout` object of the worksheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -273,7 +273,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -304,7 +304,7 @@ properties:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -353,7 +353,7 @@ properties:
         });
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -366,7 +366,7 @@ properties:
     fullName: shapes
     summary: Returns the collection of all the Shape objects on the worksheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -398,7 +398,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -411,7 +411,7 @@ properties:
     fullName: showHeadings
     summary: Specifies if headings are visible to the user.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -446,7 +446,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -459,7 +459,7 @@ properties:
     fullName: standardHeight
     summary: 'Returns the standard (default) height of all the rows in the worksheet, in points.'
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -475,7 +475,7 @@ properties:
       the width of one character in the Normal style. For proportional fonts, the width of the character 0 (zero) is
       used.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -511,7 +511,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -527,7 +527,7 @@ properties:
       is different from `worksheet.id` (which returns a globally unique identifier) and `worksheet.name` (which returns
       a value such as "Sheet1").
     remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -540,7 +540,7 @@ properties:
     fullName: tables
     summary: Collection of tables that are part of the worksheet.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -555,7 +555,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -568,7 +568,7 @@ properties:
     fullName: verticalPageBreaks
     summary: Gets the vertical page break collection for the worksheet. This collection only contains manual page breaks.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -583,7 +583,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi 1.1 for reading visibility; 1.2 for setting
       it.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -614,7 +614,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -628,7 +628,7 @@ methods:
     fullName: calculate(markAllDirty)
     summary: Calculates all cells on a worksheet.
     remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -672,7 +672,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -697,7 +697,7 @@ methods:
     fullName: 'copy(positionTypeString, relativeTo)'
     summary: Copies a worksheet and places it at the specified position.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -744,7 +744,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -760,7 +760,7 @@ methods:
       Finds all occurrences of the given string based on the criteria specified and returns them as a `RangeAreas`
       object, comprising one or more rectangular ranges.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -815,7 +815,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -865,7 +865,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -925,7 +925,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -948,7 +948,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -999,7 +999,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1021,7 +1021,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1078,7 +1078,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1100,7 +1100,7 @@ methods:
       Gets the `Range` object beginning at a particular row index and column index, and spanning a certain number of
       rows and columns.
     remarks: '\[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1150,7 +1150,7 @@ methods:
       })
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1192,7 +1192,7 @@ methods:
           }
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1217,7 +1217,7 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1237,7 +1237,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1257,7 +1257,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1297,7 +1297,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1325,7 +1325,7 @@ methods:
     fullName: 'replaceAll(text, replacement, criteria)'
     summary: Finds and replaces the given string based on the criteria specified within the current worksheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1353,7 +1353,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1376,7 +1376,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1433,7 +1433,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1459,7 +1459,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.WorksheetData`<!-- -->) that contains shallow copies of any loaded
       child properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1490,7 +1490,7 @@ events:
           return context.sync();
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1521,7 +1521,7 @@ events:
           return context.sync();
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1556,7 +1556,7 @@ events:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1604,7 +1604,7 @@ events:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1635,7 +1635,7 @@ events:
           return context.sync();
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1652,7 +1652,7 @@ events:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -1667,7 +1667,7 @@ events:
     fullName: onFormatChanged
     summary: Occurs when format changed on a specific worksheet.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1730,7 +1730,7 @@ events:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1745,7 +1745,7 @@ events:
     fullName: onNameChanged
     summary: Occurs when the worksheet name is changed.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1805,7 +1805,7 @@ events:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1836,7 +1836,7 @@ events:
           return context.sync();
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1884,7 +1884,7 @@ events:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1915,7 +1915,7 @@ events:
           return context.sync();
       });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1964,7 +1964,7 @@ events:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1979,7 +1979,7 @@ events:
     fullName: onVisibilityChanged
     summary: Occurs when the worksheet visibility is changed.
     remarks: '\[ [API set: ExcelApiOnline 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

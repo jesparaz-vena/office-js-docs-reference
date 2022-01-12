@@ -7,7 +7,7 @@ summary: Represents a task.
 remarks: >-
   \[ [API set: ExcelApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets)
   \]
-example: []
+
 isPreview: true
 isDeprecated: false
 type: class
@@ -20,7 +20,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -35,7 +35,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -50,7 +50,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -65,7 +65,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -80,7 +80,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -95,7 +95,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -110,7 +110,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -125,7 +125,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -140,7 +140,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -157,7 +157,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -172,7 +172,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -187,7 +187,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -202,7 +202,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -218,7 +218,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -238,7 +238,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -258,7 +258,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -288,7 +288,7 @@ methods:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -318,7 +318,7 @@ methods:
       plain JavaScript object (typed as `Excel.Interfaces.DocumentTaskData`<!-- -->) that contains shallow copies of any
       loaded child properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:

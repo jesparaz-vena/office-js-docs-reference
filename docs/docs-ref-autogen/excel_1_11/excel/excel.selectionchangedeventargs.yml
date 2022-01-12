@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.SelectionChangedEventArgs
 summary: Provides information about the document that raised the selection changed event.
 remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -16,7 +16,7 @@ properties:
     fullName: workbook
     summary: Gets the workbook object that raised the selection changed event.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the TopBottomConditionalFormat object, for use in `topBottomConditionalFormat.set({
   ... })`<!-- -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.ShapeFontUnderlineStyle
 summary: The type of underline applied to a font.
 remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

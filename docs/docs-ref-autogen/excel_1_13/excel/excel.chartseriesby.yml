@@ -8,7 +8,7 @@ summary: >-
   data shape to automatically guess whether the data is by rows or columns. In Excel on the web, "auto" will simply
   default to "columns".
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

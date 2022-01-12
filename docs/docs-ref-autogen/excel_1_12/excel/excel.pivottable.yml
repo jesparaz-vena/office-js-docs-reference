@@ -7,7 +7,7 @@ summary: >-
   Represents an Excel PivotTable. To learn more about the PivotTable object model, read [Work with PivotTables using the
   Excel JavaScript API](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-pivottables)<!-- -->.
 remarks: '\[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -18,7 +18,7 @@ properties:
     fullName: allowMultipleFiltersPerField
     summary: Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
     remarks: '\[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -61,7 +61,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -76,7 +76,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -109,7 +109,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -122,7 +122,7 @@ properties:
     fullName: enableDataValueEditing
     summary: Specifies if the PivotTable allows values in the data body to be edited by the user.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -163,7 +163,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -176,7 +176,7 @@ properties:
     fullName: hierarchies
     summary: The Pivot Hierarchies of the PivotTable.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -189,7 +189,7 @@ properties:
     fullName: id
     summary: ID of the PivotTable.
     remarks: '\[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -231,7 +231,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -244,7 +244,7 @@ properties:
     fullName: name
     summary: Name of the PivotTable.
     remarks: '\[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -257,7 +257,7 @@ properties:
     fullName: rowHierarchies
     summary: The Row Pivot Hierarchies of the PivotTable.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -270,7 +270,7 @@ properties:
     fullName: useCustomSortLists
     summary: Specifies if the PivotTable uses custom lists when sorting.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -283,7 +283,7 @@ properties:
     fullName: worksheet
     summary: The worksheet containing the current PivotTable.
     remarks: '\[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -315,7 +315,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -331,7 +331,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -351,7 +351,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -371,7 +371,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -399,7 +399,7 @@ methods:
     fullName: refresh()
     summary: Refreshes the PivotTable.
     remarks: '\[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -415,7 +415,7 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -438,7 +438,7 @@ methods:
     fullName: set(properties)
     summary: 'Sets multiple properties on the object at the same time, based on an existing loaded object.'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -461,7 +461,7 @@ methods:
       JavaScript object (typed as `Excel.Interfaces.PivotTableData`<!-- -->) that contains shallow copies of any loaded
       child properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

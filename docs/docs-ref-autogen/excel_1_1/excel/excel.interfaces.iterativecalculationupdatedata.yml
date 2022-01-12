@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the IterativeCalculation object, for use in `iterativeCalculation.set({ ... })`<!--
   -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

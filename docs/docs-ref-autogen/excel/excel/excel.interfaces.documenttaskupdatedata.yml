@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Interfaces.DocumentTaskUpdateData
 summary: 'An interface for updating data on the DocumentTask object, for use in `documentTask.set({ ... })`<!-- -->.'
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -20,7 +20,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -35,7 +35,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -50,7 +50,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -65,7 +65,7 @@ properties:
     remarks: >-
       \[ [API set: ExcelApi BETA (PREVIEW
       ONLY)](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
