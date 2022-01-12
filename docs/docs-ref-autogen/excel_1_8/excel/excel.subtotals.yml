@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Subtotals
 summary: Subtotals for the Pivot Field.
 remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
       If `Automatic` is set to `true`<!-- -->, then all other values will be ignored when setting the `Subtotals`<!--
       -->.
     remarks: '\[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,7 +31,7 @@ properties:
     fullName: average
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -44,7 +44,7 @@ properties:
     fullName: count
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -57,7 +57,7 @@ properties:
     fullName: countNumbers
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -70,7 +70,7 @@ properties:
     fullName: max
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -83,7 +83,7 @@ properties:
     fullName: min
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -96,7 +96,7 @@ properties:
     fullName: product
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -109,7 +109,7 @@ properties:
     fullName: standardDeviation
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -122,7 +122,7 @@ properties:
     fullName: standardDeviationP
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -135,7 +135,7 @@ properties:
     fullName: sum
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -148,7 +148,7 @@ properties:
     fullName: variance
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -161,7 +161,7 @@ properties:
     fullName: varianceP
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

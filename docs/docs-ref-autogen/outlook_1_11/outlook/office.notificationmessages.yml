@@ -16,7 +16,7 @@ remarks: >-
   **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose or Read
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -115,7 +115,7 @@ methods:
       Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -168,7 +168,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose or Read
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -241,7 +241,7 @@ methods:
       Office.context.mailbox.item.notificationMessages.getAllAsync(handleResult);          
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -282,7 +282,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose or Read
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -331,7 +331,7 @@ methods:
       Office.context.mailbox.item.notificationMessages.removeAsync(id, handleResult);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -372,7 +372,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose or Read
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -444,7 +444,7 @@ methods:
         },
         handleResult);
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -493,7 +493,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose or Read
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

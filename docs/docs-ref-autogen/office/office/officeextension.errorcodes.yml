@@ -5,7 +5,7 @@ package: office!
 fullName: OfficeExtension.ErrorCodes
 summary: ''
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -16,7 +16,7 @@ properties:
     fullName: accessDenied
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -29,7 +29,7 @@ properties:
     fullName: activityLimitReached
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -42,7 +42,7 @@ properties:
     fullName: apiNotFound
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -55,7 +55,7 @@ properties:
     fullName: cannotRegisterEvent
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,7 +68,7 @@ properties:
     fullName: connectionFailure
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -81,7 +81,7 @@ properties:
     fullName: generalException
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -94,7 +94,7 @@ properties:
     fullName: invalidArgument
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -107,7 +107,7 @@ properties:
     fullName: invalidObjectPath
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -120,7 +120,7 @@ properties:
     fullName: invalidRequestContext
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -133,7 +133,7 @@ properties:
     fullName: propertyNotLoaded
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -146,7 +146,7 @@ properties:
     fullName: runMustReturnPromise
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -159,7 +159,7 @@ properties:
     fullName: valueNotLoaded
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

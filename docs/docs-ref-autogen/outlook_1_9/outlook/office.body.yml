@@ -26,7 +26,7 @@ remarks: >-
   **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose or Read
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -97,7 +97,7 @@ methods:
       );
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -173,7 +173,7 @@ methods:
 
       - `InvalidFormatError`<!-- -->: The `options.coercionType` parameter is set to `Office.CoercionType.Html` but the
       message body is in plain text.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -243,7 +243,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -295,7 +295,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose or Read
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -348,7 +348,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -389,7 +389,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -463,7 +463,7 @@ methods:
           {coercionType: Office.CoercionType.Html},
           callback);
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -532,7 +532,7 @@ methods:
 
 
       - `DataExceedsMaximumSize`<!-- -->: The data parameter is longer than 1,000,000 characters.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -627,7 +627,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -700,7 +700,7 @@ methods:
 
       - `InvalidFormatError`<!-- -->: The `options.coercionType` parameter is set to `Office.CoercionType.Html` and the
       message body is in plain text.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -775,7 +775,7 @@ methods:
           {coercionType: Office.CoercionType.Html},
           callback);
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -844,7 +844,7 @@ methods:
 
       - `InvalidFormatError`<!-- -->: The `options.coercionType` parameter is set to `Office.CoercionType.Html` and the
       message body is in plain text.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

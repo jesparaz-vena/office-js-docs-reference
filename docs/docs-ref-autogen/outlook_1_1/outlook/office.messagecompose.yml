@@ -21,7 +21,7 @@ summary: >-
 
   - [Message](xref:outlook!Office.Message:interface)
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -107,7 +107,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -156,7 +156,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -243,7 +243,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -287,7 +287,7 @@ properties:
       console.log(`Conversation ID: ${Office.context.mailbox.item.conversationId}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -326,7 +326,7 @@ properties:
       console.log(`Item type: ${Office.context.mailbox.item.itemType}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -388,7 +388,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -475,7 +475,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -589,7 +589,7 @@ methods:
           { "asyncContext" : { var1: 1, var2: true } },
           function(result) { console.log(result); });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -667,7 +667,7 @@ methods:
 
 
       - `NumberOfAttachmentsExceeded`<!-- -->: The message or appointment has too many attachments.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -778,7 +778,7 @@ methods:
           { "asyncContext" : { var3: 3, var4: false } },
           function(result) { console.log(result); });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -847,7 +847,7 @@ methods:
 
 
       - `NumberOfAttachmentsExceeded`<!-- -->: The message or appointment has too many attachments.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -968,7 +968,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1061,7 +1061,7 @@ methods:
       );
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1119,7 +1119,7 @@ methods:
 
 
       - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.ConditionalRangeBorderLineStyle
 summary: ''
 remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

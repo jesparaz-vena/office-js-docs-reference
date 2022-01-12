@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.Filter
 summary: Manages the filtering of a table's column.
 remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: class
@@ -18,7 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,7 +31,7 @@ properties:
     fullName: criteria
     summary: The currently applied filter on the given column.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -45,7 +45,7 @@ methods:
     fullName: apply(criteria)
     summary: Apply the given filter criteria on the given column.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,7 +63,7 @@ methods:
     fullName: applyBottomItemsFilter(count)
     summary: Apply a "Bottom Item" filter to the column for the given number of elements.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -81,7 +81,7 @@ methods:
     fullName: applyBottomPercentFilter(percent)
     summary: Apply a "Bottom Percent" filter to the column for the given percentage of elements.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -99,7 +99,7 @@ methods:
     fullName: applyCellColorFilter(color)
     summary: Apply a "Cell Color" filter to the column for the given color.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -117,7 +117,7 @@ methods:
     fullName: 'applyCustomFilter(criteria1, criteria2, oper)'
     summary: Apply an "Icon" filter to the column for the given criteria strings.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -141,7 +141,7 @@ methods:
     fullName: 'applyCustomFilter(criteria1, criteria2, operString)'
     summary: Apply an "Icon" filter to the column for the given criteria strings.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -165,7 +165,7 @@ methods:
     fullName: applyDynamicFilter(criteria)
     summary: Apply a "Dynamic" filter to the column.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -183,7 +183,7 @@ methods:
     fullName: applyDynamicFilter(criteriaString)
     summary: Apply a "Dynamic" filter to the column.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -216,7 +216,7 @@ methods:
     fullName: applyFontColorFilter(color)
     summary: Apply a "Font Color" filter to the column for the given color.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

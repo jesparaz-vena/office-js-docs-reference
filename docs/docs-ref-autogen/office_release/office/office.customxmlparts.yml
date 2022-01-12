@@ -5,7 +5,7 @@ package: office!
 fullName: Office.CustomXmlParts
 summary: Represents a collection of CustomXmlPart objects.
 remarks: '**Hosts**: Word'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ methods:
     remarks: >-
       **Requirement set**:
       [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -84,7 +84,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -136,7 +136,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -170,7 +170,7 @@ methods:
     remarks: >-
       **Requirement set**:
       [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -199,7 +199,7 @@ methods:
     remarks: >-
       **Requirement set**:
       [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -254,7 +254,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

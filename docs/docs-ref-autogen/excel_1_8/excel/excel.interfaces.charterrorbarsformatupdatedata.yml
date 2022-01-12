@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the ChartErrorBarsFormat object, for use in `chartErrorBarsFormat.set({ ... })`<!--
   -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

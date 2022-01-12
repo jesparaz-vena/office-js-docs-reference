@@ -5,7 +5,7 @@ package: powerpoint!
 fullName: PowerPoint.ShapeFill
 summary: Represents the fill formatting of a shape object.
 remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-example: []
+
 isPreview: true
 isDeprecated: false
 type: class
@@ -18,7 +18,7 @@ properties:
       The request context associated with the object. This connects the add-in's process to the Office host
       application's process.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -33,7 +33,7 @@ properties:
       Represents the shape fill foreground color in HTML color format, in the form \#RRGGBB (e.g., "FFA500") or as a
       named HTML color (e.g., "orange").
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -49,7 +49,7 @@ properties:
       if the shape type does not support transparency or the shape fill has inconsistent transparency, such as with a
       gradient fill type.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -64,7 +64,7 @@ properties:
       Returns the fill type of the shape. See [PowerPoint.ShapeFillType](xref:powerpoint!PowerPoint.ShapeFillType:enum)
       for details.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -82,7 +82,7 @@ methods:
     fullName: clear()
     summary: Clears the fill formatting of this shape.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -98,7 +98,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -118,7 +118,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -138,7 +138,7 @@ methods:
       Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading
       the properties.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -166,7 +166,7 @@ methods:
     fullName: setSolidColor(color)
     summary: Sets the fill formatting of the shape to a uniform color. This changes the fill type to `Solid`<!-- -->.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -191,7 +191,7 @@ methods:
       plain JavaScript object (typed as `PowerPoint.Interfaces.ShapeFillData`<!-- -->) that contains shallow copies of
       any loaded child properties from the original object.
     remarks: ''
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:

@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the RangeBorderCollection object, for use in `rangeBorderCollection.set({ ...
   })`<!-- -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
     fullName: items
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -34,7 +34,7 @@ properties:
       (brightest), with 0 for the original color. A `null` value indicates that the entire border collection doesn't
       have a uniform `tintAndShade` setting.
     remarks: '\[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

@@ -11,7 +11,7 @@ summary: >-
   Commands](https://docs.microsoft.com/office/dev/add-ins/design/disable-add-in-commands) and [Create custom contextual
   tabs](https://docs.microsoft.com/office/dev/add-ins/design/contextual-tabs)<!-- -->.
 remarks: '**Requirement set**: Ribbon 1.1'
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -22,7 +22,7 @@ properties:
     fullName: enabled
     summary: Indicates whether the control should be enabled or disabled. The default is true.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -35,7 +35,7 @@ properties:
     fullName: id
     summary: Identifier of the control as specified in the manifest.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

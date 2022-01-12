@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the DataBarConditionalFormat object, for use in `dataBarConditionalFormat.set({ ...
   })`<!-- -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

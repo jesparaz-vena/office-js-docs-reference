@@ -21,7 +21,7 @@ summary: >-
 
   - [Appointment](xref:outlook!Office.Appointment:interface)
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -87,7 +87,7 @@ properties:
       console.log(attachments);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -136,7 +136,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -246,7 +246,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -280,7 +280,7 @@ properties:
       console.log(`Creation date and time: ${Office.context.mailbox.item.dateTimeCreated}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -317,7 +317,7 @@ properties:
       console.log(`Date and time item last modified: ${Office.context.mailbox.item.dateTimeModified}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -360,7 +360,7 @@ properties:
       console.log(`Appointment ends: ${Office.context.mailbox.item.end}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -419,7 +419,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -455,7 +455,7 @@ properties:
       console.log("Is this an all-day event? " + isAllDayEvent);
 
       ```
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -507,7 +507,7 @@ properties:
       console.log(`Item class: ${Office.context.mailbox.item.itemClass}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -572,7 +572,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -611,7 +611,7 @@ properties:
       console.log(`Item type: ${Office.context.mailbox.item.itemType}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -656,7 +656,7 @@ properties:
       console.log(`Appointment location: ${Office.context.mailbox.item.location}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -696,7 +696,7 @@ properties:
       console.log(`Normalized subject: ${Office.context.mailbox.item.normalizedSubject}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -814,7 +814,7 @@ properties:
       Office.context.mailbox.item.notificationMessages.removeAsync(id, handleResult);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -876,7 +876,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -912,7 +912,7 @@ properties:
       console.log("Organizer: " + apptOrganizer.displayName + " (" + apptOrganizer.emailAddress + ")");
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -971,7 +971,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1033,7 +1033,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1069,7 +1069,7 @@ properties:
       console.log("Sensitivity: " + sensitivity);
 
       ```
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -1132,7 +1132,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1171,7 +1171,7 @@ properties:
       console.log(`Appointment starts: ${Office.context.mailbox.item.start}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1213,7 +1213,7 @@ properties:
       console.log(`Subject: ${Office.context.mailbox.item.subject}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1263,7 +1263,7 @@ methods:
       Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged, myHandlerFunction, myCallback);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1316,7 +1316,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Appointment Attendee
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1471,7 +1471,7 @@ methods:
       Office.context.mailbox.item.displayReplyAllForm("This is a reply ALL with <b>some bold text</b>.");
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1537,7 +1537,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1598,7 +1598,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Appointment Attendee
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1769,7 +1769,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1859,7 +1859,7 @@ methods:
       );
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1920,7 +1920,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Appointment Attendee
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2029,7 +2029,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2092,7 +2092,7 @@ methods:
 
 
       - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2194,7 +2194,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2232,7 +2232,7 @@ methods:
       console.log(Office.context.mailbox.item.getEntitiesByType(Office.MailboxEnums.EntityType.Address));
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2303,7 +2303,7 @@ methods:
       console.log(Office.context.mailbox.item.getFilteredEntitiesByName("sampleFilterName"));
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2378,7 +2378,7 @@ methods:
       );
 
       ```
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -2425,7 +2425,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Appointment Attendee
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -2533,7 +2533,7 @@ methods:
       console.log(Office.context.mailbox.item.getRegExMatches());
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2626,7 +2626,7 @@ methods:
       console.log(Office.context.mailbox.item.getRegExMatchesByName("sampleRegexName"));
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2723,7 +2723,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2832,7 +2832,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2920,7 +2920,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2990,7 +2990,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -3102,7 +3102,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -3149,7 +3149,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Appointment Attendee
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -3197,7 +3197,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Appointment Attendee
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

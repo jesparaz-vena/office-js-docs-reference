@@ -961,7 +961,7 @@ functions:
 
       \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -997,7 +997,7 @@ functions:
     package: excel!
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1017,7 +1017,7 @@ functions:
     package: excel!
     summary: ''
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1036,7 +1036,7 @@ functions:
       Executes a batch script that performs actions on the Excel object model, using a new RequestContext. When the
       promise is resolved, any tracked objects that were automatically allocated during execution will be released.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1060,7 +1060,7 @@ functions:
       previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated
       during execution will be released.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1090,7 +1090,7 @@ functions:
       Executes a batch script that performs actions on the Excel object model, using the RequestContext of
       previously-created API objects.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1122,7 +1122,7 @@ functions:
       previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated
       during execution will be released.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1153,7 +1153,7 @@ functions:
       previously-created object. When the promise is resolved, any tracked objects that were automatically allocated
       during execution will be released.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

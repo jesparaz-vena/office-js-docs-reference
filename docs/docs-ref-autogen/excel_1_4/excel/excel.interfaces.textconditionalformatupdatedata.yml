@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the TextConditionalFormat object, for use in `textConditionalFormat.set({ ...
   })`<!-- -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

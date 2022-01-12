@@ -7,7 +7,7 @@ summary: >-
   An interface for updating data on the ConditionalDataBarNegativeFormat object, for use in
   `conditionalDataBarNegativeFormat.set({ ... })`<!-- -->.
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface

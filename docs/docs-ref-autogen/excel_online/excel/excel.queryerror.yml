@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.QueryError
 summary: An enum that specifies the query load error message.
 remarks: '\[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

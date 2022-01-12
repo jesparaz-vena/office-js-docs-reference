@@ -5,7 +5,7 @@ package: excel!
 fullName: Excel.ConditionalFormatIconRuleType
 summary: Represents the types of icon conditional format.
 remarks: '\[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

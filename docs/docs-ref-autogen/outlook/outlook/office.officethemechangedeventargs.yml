@@ -5,7 +5,7 @@ package: outlook!
 fullName: Office.OfficeThemeChangedEventArgs
 summary: Provides the updated Office theme that raised the `Office.EventType.OfficeThemeChanged` event.
 remarks: '\[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]'
-example: []
+
 isPreview: true
 isDeprecated: false
 type: interface
@@ -16,7 +16,7 @@ properties:
     fullName: officeTheme
     summary: Gets the updated Office theme.
     remarks: '\[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:
@@ -31,7 +31,7 @@ properties:
       Gets the type of the event. For details, refer to
       [Office.EventType](https://docs.microsoft.com/javascript/api/office/office.eventtype)<!-- -->.
     remarks: '\[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:

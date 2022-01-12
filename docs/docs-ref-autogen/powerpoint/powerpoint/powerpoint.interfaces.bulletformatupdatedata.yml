@@ -5,7 +5,7 @@ package: powerpoint!
 fullName: PowerPoint.Interfaces.BulletFormatUpdateData
 summary: 'An interface for updating data on the BulletFormat object, for use in `bulletFormat.set({ ... })`<!-- -->.'
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -18,7 +18,7 @@ properties:
       Specifies if the bullets in the paragraph are visible. Returns 'null' if the 'TextRange' includes text fragments
       with different bullet visibility values.
     remarks: '\[ [API set: PowerPointApi BETA (PREVIEW ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-    example: []
+    
     isPreview: true
     isDeprecated: false
     syntax:

@@ -5,7 +5,7 @@ package: powerpoint!
 fullName: PowerPoint.InsertSlideFormatting
 summary: Specifies the formatting options for when slides are inserted.
 remarks: '\[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]'
-example: []
+
 isPreview: false
 isDeprecated: false
 fields:

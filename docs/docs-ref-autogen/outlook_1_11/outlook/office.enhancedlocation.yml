@@ -16,7 +16,7 @@ remarks: >-
   **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose or Read
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -74,7 +74,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -122,7 +122,7 @@ methods:
 
 
       - `InvalidFormatError`<!-- -->: The format of the specified data object is not valid.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -188,7 +188,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -228,7 +228,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose or Read
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -296,7 +296,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -343,7 +343,7 @@ methods:
       **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

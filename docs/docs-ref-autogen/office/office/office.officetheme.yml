@@ -29,7 +29,7 @@ remarks: |-
       $('.body').css('background-color', bodyBackgroundColor);
   }
   ```
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -40,7 +40,7 @@ properties:
     fullName: bodyBackgroundColor
     summary: 'Gets the Office theme body background color as a hexadecimal color triplet (e.g., "FFA500").'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -53,7 +53,7 @@ properties:
     fullName: bodyForegroundColor
     summary: 'Gets the Office theme body foreground color as a hexadecimal color triplet (e.g., "FFA500").'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -66,7 +66,7 @@ properties:
     fullName: controlBackgroundColor
     summary: 'Gets the Office theme control background color as a hexadecimal color triplet (e.g., "FFA500").'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -79,7 +79,7 @@ properties:
     fullName: controlForegroundColor
     summary: 'Gets the Office theme control foreground color as a hexadecimal color triplet (e.g., "FFA500").'
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

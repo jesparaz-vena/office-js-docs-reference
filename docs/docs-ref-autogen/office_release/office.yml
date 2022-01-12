@@ -186,7 +186,7 @@ functions:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -203,7 +203,7 @@ functions:
     package: office!
     summary: Checks if the specified requirement set is supported by the host Office application.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -228,7 +228,7 @@ functions:
       Office.js determines that it is running outside of an Office host application, it will call the callback and
       resolve the promise with "null" for both the host and platform.
     remarks: ''
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -288,7 +288,7 @@ functions:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -366,7 +366,7 @@ functions:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:

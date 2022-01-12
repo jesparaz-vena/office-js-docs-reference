@@ -21,7 +21,7 @@ summary: >-
 
   - [Appointment](xref:outlook!Office.Appointment:interface)
 remarks: ''
-example: []
+
 isPreview: false
 isDeprecated: false
 type: interface
@@ -68,7 +68,7 @@ properties:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -169,7 +169,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -208,7 +208,7 @@ properties:
       console.log(`Item type: ${Office.context.mailbox.item.itemType}`);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -282,7 +282,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -400,7 +400,7 @@ properties:
       Office.context.mailbox.item.notificationMessages.removeAsync(id, handleResult);
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -493,7 +493,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -587,7 +587,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -659,7 +659,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -721,7 +721,7 @@ properties:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -811,7 +811,7 @@ methods:
           { "asyncContext" : { var1: 1, var2: true } },
           function(result) { console.log(result); });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -889,7 +889,7 @@ methods:
 
 
       - `NumberOfAttachmentsExceeded`<!-- -->: The message or appointment has too many attachments.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1000,7 +1000,7 @@ methods:
           { "asyncContext" : { var3: 3, var4: false } },
           function(result) { console.log(result); });
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1069,7 +1069,7 @@ methods:
 
 
       - `NumberOfAttachmentsExceeded`<!-- -->: The message or appointment has too many attachments.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1138,7 +1138,7 @@ methods:
       Office.context.mailbox.item.close();
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1196,7 +1196,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1272,7 +1272,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1389,7 +1389,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1482,7 +1482,7 @@ methods:
       );
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1540,7 +1540,7 @@ methods:
 
 
       - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1633,7 +1633,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1733,7 +1733,7 @@ methods:
       }
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1807,7 +1807,7 @@ methods:
       });
 
       ```
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1870,7 +1870,7 @@ methods:
 
 
       - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
-    example: []
+    
     isPreview: false
     isDeprecated: false
     syntax:
