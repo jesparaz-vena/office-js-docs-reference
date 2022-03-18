@@ -42,17 +42,39 @@ methods:
     fullName: add(name)
     summary: Adds a new style to the collection.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml      await Excel.run(async (context) => {
-          let styles = context.workbook.styles;          // Add a new style to the style collection.
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml
+
+      await Excel.run(async (context) => {
+          let styles = context.workbook.styles;
+
+          // Add a new style to the style collection.
           // Styles is in the Home tab ribbon.
-          styles.add("Diagonal Orientation Style");          let newStyle = styles.getItem("Diagonal Orientation Style");          // The "Diagonal Orientation Style" properties.
+          styles.add("Diagonal Orientation Style");
+                
+          let newStyle = styles.getItem("Diagonal Orientation Style");
+          
+          // The "Diagonal Orientation Style" properties.
           newStyle.textOrientation = 38;
           newStyle.autoIndent = true;
           newStyle.includeProtection = true;
           newStyle.shrinkToFit = true;
-          newStyle.locked = false;          await context.sync();          console.log("Successfully added a new style with diagonal orientation to the Home tab ribbon.");
-      });      ```
+          newStyle.locked = false;
+          
+          await context.sync();
+
+          console.log("Successfully added a new style with diagonal orientation to the Home tab ribbon.");
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -70,17 +92,39 @@ methods:
     fullName: getItem(name)
     summary: Gets a `Style` by name.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml      await Excel.run(async (context) => {
-          let styles = context.workbook.styles;          // Add a new style to the style collection.
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml
+
+      await Excel.run(async (context) => {
+          let styles = context.workbook.styles;
+
+          // Add a new style to the style collection.
           // Styles is in the Home tab ribbon.
-          styles.add("Diagonal Orientation Style");          let newStyle = styles.getItem("Diagonal Orientation Style");          // The "Diagonal Orientation Style" properties.
+          styles.add("Diagonal Orientation Style");
+                
+          let newStyle = styles.getItem("Diagonal Orientation Style");
+          
+          // The "Diagonal Orientation Style" properties.
           newStyle.textOrientation = 38;
           newStyle.autoIndent = true;
           newStyle.includeProtection = true;
           newStyle.shrinkToFit = true;
-          newStyle.locked = false;          await context.sync();          console.log("Successfully added a new style with diagonal orientation to the Home tab ribbon.");
-      });      ```
+          newStyle.locked = false;
+          
+          await context.sync();
+
+          console.log("Successfully added a new style with diagonal orientation to the Home tab ribbon.");
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

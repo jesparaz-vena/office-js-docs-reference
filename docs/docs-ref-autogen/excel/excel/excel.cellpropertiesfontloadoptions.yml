@@ -27,9 +27,21 @@ properties:
     fullName: color
     summary: Specifies whether to load the `color` property.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/cell-properties.yaml      await Excel.run(async (context) => {
-          const cell = context.workbook.getActiveCell();          // Define the cell properties to get by setting the matching LoadOptions to true.
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/cell-properties.yaml
+
+      await Excel.run(async (context) => {
+          const cell = context.workbook.getActiveCell();
+
+          // Define the cell properties to get by setting the matching LoadOptions to true.
           const propertiesToGet = cell.getCellProperties({
               address: true,
               format: {
@@ -41,12 +53,16 @@ properties:
                   }
               },
               style: true
-          });          // Sync to get the data from the workbook.
+          });
+
+          // Sync to get the data from the workbook.
           await context.sync();
           const cellProperties = propertiesToGet.value[0][0];
           console.log(
               `Address: ${cellProperties.address}\nStyle: ${cellProperties.style}\nFill Color: ${cellProperties.format.fill.color}\nFont Color: ${cellProperties.format.font.color}`);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

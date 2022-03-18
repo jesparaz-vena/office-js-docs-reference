@@ -54,7 +54,11 @@ methods:
     fullName: getRange()
     summary: Returns the range represented by the binding. Will throw an error if the binding is not of the correct type.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var binding = ctx.workbook.bindings.getItemAt(0);
           var range = binding.getRange();
@@ -82,7 +86,11 @@ methods:
     fullName: getTable()
     summary: Returns the table represented by the binding. Will throw an error if the binding is not of the correct type.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var binding = ctx.workbook.bindings.getItemAt(0);
           var table = binding.getTable();
@@ -110,7 +118,11 @@ methods:
     fullName: getText()
     summary: Returns the text represented by the binding. Will throw an error if the binding is not of the correct type.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var binding = ctx.workbook.bindings.getItemAt(0);
           var text = binding.getText();
@@ -169,7 +181,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Binding:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var binding = ctx.workbook.bindings.getItemAt(0);
               binding.load('type');
@@ -237,13 +254,29 @@ events:
     fullName: onDataChanged
     summary: Occurs when data or formatting within the binding is changed.
     remarks: >-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/data-changed.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/data-changed.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");    
           const salesTable = sheet.tables.getItem("SalesTable");
           const salesByQuarterBinding = context.workbook.bindings.add(salesTable.getRange(), "Table", "SalesByQuarter");
-          salesByQuarterBinding.onDataChanged.add(onSalesDataChanged);          console.log("The data changed handler is registered.");          await context.sync();
-      });      ```
+          salesByQuarterBinding.onDataChanged.add(onSalesDataChanged);
+
+          console.log("The data changed handler is registered.");
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -257,7 +290,10 @@ events:
     package: excel!
     fullName: onSelectionChanged
     summary: >-
-      Occurs when the selected content in the binding is changed.      *Note**: If multiple, discontiguous cells are selected, `Binding.onSelectionChanged` only reports row and column
+      Occurs when the selected content in the binding is changed.
+
+
+      *Note**: If multiple, discontiguous cells are selected, `Binding.onSelectionChanged` only reports row and column
       information for one selection. Use `Worksheet.onSelectionChanged` for multiple selected ranges.
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
     isPreview: false

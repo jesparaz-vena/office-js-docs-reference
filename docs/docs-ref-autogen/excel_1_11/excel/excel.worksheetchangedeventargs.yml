@@ -46,12 +46,18 @@ properties:
       triggered on a single cell. If the changed event is triggered on multiple cells, this property cannot be
       retrieved.
     remarks: |-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // This function would be used as an event handler for the Worksheet.onChanged event.
       function onWorksheetChanged(eventArgs) {
           Excel.run(function (context) {
               var details = eventArgs.details;
-              var address = eventArgs.address;              // Print the before and after types and values to the console.
+              var address = eventArgs.address;
+
+              // Print the before and after types and values to the console.
               console.log(`Change at ${address}: was ${details.valueBefore}(${details.valueTypeBefore}),`
                   + ` now is ${details.valueAfter}(${details.valueTypeAfter})`);
               return context.sync();
@@ -106,7 +112,9 @@ methods:
     package: excel!
     fullName: getRange(ctx)
     summary: |-
-      Gets the range that represents the changed area of a specific worksheet.      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+      Gets the range that represents the changed area of a specific worksheet.
+
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -124,7 +132,9 @@ methods:
     package: excel!
     fullName: getRangeOrNullObject(ctx)
     summary: |-
-      Gets the range that represents the changed area of a specific worksheet. It might return null object.      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+      Gets the range that represents the changed area of a specific worksheet. It might return null object.
+
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

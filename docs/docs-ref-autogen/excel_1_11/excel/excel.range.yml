@@ -211,21 +211,43 @@ properties:
     fullName: hyperlink
     summary: Represents the hyperlink for the current range.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-hyperlink.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getItem("Orders");          let productsRange = sheet.getRange("A3:A5");
-          productsRange.load("values");          await context.sync();          // Create a hyperlink to a URL 
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-hyperlink.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getItem("Orders");
+
+          let productsRange = sheet.getRange("A3:A5");
+          productsRange.load("values");
+
+          await context.sync();
+
+          // Create a hyperlink to a URL 
           // for each product name in the first table.
           for (let i = 0; i < productsRange.values.length; i++) {
               let cellRange = productsRange.getCell(i, 0);
-              let cellText = productsRange.values[i][0];              let hyperlink = {
+              let cellText = productsRange.values[i][0];
+
+              let hyperlink = {
                   textToDisplay: cellText,
                   screenTip: "Search Bing for '" + cellText + "'",
                   address: "https://www.bing.com?q=" + cellText
               }
               cellRange.hyperlink = hyperlink;
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -286,7 +308,11 @@ properties:
     fullName: numberFormat
     summary: Represents Excel's number format code for the given range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // The example below sets number-format, values and formulas on a grid that contains 2x3 grid.
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
@@ -375,14 +401,28 @@ properties:
     fullName: sort
     summary: Represents the range sort of the current range.
     remarks: >-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/event-column-and-row-sort.yaml      async function sortTopToBottom(criteria: string) {
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/event-column-and-row-sort.yaml
+
+      async function sortTopToBottom(criteria: string) {
           await Excel.run(async (context) => {
               const sheet = context.workbook.worksheets.getActiveWorksheet();
-              const range = sheet.getRange("A1:E5");              // Find the column header that provides the sort criteria.
+              const range = sheet.getRange("A1:E5");
+
+              // Find the column header that provides the sort criteria.
               const header = range.find(criteria, {});
               header.load("columnIndex");
-              await context.sync();              range.sort.apply(
+              await context.sync();
+
+              range.sort.apply(
                   [
                       {
                           key: header.columnIndex,
@@ -395,7 +435,9 @@ properties:
               );
               await context.sync();
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -411,14 +453,30 @@ properties:
       For custom styles, the style name will be returned. For built-in styles, a string representing a value in the
       `BuiltInStyle` enum will be returned.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml
+
+      await Excel.run(async (context) => {
           let worksheet = context.workbook.worksheets.getItem("Sample");
-          let range = worksheet.getRange("A1:E1");          // Apply built-in style. 
+          let range = worksheet.getRange("A1:E1");
+
+          // Apply built-in style. 
           // Styles are in the Home tab ribbon.
           range.style = Excel.BuiltInStyle.neutral;
-          range.format.horizontalAlignment = "Right";          await context.sync();
-      });      ```
+          range.format.horizontalAlignment = "Right";
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -510,19 +568,36 @@ methods:
     summary: >-
       Fills range from the current range to the destination range using the specified AutoFill logic. The destination
       range can be `null`<!-- -->, or can extend the source either horizontally or vertically. Discontiguous ranges are
-      not supported.      For more information, read [Use AutoFill and Flash
+      not supported.
+
+
+      For more information, read [Use AutoFill and Flash
       Fill](https://support.office.com/article/video-use-autofill-and-flash-fill-2e79a709-c814-4b27-8bc2-c4dc84d49464)<!--
       -->.
     remarks: >-
       \[ [API set: ExcelApi 1.9, ExcelApi Preview for null `destinationRange`<!--
-      -->](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-auto-fill.yaml      await Excel.run(async (context) => {
+      -->](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-auto-fill.yaml
+
+      await Excel.run(async (context) => {
         const sheet = context.workbook.worksheets.getActiveWorksheet();
-        const sumCell = sheet.getRange("P4");        // Copy everything. The formulas will be contextually updated based on their new locations.
+        const sumCell = sheet.getRange("P4");
+        
+        // Copy everything. The formulas will be contextually updated based on their new locations.
         sumCell.autoFill("P4:P7", Excel.AutoFillType.fillCopy);
         sumCell.format.autofitColumns();
         await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -548,7 +623,10 @@ methods:
     summary: >-
       Fills range from the current range to the destination range using the specified AutoFill logic. The destination
       range can be `null`<!-- -->, or can extend the source either horizontally or vertically. Discontiguous ranges are
-      not supported.      For more information, read [Use AutoFill and Flash
+      not supported.
+
+
+      For more information, read [Use AutoFill and Flash
       Fill](https://support.office.com/article/video-use-autofill-and-flash-fill-2e79a709-c814-4b27-8bc2-c4dc84d49464)<!--
       -->.
     remarks: >-
@@ -596,7 +674,11 @@ methods:
     fullName: clear(applyTo)
     summary: 'Clear range values, format, fill, border, etc.'
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Below example clears format and contents of the range. 
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
@@ -681,15 +763,29 @@ methods:
       can be a different size than the source range or `RangeAreas`<!-- -->. The destination will be expanded
       automatically if it is smaller than the source.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-copyfrom.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-copyfrom.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           // Place a label in front of the copied data.
-          sheet.getRange("F2").values = [["Copied Formula"]];          // Copy a range preserving the formulas.
+          sheet.getRange("F2").values = [["Copied Formula"]];
+
+          // Copy a range preserving the formulas.
           // Note: non-formula values are copied over as is.
           sheet.getRange("G2").copyFrom("A1:E1", Excel.RangeCopyType.formulas);
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -753,7 +849,11 @@ methods:
     fullName: delete(shift)
     summary: Deletes the cells associated with the range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "D:F";
@@ -803,19 +903,38 @@ methods:
       Finds the given string based on the criteria specified. If the current range is larger than a single cell, then
       the search will be limited to that range, else the search will cover the entire sheet starting after that cell.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-find.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-find.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const table = sheet.tables.getItem("ExpensesTable");
-          const searchRange = table.getRange();          // NOTE: If no match is found, an ItemNotFound error
+          const searchRange = table.getRange();
+
+          // NOTE: If no match is found, an ItemNotFound error
           // is thrown when Range.find is evaluated.
           const foundRange = searchRange.find($("#searchText").text(), {
               completeMatch: isCompleteMatchToggle,
               matchCase: isMatchCaseToggle,
               searchDirection: searchDirectionToggle
-          });          foundRange.load("address");
-          await context.sync();          console.log(foundRange.address);
-      });      ```
+          });
+          
+          foundRange.load("address");
+          await context.sync();
+
+
+          console.log(foundRange.address);
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -844,8 +963,18 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-find.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-find.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const table = sheet.tables.getItem("ExpensesTable");
           const searchRange = table.getRange();
@@ -853,13 +982,19 @@ methods:
               completeMatch: isCompleteMatchToggle,
               matchCase: isMatchCaseToggle,
               searchDirection: searchDirectionToggle
-          });          foundRange.load("address");
-          await context.sync();          if (foundRange.isNullObject) {
+          });
+          
+          foundRange.load("address");
+          await context.sync();
+
+          if (foundRange.isNullObject) {
               console.log("Text not found");
           } else {
               console.log(foundRange.address);
           }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -921,7 +1056,11 @@ methods:
       Gets the smallest range object that encompasses the given ranges. For example, the `GetBoundingRect` of "B2:C5"
       and "D10:E15" is "B2:E15".
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "D4:G6";
@@ -958,7 +1097,11 @@ methods:
       bounds of its parent range, so long as it stays within the worksheet grid. The returned cell is located relative
       to the top left cell of the range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -996,9 +1139,21 @@ methods:
     fullName: getCellProperties(cellPropertiesLoadOptions)
     summary: 'Returns a 2D array, encapsulating the data for each cell''s font, fill, borders, alignment, and other properties.'
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/cell-properties.yaml      await Excel.run(async (context) => {
-          const cell = context.workbook.getActiveCell();          // Define the cell properties to get by setting the matching LoadOptions to true.
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/cell-properties.yaml
+
+      await Excel.run(async (context) => {
+          const cell = context.workbook.getActiveCell();
+
+          // Define the cell properties to get by setting the matching LoadOptions to true.
           const propertiesToGet = cell.getCellProperties({
               address: true,
               format: {
@@ -1010,12 +1165,16 @@ methods:
                   }
               },
               style: true
-          });          // Sync to get the data from the workbook.
+          });
+
+          // Sync to get the data from the workbook.
           await context.sync();
           const cellProperties = propertiesToGet.value[0][0];
           console.log(
               `Address: ${cellProperties.address}\nStyle: ${cellProperties.style}\nFill Color: ${cellProperties.format.fill.color}\nFont Color: ${cellProperties.format.font.color}`);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1037,7 +1196,11 @@ methods:
     fullName: getColumn(column)
     summary: Gets a column contained in the range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet19";
           var rangeAddress = "A1:F8";
@@ -1136,7 +1299,11 @@ methods:
       Gets an object that represents the entire column of the range (for example, if the current range represents cells
       "B4:E11", its `getEntireColumn` is a range that represents columns "B:E").
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Note: the grid properties of the Range (values, numberFormat, formulas) 
       // contains null since the Range in question is unbounded.
       Excel.run(function (ctx) { 
@@ -1170,7 +1337,11 @@ methods:
       Gets an object that represents the entire row of the range (for example, if the current range represents cells
       "B4:E11", its `GetEntireRow` is a range that represents rows "4:11").
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Gets an object that represents the entire row of the range 
       // (for example, if the current range represents cells "B4:E11", 
       // its GetEntireRow is a range that represents rows "4:11").
@@ -1218,7 +1389,11 @@ methods:
     fullName: getIntersection(anotherRange)
     summary: Gets the range object that represents the rectangular intersection of the given ranges.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -1257,22 +1432,42 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-relationships.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-relationships.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const salesTable = sheet.tables.getItem("SalesTable");
-          const dataRange = salesTable.getDataBodyRange();          // We want the most recent quarter that has data, so
+          const dataRange = salesTable.getDataBodyRange();
+
+          // We want the most recent quarter that has data, so
           // exclude quarters without data and get the last of
           // the remaining columns.
           const usedDataRange = dataRange.getUsedRange(true /* valuesOnly */);
-          const currentQuarterRange = usedDataRange.getLastColumn();          // Asian and European teams have separate contests.
+          const currentQuarterRange = usedDataRange.getLastColumn();
+
+          // Asian and European teams have separate contests.
           const asianSalesRange = sheet.getRange("A2:E4");
-          const europeanSalesRange = sheet.getRange("A5:E7");          // The data for each chart is the intersection of the
+          const europeanSalesRange = sheet.getRange("A5:E7");
+
+          // The data for each chart is the intersection of the
           // current quarter column and the rows for the continent.
           const asianContestRange = asianSalesRange.getIntersectionOrNullObject(currentQuarterRange);
-          const europeanContestRange = europeanSalesRange.getIntersectionOrNullObject(currentQuarterRange);          // Must sync before you can test the output of *OrNullObject
+          const europeanContestRange = europeanSalesRange.getIntersectionOrNullObject(currentQuarterRange);
+
+          // Must sync before you can test the output of *OrNullObject
           // method/property.
-          await context.sync();          if (asianContestRange.isNullObject) {
+          await context.sync();
+
+          if (asianContestRange.isNullObject) {
               // See the declaration of this method for how to
               // test this code path.
               reportMissingData("Asian");
@@ -1284,7 +1479,9 @@ methods:
                   "A9",
                   "F24"
               );
-          }          if (europeanContestRange.isNullObject) {
+          }
+
+          if (europeanContestRange.isNullObject) {
               // See the declaration of this method for how to
               // test this code path.
               reportMissingData("European");
@@ -1296,8 +1493,12 @@ methods:
                   "A25",
                   "F40"
               );
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1315,7 +1516,11 @@ methods:
     fullName: getLastCell()
     summary: 'Gets the last cell within the range. For example, the last cell of "B2:D5" is "D5".'
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -1344,7 +1549,11 @@ methods:
     fullName: getLastColumn()
     summary: 'Gets the last column within the range. For example, the last column of "B2:D5" is "D2:D5".'
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -1373,7 +1582,11 @@ methods:
     fullName: getLastRow()
     summary: 'Gets the last row within the range. For example, the last row of "B2:D5" is "B5:D5".'
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -1405,7 +1618,11 @@ methods:
       range will match this range. If the resulting range is forced outside the bounds of the worksheet grid, an error
       will be thrown.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "D4:F6";
@@ -1472,7 +1689,11 @@ methods:
     fullName: getRow(row)
     summary: Gets a row contained in the range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -1571,12 +1792,30 @@ methods:
       Gets the `RangeAreas` object, comprising one or more rectangular ranges, that represents all the cells that match
       the specified type and value. If no special cells are found, an `ItemNotFound` error will be thrown.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-areas.yaml      await Excel.run(async (context) => {          const sheet = context.workbook.worksheets.getActiveWorksheet();
-          const usedRange = sheet.getUsedRange();          // Find the ranges with either text or logical (boolean) values.
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-areas.yaml
+
+      await Excel.run(async (context) => {
+
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+          const usedRange = sheet.getUsedRange();
+
+          // Find the ranges with either text or logical (boolean) values.
           const formulaRanges = usedRange.getSpecialCells("Constants", "LogicalText");
-          formulaRanges.format.fill.color = "orange";          return context.sync();
-      });      ```
+          formulaRanges.format.fill.color = "orange";
+
+          return context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1738,22 +1977,42 @@ methods:
       Returns the used range of the given range object. If there are no used cells within the range, this function will
       throw an `ItemNotFound` error.
     remarks: >-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-relationships.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-relationships.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const salesTable = sheet.tables.getItem("SalesTable");
-          const dataRange = salesTable.getDataBodyRange();          // We want the most recent quarter that has data, so
+          const dataRange = salesTable.getDataBodyRange();
+
+          // We want the most recent quarter that has data, so
           // exclude quarters without data and get the last of
           // the remaining columns.
           const usedDataRange = dataRange.getUsedRange(true /* valuesOnly */);
-          const currentQuarterRange = usedDataRange.getLastColumn();          // Asian and European teams have separate contests.
+          const currentQuarterRange = usedDataRange.getLastColumn();
+
+          // Asian and European teams have separate contests.
           const asianSalesRange = sheet.getRange("A2:E4");
-          const europeanSalesRange = sheet.getRange("A5:E7");          // The data for each chart is the intersection of the
+          const europeanSalesRange = sheet.getRange("A5:E7");
+
+          // The data for each chart is the intersection of the
           // current quarter column and the rows for the continent.
           const asianContestRange = asianSalesRange.getIntersectionOrNullObject(currentQuarterRange);
-          const europeanContestRange = europeanSalesRange.getIntersectionOrNullObject(currentQuarterRange);          // Must sync before you can test the output of *OrNullObject
+          const europeanContestRange = europeanSalesRange.getIntersectionOrNullObject(currentQuarterRange);
+
+          // Must sync before you can test the output of *OrNullObject
           // method/property.
-          await context.sync();          if (asianContestRange.isNullObject) {
+          await context.sync();
+
+          if (asianContestRange.isNullObject) {
               // See the declaration of this method for how to
               // test this code path.
               reportMissingData("Asian");
@@ -1765,7 +2024,9 @@ methods:
                   "A9",
                   "F24"
               );
-          }          if (europeanContestRange.isNullObject) {
+          }
+
+          if (europeanContestRange.isNullObject) {
               // See the declaration of this method for how to
               // test this code path.
               reportMissingData("European");
@@ -1777,8 +2038,12 @@ methods:
                   "A25",
                   "F40"
               );
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1801,15 +2066,31 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/used-range.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/used-range.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const salesTable = sheet.tables.getItem("SalesTable");
-          const dataRange = salesTable.getDataBodyRange();          // Pass true so only cells with values count as used
+          const dataRange = salesTable.getDataBodyRange();
+
+          // Pass true so only cells with values count as used
           const usedDataRange = dataRange.getUsedRangeOrNullObject(
               true /* valuesOnly */
-          );          //Must sync before reading value returned from *OrNullObject method/property.
-          await context.sync();          if (usedDataRange.isNullObject) {
+          );
+
+          //Must sync before reading value returned from *OrNullObject method/property.
+          await context.sync();
+
+          if (usedDataRange.isNullObject) {
               console.log("Need Data to Make Chart");
               console.log("To create a meaningful chart, press 'Fill the table' (or add names to the Product column and numbers to some of the other cells). Then press 'Try to create chart' again.");
           } else {
@@ -1824,8 +2105,12 @@ methods:
               chart.legend.format.fill.setSolidColor("white");
               chart.dataLabels.format.font.size = 15;
               chart.dataLabels.format.font.color = "black";
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1856,16 +2141,32 @@ methods:
     fullName: group(groupOption)
     summary: Groups columns and rows for an outline.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/outline.yaml      Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getActiveWorksheet();          // Group the larger, main level. Note that the outline controls
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/outline.yaml
+
+      Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+          
+          // Group the larger, main level. Note that the outline controls
           // will be on row 10, meaning 4-9 will collapse and expand.
-          sheet.getRange("4:9").group(Excel.GroupOption.byRows);          // Group the smaller, sublevels. Note that the outline controls
+          sheet.getRange("4:9").group(Excel.GroupOption.byRows);
+
+          // Group the smaller, sublevels. Note that the outline controls
           // will be on rows 6 and 9, meaning 4-5 and 7-8 will collapse and expand.
           sheet.getRange("4:5").group(Excel.GroupOption.byRows);
           sheet.getRange("7:8").group(Excel.GroupOption.byRows);
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1942,7 +2243,11 @@ methods:
       Inserts a cell or a range of cells into the worksheet in place of this range, and shifts the other cells to make
       space. Returns a new `Range` object at the now blank space.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "F5:F10";
@@ -2024,7 +2329,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Range:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Below example uses range address to get the range object.
           Excel.run(function (ctx) {
               var sheetName = "Sheet1";
@@ -2077,7 +2387,15 @@ methods:
     fullName: merge(across)
     summary: Merge the range cells into one region in the worksheet.
     remarks: >-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript      Excel.run(function (ctx) { 
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```javascript
+
+      Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:C3";
           var range = ctx.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
@@ -2088,15 +2406,31 @@ methods:
           if (error instanceof OfficeExtension.Error) {
               console.log("Debug info: " + JSON.stringify(error.debugInfo));
           }
-      });      ```      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-merged-ranges.yaml      await Excel.run(async (context) => {
+      });
+
+      ```
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-merged-ranges.yaml
+
+      await Excel.run(async (context) => {
         // Retrieve the worksheet and the table in that worksheet.
         const sheet = context.workbook.worksheets.getActiveWorksheet();
-        const tableRange = sheet.getRange("B2:E6");        // Create a merged range in the first row of the table.
+        const tableRange = sheet.getRange("B2:E6");
+
+        // Create a merged range in the first row of the table.
         const chartTitle = tableRange.getRow(0);
-        chartTitle.merge(true);        // Format the merged range.
-        chartTitle.format.horizontalAlignment = "Center";        await context.sync();
-      });      ```
+        chartTitle.merge(true);
+
+        // Format the merged range.
+        chartTitle.format.horizontalAlignment = "Center";
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2119,14 +2453,28 @@ methods:
       information in those cells. The destination range will be expanded automatically if it is smaller than the current
       range. Any cells in the destination range that are outside of the original range's area are not changed.
     remarks: >-
-      \[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-copyfrom.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-copyfrom.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           // Place a label in front of the moved data.
-          sheet.getRange("F12").values = [["Moved Range:"]];          // Move the range from A1:E1 to G12:K12.
+          sheet.getRange("F12").values = [["Moved Range:"]];
+
+          // Move the range from A1:E1 to G12:K12.
           sheet.getRange("A1:E1").moveTo("G12");
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2144,14 +2492,30 @@ methods:
     fullName: 'removeDuplicates(columns, includesHeader)'
     summary: Removes duplicate values from the range specified by the columns.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-remove-duplicates.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-remove-duplicates.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
-          const range = sheet.getRange("B2:D11");          const deleteResult = range.removeDuplicates([0],true);    
+          const range = sheet.getRange("B2:D11");
+
+          const deleteResult = range.removeDuplicates([0],true);    
           deleteResult.load();    
-          await context.sync();          console.log(deleteResult.removed + " entries with duplicate names removed.");
+          await context.sync();
+
+          console.log(deleteResult.removed + " entries with duplicate names removed.");
           console.log(deleteResult.uniqueRemaining + " entries with unique names remain in the range.");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2199,7 +2563,11 @@ methods:
     fullName: select()
     summary: Selects the specified range in the Excel UI.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) {
           var sheetName = "Sheet1";
           var rangeAddress = "F5:F10"; 
@@ -2243,9 +2611,21 @@ methods:
           type: '<xref uid="office!OfficeExtension.UpdateOptions:interface" />'
       return:
         type: void
-        description: >-          #### Examples          ```typescript          // Link to full sample:
-          https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/multiple-property-set.yaml          await Excel.run(async (context) => {
-              const sheet = context.workbook.worksheets.getItem("Sample");              const range = sheet.getRange("B2:E2");
+        description: >-
+
+
+          #### Examples
+
+
+          ```typescript
+
+          // Link to full sample:
+          https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/multiple-property-set.yaml
+
+          await Excel.run(async (context) => {
+              const sheet = context.workbook.worksheets.getItem("Sample");
+
+              const range = sheet.getRange("B2:E2");
               range.set({
                   format: {
                       fill: {
@@ -2259,17 +2639,31 @@ methods:
               })
               range.format.autofitColumns();
               await context.sync();
-          });          ```          ```typescript          // Link to full sample:
-          https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/multiple-property-set.yaml          await Excel.run(async (context) => {
-              const sheet = context.workbook.worksheets.getItem("Sample");              const sourceRange = sheet.getRange("B2:E2");
+          });
+
+          ```
+
+          ```typescript
+
+          // Link to full sample:
+          https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/multiple-property-set.yaml
+
+          await Excel.run(async (context) => {
+              const sheet = context.workbook.worksheets.getItem("Sample");
+
+              const sourceRange = sheet.getRange("B2:E2");
               sourceRange.load("format/fill/color, format/font/name, format/font/color");
-              await context.sync();              // Set properties based on the loaded and synced 
+              await context.sync();
+
+              // Set properties based on the loaded and synced 
               // source range.
               const targetRange = sheet.getRange("B7:E7");
               targetRange.set(sourceRange); 
               targetRange.format.autofitColumns();
               await context.sync();
-          });          ```
+          });
+
+          ```
   - name: set(properties)
     uid: 'excel!Excel.Range#set:member(2)'
     package: excel!
@@ -2295,9 +2689,21 @@ methods:
       Updates the range based on a 2D array of cell properties, encapsulating things like font, fill, borders, and
       alignment.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/cell-properties.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getActiveWorksheet();          // Creating the SettableCellProperties objects to use for the range.
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/cell-properties.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+
+          // Creating the SettableCellProperties objects to use for the range.
           // In your add-in, these should be created once, outside the function.
           const topHeaderProps: Excel.SettableCellProperties = {
               // The style property takes a string matching the name of an Excel style.
@@ -2305,7 +2711,9 @@ methods:
               // Note that a style will overwrite any formatting,
               // so do not use the format property with the style property.
               style: "Heading1"
-          };          const headerProps: Excel.SettableCellProperties = {
+          };
+
+          const headerProps: Excel.SettableCellProperties = {
               // Any subproperties of format that are not set will not be changed when these cell properties are set.
               format: {
                   fill: {
@@ -2316,7 +2724,9 @@ methods:
                       bold: true
                   }
               }
-          };          const nonApplicableProps: Excel.SettableCellProperties = {
+          };
+
+          const nonApplicableProps: Excel.SettableCellProperties = {
               format: {
                   fill: {
                       pattern: Excel.FillPattern.gray25
@@ -2326,7 +2736,9 @@ methods:
                       italic: true
                   }
               }
-          };          const matchupScoreProps: Excel.SettableCellProperties = {
+          };
+
+          const matchupScoreProps: Excel.SettableCellProperties = {
               format: {
                   borders: {
                       bottom: {
@@ -2343,16 +2755,24 @@ methods:
                       }
                   }
               }
-          };          const range = sheet.getRange("A1:E5");          // You can use empty JSON objects to avoid changing a cell's properties.
+          };
+
+          const range = sheet.getRange("A1:E5");
+
+          // You can use empty JSON objects to avoid changing a cell's properties.
           range.setCellProperties([
               [topHeaderProps, {}, {}, {}, {}],
               [{}, {}, headerProps, headerProps, headerProps],
               [{}, headerProps, nonApplicableProps, matchupScoreProps, matchupScoreProps],
               [{}, headerProps, matchupScoreProps, nonApplicableProps, matchupScoreProps],
               [{}, headerProps, matchupScoreProps, matchupScoreProps, nonApplicableProps]
-          ]);          sheet.getUsedRange().format.autofitColumns();
+          ]);
+
+          sheet.getUsedRange().format.autofitColumns();
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2504,16 +2924,30 @@ methods:
     fullName: ungroup(groupOption)
     summary: Ungroups columns and rows for an outline.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/outline.yaml      Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getActiveWorksheet();          // This removes two levels of groups from the "A1-R10" range.
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/outline.yaml
+
+      Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+          
+          // This removes two levels of groups from the "A1-R10" range.
           // Any groups at the same level on the same dimension will be removed by a single call.
           sheet.getRange("A1:R10").ungroup(Excel.GroupOption.byRows);
           sheet.getRange("A1:R10").ungroup(Excel.GroupOption.byRows);
           sheet.getRange("A1:R10").ungroup(Excel.GroupOption.byColumns);
           sheet.getRange("A1:R10").ungroup(Excel.GroupOption.byColumns);
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2548,7 +2982,11 @@ methods:
     fullName: unmerge()
     summary: Unmerge the range cells into separate cells.
     remarks: |-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:C3";
@@ -2585,17 +3023,28 @@ methods:
       content: 'untrack(): Excel.Range;'
       return:
         type: '<xref uid="excel!Excel.Range:class" />'
-        description: |-          #### Examples          ```typescript
+        description: |-
+
+
+          #### Examples
+
+          ```typescript
           Excel.run(async (context) => {
               const largeRange = context.workbook.getSelectedRange();
               largeRange.load(["rowCount", "columnCount"]);
-              await context.sync();              for (let i = 0; i < largeRange.rowCount; i++) {
+              await context.sync();
+
+              for (let i = 0; i < largeRange.rowCount; i++) {
                   for (let j = 0; j < largeRange.columnCount; j++) {
                       let cell = largeRange.getCell(i, j);
-                      cell.values = [[i *j]];                      // call untrack() to release the range from memory
+                      cell.values = [[i *j]];
+
+                      // call untrack() to release the range from memory
                       cell.untrack();
                   }
-              }              await context.sync();
+              }
+
+              await context.sync();
           });
           ```
 extends: '<xref uid="office!OfficeExtension.ClientObject:class" />'

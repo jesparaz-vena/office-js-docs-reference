@@ -43,13 +43,25 @@ properties:
       The worksheet's center horizontally flag. This flag determines whether the worksheet will be centered horizontally
       when it's printed.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml
+
+      await Excel.run(async (context) => {
           const farmSheet = context.workbook.worksheets.getItem("Print");
           farmSheet.pageLayout.centerHorizontally = true;
           farmSheet.pageLayout.centerVertically = true;
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -64,13 +76,25 @@ properties:
       The worksheet's center vertically flag. This flag determines whether the worksheet will be centered vertically
       when it's printed.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml
+
+      await Excel.run(async (context) => {
           const farmSheet = context.workbook.worksheets.getItem("Print");
           farmSheet.pageLayout.centerHorizontally = true;
           farmSheet.pageLayout.centerVertically = true;
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -169,12 +193,24 @@ properties:
     fullName: orientation
     summary: The worksheet's orientation of the page.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml
+
+      await Excel.run(async (context) => {
           const farmSheet = context.workbook.worksheets.getItem("Print");
           farmSheet.pageLayout.orientation = Excel.PageOrientation.landscape;
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -297,12 +333,24 @@ properties:
       The worksheet's print zoom options. The `PageLayoutZoomOptions` object must be set as a JSON object (use `x.zoom =
       {...}` instead of `x.zoom.scale = ...`<!-- -->).
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml
+
+      await Excel.run(async (context) => {
           const farmSheet = context.workbook.worksheets.getItem("Print");
           farmSheet.pageLayout.zoom = { scale: 200 };
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -517,12 +565,24 @@ methods:
     fullName: setPrintArea(printArea)
     summary: Sets the worksheet's print area.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml
+
+      await Excel.run(async (context) => {
           const farmSheet = context.workbook.worksheets.getItem("Print");
           farmSheet.pageLayout.setPrintArea("A1:D41");
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -599,12 +659,24 @@ methods:
     fullName: setPrintTitleRows(printTitleRows)
     summary: Sets the rows that contain the cells to be repeated at the top of each page of the worksheet for printing.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-page-layout.yaml
+
+      await Excel.run(async (context) => {
           const farmSheet = context.workbook.worksheets.getItem("Print");
           farmSheet.pageLayout.setPrintTitleRows("$1:$1");
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

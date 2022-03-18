@@ -48,11 +48,22 @@ methods:
     summary: Asynchronously adds a new custom XML part to a file.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      #### Examples      ```javascript      function addXMLPart() {
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      #### Examples
+
+
+      ```javascript
+
+      function addXMLPart() {
           Office.context.document.customXmlParts.addAsync(
               '<root categoryId="1" xmlns="http://tempuri.org"><item name="Cheap Item" price="$193.95"/><item name="Expensive Item" price="$931.88"/></root>',
               function (result) {});
-      }      function addXMLPartandHandler() {
+      }
+
+
+      function addXMLPartandHandler() {
           Office.context.document.customXmlParts.addAsync(
               "<testns:book xmlns:testns='http://testns.com'><testns:page number='1'>Hello</testns:page><testns:page number='2'>world!</testns:page></testns:book>",
               function(r) { r.value.addHandlerAsync(Office.EventType.DataNodeDeleted,
@@ -61,9 +72,16 @@ methods:
                       function(s) {write(s.status)
                       });
               });
-      }      // Function that writes to a div with id='message' on the page.      function write(message){
+      }
+
+
+      // Function that writes to a div with id='message' on the page.
+
+      function write(message){
           document.getElementById('message').innerText += message;
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -90,7 +108,15 @@ methods:
     summary: Asynchronously gets the specified custom XML part by its id.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      #### Examples      ```javascript      function showXMLPartInnerXML() {
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      #### Examples
+
+
+      ```javascript
+
+      function showXMLPartInnerXML() {
           Office.context.document.customXmlParts.getByIdAsync(
               "{3BC85265-09D6-4205-B665-8EB239A8B9A1}", function (result) {
               var xmlPart = result.value;
@@ -98,9 +124,15 @@ methods:
                   write(eventArgs.value);
               });
           });
-      }      // Function that writes to a div with id='message' on the page.      function write(message){
+      }
+
+      // Function that writes to a div with id='message' on the page.
+
+      function write(message){
           document.getElementById('message').innerText += message; 
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -193,15 +225,29 @@ methods:
     summary: Asynchronously gets the specified custom XML part(s) by its namespace.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      #### Examples      ```javascript      function showXMLPartsInNamespace() {
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      #### Examples
+
+
+      ```javascript
+
+      function showXMLPartsInNamespace() {
           Office.context.document.customXmlParts.getByNamespaceAsync(
               "http://tempuri.org", 
               function (eventArgs) {
                   write("Found " + eventArgs.value.length + " parts with this namespace");
           }); 
-      }      // Function that writes to a div with id='message' on the page.      function write(message){
+      }
+
+      // Function that writes to a div with id='message' on the page.
+
+      function write(message){
           document.getElementById('message').innerText += message; 
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

@@ -63,7 +63,9 @@ methods:
     package: excel!
     fullName: getRange(ctx)
     summary: |-
-      Gets the range that represents the changed area of a specific worksheet.      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+      Gets the range that represents the changed area of a specific worksheet.
+
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -81,7 +83,9 @@ methods:
     package: excel!
     fullName: getRangeOrNullObject(ctx)
     summary: |-
-      Gets the range that represents the changed area of a specific worksheet. It might return null object.      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+      Gets the range that represents the changed area of a specific worksheet. It might return null object.
+
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

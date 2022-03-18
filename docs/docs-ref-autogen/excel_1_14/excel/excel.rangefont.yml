@@ -194,7 +194,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.RangeFont:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var sheetName = "Sheet1";
               var rangeAddress = "F:G";

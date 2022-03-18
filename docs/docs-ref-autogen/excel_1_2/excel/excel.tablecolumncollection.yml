@@ -56,7 +56,15 @@ methods:
     remarks: >-
       \[ [API set: ExcelApi 1.1 requires an index smaller than the total column count; 1.4 allows index to be optional
       (null or -1) and will append a column at the end; 1.4 allows name parameter at creation
-      time.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript      Excel.run(function (ctx) { 
+      time.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```javascript
+
+      Excel.run(function (ctx) { 
           var tables = ctx.workbook.tables;
           var values = [["Sample"], ["Values"], ["For"], ["New"], ["Column"]];
           var column = tables.getItem("Table1").columns.add(null, values);
@@ -69,7 +77,9 @@ methods:
           if (error instanceof OfficeExtension.Error) {
               console.log("Debug info: " + JSON.stringify(error.debugInfo));
           }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -97,7 +107,11 @@ methods:
     fullName: getItem(key)
     summary: Gets a column object by name or ID.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableColumn = ctx.workbook.tables.getItem('Table1').columns.getItem(0);
           tableColumn.load('name');
@@ -128,7 +142,11 @@ methods:
     fullName: getItemAt(index)
     summary: Gets a column based on its position in the collection.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableColumn = ctx.workbook.tables.getItem['Table1'].columns.getItemAt(0);
           tableColumn.load('name');
@@ -194,7 +212,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.TableColumnCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var tableColumns = ctx.workbook.tables.getItem('Table1').columns;
               tableColumns.load('items');

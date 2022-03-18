@@ -4,7 +4,9 @@ uid: 'visio!Visio.DataValidationErrorType:enum'
 package: visio!
 fullName: Visio.DataValidationErrorType
 summary: |-
-  Represents the types of data validation error.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the types of data validation error.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

@@ -46,15 +46,29 @@ methods:
     fullName: getActiveNotebook()
     summary: 'Gets the active notebook if one exists. If no notebook is active, throws ItemNotFound.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the active notebook.
-          var notebook = context.application.getActiveNotebook();          // Queue a command to load the notebook. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+              
+          // Get the active notebook.
+          var notebook = context.application.getActiveNotebook();
+                  
+          // Queue a command to load the notebook. 
           // For best performance, request specific properties.           
-          notebook.load('id,name');          // Run the queued commands, and return a promise to indicate task completion.
+          notebook.load('id,name');
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Show some properties.
+              .then(function () {
+                          
+                  // Show some properties.
                   console.log("Notebook name: " + notebook.name);
-                  console.log("Notebook ID: " + notebook.id);              });
+                  console.log("Notebook ID: " + notebook.id);
+                  
+              });
       })
       .catch(function(error) {
           console.log("Error: " + error);
@@ -76,13 +90,25 @@ methods:
     fullName: getActiveNotebookOrNull()
     summary: 'Gets the active notebook if one exists. If no notebook is active, returns null.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the active notebook.
-          var notebook = context.application.getActiveNotebookOrNull();          // Queue a command to load the notebook. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the active notebook.
+          var notebook = context.application.getActiveNotebookOrNull();
+
+          // Queue a command to load the notebook. 
           // For best performance, request specific properties.           
-          notebook.load('id,name');          // Run the queued commands, and return a promise to indicate task completion.
+          notebook.load('id,name');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // check if active notebook is set.
+              .then(function () {
+
+                  // check if active notebook is set.
                   if (!notebook.isNull) {
                       console.log("Notebook name: " + notebook.name);
                       console.log("Notebook ID: " + notebook.id);
@@ -109,12 +135,24 @@ methods:
     fullName: getActiveOutline()
     summary: 'Gets the active outline if one exists, If no outline is active, throws ItemNotFound.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // get active outline.
-          var outline = context.application.getActiveOutline();          // Queue a command to load the id of the outline.         
-          outline.load('id');          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // get active outline.
+          var outline = context.application.getActiveOutline();
+
+          // Queue a command to load the id of the outline.         
+          outline.load('id');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Show some properties.
+              .then(function () {
+
+                  // Show some properties.
                   console.log("outline id: " + outline.id);
               });
       })
@@ -138,12 +176,24 @@ methods:
     fullName: getActiveOutlineOrNull()
     summary: 'Gets the active outline if one exists, otherwise returns null.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // get active outline.
-          var outline = context.application.getActiveOutlineOrNull();          // Queue a command to load the id of the outline.         
-          outline.load('id');          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // get active outline.
+          var outline = context.application.getActiveOutlineOrNull();
+
+          // Queue a command to load the id of the outline.         
+          outline.load('id');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  if (!outline.isNull) {
+              .then(function () {
+
+                  if (!outline.isNull) {
                       console.log("outline id: " + outline.id);
                   }
               });
@@ -168,15 +218,29 @@ methods:
     fullName: getActivePage()
     summary: 'Gets the active page if one exists. If no page is active, throws ItemNotFound.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the active page.
-          var page = context.application.getActivePage();          // Queue a command to load the page. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+              
+          // Get the active page.
+          var page = context.application.getActivePage();
+                  
+          // Queue a command to load the page. 
           // For best performance, request specific properties.           
-          page.load('id,title');          // Run the queued commands, and return a promise to indicate task completion.
+          page.load('id,title');
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Show some properties.
+              .then(function () {
+                          
+                  // Show some properties.
                   console.log("Page title: " + page.title);
-                  console.log("Page ID: " + page.id);              });
+                  console.log("Page ID: " + page.id);
+                  
+              });
       })
       .catch(function(error) {
           console.log("Error: " + error);
@@ -198,13 +262,25 @@ methods:
     fullName: getActivePageOrNull()
     summary: 'Gets the active page if one exists. If no page is active, returns null.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the active page.
-          var page = context.application.getActivePageOrNull();          // Queue a command to load the page. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the active page.
+          var page = context.application.getActivePageOrNull();
+
+          // Queue a command to load the page. 
           // For best performance, request specific properties.           
-          page.load('id,title');          // Run the queued commands, and return a promise to indicate task completion.
+          page.load('id,title');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  if (!page.isNull) {
+              .then(function () {
+                  
+                  if (!page.isNull) {
                       // Show some properties.
                       console.log("Page title: " + page.title);
                       console.log("Page ID: " + page.id);
@@ -257,15 +333,29 @@ methods:
     fullName: getActiveSection()
     summary: 'Gets the active section if one exists. If no section is active, throws ItemNotFound.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the active section.
-          var section = context.application.getActiveSection();          // Queue a command to load the section. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+              
+          // Get the active section.
+          var section = context.application.getActiveSection();
+                  
+          // Queue a command to load the section. 
           // For best performance, request specific properties.           
-          section.load('id,name');          // Run the queued commands, and return a promise to indicate task completion.
+          section.load('id,name');
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Show some properties.
+              .then(function () {
+                          
+                  // Show some properties.
                   console.log("Section name: " + section.name);
-                  console.log("Section ID: " + section.id);              });
+                  console.log("Section ID: " + section.id);
+                  
+              });
       })
       .catch(function(error) {
           console.log("Error: " + error);
@@ -287,11 +377,21 @@ methods:
     fullName: getActiveSectionOrNull()
     summary: 'Gets the active section if one exists. If no section is active, returns null.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the active section.
-          var section = context.application.getActiveSectionOrNull();          // Queue a command to load the section. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the active section.
+          var section = context.application.getActiveSectionOrNull();
+
+          // Queue a command to load the section. 
           // For best performance, request specific properties.           
-          section.load('id,name');          // Run the queued commands, and return a promise to indicate task completion.
+          section.load('id,name');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function () {
                   if (!section.isNull) {
@@ -444,15 +544,31 @@ methods:
     fullName: navigateToPage(page)
     summary: Opens the specified page in the application instance.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the pages in the current section.
-          var pages = context.application.getActiveSection().pages;          // Queue a command to load the pages. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+              
+          // Get the pages in the current section.
+          var pages = context.application.getActiveSection().pages;
+                  
+          // Queue a command to load the pages. 
           // For best performance, request specific properties.           
-          pages.load('id');          // Run the queued commands, and return a promise to indicate task completion.
+          pages.load('id');
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // This example loads the first page in the section.
-                  var page = pages.items[0];                  // Open the page in the application.                    
-                  context.application.navigateToPage(page);                  // Run the queued command.
+              .then(function () {
+                          
+                  // This example loads the first page in the section.
+                  var page = pages.items[0];
+                              
+                  // Open the page in the application.                    
+                  context.application.navigateToPage(page);
+                          
+                  // Run the queued command.
                   return context.sync();
               });
       })
@@ -482,15 +598,31 @@ methods:
       Gets the specified page, and opens it in the application instance. Navigation may still not be carried out when no
       fails. Caller should validate the returned page if so desired.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the pages in the current section.
-          var pages = context.application.getActiveSection().pages;          // Queue a command to load the pages. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the pages in the current section.
+          var pages = context.application.getActiveSection().pages;
+
+          // Queue a command to load the pages. 
           // For best performance, request specific properties.           
-          pages.load('clientUrl');          // Run the queued commands, and return a promise to indicate task completion.
+          pages.load('clientUrl');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // This example loads the first page in the section.
-                  var page = pages.items[0];                  // Open the page in the application.                    
-                  context.application.navigateToPageWithClientUrl(page.clientUrl);                  // Run the queued command.
+              .then(function () {
+
+                  // This example loads the first page in the section.
+                  var page = pages.items[0];
+
+                  // Open the page in the application.                    
+                  context.application.navigateToPageWithClientUrl(page.clientUrl);
+
+                  // Run the queued command.
                   return context.sync();
               });
       })

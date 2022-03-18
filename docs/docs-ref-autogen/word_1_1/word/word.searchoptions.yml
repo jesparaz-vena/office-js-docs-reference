@@ -4,7 +4,10 @@ uid: 'word!Word.SearchOptions:class'
 package: word!
 fullName: Word.SearchOptions
 summary: >-
-  Specifies the options to be included in a search operation.  To learn more about how to use search options in the Word JavaScript APIs, read [Use search options to find text in
+  Specifies the options to be included in a search operation.
+
+
+  To learn more about how to use search options in the Word JavaScript APIs, read [Use search options to find text in
   your Word add-in](https://docs.microsoft.com/office/dev/add-ins/word/search-option-guidance)<!-- -->.
 remarks: '\[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]'
 isPreview: false
@@ -142,20 +145,35 @@ methods:
           type: '<xref uid="word!Word.Interfaces.SearchOptionsLoadOptions:interface" />'
       return:
         type: '<xref uid="word!Word.SearchOptions:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Ignore punctuation search
           // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Queue a command to search the document and ignore punctuation.
-              var searchResults = context.document.body.search('video you', {ignorePunct: true});              // Queue a command to load the search results and get the font property values.
-              context.load(searchResults, 'font');              // Synchronize the document state by executing the queued commands, 
+          Word.run(function (context) {
+              
+              // Queue a command to search the document and ignore punctuation.
+              var searchResults = context.document.body.search('video you', {ignorePunct: true});
+
+              // Queue a command to load the search results and get the font property values.
+              context.load(searchResults, 'font');
+              
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
-                  console.log('Found count: ' + searchResults.items.length);                  // Queue a set of commands to change the font for each found item.
+                  console.log('Found count: ' + searchResults.items.length);
+
+                  // Queue a set of commands to change the font for each found item.
                   for (var i = 0; i < searchResults.items.length; i++) {
                       searchResults.items[i].font.color = 'purple';
                       searchResults.items[i].font.highlightColor = '#FFFF00'; //Yellow
                       searchResults.items[i].font.bold = true;
-                  }                  // Synchronize the document state by executing the queued commands, 
+                  }
+                  
+                  // Synchronize the document state by executing the queued commands, 
                   // and return a promise to indicate task completion.
                   return context.sync();
               });  
@@ -170,17 +188,27 @@ methods:
           ```javascript
           // Search based on a prefix
           // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Queue a command to search the document based on a prefix.
-              var searchResults = context.document.body.search('vid', {matchPrefix: true});              // Queue a command to load the search results and get the font property values.
-              context.load(searchResults, 'font');              // Synchronize the document state by executing the queued commands, 
+          Word.run(function (context) {
+              
+              // Queue a command to search the document based on a prefix.
+              var searchResults = context.document.body.search('vid', {matchPrefix: true});
+
+              // Queue a command to load the search results and get the font property values.
+              context.load(searchResults, 'font');
+              
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
-                  console.log('Found count: ' + searchResults.items.length);                  // Queue a set of commands to change the font for each found item.
+                  console.log('Found count: ' + searchResults.items.length);
+
+                  // Queue a set of commands to change the font for each found item.
                   for (var i = 0; i < searchResults.items.length; i++) {
                       searchResults.items[i].font.color = 'purple';
                       searchResults.items[i].font.highlightColor = '#FFFF00'; //Yellow
                       searchResults.items[i].font.bold = true;
-                  }                  // Synchronize the document state by executing the queued commands, 
+                  }
+                  
+                  // Synchronize the document state by executing the queued commands, 
                   // and return a promise to indicate task completion.
                   return context.sync();
               });  
@@ -195,17 +223,27 @@ methods:
           ```javascript
           // Search based on a suffix
           // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Queue a command to search the document for any string of characters after 'ly'.
-              var searchResults = context.document.body.search('ly', {matchSuffix: true});              // Queue a command to load the search results and get the font property values.
-              context.load(searchResults, 'font');              // Synchronize the document state by executing the queued commands, 
+          Word.run(function (context) {
+
+              // Queue a command to search the document for any string of characters after 'ly'.
+              var searchResults = context.document.body.search('ly', {matchSuffix: true});
+
+              // Queue a command to load the search results and get the font property values.
+              context.load(searchResults, 'font');
+              
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
-                  console.log('Found count: ' + searchResults.items.length);                  // Queue a set of commands to change the font for each found item.
+                  console.log('Found count: ' + searchResults.items.length);
+
+                  // Queue a set of commands to change the font for each found item.
                   for (var i = 0; i < searchResults.items.length; i++) {
                       searchResults.items[i].font.color = 'orange';
                       searchResults.items[i].font.highlightColor = 'black';
                       searchResults.items[i].font.bold = true;
-                  }                  // Synchronize the document state by executing the queued commands, 
+                  }
+                  
+                  // Synchronize the document state by executing the queued commands, 
                   // and return a promise to indicate task completion.
                   return context.sync();
               });  
@@ -220,18 +258,28 @@ methods:
           ```javascript
           // Search using a wildcard
           // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Queue a command to search the document with a wildcard
+          Word.run(function (context) {
+              
+              // Queue a command to search the document with a wildcard
               // for any string of characters that starts with 'to' and ends with 'n'.
-              var searchResults = context.document.body.search('to*n', {matchWildCards: true});              // Queue a command to load the search results and get the font property values.
-              context.load(searchResults, 'font');              // Synchronize the document state by executing the queued commands, 
+              var searchResults = context.document.body.search('to*n', {matchWildCards: true});
+
+              // Queue a command to load the search results and get the font property values.
+              context.load(searchResults, 'font');
+              
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
-                  console.log('Found count: ' + searchResults.items.length);                  // Queue a set of commands to change the font for each found item.
+                  console.log('Found count: ' + searchResults.items.length);
+
+                  // Queue a set of commands to change the font for each found item.
                   for (var i = 0; i < searchResults.items.length; i++) {
                       searchResults.items[i].font.color = 'purple';
                       searchResults.items[i].font.highlightColor = 'pink';
                       searchResults.items[i].font.bold = true;
-                  }                  // Synchronize the document state by executing the queued commands, 
+                  }
+                  
+                  // Synchronize the document state by executing the queued commands, 
                   // and return a promise to indicate task completion.
                   return context.sync();
               });  

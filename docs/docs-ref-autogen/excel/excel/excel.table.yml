@@ -104,7 +104,10 @@ properties:
     package: excel!
     fullName: name
     summary: >-
-      Name of the table.      The set name of the table must follow the guidelines specified in the [Rename an Excel
+      Name of the table.
+
+
+      The set name of the table must follow the guidelines specified in the [Rename an Excel
       table](https://support.microsoft.com/office/fbf49a4f-82a3-43eb-8ba2-44d21233b114) article.
     remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
     isPreview: false
@@ -212,7 +215,11 @@ properties:
       "TableStyleLight21", "TableStyleMedium1" through "TableStyleMedium28", "TableStyleDark1" through
       "TableStyleDark11". A custom user-defined style present in the workbook can also be specified.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Set table style. 
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
@@ -298,7 +305,11 @@ methods:
     fullName: convertToRange()
     summary: Converts the table into a normal range of cells. All data is preserved.
     remarks: |-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -324,7 +335,11 @@ methods:
     fullName: delete()
     summary: Deletes the table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -350,7 +365,11 @@ methods:
     fullName: getDataBodyRange()
     summary: Gets the range object associated with the data body of the table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -379,7 +398,11 @@ methods:
     fullName: getHeaderRowRange()
     summary: Gets the range object associated with the header row of the table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -408,7 +431,11 @@ methods:
     fullName: getRange()
     summary: Gets the range object associated with the entire table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -437,7 +464,11 @@ methods:
     fullName: getTotalRowRange()
     summary: Gets the range object associated with the totals row of the table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -497,7 +528,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Table:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Get a table by name. 
           Excel.run(function (ctx) { 
               var tableName = 'Table1';
@@ -579,13 +615,29 @@ methods:
       Resize the table to the new range. The new range must overlap with the original table range and the headers (or
       the top of the table) must be in the same row.
     remarks: >-
-      \[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/46-table/resize-table.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.13](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/46-table/resize-table.yaml
+
+      await Excel.run(async (context) => {
         // Retrieve the worksheet and a table on that worksheet.
         const sheet = context.workbook.worksheets.getItem("Sample");
-        const expensesTable = sheet.tables.getItem("ExpensesTable");        // Resize the table.
-        expensesTable.resize("A1:D20");        await context.sync();
-      });      ```
+        const expensesTable = sheet.tables.getItem("ExpensesTable");
+        
+        // Resize the table.
+        expensesTable.resize("A1:D20");
+        
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -684,12 +736,26 @@ events:
     fullName: onChanged
     summary: Occurs when data in cells changes on a specific table.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-table-changed.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-table-changed.yaml
+
+      await Excel.run(async (context) => {
           let table = context.workbook.tables.getItemAt(0);
-          table.onChanged.add(onChange);          await context.sync();
+          table.onChanged.add(onChange);
+
+          await context.sync();
           console.log("A handler has been registered for the onChanged event");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -720,12 +786,26 @@ events:
     fullName: onSelectionChanged
     summary: Occurs when the selection changes on a specific table.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-table-changed.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-table-changed.yaml
+
+      await Excel.run(async (context) => {
           let table = context.workbook.tables.getItemAt(0);
-          table.onSelectionChanged.add(onSelectionChange);          await context.sync();
+          table.onSelectionChanged.add(onSelectionChange);
+
+          await context.sync();
           console.log("A handler has been registered for table onSelectionChanged event");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

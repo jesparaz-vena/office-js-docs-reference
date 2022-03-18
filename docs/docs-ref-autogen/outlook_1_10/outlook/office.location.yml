@@ -5,9 +5,15 @@ package: outlook!
 fullName: Office.Location
 summary: Provides methods to get and set the location of a meeting in an Outlook add-in.
 remarks: >-
-  \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose
 isPreview: false
@@ -19,17 +25,41 @@ methods:
     package: outlook!
     fullName: 'getAsync(options, callback)'
     summary: >-
-      Gets the location of an appointment.      The `getAsync` method starts an asynchronous call to the Exchange server to get the location of an appointment.
+      Gets the location of an appointment.
+
+
+      The `getAsync` method starts an asynchronous call to the Exchange server to get the location of an appointment.
       The location of the appointment is provided as a string in the `asyncResult.value` property.
     remarks: >-
-      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      var userContext = { value : 1 };      Office.context.mailbox.item.location.getAsync( { context: userContext}, callback);      function callback(asyncResult) {
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      var userContext = { value : 1 };
+
+      Office.context.mailbox.item.location.getAsync( { context: userContext}, callback);
+
+
+      function callback(asyncResult) {
           var context = asyncResult.context;
           var location = asyncResult.value;
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -55,21 +85,42 @@ methods:
     package: outlook!
     fullName: getAsync(callback)
     summary: >-
-      Gets the location of an appointment.      The `getAsync` method starts an asynchronous call to the Exchange server to get the location of an appointment.
+      Gets the location of an appointment.
+
+
+      The `getAsync` method starts an asynchronous call to the Exchange server to get the location of an appointment.
       The location of the appointment is provided as a string in the `asyncResult.value` property.
     remarks: >-
-      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-set-location-appointment-organizer.yaml      Office.context.mailbox.item.location.getAsync((result) => {
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-set-location-appointment-organizer.yaml
+
+      Office.context.mailbox.item.location.getAsync((result) => {
         if (result.status !== Office.AsyncResultStatus.Succeeded) {
           console.error(`Action failed with message ${result.error.message}`);
           return;
         }
         console.log(`Appointment location: ${result.value}`);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -88,21 +139,50 @@ methods:
     package: outlook!
     fullName: 'setAsync(location, options, callback)'
     summary: >-
-      Sets the location of an appointment.      The `setAsync` method starts an asynchronous call to the Exchange server to set the location of an appointment.
+      Sets the location of an appointment.
+
+
+      The `setAsync` method starts an asynchronous call to the Exchange server to set the location of an appointment.
       Setting the location of an appointment overwrites the current location.
     remarks: >-
-      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      **Errors**:      - DataExceedsMaximumSize: The location parameter is longer than 255 characters.      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-set-location-appointment-organizer.yaml      var location = "my office";      Office.context.mailbox.item.location.setAsync(location, (result) => {
+      Compose
+
+
+      **Errors**:
+
+
+      - DataExceedsMaximumSize: The location parameter is longer than 255 characters.
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-set-location-appointment-organizer.yaml
+
+      var location = "my office";
+
+      Office.context.mailbox.item.location.setAsync(location, (result) => {
         if (result.status !== Office.AsyncResultStatus.Succeeded) {
           console.error(`Action failed with message ${result.error.message}`);
           return;
         }
         console.log(`Successfully set location to ${location}`);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -132,14 +212,29 @@ methods:
     package: outlook!
     fullName: 'setAsync(location, callback)'
     summary: >-
-      Sets the location of an appointment.      The `setAsync` method starts an asynchronous call to the Exchange server to set the location of an appointment.
+      Sets the location of an appointment.
+
+
+      The `setAsync` method starts an asynchronous call to the Exchange server to set the location of an appointment.
       Setting the location of an appointment overwrites the current location.
     remarks: >-
-      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      **Errors**:      - DataExceedsMaximumSize: The location parameter is longer than 255 characters.
+      Compose
+
+
+      **Errors**:
+
+
+      - DataExceedsMaximumSize: The location parameter is longer than 255 characters.
     isPreview: false
     isDeprecated: false
     syntax:

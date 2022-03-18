@@ -4,7 +4,9 @@ uid: 'visio!Visio.LayoutVariant:enum'
 package: visio!
 fullName: Visio.LayoutVariant
 summary: |-
-  Represents the type of layout.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the type of layout.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

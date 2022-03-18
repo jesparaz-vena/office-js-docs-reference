@@ -4,12 +4,21 @@ uid: 'outlook!Office.SharedProperties:interface'
 package: outlook!
 fullName: Office.SharedProperties
 summary: >-
-  Represents the properties of an appointment or message in a shared folder or shared mailbox (now in preview).  For more information on how this object is used, see the [shared folders and shared
+  Represents the properties of an appointment or message in a shared folder or shared mailbox (now in preview).
+
+
+  For more information on how this object is used, see the [shared folders and shared
   mailbox](https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access) article.
 remarks: >-
-  \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose or Read
 isPreview: false
@@ -46,7 +55,13 @@ properties:
     fullName: targetMailbox
     summary: >-
       The location of the owner's mailbox for the delegate's access. This location may differ based on the Outlook
-      client.      Use with `targetRestUrl` to construct the REST operation's URL.      Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
+      client.
+
+
+      Use with `targetRestUrl` to construct the REST operation's URL.
+
+
+      Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -59,7 +74,11 @@ properties:
     package: outlook!
     fullName: targetRestUrl
     summary: |-
-      The REST API's base URL (currently https://outlook.office.com/api).      Use with `targetMailbox` to construct the REST operation's URL.      Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
+      The REST API's base URL (currently https://outlook.office.com/api).
+
+      Use with `targetMailbox` to construct the REST operation's URL.
+
+      Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
     remarks: ''
     isPreview: false
     isDeprecated: false

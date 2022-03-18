@@ -74,13 +74,25 @@ methods:
     summary: Deletes an attribute with the given name from the element identified by xpath.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true
@@ -111,13 +123,25 @@ methods:
     summary: Deletes the element identified by xpath.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true
@@ -160,13 +184,25 @@ methods:
     summary: Inserts an attribute with the given name and value to the element identified by xpath.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true
@@ -200,13 +236,25 @@ methods:
     summary: Inserts the given XML under the parent element identified by xpath at child position index.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true
@@ -309,13 +357,25 @@ methods:
     summary: Queries the XML content of the custom XML part.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true
@@ -415,13 +475,25 @@ methods:
     summary: Updates the value of an attribute with the given name of the element identified by xpath.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true
@@ -455,13 +527,25 @@ methods:
     summary: Updates the XML of the element identified by xpath.
     remarks: >-
       \[ [API set: WordApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      If any element in the tree has an xmlns attribute (whose value is typically, but not always, a URI), an alias for
       that attribute value must prefix the element name in the xpath parameter. For example, suppose the tree is the
-      following:      ```xml      <Day>
+      following:
+
+
+      ```xml
+
+      <Day>
         <Month xmlns="http://calendartypes.org/xsds/GregorianCalendar">
           <Week>something</Week>
         </Month>
-      </Day>      ```      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
+      </Day>
+
+      ```
+
+      The xpath to `<Week>` must be /<!-- -->Day<!-- -->/<!-- -->greg:Month<!-- -->/<!-- -->Week, where greg is an alias
       that is mapped to "http:<!-- -->/<!-- -->/<!-- -->calendartypes.org<!-- -->/<!-- -->xsds<!-- -->/<!--
       -->GregorianCalendar" in the namespaceMappings parameter.
     isPreview: true

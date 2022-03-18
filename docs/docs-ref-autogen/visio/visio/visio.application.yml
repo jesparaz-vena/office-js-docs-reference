@@ -4,7 +4,9 @@ uid: 'visio!Visio.Application:class'
 package: visio!
 fullName: Visio.Application
 summary: |-
-  Represents the Application.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the Application.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -29,7 +31,9 @@ properties:
     package: visio!
     fullName: showBorders
     summary: |-
-      Show or hide the iFrame application borders.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Show or hide the iFrame application borders.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -37,7 +41,12 @@ properties:
       content: 'showBorders: boolean;'
       return:
         type: boolean
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Visio.run(session, function (ctx) {
               var application = ctx.document.application;
               application.showToolbars = false;
@@ -55,7 +64,9 @@ properties:
     package: visio!
     fullName: showToolbars
     summary: |-
-      Show or hide the standard toolbars.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Show or hide the standard toolbars.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -139,7 +150,9 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: |-
-      This method has the following additional signature:      `set(properties: Visio.Application): void`
+      This method has the following additional signature:
+
+      `set(properties: Visio.Application): void`
     isPreview: false
     isDeprecated: false
     syntax:
@@ -195,7 +208,9 @@ methods:
     package: visio!
     fullName: 'showToolbar(id, show)'
     summary: |-
-      Sets the visibility of a specific toolbar in the application.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Sets the visibility of a specific toolbar in the application.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -216,7 +231,9 @@ methods:
     package: visio!
     fullName: 'showToolbar(idString, show)'
     summary: |-
-      Sets the visibility of a specific toolbar in the application.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Sets the visibility of a specific toolbar in the application.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

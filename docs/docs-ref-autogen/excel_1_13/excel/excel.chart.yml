@@ -168,7 +168,11 @@ properties:
     fullName: legend
     summary: Represents the legend for the chart.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Set to show legend of Chart1 and make it on top of the chart.
       Excel.run(function (ctx) { 
           var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
@@ -197,7 +201,11 @@ properties:
     fullName: name
     summary: Specifies the name of a chart object.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Rename the chart to new name, resize the chart to 200 points in both height and weight. 
       // Move Chart1 to 100 points to the top and left. 
       Excel.run(function (ctx) { 
@@ -404,7 +412,11 @@ methods:
     fullName: delete()
     summary: Deletes the chart object.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
           chart.delete();
@@ -431,7 +443,11 @@ methods:
       Renders the chart as a base64-encoded image by scaling the chart to fit the specified dimensions. The aspect ratio
       is preserved as part of the resizing.
     remarks: |-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
           var image = chart.getImage();
@@ -526,7 +542,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Chart:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Get a chart named "Chart1"
           Excel.run(function (ctx) { 
               var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
@@ -617,7 +638,11 @@ methods:
     fullName: 'setData(sourceData, seriesBy)'
     summary: Resets the source data for the chart.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Set the sourceData to be "A1:B4" and seriesBy to be "Columns"
       Excel.run(function (ctx) { 
           var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
@@ -675,7 +700,11 @@ methods:
     fullName: 'setPosition(startCell, endCell)'
     summary: Positions the chart relative to cells on the worksheet.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Charts";
           var rangeSelection = "A1:B4";
@@ -736,21 +765,53 @@ events:
     fullName: onActivated
     summary: Occurs when the chart is activated.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml      await Excel.run(async (context) => {          const pieChart = context.workbook.worksheets.getActiveWorksheet().charts.getItem("Pie");          // Register the onActivated and onDeactivated event handlers.
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml
+
+      await Excel.run(async (context) => {
+
+          const pieChart = context.workbook.worksheets.getActiveWorksheet().charts.getItem("Pie");
+
+          // Register the onActivated and onDeactivated event handlers.
           pieChart.onActivated.add(chartActivated);
-          pieChart.onDeactivated.add(chartDeactivated);          await context.sync();          console.log("Added handlers for Chart onActivated and onDeactivated events.");
-      });      ```      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml      async function chartActivated(event) {
+          pieChart.onDeactivated.add(chartDeactivated);
+
+          await context.sync();
+
+          console.log("Added handlers for Chart onActivated and onDeactivated events.");
+      });
+
+      ```
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml
+
+      async function chartActivated(event) {
           await Excel.run(async (context) => {
               // Retrieve the worksheet.
-              const sheet = context.workbook.worksheets.getActiveWorksheet();              // Retrieve the activated chart by ID and load the name of the chart. 
+              const sheet = context.workbook.worksheets.getActiveWorksheet();
+
+              // Retrieve the activated chart by ID and load the name of the chart. 
               const activatedChart = sheet.charts.getItem(event.chartId);
               activatedChart.load(["name"]);
-              await context.sync();              // Print out the activated chart's data.
+              await context.sync();
+
+              // Print out the activated chart's data.
               console.log(`A chart was activated. ID: ${event.chartId}. Chart name: ${activatedChart.name}.`);
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -765,17 +826,45 @@ events:
     fullName: onDeactivated
     summary: Occurs when the chart is deactivated.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml      await Excel.run(async (context) => {          const pieChart = context.workbook.worksheets.getActiveWorksheet().charts.getItem("Pie");          // Register the onActivated and onDeactivated event handlers.
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml
+
+      await Excel.run(async (context) => {
+
+          const pieChart = context.workbook.worksheets.getActiveWorksheet().charts.getItem("Pie");
+
+          // Register the onActivated and onDeactivated event handlers.
           pieChart.onActivated.add(chartActivated);
-          pieChart.onDeactivated.add(chartDeactivated);          await context.sync();          console.log("Added handlers for Chart onActivated and onDeactivated events.");
-      });      ```      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml      async function chartDeactivated(event) {
+          pieChart.onDeactivated.add(chartDeactivated);
+
+          await context.sync();
+
+          console.log("Added handlers for Chart onActivated and onDeactivated events.");
+      });
+
+      ```
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-chart-activated.yaml
+
+      async function chartDeactivated(event) {
           await Excel.run(async (context) => {
               // Callback function for when the chart is deactivated.
               console.log("The pie chart is NOT active.");
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

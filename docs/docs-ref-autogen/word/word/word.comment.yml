@@ -46,8 +46,18 @@ properties:
     summary: Gets or sets the comment's content as plain text.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
         let text = $("#edit-comment-text")
           .val()
           .toString();
@@ -55,11 +65,17 @@ properties:
           .getSelection()
           .getComments()
           .getFirst();
-        comment.content = text;        // Load object for display in Script Lab console.
+        comment.content = text;
+
+        // Load object for display in Script Lab console.
         comment.load();
-        await context.sync();        console.log("Comment content changed:");
+        await context.sync();
+
+        console.log("Comment content changed:");
         console.log(comment);
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -145,22 +161,38 @@ properties:
       means that the comment thread is resolved.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
         let comment = context.document
           .getSelection()
           .getComments()
           .getFirst();
         comment.load("resolved");
-        await context.sync();        // Toggle resolved status.
+        await context.sync();
+
+        // Toggle resolved status.
         // If the comment is active, set as resolved.
         // If it's resolved, set resolved to false.
         let toggleResolved: boolean = comment.resolved;
         comment.resolved = !toggleResolved;
         comment.load();
-        await context.sync();        console.log(`Comment Resolved status: ${comment.resolved}`);
+        await context.sync();
+
+        console.log(`Comment Resolved status: ${comment.resolved}`);
         console.log(comment);
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -175,15 +207,29 @@ methods:
     summary: Deletes the comment and its replies.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
         context.document
           .getSelection()
           .getComments()
           .getFirst()
           .delete();
-        await context.sync();        console.log("Comment deleted");
-      });      ```
+        await context.sync();
+
+        console.log("Comment deleted");
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -198,16 +244,30 @@ methods:
     summary: Gets the range in the main document where the comment is on.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
         let range = context.document
           .getSelection()
           .getComments()
           .getFirst()
           .getRange();
         range.load("text");
-        await context.sync();        console.log(`Comment location: ${range.text}`);
-      });      ```
+        await context.sync();
+
+        console.log(`Comment location: ${range.text}`);
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -289,8 +349,18 @@ methods:
     summary: Adds a new reply to the end of the comment thread.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
         let text = $("#reply-text")
           .val()
           .toString();
@@ -304,7 +374,9 @@ methods:
         } else {
           console.log("No active comment was found in the selection so couldn't reply.");
         }
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:

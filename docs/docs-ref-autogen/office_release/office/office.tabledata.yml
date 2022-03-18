@@ -45,13 +45,34 @@ properties:
     remarks: >-
       To specify headers, you must specify an array of arrays that corresponds to the structure of the table. For
       example, to specify headers for a two-column table you would set the header property to \[\['header1',
-      'header2'\]\].      If you specify null for the headers property (or leaving the property empty when you construct a TableData
-      object), the following results occur when your code executes:      - If you insert a new table, the default column headers for the table are created.      - If you overwrite or update an existing table, the existing headers are not altered.      #### Examples      ```javascript      // The following example creates a single-column table with a header and three rows.      function createTableData() {
+      'header2'\]\].
+
+
+      If you specify null for the headers property (or leaving the property empty when you construct a TableData
+      object), the following results occur when your code executes:
+
+
+      - If you insert a new table, the default column headers for the table are created.
+
+
+      - If you overwrite or update an existing table, the existing headers are not altered.
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following example creates a single-column table with a header and three rows.
+
+      function createTableData() {
           var tableData = new Office.TableData();
           tableData.headers = [['header1']];
           tableData.rows = [['row1'], ['row2'], ['row3']];
           return tableData;
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,13 +89,34 @@ properties:
     remarks: >-
       To specify rows, you must specify an array of arrays that corresponds to the structure of the table. For example,
       to specify two rows of string values in a two-column table you would set the rows property to \[\['a', 'b'\],
-      \['c', 'd'\]\].      If you specify null for the rows property (or leave the property empty when you construct a TableData object), the
-      following results occur when your code executes:      - If you insert a new table, a blank row will be inserted.      - If you overwrite or update an existing table, the existing rows are not altered.      #### Examples      ```javascript      // The following example creates a single-column table with a header and three rows.      function createTableData() {
+      \['c', 'd'\]\].
+
+
+      If you specify null for the rows property (or leave the property empty when you construct a TableData object), the
+      following results occur when your code executes:
+
+
+      - If you insert a new table, a blank row will be inserted.
+
+
+      - If you overwrite or update an existing table, the existing rows are not altered.
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following example creates a single-column table with a header and three rows.
+
+      function createTableData() {
           var tableData = new Office.TableData();
           tableData.headers = [['header1']];
           tableData.rows = [['row1'], ['row2'], ['row3']];
           return tableData;
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

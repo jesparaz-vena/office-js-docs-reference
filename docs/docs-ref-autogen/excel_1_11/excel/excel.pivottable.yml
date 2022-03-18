@@ -17,18 +17,36 @@ properties:
     fullName: columnHierarchies
     summary: The Column Pivot Hierarchies of the PivotTable.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml      await Excel.run(async (context) => {
-          const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");                 // Check if the PivotTable already has a column.
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml
+
+      await Excel.run(async (context) => {
+          const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");       
+
+          // Check if the PivotTable already has a column.
           const column = pivotTable.columnHierarchies.getItemOrNullObject("Farm");
           column.load("id");
-          await context.sync();          if (column.isNullObject) {
+          await context.sync();
+
+          if (column.isNullObject) {
               // Adding the farm column to the column hierarchy automatically removes it from the row hierarchy.
               pivotTable.columnHierarchies.add(pivotTable.hierarchies.getItem("Farm"));
           } else {
               pivotTable.columnHierarchies.remove(column);
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -55,12 +73,26 @@ properties:
     fullName: dataHierarchies
     summary: The Data Pivot Hierarchies of the PivotTable.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml
+
+      await Excel.run(async (context) => {
           const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
           pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold at Farm"));
-          pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold Wholesale"));          await context.sync();
-      });      ```
+          pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold Wholesale"));
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -85,20 +117,34 @@ properties:
     fullName: filterHierarchies
     summary: The Filter Pivot Hierarchies of the PivotTable.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-filters-and-summaries.yaml      async function filter(functionType: Excel.AggregationFunction) {
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-filters-and-summaries.yaml
+
+      async function filter(functionType: Excel.AggregationFunction) {
           await Excel.run(async (context) => {
               const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
               const filters = pivotTable.filterHierarchies;
               const filter = filters.getItemOrNullObject("Classification");
               filter.load();
-              await context.sync();              // Add the Classification hierarchy to the filter, if it's not already there.
+              await context.sync();
+
+              // Add the Classification hierarchy to the filter, if it's not already there.
               if (filter.isNullObject) {
                   filters.add(pivotTable.hierarchies.getItem("Classification"));
                   await context.sync();
               }
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -135,11 +181,23 @@ properties:
     fullName: layout
     summary: The PivotLayout describing the layout and visual structure of the PivotTable.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml
+
+      await Excel.run(async (context) => {
           const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
           pivotTable.layout.load("layoutType");
-          await context.sync();          // Cycle between the three layout types.
+          await context.sync();
+
+          // Cycle between the three layout types.
           if (pivotTable.layout.layoutType === "Compact") {
               pivotTable.layout.layoutType = "Outline";
           } else if (pivotTable.layout.layoutType === "Outline") {
@@ -149,7 +207,9 @@ properties:
           }
           await context.sync();
           console.log("Pivot layout is now " + pivotTable.layout.layoutType);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -211,10 +271,24 @@ methods:
     fullName: delete()
     summary: Deletes the PivotTable.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml      await Excel.run(async (context) => {
-          context.workbook.worksheets.getItem("Pivot").pivotTables.getItem("Farm Sales").delete();          await context.sync();
-      });      ```
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml
+
+      await Excel.run(async (context) => {
+          context.workbook.worksheets.getItem("Pivot").pivotTables.getItem("Farm Sales").delete();
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

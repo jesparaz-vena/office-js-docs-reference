@@ -27,7 +27,10 @@ properties:
     fullName: criterion1
     summary: >-
       The first criterion used to filter data. Used as an operator in the case of `custom` filtering. For example "<!--
-      -->&gt;<!-- -->50" for numbers greater than 50, or "=*s" for values ending in "s".      Used as a number in the case of top/bottom items/percents (e.g., "5" for the top 5 items if `filterOn` is set to
+      -->&gt;<!-- -->50" for numbers greater than 50, or "=*s" for values ending in "s".
+
+
+      Used as a number in the case of top/bottom items/percents (e.g., "5" for the top 5 items if `filterOn` is set to
       `topItems`<!-- -->).
     remarks: '\[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
     isPreview: false
@@ -83,17 +86,35 @@ properties:
     fullName: filterOn
     summary: The property used by the filter to determine whether the values should stay visible.
     remarks: >-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml
+
+      await Excel.run(async (context) => {
           // This method adds a percentage AutoFilter to the active worksheet 
-          // and applies the filter to a column of the used range.          // Retrieve the active worksheet and the used range on that worksheet.
+          // and applies the filter to a column of the used range.
+
+          // Retrieve the active worksheet and the used range on that worksheet.
           const sheet = context.workbook.worksheets.getActiveWorksheet();
-          const farmData = sheet.getUsedRange();          // Add a filter that will only show the rows with the top 50% of values in column 3.
+          const farmData = sheet.getUsedRange();
+
+          // Add a filter that will only show the rows with the top 50% of values in column 3.
           sheet.autoFilter.apply(farmData, 3, {
               criterion1: "50",
               filterOn: Excel.FilterOn.topPercent
-          });          await context.sync();
-      });      ```
+          });
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

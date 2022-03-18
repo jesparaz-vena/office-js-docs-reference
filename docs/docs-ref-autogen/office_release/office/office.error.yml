@@ -25,7 +25,12 @@ properties:
       content: 'code: number;'
       return:
         type: number
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // To cause an error to be thrown, select a table or a matrix, and then call the setText function.
           function setText() {
               Office.context.document.setSelectedDataAsync("Hello World!",
@@ -34,7 +39,9 @@ properties:
                           var error = asyncResult.error;
                       write(error.name + ": " + error.code + " - " + error.message);
                   });
-          }          // Function that writes to a div with id='message' on the page.
+          }
+
+          // Function that writes to a div with id='message' on the page.
           function write(message){
               document.getElementById('message').innerText += message; 
           }
@@ -51,7 +58,12 @@ properties:
       content: 'message: string;'
       return:
         type: string
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // To cause an error to be thrown, select a table or a matrix, and then call the setText function.
           function setText() {
               Office.context.document.setSelectedDataAsync("Hello World!",
@@ -60,7 +72,9 @@ properties:
                           var error = asyncResult.error;
                       write(error.name + ": " + error.message);
                   });
-          }          // Function that writes to a div with id='message' on the page.
+          }
+
+          // Function that writes to a div with id='message' on the page.
           function write(message){
               document.getElementById('message').innerText += message; 
           }
@@ -77,7 +91,12 @@ properties:
       content: 'name: string;'
       return:
         type: string
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // To cause an error to be thrown, select a table or a matrix, and then call the setText function.
           function setText() {
               Office.context.document.setSelectedDataAsync("Hello World!",
@@ -86,7 +105,9 @@ properties:
                           var error = asyncResult.error;
                       write(error.name + ": " + error.message);
                   });
-          }          // Function that writes to a div with id='message' on the page.
+          }
+
+          // Function that writes to a div with id='message' on the page.
           function write(message){
               document.getElementById('message').innerText += message; 
           }

@@ -68,18 +68,34 @@ methods:
     fullName: appendHtml(html)
     summary: Adds the specified HTML to the bottom of the Outline.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Gets the active page.
-          var activePage = context.application.getActivePage();          // Get pageContents of the activePage. 
-          var pageContents = activePage.contents;          // Queue a command to load the pageContents to access its data.
-          context.load(pageContents);          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Gets the active page.
+          var activePage = context.application.getActivePage();
+
+          // Get pageContents of the activePage. 
+          var pageContents = activePage.contents;
+
+          // Queue a command to load the pageContents to access its data.
+          context.load(pageContents);
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function() {
                   if (pageContents.items.length != 0 && pageContents.items[0].type == "Outline")
                   {
                       // First item is an outline.
-                      outline = pageContents.items[0].outline;                      // Queue a command to append a paragraph to the outline.
-                      outline.appendHtml("<p>new paragraph</p>");                      // Run the queued commands.
+                      outline = pageContents.items[0].outline;
+
+                      // Queue a command to append a paragraph to the outline.
+                      outline.appendHtml("<p>new paragraph</p>");
+
+                      // Run the queued commands.
                       return context.sync();
                   }
               });
@@ -151,17 +167,33 @@ methods:
     fullName: 'appendTable(rowCount, columnCount, values)'
     summary: Adds a table with the specified number of rows and columns to the bottom of the outline.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Gets the active page.
-          var activePage = context.application.getActivePage();          // Get pageContents of the activePage. 
-          var pageContents = activePage.contents;          // Queue a command to load the pageContents to access its data.
-          context.load(pageContents);          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Gets the active page.
+          var activePage = context.application.getActivePage();
+
+          // Get pageContents of the activePage. 
+          var pageContents = activePage.contents;
+
+          // Queue a command to load the pageContents to access its data.
+          context.load(pageContents);
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function() {
                   if (pageContents.items.length != 0 && pageContents.items[0].type == "Outline") {
                       // First item is an outline.
-                      var outline = pageContents.items[0].outline;                      // Queue a command to append a paragraph to the outline.
-                      outline.appendTable(2, 2, [[1, 2],[3, 4]]);                      // Run the queued commands.
+                      var outline = pageContents.items[0].outline;
+
+                      // Queue a command to append a paragraph to the outline.
+                      outline.appendTable(2, 2, [[1, 2],[3, 4]]);
+
+                      // Run the queued commands.
                       return context.sync();
                   }
               });

@@ -57,7 +57,11 @@ methods:
       added. If the table cannot be added (e.g., because the address is invalid, or the table would overlap with another
       table), an error will be thrown.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var table = ctx.workbook.tables.add('Sheet1!A1:E7', true);
           table.load('name');
@@ -111,7 +115,11 @@ methods:
     fullName: getItem(key)
     summary: Gets a table by name or ID.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);
@@ -143,7 +151,11 @@ methods:
     fullName: getItemAt(index)
     summary: Gets a table based on its position in the collection.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var table = ctx.workbook.tables.getItemAt(0);
           table.load('name');
@@ -230,7 +242,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.TableCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var tables = ctx.workbook.tables;
               tables.load();
@@ -309,12 +326,26 @@ events:
     fullName: onChanged
     summary: 'Occurs when data changes on any table in a workbook, or a worksheet.'
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-tablecollection-changed.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-tablecollection-changed.yaml
+
+      await Excel.run(async (context) => {
           let tables = context.workbook.tables;
-          tables.onChanged.add(onChange);          await context.sync();
+          tables.onChanged.add(onChange);
+
+          await context.sync();
           console.log("A handler has been registered for the table collection onChanged event");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

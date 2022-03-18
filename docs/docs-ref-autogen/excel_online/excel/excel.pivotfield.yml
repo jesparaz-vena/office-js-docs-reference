@@ -109,17 +109,33 @@ methods:
     fullName: clearAllFilters()
     summary: Clears all criteria from all of the field's filters. This removes any active filtering on the field.
     remarks: >-
-      \[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-pivotfilters.yaml      await Excel.run(async (context) => {
-        // Clear all the PivotFilters.        // Get the PivotTable.
+      \[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-pivotfilters.yaml
+
+      await Excel.run(async (context) => {
+        // Clear all the PivotFilters.
+
+        // Get the PivotTable.
         const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
         pivotTable.hierarchies.load("name");
-        await context.sync();        // Clear the filters on each PivotField.
+        await context.sync();
+
+        // Clear the filters on each PivotField.
         pivotTable.hierarchies.items.forEach((hierarchy) => {
           hierarchy.fields.getItem(hierarchy.name).clearAllFilters();
         });
         await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

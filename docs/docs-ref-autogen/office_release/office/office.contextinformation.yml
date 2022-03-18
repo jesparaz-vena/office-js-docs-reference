@@ -21,7 +21,12 @@ properties:
       content: 'host: Office.HostType;'
       return:
         type: '<xref uid="office!Office.HostType:enum" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           var contextInfo = Office.context.diagnostics;
           console.log("Office application: " + contextInfo.host);
           ```
@@ -37,7 +42,12 @@ properties:
       content: 'platform: Office.PlatformType;'
       return:
         type: '<xref uid="office!Office.PlatformType:enum" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           var contextInfo = Office.context.diagnostics;
           console.log("Platform: " + contextInfo.platform);
           ```
@@ -53,7 +63,12 @@ properties:
       content: 'version: string;'
       return:
         type: string
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           var contextInfo = Office.context.diagnostics;
           console.log("Office version: " + contextInfo.version);
           ```

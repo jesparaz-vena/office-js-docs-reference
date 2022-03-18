@@ -4,7 +4,9 @@ uid: 'visio!Visio.Interfaces.HyperlinkCollectionLoadOptions:interface'
 package: visio!
 fullName: Visio.Interfaces.HyperlinkCollectionLoadOptions
 summary: |-
-  Represents the Hyperlink Collection.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the Hyperlink Collection.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -29,7 +31,9 @@ properties:
     package: visio!
     fullName: address
     summary: |-
-      For EACH ITEM in the collection: Gets the address of the Hyperlink object. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      For EACH ITEM in the collection: Gets the address of the Hyperlink object. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -42,7 +46,9 @@ properties:
     package: visio!
     fullName: description
     summary: |-
-      For EACH ITEM in the collection: Gets the description of a hyperlink. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      For EACH ITEM in the collection: Gets the description of a hyperlink. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -56,7 +62,10 @@ properties:
     fullName: extraInfo
     summary: >-
       For EACH ITEM in the collection: Gets the extra URL request information used to resolve the hyperlink's URL.
-      Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Read-only.
+
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -69,7 +78,9 @@ properties:
     package: visio!
     fullName: subAddress
     summary: |-
-      For EACH ITEM in the collection: Gets the sub-address of the Hyperlink object. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      For EACH ITEM in the collection: Gets the sub-address of the Hyperlink object. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

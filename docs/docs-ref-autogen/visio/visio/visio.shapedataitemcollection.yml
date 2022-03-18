@@ -4,7 +4,9 @@ uid: 'visio!Visio.ShapeDataItemCollection:class'
 package: visio!
 fullName: Visio.ShapeDataItemCollection
 summary: |-
-  Represents the ShapeDataItemCollection for a given Shape.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the ShapeDataItemCollection for a given Shape.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -42,7 +44,9 @@ methods:
     package: visio!
     fullName: getCount()
     summary: |-
-      Gets the number of Shape Data Items.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets the number of Shape Data Items.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -56,7 +60,9 @@ methods:
     package: visio!
     fullName: getItem(key)
     summary: |-
-      Gets the ShapeDataItem using its name.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets the ShapeDataItem using its name.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -91,7 +97,12 @@ methods:
             uid="visio!Visio.Interfaces.CollectionLoadOptions:interface" />
       return:
         type: '<xref uid="visio!Visio.ShapeDataItemCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Visio.run(session, function (ctx) {
               var activePage = ctx.document.getActivePage();
               var shape = activePage.shapes.getItem(0);

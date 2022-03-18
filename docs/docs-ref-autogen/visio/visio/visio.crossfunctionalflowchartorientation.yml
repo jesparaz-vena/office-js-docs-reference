@@ -4,7 +4,9 @@ uid: 'visio!Visio.CrossFunctionalFlowchartOrientation:enum'
 package: visio!
 fullName: Visio.CrossFunctionalFlowchartOrientation
 summary: |-
-  Represents the orientation of the Cross Functional Flowchart diagram.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the orientation of the Cross Functional Flowchart diagram.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

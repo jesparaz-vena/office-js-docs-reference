@@ -4,7 +4,10 @@ uid: 'excel!Excel.WorksheetMovedEventArgs:interface'
 package: excel!
 fullName: Excel.WorksheetMovedEventArgs
 summary: >-
-  Notifies when a worksheet is moved within a workbook.  If a worksheet is moved from one position within the workbook to another via the Excel UI, then this API will trigger
+  Notifies when a worksheet is moved within a workbook.
+
+
+  If a worksheet is moved from one position within the workbook to another via the Excel UI, then this API will trigger
   an event. Note that if the position of a worksheet changes as a result of moving a different worksheet, then this
   event won't trigger for both position changes. This event only triggers for the primary worksheet move, and not any
   worksheet position changes that occur as a result of that primary move.

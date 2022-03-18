@@ -55,16 +55,32 @@ properties:
     fullName: tableId
     summary: Gets the ID of the table in which the data changed.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-tablecollection-changed.yaml      async function onChange(event) {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-tablecollection-changed.yaml
+
+      async function onChange(event) {
           await Excel.run(async (context) => {
               let table = context.workbook.tables.getItem(event.tableId);
               let worksheet = context.workbook.worksheets.getItem(event.worksheetId);
-              worksheet.load("name");              await context.sync();              console.log("Handler for table collection onChanged event has been triggered. Data changed address: " + event.address);
+              worksheet.load("name");
+
+              await context.sync();
+
+              console.log("Handler for table collection onChanged event has been triggered. Data changed address: " + event.address);
               console.log("Table Id : " + event.tableId);
               console.log("Worksheet Id : " + worksheet.name);
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -89,16 +105,32 @@ properties:
     fullName: worksheetId
     summary: Gets the ID of the worksheet in which the data changed.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-tablecollection-changed.yaml      async function onChange(event) {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-tablecollection-changed.yaml
+
+      async function onChange(event) {
           await Excel.run(async (context) => {
               let table = context.workbook.tables.getItem(event.tableId);
               let worksheet = context.workbook.worksheets.getItem(event.worksheetId);
-              worksheet.load("name");              await context.sync();              console.log("Handler for table collection onChanged event has been triggered. Data changed address: " + event.address);
+              worksheet.load("name");
+
+              await context.sync();
+
+              console.log("Handler for table collection onChanged event has been triggered. Data changed address: " + event.address);
               console.log("Table Id : " + event.tableId);
               console.log("Worksheet Id : " + worksheet.name);
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -111,7 +143,9 @@ methods:
     package: excel!
     fullName: getRange(ctx)
     summary: |-
-      Gets the range that represents the changed area of a table on a specific worksheet.      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+      Gets the range that represents the changed area of a table on a specific worksheet.
+
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -129,7 +163,9 @@ methods:
     package: excel!
     fullName: getRangeOrNullObject(ctx)
     summary: |-
-      Gets the range that represents the changed area of a table on a specific worksheet. It might return null object.      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+      Gets the range that represents the changed area of a table on a specific worksheet. It might return null object.
+
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

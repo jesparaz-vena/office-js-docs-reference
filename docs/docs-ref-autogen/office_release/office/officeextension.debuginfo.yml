@@ -39,7 +39,10 @@ properties:
     fullName: fullStatements
     summary: >-
       All statements in the batch request (including any potentially-sensitive information that was specified in the
-      request), if available.      These statements may not match the code exactly as written, but will be a close approximation.
+      request), if available.
+
+
+      These statements may not match the code exactly as written, but will be a close approximation.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -76,7 +79,10 @@ properties:
     package: office!
     fullName: statements
     summary: >-
-      The statement that caused the error, if available.      This statement will never contain any potentially-sensitive data and may not match the code exactly as written,
+      The statement that caused the error, if available.
+
+
+      This statement will never contain any potentially-sensitive data and may not match the code exactly as written,
       but will be a close approximation.
     remarks: ''
     isPreview: false
@@ -90,7 +96,10 @@ properties:
     package: office!
     fullName: surroundingStatements
     summary: >-
-      The statements that closely precede and follow the statement that caused the error, if available.      These statements will never contain any potentially-sensitive data and may not match the code exactly as written,
+      The statements that closely precede and follow the statement that caused the error, if available.
+
+
+      These statements will never contain any potentially-sensitive data and may not match the code exactly as written,
       but will be a close approximation.
     remarks: ''
     isPreview: false

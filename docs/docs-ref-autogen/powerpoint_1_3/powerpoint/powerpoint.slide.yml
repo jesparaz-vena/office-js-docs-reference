@@ -90,10 +90,24 @@ methods:
     fullName: delete()
     summary: Deletes the slide from the presentation. Does nothing if the slide does not exist.
     remarks: >-
-      \[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml      await PowerPoint.run(async function(context) {
+      \[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
+
+      await PowerPoint.run(async function(context) {
         const slides = context.presentation.slides;
-        slides.load("tags/key, tags/value");        await context.sync();        for (let i = 0; i < slides.items.length; i++) {
+        slides.load("tags/key, tags/value");
+
+        await context.sync();
+
+        for (let i = 0; i < slides.items.length; i++) {
           let currentSlide = slides.items[i];
           for (let j = 0; j < currentSlide.tags.items.length; j++) {
             let currentTag = currentSlide.tags.items[j];
@@ -101,8 +115,12 @@ methods:
               currentSlide.delete();
             }
           }
-        }        await context.sync();
-      });      ```
+        }
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

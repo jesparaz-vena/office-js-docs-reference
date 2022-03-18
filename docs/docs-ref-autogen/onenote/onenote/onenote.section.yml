@@ -154,15 +154,29 @@ methods:
     fullName: addPage(title)
     summary: Adds a new page to the end of the section.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Queue a command to add a page to the current section.
-          var page = context.application.getActiveSection().addPage("Wish list");          // Queue a command to load the id and title of the new page. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+                  
+          // Queue a command to add a page to the current section.
+          var page = context.application.getActiveSection().addPage("Wish list");
+                  
+          // Queue a command to load the id and title of the new page. 
           // This example loads the new page so it can read its properties later.           
-          page.load('id,title');          // Run the queued commands, and return a promise to indicate task completion.
+          page.load('id,title');
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Display the properties.       
+              .then(function () {
+                   
+                  // Display the properties.       
                   console.log("Page name: " + page.title);
-                  console.log("Page ID: " + page.id);              });
+                  console.log("Page ID: " + page.id);
+
+              });
       })
       .catch(function(error) {
           console.log("Error: " + error);
@@ -188,11 +202,23 @@ methods:
     fullName: copyToNotebook(destinationNotebook)
     summary: Copies this section to specified notebook.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function (context) {
-          var app = context.application;          // Gets the active Notebook.
-          var notebook = app.getActiveNotebook();          // Gets the active Section.
-          var section = app.getActiveSection();          var newSection;          return context.sync()
+          var app = context.application;
+          
+          // Gets the active Notebook.
+          var notebook = app.getActiveNotebook();
+          
+          // Gets the active Section.
+          var section = app.getActiveSection();
+          
+          var newSection;
+          
+          return context.sync()
               .then(function() {
                   newSection = section.copyToNotebook(notebook);
                   newSection.load('id');
@@ -226,11 +252,23 @@ methods:
     fullName: copyToSectionGroup(destinationSectionGroup)
     summary: Copies this section to specified section group.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function (ctx) {
-          var app = ctx.application;          // Gets the active Notebook.
-          var notebook = app.getActiveNotebook();          // Gets the active Section.
-          var section = app.getActiveSection();          var newSection;          return ctx.sync()
+          var app = ctx.application;
+          
+          // Gets the active Notebook.
+          var notebook = app.getActiveNotebook();
+          
+          // Gets the active Section.
+          var section = app.getActiveSection();
+          
+          var newSection;
+          
+          return ctx.sync()
               .then(function() {
                   var firstSectionGroup = notebook.sectionGroups.items[0];
                   newSection = section.copyToSectionGroup(firstSectionGroup);
@@ -265,11 +303,17 @@ methods:
     fullName: getRestApiId()
     summary: Gets the REST API ID.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx){
           // Get the current section.         
           var section = ctx.application.getActiveSection();
-          var restApiId = section.getRestApiId();          return ctx.sync().
+          var restApiId = section.getRestApiId();
+
+          return ctx.sync().
               then(function(){
                   console.log("The REST API ID is " + restApiId.value);
                   // Note that the REST API ID isn't all you need to interact with the OneNote REST API. 
@@ -313,13 +357,25 @@ methods:
     fullName: 'insertSectionAsSibling(locationString, title)'
     summary: Inserts a new section before or after the current section.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Queue a command to insert a section after the current section.
-          var section = context.application.getActiveSection().insertSectionAsSibling("After", "New section");          // Queue a command to load the id and name of the new section. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+                  
+          // Queue a command to insert a section after the current section.
+          var section = context.application.getActiveSection().insertSectionAsSibling("After", "New section");
+                  
+          // Queue a command to load the id and name of the new section. 
           // This example loads the new section so it can read its properties later.           
-          section.load('id,name');          // Run the queued commands, and return a promise to indicate task completion.
+          section.load('id,name');
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Display the properties.       
+              .then(function () {
+                   
+                  // Display the properties.       
                   console.log("Section name: " + section.name);
                   console.log("Section ID: " + section.id);
               });
@@ -382,11 +438,22 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.Section:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the current section.
-              var section = context.application.getActiveSection();              // Queue a command to load the section. 
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+                  
+              // Get the current section.
+              var section = context.application.getActiveSection();
+                      
+              // Queue a command to load the section. 
               // For best performance, request specific properties.           
-              section.load("id");              // Run the queued commands, and return a promise to indicate task completion.
+              section.load("id");
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
                       console.log("Section ID: " + section.id);
@@ -400,9 +467,15 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the current section.
-              var section = context.application.getActiveSection();              // Queue a command to load the section with the specified properties. 
-              section.load("name,notebook/name");              // Run the queued commands, and return a promise to indicate task completion.
+          OneNote.run(function (context) {
+                  
+              // Get the current section.
+              var section = context.application.getActiveSection();
+                      
+              // Queue a command to load the section with the specified properties. 
+              section.load("name,notebook/name");
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
                       console.log("Section name: " + section.name);
@@ -421,7 +494,9 @@ methods:
               // Queue a command to add a page to the current section.
               var section = context.application.getActiveSection();
               section.load('clientUrl,notebook');
-              var sectionGroup = section.parentSectionGroupOrNull;              // Run the queued commands, and return a promise to indicate task completion.
+              var sectionGroup = section.parentSectionGroupOrNull;
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
                       if(sectionGroup.isNull === false)

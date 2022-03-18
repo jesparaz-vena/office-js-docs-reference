@@ -32,18 +32,32 @@ properties:
     summary: Gets or sets the ChangeTracking mode.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml
+
+      await Word.run(async (context) => {
         const document = context.document;
         document.load("changeTrackingMode");
-        await context.sync();        if (document.changeTrackingMode === Word.ChangeTrackingMode.trackMineOnly) {
+        await context.sync();
+
+        if (document.changeTrackingMode === Word.ChangeTrackingMode.trackMineOnly) {
           console.log("Only my changes are being tracked.");
         } else if (document.changeTrackingMode === Word.ChangeTrackingMode.trackAll) {
           console.log("Everyone's changes are being tracked.");
         } else {
           console.log("No changes are being tracked.");
         }
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -98,12 +112,26 @@ properties:
     fullName: properties
     summary: Gets the properties of the document. Read-only.
     remarks: >-
-      \[ [API set: WordApi 1.3](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/30-properties/get-built-in-properties.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.3](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/30-properties/get-built-in-properties.yaml
+
+      await Word.run(async (context) => {
           let builtInProperties = context.document.properties;
-          builtInProperties.load("*"); // Let's get all!          await context.sync();
+          builtInProperties.load("*"); // Let's get all!
+
+          await context.sync();
           console.log(JSON.stringify(builtInProperties, null, 4));
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -244,15 +272,27 @@ methods:
     fullName: getSelection()
     summary: Gets the current selection of the document. Multiple selections are not supported.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          var textSample = 'This is an example of the insert text method. This is a method ' + 
+      Word.run(function (context) {
+          
+          var textSample = 'This is an example of the insert text method. This is a method ' + 
               'which allows users to insert text into a selection. It can insert text into a ' +
               'relative location or it can overwrite the current selection. Since the ' +
               'getSelection method returns a range object, look up the range object documentation ' +
-              'for everything you can do with a selection.';          // Create a range proxy object for the current selection.
-          var range = context.document.getSelection();          // Queue a command to insert text at the end of the selection.
-          range.insertText(textSample, Word.InsertLocation.end);          // Synchronize the document state by executing the queued commands, 
+              'for everything you can do with a selection.';
+          
+          // Create a range proxy object for the current selection.
+          var range = context.document.getSelection();
+          
+          // Queue a command to insert text at the end of the selection.
+          range.insertText(textSample, Word.InsertLocation.end);
+          
+          // Synchronize the document state by executing the queued commands, 
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Inserted the text at the end of the selection.');
@@ -290,11 +330,22 @@ methods:
           type: '<xref uid="word!Word.Interfaces.DocumentLoadOptions:interface" />'
       return:
         type: '<xref uid="word!Word.Document:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Create a proxy object for the document.
-              var thisDocument = context.document;              // Queue a command to load content control properties.
-              context.load(thisDocument, 'contentControls/id, contentControls/text, contentControls/tag');              // Synchronize the document state by executing the queued commands, 
+          Word.run(function (context) {
+              
+              // Create a proxy object for the document.
+              var thisDocument = context.document;
+              
+              // Queue a command to load content control properties.
+              context.load(thisDocument, 'contentControls/id, contentControls/text, contentControls/tag');
+              
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
                   if (thisDocument.contentControls.items.length !== 0) {
@@ -369,15 +420,29 @@ methods:
     fullName: save()
     summary: Saves the document. This uses the Word default file naming convention if the document has not been saved before.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a proxy object for the document.
-          var thisDocument = context.document;          // Queue a command to load the document save state (on the saved property).
-          context.load(thisDocument, 'saved');              // Synchronize the document state by executing the queued commands, 
+      Word.run(function (context) {
+          
+          // Create a proxy object for the document.
+          var thisDocument = context.document;
+
+          // Queue a command to load the document save state (on the saved property).
+          context.load(thisDocument, 'saved');    
+          
+          // Synchronize the document state by executing the queued commands, 
           // and return a promise to indicate task completion.
-          return context.sync().then(function () {              if (thisDocument.saved === false) {
+          return context.sync().then(function () {
+              
+              if (thisDocument.saved === false) {
                   // Queue a command to save this document.
-                  thisDocument.save();                  // Synchronize the document state by executing the queued commands, 
+                  thisDocument.save();
+                  
+                  // Synchronize the document state by executing the queued commands, 
                   // and return a promise to indicate task completion.
                   return context.sync().then(function () {
                       console.log('Saved the document');

@@ -198,7 +198,11 @@ methods:
     fullName: getItem(id)
     summary: Gets a binding object by ID.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Create a table binding to monitor data changes in the table. 
       // When data is changed, the background color of the table will be changed to orange.
       function addEventHandler() {
@@ -224,7 +228,9 @@ methods:
                       Office.EventType.BindingDataChanged, onBindingDataChanged);
               }
           });
-      }      // when data in the table is changed, this event will be triggered.
+      }
+          
+      // when data in the table is changed, this event will be triggered.
       function onBindingDataChanged(eventArgs) {
           Excel.run(function (ctx) { 
               // highlight the table in orange to indicate data has been changed.
@@ -255,7 +261,11 @@ methods:
     fullName: getItemAt(index)
     summary: Gets a binding object based on its position in the items array.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var lastPosition = ctx.workbook.bindings.count - 1;
           var binding = ctx.workbook.bindings.getItemAt(lastPosition);
@@ -322,7 +332,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.BindingCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var bindings = ctx.workbook.bindings;
               bindings.load('items');

@@ -380,17 +380,33 @@ properties:
     fullName: markerBackgroundColor
     summary: Specifies the marker background color of a chart series.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml
+
+      await Excel.run(async (context) => {
           let sheet = context.workbook.worksheets.getItem("Sample");
           let salesTable = sheet.tables.getItem("SalesTable");
-          let dataRange = sheet.getRange("A1:E7");          // Create an XY scatter chart.
+          let dataRange = sheet.getRange("A1:E7");
+
+          // Create an XY scatter chart.
           let chart = sheet.charts.add("XYScatterSmooth", dataRange, "Auto");
-          chart.title.text = "Bicycle Parts Quarterly Sales";           let series = chart.series;
+          chart.title.text = "Bicycle Parts Quarterly Sales"; 
+        
+          let series = chart.series;
           let series0 = series.getItemAt(0);
           let series1 = series.getItemAt(1);
           let series2 = series.getItemAt(2);
-          let series3 = series.getItemAt(3);          // Set markers.
+          let series3 = series.getItemAt(3);
+
+          // Set markers.
           series0.markerStyle = "Dash";
           series0.markerForegroundColor = "black";
           series1.markerStyle = "Star";
@@ -398,8 +414,12 @@ properties:
           series2.markerStyle = "X";
           series2.markerSize = 12;
           series3.markerStyle = "Triangle";
-          series3.markerBackgroundColor = "purple";          await context.sync();
-      });      ```
+          series3.markerBackgroundColor = "purple";
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -412,17 +432,33 @@ properties:
     fullName: markerForegroundColor
     summary: Specifies the marker foreground color of a chart series.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml
+
+      await Excel.run(async (context) => {
           let sheet = context.workbook.worksheets.getItem("Sample");
           let salesTable = sheet.tables.getItem("SalesTable");
-          let dataRange = sheet.getRange("A1:E7");          // Create an XY scatter chart.
+          let dataRange = sheet.getRange("A1:E7");
+
+          // Create an XY scatter chart.
           let chart = sheet.charts.add("XYScatterSmooth", dataRange, "Auto");
-          chart.title.text = "Bicycle Parts Quarterly Sales";           let series = chart.series;
+          chart.title.text = "Bicycle Parts Quarterly Sales"; 
+        
+          let series = chart.series;
           let series0 = series.getItemAt(0);
           let series1 = series.getItemAt(1);
           let series2 = series.getItemAt(2);
-          let series3 = series.getItemAt(3);          // Set markers.
+          let series3 = series.getItemAt(3);
+
+          // Set markers.
           series0.markerStyle = "Dash";
           series0.markerForegroundColor = "black";
           series1.markerStyle = "Star";
@@ -430,8 +466,12 @@ properties:
           series2.markerStyle = "X";
           series2.markerSize = 12;
           series3.markerStyle = "Triangle";
-          series3.markerBackgroundColor = "purple";          await context.sync();
-      });      ```
+          series3.markerBackgroundColor = "purple";
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -444,17 +484,33 @@ properties:
     fullName: markerSize
     summary: Specifies the marker size of a chart series.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml
+
+      await Excel.run(async (context) => {
           let sheet = context.workbook.worksheets.getItem("Sample");
           let salesTable = sheet.tables.getItem("SalesTable");
-          let dataRange = sheet.getRange("A1:E7");          // Create an XY scatter chart.
+          let dataRange = sheet.getRange("A1:E7");
+
+          // Create an XY scatter chart.
           let chart = sheet.charts.add("XYScatterSmooth", dataRange, "Auto");
-          chart.title.text = "Bicycle Parts Quarterly Sales";           let series = chart.series;
+          chart.title.text = "Bicycle Parts Quarterly Sales"; 
+        
+          let series = chart.series;
           let series0 = series.getItemAt(0);
           let series1 = series.getItemAt(1);
           let series2 = series.getItemAt(2);
-          let series3 = series.getItemAt(3);          // Set markers.
+          let series3 = series.getItemAt(3);
+
+          // Set markers.
           series0.markerStyle = "Dash";
           series0.markerForegroundColor = "black";
           series1.markerStyle = "Star";
@@ -462,8 +518,12 @@ properties:
           series2.markerStyle = "X";
           series2.markerSize = 12;
           series3.markerStyle = "Triangle";
-          series3.markerBackgroundColor = "purple";          await context.sync();
-      });      ```
+          series3.markerBackgroundColor = "purple";
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -476,17 +536,33 @@ properties:
     fullName: markerStyle
     summary: Specifies the marker style of a chart series. See `Excel.ChartMarkerStyle` for details.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series-markers.yaml
+
+      await Excel.run(async (context) => {
           let sheet = context.workbook.worksheets.getItem("Sample");
           let salesTable = sheet.tables.getItem("SalesTable");
-          let dataRange = sheet.getRange("A1:E7");          // Create an XY scatter chart.
+          let dataRange = sheet.getRange("A1:E7");
+
+          // Create an XY scatter chart.
           let chart = sheet.charts.add("XYScatterSmooth", dataRange, "Auto");
-          chart.title.text = "Bicycle Parts Quarterly Sales";           let series = chart.series;
+          chart.title.text = "Bicycle Parts Quarterly Sales"; 
+        
+          let series = chart.series;
           let series0 = series.getItemAt(0);
           let series1 = series.getItemAt(1);
           let series2 = series.getItemAt(2);
-          let series3 = series.getItemAt(3);          // Set markers.
+          let series3 = series.getItemAt(3);
+
+          // Set markers.
           series0.markerStyle = "Dash";
           series0.markerForegroundColor = "black";
           series1.markerStyle = "Star";
@@ -494,8 +570,12 @@ properties:
           series2.markerStyle = "X";
           series2.markerSize = 12;
           series3.markerStyle = "Triangle";
-          series3.markerBackgroundColor = "purple";          await context.sync();
-      });      ```
+          series3.markerBackgroundColor = "purple";
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -713,16 +793,34 @@ methods:
     fullName: delete()
     summary: Deletes the chart series.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series.yaml
+
+      await Excel.run(async (context) => {
         const sheet = context.workbook.worksheets.getItem("Sample");
         const seriesCollection = sheet.charts.getItemAt(0).series;
         seriesCollection.load("count");
-        await context.sync();        if (seriesCollection.count > 0) {
-          const series = seriesCollection.getItemAt(0);          // Delete the first series.
+        await context.sync();
+
+        if (seriesCollection.count > 0) {
+          const series = seriesCollection.getItemAt(0);
+
+          // Delete the first series.
           series.delete();
-        }        await context.sync();
-      });      ```
+        }
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -767,7 +865,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.ChartSeries:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Rename the 1st series of Chart1 to "New Series Name"
           Excel.run(function (ctx) { 
               var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
@@ -858,33 +961,63 @@ methods:
     fullName: setBubbleSizes(sourceData)
     summary: Sets the bubble sizes for a chart series. Only works for bubble charts.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-bubble-chart.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-bubble-chart.yaml
+
+      await Excel.run(async (context) => {
         /*
           The table is expected to look like this:
           Product, Inventory, Price, Current Market Share
           Calamansi, 2000, $2.45, 10%
-          ...          We want each bubble to represent a single row.
-        */        // Get the worksheet and table data.
+          ...
+
+          We want each bubble to represent a single row.
+        */
+
+        // Get the worksheet and table data.
         const sheet = context.workbook.worksheets.getItem("Sample");
         const table = sheet.tables.getItem("Sales");
-        const dataRange = table.getDataBodyRange();        // Get the table data without the row names.
-        const valueRange = dataRange.getOffsetRange(0, 1).getResizedRange(0, -1);        // Create the chart.
+        const dataRange = table.getDataBodyRange();
+
+        // Get the table data without the row names.
+        const valueRange = dataRange.getOffsetRange(0, 1).getResizedRange(0, -1);
+
+        // Create the chart.
         const bubbleChart = sheet.charts.add(Excel.ChartType.bubble, valueRange);
-        bubbleChart.name = "Product Chart";        // Remove the default series, since we want a unique series for each row.
-        bubbleChart.series.getItemAt(0).delete();        // Load the data necessary to make a chart series.
+        bubbleChart.name = "Product Chart";
+
+        // Remove the default series, since we want a unique series for each row.
+        bubbleChart.series.getItemAt(0).delete();
+
+        // Load the data necessary to make a chart series.
         dataRange.load(["rowCount", "values"]);
-        await context.sync();        // For each row, create a chart series (a bubble).
+        await context.sync();
+
+        // For each row, create a chart series (a bubble).
         for (let i = 0; i < dataRange.rowCount; i++) {
           const newSeries = bubbleChart.series.add(dataRange.values[i][0], i);
           newSeries.setXAxisValues(dataRange.getCell(i, 1));
           newSeries.setValues(dataRange.getCell(i, 2));
-          newSeries.setBubbleSizes(dataRange.getCell(i, 3));          // Show the product name and market share percentage.
+          newSeries.setBubbleSizes(dataRange.getCell(i, 3));
+
+          // Show the product name and market share percentage.
           newSeries.dataLabels.showSeriesName = true;
           newSeries.dataLabels.showBubbleSize = true;
           newSeries.dataLabels.showValue = false;
-        }        await context.sync();
-      });      ```
+        }
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -902,15 +1035,33 @@ methods:
     fullName: setValues(sourceData)
     summary: 'Sets the values for a chart series. For scatter charts, it refers to y-axis values.'
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series.yaml      await Excel.run(async (context) => {
-        const sheet = context.workbook.worksheets.getItem("Sample");        let seriesCollection = sheet.charts.getItemAt(0);
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-series.yaml
+
+      await Excel.run(async (context) => {
+        const sheet = context.workbook.worksheets.getItem("Sample");
+
+        let seriesCollection = sheet.charts.getItemAt(0);
         let rangeSelection = sheet.getRange("C2:C7");
-        let xRangeSelection = sheet.getRange("A1:A7");        // Add a series.
+        let xRangeSelection = sheet.getRange("A1:A7");
+
+        // Add a series.
         let newSeries = seriesCollection.series.add("Qtr2");
         newSeries.setValues(rangeSelection);
-        newSeries.setXAxisValues(xRangeSelection);        await context.sync();
-      });      ```
+        newSeries.setXAxisValues(xRangeSelection);
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

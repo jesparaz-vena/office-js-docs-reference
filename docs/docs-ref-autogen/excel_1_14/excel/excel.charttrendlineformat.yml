@@ -29,19 +29,55 @@ properties:
     fullName: line
     summary: Represents chart line formatting.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-trendlines.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getItem("Sample");          let seriesCollection = sheet.charts.getItemAt(0).series;           // Get the color of the chart trendline. 
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-trendlines.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getItem("Sample");
+
+          let seriesCollection = sheet.charts.getItemAt(0).series; 
+
+          // Get the color of the chart trendline. 
           let trendline = seriesCollection.getItemAt(0).trendlines.getItem(0);
           let line = trendline.format.line;
-          line.load("color");          await context.sync();          console.log("The trendline color is:" + line.color);
-      });      ```      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-trendlines.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getItem("Sample");          let seriesCollection = sheet.charts.getItemAt(0).series; 
-          let trendline = seriesCollection.getItemAt(0).trendlines.getItem(0);          // Set format of the trendline to a solid, red line.
+          line.load("color");
+
+          await context.sync();
+
+          console.log("The trendline color is:" + line.color);
+      });
+
+      ```
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-trendlines.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getItem("Sample");
+
+          let seriesCollection = sheet.charts.getItemAt(0).series; 
+          let trendline = seriesCollection.getItemAt(0).trendlines.getItem(0);
+
+          // Set format of the trendline to a solid, red line.
           let line = trendline.format.line;
-          line.color = '#FF0000';          await context.sync();          console.log("The trendline color has been set to:" + line.color);
-      });      ```
+          line.color = '#FF0000';
+
+          await context.sync();
+
+          console.log("The trendline color has been set to:" + line.color);
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

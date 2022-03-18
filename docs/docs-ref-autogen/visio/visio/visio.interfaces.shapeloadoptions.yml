@@ -4,7 +4,9 @@ uid: 'visio!Visio.Interfaces.ShapeLoadOptions:interface'
 package: visio!
 fullName: Visio.Interfaces.ShapeLoadOptions
 summary: |-
-  Represents the Shape class.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the Shape class.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -29,7 +31,9 @@ properties:
     package: visio!
     fullName: id
     summary: |-
-      Shape's identifier. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Shape's identifier. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -42,7 +46,9 @@ properties:
     package: visio!
     fullName: isBoundToData
     summary: |-
-      Returns true if the shape is bound to data and is part of Data Visualizer diagram. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Returns true if the shape is bound to data and is part of Data Visualizer diagram. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -55,7 +61,9 @@ properties:
     package: visio!
     fullName: name
     summary: |-
-      Shape's name. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Shape's name. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -68,7 +76,9 @@ properties:
     package: visio!
     fullName: select
     summary: |-
-      Returns true, if shape is selected. User can set true to select the shape explicitly.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Returns true, if shape is selected. User can set true to select the shape explicitly.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -81,7 +91,9 @@ properties:
     package: visio!
     fullName: text
     summary: |-
-      Shape's text. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Shape's text. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -94,7 +106,9 @@ properties:
     package: visio!
     fullName: view
     summary: |-
-      Returns the view of the shape.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Returns the view of the shape.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

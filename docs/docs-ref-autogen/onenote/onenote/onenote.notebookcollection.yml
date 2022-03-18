@@ -54,18 +54,32 @@ methods:
     fullName: getByName(name)
     summary: Gets the collection of notebooks with the specified name that are open in the application instance.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the notebooks that are open in the application instance and have the specified name.
-          var notebooks = context.application.notebooks.getByName("Homework");          // Queue a command to load the notebooks. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the notebooks that are open in the application instance and have the specified name.
+          var notebooks = context.application.notebooks.getByName("Homework");
+
+          // Queue a command to load the notebooks. 
           // For best performance, request specific properties.           
-          notebooks.load("id,name");          // Run the queued commands, and return a promise to indicate task completion.
+          notebooks.load("id,name");
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Iterate through the collection or access items individually by index,
+              .then(function () {
+
+                  // Iterate through the collection or access items individually by index,
                   // for example: notebooks.items[0]
                   if (notebooks.items.length > 0) {
                       console.log("Notebook name: " + notebooks.items[0].name);
                       console.log("Notebook ID: " + notebooks.items[0].id);
-                  }              });
+                  }
+                      
+              });
       })
       .catch(function(error) {
           console.log("Error: " + error);
@@ -160,19 +174,34 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.NotebookCollection:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the notebooks that are open in the application instance and have the specified name.
-              var notebooks = context.application.notebooks.getByName("Homework");              // Queue a command to load the notebooks. 
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+
+              // Get the notebooks that are open in the application instance and have the specified name.
+              var notebooks = context.application.notebooks.getByName("Homework");
+
+              // Queue a command to load the notebooks. 
               // For best performance, request specific properties.           
-              notebooks.load("id");              // Run the queued commands, and return a promise to indicate task completion.
+              notebooks.load("id");
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      // Iterate through the collection or access items individually by index, 
+                  .then(function () {
+
+                      // Iterate through the collection or access items individually by index, 
                       // for example: notebooks.items[0]
                       $.each(notebooks.items, function(index, notebook) {
                           notebook.addSection("Biology");
                           notebook.addSection("Spanish");
                           notebook.addSection("Computer Science");
-                      });                      return context.sync();
+                      });
+                      
+                      return context.sync();
                   });
           })
           .catch(function(error) {

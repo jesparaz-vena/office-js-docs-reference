@@ -70,7 +70,11 @@ methods:
     fullName: clear()
     summary: Clears the line format of a chart element.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Set to show legend of Chart1 and make it on top of the chart.
       Excel.run(function (ctx) { 
           var gridlines = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1").axes.valueAxis.majorGridlines;
@@ -129,7 +133,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.ChartLineFormat:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Set chart major gridlines on value axis to be red.
           Excel.run(function (ctx) {
               var gridlines = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1").axes.valueAxis.majorGridlines;

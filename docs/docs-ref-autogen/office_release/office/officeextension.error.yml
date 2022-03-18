@@ -6,12 +6,23 @@ fullName: OfficeExtension.Error
 summary: >-
   The error object returned by `context.sync()`<!-- -->, if a promise is rejected due to an error while processing the
   request.
-remarks: |-  #### Examples  ```javascript
+remarks: |-
+
+
+  #### Examples
+
+  ```javascript
   // Run a batch operation against the Word object model.
-  Word.run(function (context) {      // Create a proxy object for the document body.
-      var body = context.document.body;      // Queue a command to insert text in to the beginning of the body.
+  Word.run(function (context) {
+
+      // Create a proxy object for the document body.
+      var body = context.document.body;
+
+      // Queue a command to insert text in to the beginning of the body.
       // This will cause an OfficeExtension.Error.
-      body.insertText(0);      // Synchronize the document state by executing the queued-up commands,
+      body.insertText(0);
+
+      // Synchronize the document state by executing the queued-up commands,
       // and return a promise to indicate task completion.
       return context.sync();
   })
@@ -112,7 +123,12 @@ properties:
       content: 'traceMessages: string[];'
       return:
         type: 'string[]'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // The following example shows how you can instrument a batch of commands
           // to determine where an error occurred. The first batch successfully
           // inserts the first two paragraphs into the document and cause no errors.
@@ -121,21 +137,35 @@ properties:
           // after the failed command in the batch are not executed, including the
           // command that adds the fifth trace message. In this case, the error
           // occurred after the fourth paragraph was inserted, and before adding the
-          // fifth trace message.          // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Create a proxy object for the document body.
-              var body = context.document.body;              // Queue a command to insert the paragraph at the end of the document body.
+          // fifth trace message.
+
+          // Run a batch operation against the Word object model.
+          Word.run(function (context) {
+
+              // Create a proxy object for the document body.
+              var body = context.document.body;
+
+              // Queue a command to insert the paragraph at the end of the document body.
               // Start a batch of commands.
               body.insertParagraph('1st paragraph', Word.InsertLocation.end);
               // Queue a command for instrumenting this part of the batch.
-              context.trace('1st paragraph successful');              body.insertParagraph('2nd paragraph', Word.InsertLocation.end);
-              context.trace('2nd paragraph successful');              // Synchronize the document state by executing the queued-up commands,
+              context.trace('1st paragraph successful');
+
+              body.insertParagraph('2nd paragraph', Word.InsertLocation.end);
+              context.trace('2nd paragraph successful');
+
+              // Synchronize the document state by executing the queued-up commands,
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
                   // Queue a command to insert the paragraph at the end of the document body.
                   // Start a new batch of commands.
                   body.insertParagraph('3rd paragraph', Word.InsertLocation.end);
-                  context.trace('3rd paragraph successful');                  body.insertParagraph('4th paragraph', Word.InsertLocation.end);
-                  context.trace('4th paragraph successful');                  // This command will cause an error. The trace messages in the queue up to
+                  context.trace('3rd paragraph successful');
+
+                  body.insertParagraph('4th paragraph', Word.InsertLocation.end);
+                  context.trace('4th paragraph successful');
+
+                  // This command will cause an error. The trace messages in the queue up to
                   // this point will be available via Error.traceMessages.
                   body.insertParagraph(0, '5th paragraph', Word.InsertLocation.end);
                   // Queue a command for instrumenting this part of the batch.
@@ -147,5 +177,7 @@ properties:
               if (error instanceof OfficeExtension.Error) {
                   console.log('Trace messages: ' + error.traceMessages);
               }
-          });          // Output: "Trace messages: 3rd paragraph successful,4th paragraph successful"
+          });
+
+          // Output: "Trace messages: 3rd paragraph successful,4th paragraph successful"
           ```

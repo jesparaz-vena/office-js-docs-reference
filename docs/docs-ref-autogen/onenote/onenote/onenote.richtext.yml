@@ -134,14 +134,25 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.RichText:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the collection of pageContent items from the page.
-              var pageContents = context.application.getActivePage().contents;              // Get the first PageContent on the page, and then get its outline's paragraphs.
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+
+              // Get the collection of pageContent items from the page.
+              var pageContents = context.application.getActivePage().contents;
+
+              // Get the first PageContent on the page, and then get its outline's paragraphs.
               var outlinePageContents = ;
               var paragraphs = ;
               var richTextParagraphs = ;
               // Queue a command to load the id and type of each page content in the outline.
-              pageContents.load("id,type");              // Run the queued commands, and return a promise to indicate task completion.
+              pageContents.load("id,type");
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
                       // Load all page contents of type Outline

@@ -68,17 +68,35 @@ methods:
     fullName: 'apply(range, columnIndex, criteria)'
     summary: Applies the AutoFilter to a range. This filters the column if column index and filter criteria are specified.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml
+
+      await Excel.run(async (context) => {
           // This method adds a percentage AutoFilter to the active worksheet 
-          // and applies the filter to a column of the used range.          // Retrieve the active worksheet and the used range on that worksheet.
+          // and applies the filter to a column of the used range.
+
+          // Retrieve the active worksheet and the used range on that worksheet.
           const sheet = context.workbook.worksheets.getActiveWorksheet();
-          const farmData = sheet.getUsedRange();          // Add a filter that will only show the rows with the top 50% of values in column 3.
+          const farmData = sheet.getUsedRange();
+
+          // Add a filter that will only show the rows with the top 50% of values in column 3.
           sheet.autoFilter.apply(farmData, 3, {
               criterion1: "50",
               filterOn: Excel.FilterOn.topPercent
-          });          await context.sync();
-      });      ```
+          });
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -102,13 +120,29 @@ methods:
     fullName: clearColumnCriteria(columnIndex)
     summary: Clears the column filter criteria of the AutoFilter.
     remarks: >-
-      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml      await Excel.run(async (context) => {
-          // This method clears the AutoFilter setting from one column.          // Retrieve the active worksheet.
-          const sheet = context.workbook.worksheets.getActiveWorksheet();          // Clear the filter from only column 3.
+      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml
+
+      await Excel.run(async (context) => {
+          // This method clears the AutoFilter setting from one column.
+
+          // Retrieve the active worksheet.
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+
+          // Clear the filter from only column 3.
           sheet.autoFilter.clearColumnCriteria(3);
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -240,13 +274,29 @@ methods:
     fullName: reapply()
     summary: Applies the specified AutoFilter object currently on the range.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml      await Excel.run(async (context) => {
-          // This method refreshes the AutoFilter to ensure that changes are captured.          // Retrieve the active worksheet.
-          const sheet = context.workbook.worksheets.getActiveWorksheet();          // Reapply the filter to capture changes.
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml
+
+      await Excel.run(async (context) => {
+          // This method refreshes the AutoFilter to ensure that changes are captured.
+
+          // Retrieve the active worksheet.
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+
+          // Reapply the filter to capture changes.
           sheet.autoFilter.reapply();
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -260,13 +310,29 @@ methods:
     fullName: remove()
     summary: Removes the AutoFilter for the range.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml      await Excel.run(async (context) => {
-          // This method removes all AutoFilters from the active worksheet.          // Retrieve the active worksheet.
-          const sheet = context.workbook.worksheets.getActiveWorksheet();          // Remove all filters.
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/worksheet-auto-filter.yaml
+
+      await Excel.run(async (context) => {
+          // This method removes all AutoFilters from the active worksheet.
+
+          // Retrieve the active worksheet.
+          const sheet = context.workbook.worksheets.getActiveWorksheet();
+
+          // Remove all filters.
           sheet.autoFilter.remove();
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

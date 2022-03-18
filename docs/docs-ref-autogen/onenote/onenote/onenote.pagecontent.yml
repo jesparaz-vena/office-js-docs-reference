@@ -128,10 +128,20 @@ methods:
     fullName: delete()
     summary: Deletes the PageContent object.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          var page = context.application.getActivePage();
-          var pageContents = page.contents;          var firstPageContent = pageContents.getItemAt(0);
-          firstPageContent.load('type');          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          var page = context.application.getActivePage();
+          var pageContents = page.contents;
+
+          var firstPageContent = pageContents.getItemAt(0);
+          firstPageContent.load('type');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function () {
                   if(firstPageContent.isNull === false) {

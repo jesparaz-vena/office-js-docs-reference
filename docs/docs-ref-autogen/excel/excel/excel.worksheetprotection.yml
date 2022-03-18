@@ -225,19 +225,51 @@ methods:
     summary: Protects a worksheet. Fails if the worksheet has already been protected.
     remarks: >-
       \[ [API set: ExcelApi 1.2 for options; 1.7 for
-      password](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml      await Excel.run(async (context) => {
+      password](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml
+
+      await Excel.run(async (context) => {
           let activeSheet = context.workbook.worksheets.getActiveWorksheet();
-          activeSheet.load("protection/protected");          await context.sync();          if (!activeSheet.protection.protected) {
+          activeSheet.load("protection/protected");
+
+          await context.sync();
+
+          if (!activeSheet.protection.protected) {
               activeSheet.protection.protect();
           }
-      });      ```      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml      let password = await passwordHandler();      passwordHelper(password);      await Excel.run(async (context) => {
+      });
+
+      ```
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml
+
+      let password = await passwordHandler();
+
+      passwordHelper(password);
+
+      await Excel.run(async (context) => {
           let activeSheet = context.workbook.worksheets.getActiveWorksheet();
-          activeSheet.load("protection/protected");          await context.sync();          if (!activeSheet.protection.protected) {
+          activeSheet.load("protection/protected");
+
+          await context.sync();
+
+          if (!activeSheet.protection.protected) {
               activeSheet.protection.protect(null, password);
           }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -319,15 +351,39 @@ methods:
     summary: Unprotects a worksheet.
     remarks: >-
       \[ [API set: ExcelApi 1.7 for password](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets)
-      \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml      await Excel.run(async (context) => {
+      \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml
+
+      await Excel.run(async (context) => {
           let activeSheet = context.workbook.worksheets.getActiveWorksheet();
           activeSheet.protection.unprotect();
-      });      ```      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml      let password = await passwordHandler();      passwordHelper(password);      await Excel.run(async (context) => {
+      });
+
+      ```
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/data-protection.yaml
+
+      let password = await passwordHandler();
+
+      passwordHelper(password);
+
+      await Excel.run(async (context) => {
           let activeSheet = context.workbook.worksheets.getActiveWorksheet();
           activeSheet.protection.unprotect(password);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

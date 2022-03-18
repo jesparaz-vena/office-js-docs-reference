@@ -138,9 +138,17 @@ methods:
     fullName: 'addOutline(left, top, html)'
     summary: Adds an Outline to the page at the specified position.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Gets the active page.
-          var page = context.application.getActivePage();          // Queue a command to add an outline with given html. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Gets the active page.
+          var page = context.application.getActivePage();
+
+          // Queue a command to add an outline with given html. 
           var outline = page.addOutline(200, 200,
       "<p>Images and a table below:</p> \
        <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==\"> \
@@ -157,7 +165,9 @@ methods:
            <td>94</td> \
          </tr> \
        </table>"     
-              );          // Run the queued commands, and return a promise to indicate task completion.
+              );
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .catch(function(error) {
                   console.log("Error: " + error);
@@ -223,15 +233,31 @@ methods:
     fullName: copyToSection(destinationSection)
     summary: Copies this page to specified section.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
-          var app = ctx.application;          // Gets the active notebook.
-          var notebook = app.getActiveNotebook();          // Gets the active page.
-          var page = app.getActivePage();          // Queue a command to load sections under the notebook.
-          notebook.load('sections');          var newPage;          // Run the queued commands, and return a promise to indicate task completion.
+          var app = ctx.application;
+          
+          // Gets the active notebook.
+          var notebook = app.getActiveNotebook();
+          
+          // Gets the active page.
+          var page = app.getActivePage();
+          
+          // Queue a command to load sections under the notebook.
+          notebook.load('sections');
+          
+          var newPage;
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync()
               .then(function() {
-                  var section = notebook.sections.items[0];                  // copy page to the section.
+                  var section = notebook.sections.items[0];
+                  
+                  // copy page to the section.
                   newPage = page.copyToSection(section);
                   newPage.load('id');
                   return ctx.sync();
@@ -281,11 +307,17 @@ methods:
     fullName: getRestApiId()
     summary: Gets the REST API ID.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx){
           // Get the current page.         
           var page = ctx.application.getActivePage();
-          var restApiId = page.getRestApiId();          return ctx.sync().
+          var restApiId = page.getRestApiId();
+
+          return ctx.sync().
               then(function(){
                   console.log("The REST API ID is " + restApiId.value);
                   // Note that the REST API ID isn't all you need to interact with the OneNote REST API.
@@ -342,11 +374,23 @@ methods:
     fullName: 'insertPageAsSibling(locationString, title)'
     summary: Inserts a new page before or after the current page.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Gets the active page.
-          var activePage = context.application.getActivePage();          // Queue a command to add a new page after the active page. 
-          var newPage = activePage.insertPageAsSibling("After", "Next Page");          // Queue a command to load the newPage to access its data.
-          context.load(newPage);          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Gets the active page.
+          var activePage = context.application.getActivePage();
+
+          // Queue a command to add a new page after the active page. 
+          var newPage = activePage.insertPageAsSibling("After", "Next Page");
+
+          // Queue a command to load the newPage to access its data.
+          context.load(newPage);
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function() {
                   console.log("page is created with title: " + newPage.title);
@@ -410,11 +454,24 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.Page:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Gets the active page.
-              var activePage = context.application.getActivePage();              // Queue a command to add a new page after the active page. 
-              var pageContents = activePage.contents;              // Queue a command to load the pageContents to access its data.
-              context.load(pageContents);              // Run the queued commands, and return a promise to indicate task completion.
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+
+              // Gets the active page.
+              var activePage = context.application.getActivePage();
+
+              // Queue a command to add a new page after the active page. 
+              var pageContents = activePage.contents;
+
+              // Queue a command to load the pageContents to access its data.
+              context.load(pageContents);
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function() {
                       for(var i=0; i < pageContents.items.length; i++)
@@ -443,9 +500,17 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              var app = context.application;              // Gets the active page.
-              var page = app.getActivePage();              // Queue a command to load the webUrl of the page.
-              page.load("webUrl");              // Run the queued commands, and return a promise to indicate task completion.
+          OneNote.run(function (context) {
+
+              var app = context.application;
+              
+              // Gets the active page.
+              var page = app.getActivePage();
+              
+              // Queue a command to load the webUrl of the page.
+              page.load("webUrl");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function() {
                       console.log(page.webUrl);
@@ -460,9 +525,15 @@ methods:
           ```
           ```javascript
           OneNote.run(function (ctx) {        
-              var app = ctx.application;              // Gets the active page.
-              var page = app.getActivePage();              // Load ink words
-              page.load('inkAnalysisOrNull/paragraphs/lines/words');              return ctx.sync()
+              var app = ctx.application;
+              
+              // Gets the active page.
+              var page = app.getActivePage();
+              
+              // Load ink words
+              page.load('inkAnalysisOrNull/paragraphs/lines/words');
+              
+              return ctx.sync()
                   .then(function() {
                       if (!page.inkAnalysisOrNull.isNull)
                           console.log(page.inkAnalysisOrNull.paragraphs.length);

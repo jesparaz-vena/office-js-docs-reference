@@ -4,7 +4,9 @@ uid: 'visio!Visio.DataSourceType:enum'
 package: visio!
 fullName: Visio.DataSourceType
 summary: |-
-  Represents the type of source for the data connection.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the type of source for the data connection.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

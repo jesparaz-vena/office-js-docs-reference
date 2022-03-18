@@ -28,7 +28,10 @@ properties:
     package: excel!
     fullName: altTextDescription
     summary: >-
-      The alt text description of the PivotTable.      Alt text provides alternative, text-based representations of the information contained in the PivotTable. This
+      The alt text description of the PivotTable.
+
+
+      Alt text provides alternative, text-based representations of the information contained in the PivotTable. This
       information is useful for people with vision or cognitive impairments who may not be able to see or understand the
       table. A title can be read to a person with a disability and is used to determine whether they wish to hear the
       description of the content.
@@ -44,7 +47,10 @@ properties:
     package: excel!
     fullName: altTextTitle
     summary: >-
-      The alt text title of the PivotTable.      Alt text provides alternative, text-based representations of the information contained in the PivotTable. This
+      The alt text title of the PivotTable.
+
+
+      Alt text provides alternative, text-based representations of the information contained in the PivotTable. This
       information is useful for people with vision or cognitive impairments who may not be able to see or understand the
       table. A title can be read to a person with a disability and is used to determine whether they wish to hear the
       description of the content.

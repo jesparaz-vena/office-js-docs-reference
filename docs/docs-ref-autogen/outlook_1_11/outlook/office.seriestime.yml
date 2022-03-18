@@ -7,9 +7,15 @@ summary: >-
   The `SeriesTime` object provides methods to get and set the dates and times of appointments in a recurring series and
   get the dates and times of meeting requests in a recurring series.
 remarks: >-
-  \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose or Read
 isPreview: false
@@ -22,15 +28,36 @@ methods:
     fullName: getDuration()
     summary: Gets the duration in minutes of a usual instance in a recurring appointment series.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // This example gets the duration of a usual instance in a recurring appointment series.      Office.context.mailbox.item.recurrence.getAsync(callback);      function callback(asyncResult) {
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example gets the duration of a usual instance in a recurring appointment series.
+
+      Office.context.mailbox.item.recurrence.getAsync(callback);
+
+
+      function callback(asyncResult) {
           var context = asyncResult.context;
           var recurrence = asyncResult.value;
           var duration = recurrence.seriesTime.getDuration();
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -46,15 +73,36 @@ methods:
       Gets the end date of a recurrence pattern in the following [ISO
       8601](https://www.iso.org/iso-8601-date-and-time-format.html) date format: "YYYY-MM-DD".
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // This example gets the end date of a recurring appointment series.      Office.context.mailbox.item.recurrence.getAsync(callback);      function callback(asyncResult) {
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example gets the end date of a recurring appointment series.
+
+      Office.context.mailbox.item.recurrence.getAsync(callback);
+
+
+      function callback(asyncResult) {
           var context = asyncResult.context;
           var recurrence = asyncResult.value;
           var endDate = recurrence.seriesTime.getEndDate();
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -71,15 +119,36 @@ methods:
       zone that the user or add-in set the recurrence pattern using the following [ISO
       8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: "THH:mm:ss:mmm".
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // This example gets the end time of a usual instance in a recurring appointment series.      Office.context.mailbox.item.recurrence.getAsync(callback);      function callback(asyncResult) {
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example gets the end time of a usual instance in a recurring appointment series.
+
+      Office.context.mailbox.item.recurrence.getAsync(callback);
+
+
+      function callback(asyncResult) {
           var context = asyncResult.context;
           var recurrence = asyncResult.value;
           var endDate = recurrence.seriesTime.getEndTime();
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -95,15 +164,36 @@ methods:
       Gets the start date of a recurrence pattern in the following [ISO
       8601](https://www.iso.org/iso-8601-date-and-time-format.html) date format: "YYYY-MM-DD".
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // This example gets the start date of a recurring appointment series.      Office.context.mailbox.item.recurrence.getAsync(callback);      function callback(asyncResult) {
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example gets the start date of a recurring appointment series.
+
+      Office.context.mailbox.item.recurrence.getAsync(callback);
+
+
+      function callback(asyncResult) {
           var context = asyncResult.context;
           var recurrence = asyncResult.value;
           var endDate = recurrence.seriesTime.getStartDate();
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -120,11 +210,33 @@ methods:
       user/add-in set the recurrence pattern using the following [ISO
       8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: "THH:mm:ss:mmm".
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // This example gets the start time of a usual      // instance in a recurring appointment series.      var seriesTimeObject = new SeriesTime();      seriesTimeObject.setDuration(120);      ```
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example gets the start time of a usual
+
+      // instance in a recurring appointment series.
+
+      var seriesTimeObject = new SeriesTime();
+
+      seriesTimeObject.setDuration(120);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -140,15 +252,38 @@ methods:
       Sets the duration of all appointments in a recurrence pattern. This will also change the end time of the
       recurrence pattern.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the duration of each appointment      // in a recurring series to 2 hours.      Office.context.mailbox.item.recurrence.getAsync(callback);      function callback(asyncResult) {
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the duration of each appointment
+
+      // in a recurring series to 2 hours.
+
+      Office.context.mailbox.item.recurrence.getAsync(callback);
+
+
+      function callback(asyncResult) {
           var context = asyncResult.context;
           var recurrence = asyncResult.value;
           var endDate = recurrence.seriesTime.getStartTime();
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -166,11 +301,33 @@ methods:
     fullName: 'setEndDate(year, month, day)'
     summary: Sets the end date of a recurring appointment series.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the end date of a recurring      // appointment series to November 2, 2017.      var seriesTimeObject = new SeriesTime();      seriesTimeObject.setEndDate(2017, 10, 2);      ```
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the end date of a recurring
+
+      // appointment series to November 2, 2017.
+
+      var seriesTimeObject = new SeriesTime();
+
+      seriesTimeObject.setEndDate(2017, 10, 2);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -196,11 +353,35 @@ methods:
     fullName: setEndDate(date)
     summary: Sets the end date of a recurring appointment series.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the end date of a      // recurring appointment series to November 2, 2017      // using ISO 8601 date standard.      var seriesTimeObject = new SeriesTime()      seriesTimeObject.setEndDate("2017-11-02");      ```
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the end date of a
+
+      // recurring appointment series to November 2, 2017
+
+      // using ISO 8601 date standard.
+
+      var seriesTimeObject = new SeriesTime()
+
+      seriesTimeObject.setEndDate("2017-11-02");
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -220,11 +401,33 @@ methods:
     fullName: 'setStartDate(year, month, day)'
     summary: Sets the start date of a recurring appointment series.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the start date of a recurring      // appointment series to November 2, 2017.      var seriesTimeObject = new SeriesTime();      seriesTimeObject.setStartDate(2017, 10, 2);      ```
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the start date of a recurring
+
+      // appointment series to November 2, 2017.
+
+      var seriesTimeObject = new SeriesTime();
+
+      seriesTimeObject.setStartDate(2017, 10, 2);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -250,11 +453,35 @@ methods:
     fullName: setStartDate(date)
     summary: Sets the start date of a recurring appointment series.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the start date of a recurring      // appointment series to November 2, 2017      // using ISO 8601 date standard.      var seriesTimeObject = new SeriesTime()      seriesTimeObject.setStartDate("2017-11-02");      ```
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the start date of a recurring
+
+      // appointment series to November 2, 2017
+
+      // using ISO 8601 date standard.
+
+      var seriesTimeObject = new SeriesTime()
+
+      seriesTimeObject.setStartDate("2017-11-02");
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -276,11 +503,40 @@ methods:
       Sets the start time of all instances of a recurring appointment series in whichever time zone the recurrence
       pattern is set (the item's time zone is used by default).
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the start time of each instance      // of a recurring appointment series to 1:30 PM.      var seriesTimeObject = new SeriesTime();      seriesTimeObject.setStartTime(13, 30);      // This example sets the start time of each instance      // of a recurring appointment series to 11:30 AM.      seriesTimeObject.setStartTime(11, 30);      ```
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the start time of each instance
+
+      // of a recurring appointment series to 1:30 PM.
+
+      var seriesTimeObject = new SeriesTime();
+
+      seriesTimeObject.setStartTime(13, 30);
+
+
+      // This example sets the start time of each instance
+
+      // of a recurring appointment series to 11:30 AM.
+
+      seriesTimeObject.setStartTime(11, 30);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -303,11 +559,33 @@ methods:
       Sets the start time of all instances of a recurring appointment series in whichever time zone the recurrence
       pattern is set (the item's time zone is used by default).
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // This example sets the start time of each instance      // of a recurring appointment series to 11:30 PM.      var seriesTimeObject = new SeriesTime()      seriesTimeObject.setStartTime("T23:30:00");      ```
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example sets the start time of each instance
+
+      // of a recurring appointment series to 11:30 PM.
+
+      var seriesTimeObject = new SeriesTime()
+
+      seriesTimeObject.setStartTime("T23:30:00");
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

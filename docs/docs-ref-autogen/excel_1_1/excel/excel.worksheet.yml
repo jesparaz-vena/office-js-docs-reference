@@ -70,7 +70,11 @@ properties:
     fullName: position
     summary: The zero-based position of the worksheet within the workbook.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Set worksheet position. 
       Excel.run(function (ctx) { 
           var wSheetName = 'Sheet1';
@@ -123,7 +127,11 @@ methods:
     fullName: activate()
     summary: Activate the worksheet in the Excel UI.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var wSheetName = 'Sheet1';
           var worksheet = ctx.workbook.worksheets.getItem(wSheetName);
@@ -152,7 +160,11 @@ methods:
       delete operation will fail with an `InvalidOperation` exception. You should first change its visibility to hidden
       or visible before deleting it.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var wSheetName = 'Sheet1';
           var worksheet = ctx.workbook.worksheets.getItem(wSheetName);
@@ -180,7 +192,11 @@ methods:
       Gets the `Range` object containing the single cell based on row and column numbers. The cell can be outside the
       bounds of its parent range, so long as it stays within the worksheet grid.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "A1:F8";
@@ -216,7 +232,11 @@ methods:
     fullName: getRange(address)
     summary: 'Gets the `Range` object, representing a single rectangular block of cells, specified by the address or name.'
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Below example uses range address to get the range object.
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
@@ -301,7 +321,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Worksheet:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Get worksheet properties based on sheet name.
           Excel.run(function (ctx) { 
               var wSheetName = 'Sheet1';

@@ -141,18 +141,36 @@ methods:
     fullName: delete()
     summary: Deletes the given name.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/34-named-item/create-and-remove-named-item.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/34-named-item/create-and-remove-named-item.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const totalName = sheet.names.getItemOrNullObject("TotalAmount");
           totalName.load();
-          await context.sync();          if (totalName.value) {
-              totalName.delete();              // Replace the named item (TotalAmount) with the actual formula for TotalAmount to avoid displaying #NAME in the cell.
+          await context.sync();
+
+          if (totalName.value) {
+              totalName.delete();
+
+              // Replace the named item (TotalAmount) with the actual formula for TotalAmount to avoid displaying #NAME in the cell.
               sheet.getRange("D11").values = [["=SUM(ExpensesTable[AMOUNT])"]];
           } else {
               console.log("No named item created for the formula.");
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -168,7 +186,11 @@ methods:
       Returns the range object that is associated with the name. Throws an error if the named item's type is not a
       range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Returns the Range object that is associated with the name. 
       // null if the name is not of the type Range.
       // Note: This API currently supports only the Workbook scoped items.
@@ -248,7 +270,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.NamedItem:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var names = ctx.workbook.names;
               var namedItem = names.getItem('MyRange');

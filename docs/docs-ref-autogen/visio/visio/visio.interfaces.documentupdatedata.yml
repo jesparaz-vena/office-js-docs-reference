@@ -14,7 +14,9 @@ properties:
     package: visio!
     fullName: application
     summary: |-
-      Represents a Visio application instance that contains this document.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Represents a Visio application instance that contains this document.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -27,7 +29,9 @@ properties:
     package: visio!
     fullName: view
     summary: |-
-      Returns the DocumentView object.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Returns the DocumentView object.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

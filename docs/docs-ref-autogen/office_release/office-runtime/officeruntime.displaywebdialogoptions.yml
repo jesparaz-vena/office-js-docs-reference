@@ -15,7 +15,10 @@ properties:
     fullName: displayInIFrame
     summary: >-
       Optional parameter that determines whether the dialog box displays as a popup (false) or within an IFrame (true).
-      This setting is only applicable to custom functions running on Excel Online.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      This setting is only applicable to custom functions running on Excel Online.
+
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -29,7 +32,10 @@ properties:
     fullName: height
     summary: >-
       Optional parameter that defines the height of the dialog box as a percentage of the current display. For example,
-      accepts strings such as: '50%', '50'.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      accepts strings such as: '50%', '50'.
+
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -42,7 +48,9 @@ properties:
     package: office-runtime!
     fullName: onClose
     summary: |-
-      Optional callback that runs when the dialog box is closed.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      Optional callback that runs when the dialog box is closed.
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -55,7 +63,9 @@ properties:
     package: office-runtime!
     fullName: onMessage
     summary: |-
-      Optional callback that runs when the dialog box sends a message to its parent.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      Optional callback that runs when the dialog box sends a message to its parent.
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -68,7 +78,9 @@ properties:
     package: office-runtime!
     fullName: onRuntimeError
     summary: |-
-      Optional callback that runs when the dialog box sends an error.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      Optional callback that runs when the dialog box sends an error.
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -82,7 +94,10 @@ properties:
     fullName: width
     summary: >-
       Optional parameter that defines the width of dialog as a percentage of window. For example, accepts strings such
-      as: '50%', '50'.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      as: '50%', '50'.
+
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

@@ -54,15 +54,31 @@ methods:
     fullName: getByName(name)
     summary: Gets the collection of section groups with the specified name.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the section groups that are direct children of the current notebook.
-          var sectionGroups = context.application.getActiveNotebook().sectionGroups;          // Queue a command to load the section groups. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the section groups that are direct children of the current notebook.
+          var sectionGroups = context.application.getActiveNotebook().sectionGroups;
+
+          // Queue a command to load the section groups. 
           // For best performance, request specific properties.
-          sectionGroups.load("id");           // Get the section groups with the specified name.
-          var labsSectionGroups = sectionGroups.getByName("Labs");          // Queue a command to load the section groups with the specified properties.
-          labsSectionGroups.load("id,name");           // Run the queued commands, and return a promise to indicate task completion.
+          sectionGroups.load("id"); 
+
+          // Get the section groups with the specified name.
+          var labsSectionGroups = sectionGroups.getByName("Labs");
+
+          // Queue a command to load the section groups with the specified properties.
+          labsSectionGroups.load("id,name"); 
+                  
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Iterate through the collection or access items individually by index.
+              .then(function () {
+
+                  // Iterate through the collection or access items individually by index.
                   if (labsSectionGroups.items.length > 0) {
                       console.log("Section group name: " + labsSectionGroups.items[0].name);
                       console.log("Section group ID: " + labsSectionGroups.items[0].id);
@@ -162,13 +178,26 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.SectionGroupCollection:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the section groups that are direct children of the current notebook.
-              var sectionGroups = context.application.getActiveNotebook().sectionGroups;              // Queue a command to load the section groups. 
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+
+              // Get the section groups that are direct children of the current notebook.
+              var sectionGroups = context.application.getActiveNotebook().sectionGroups;
+
+              // Queue a command to load the section groups. 
               // For best performance, request specific properties.
-              sectionGroups.load("name");               // Run the queued commands, and return a promise to indicate task completion.
+              sectionGroups.load("name"); 
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      // Iterate through the collection or access items individually by index, 
+                  .then(function () {
+                      
+                      // Iterate through the collection or access items individually by index, 
                       // for example: sectionGroups.items[0]
                       $.each(sectionGroups.items, function(index, sectionGroup) {
                           console.log("Section group name: " + sectionGroup.name);  

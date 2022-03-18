@@ -95,7 +95,11 @@ methods:
     fullName: delete()
     summary: Deletes the column from the table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var column = ctx.workbook.tables.getItem(tableName).columns.getItemAt(2);
@@ -121,7 +125,11 @@ methods:
     fullName: getDataBodyRange()
     summary: Gets the range object associated with the data body of the column.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var column = ctx.workbook.tables.getItem(tableName).columns.getItemAt(0);
@@ -149,7 +157,11 @@ methods:
     fullName: getHeaderRowRange()
     summary: Gets the range object associated with the header row of the column.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var columns = ctx.workbook.tables.getItem(tableName).columns.getItemAt(0);
@@ -178,7 +190,11 @@ methods:
     fullName: getRange()
     summary: Gets the range object associated with the entire column.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var columns = ctx.workbook.tables.getItem(tableName).columns.getItemAt(0);
@@ -207,7 +223,11 @@ methods:
     fullName: getTotalRowRange()
     summary: Gets the range object associated with the totals row of the column.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var columns = ctx.workbook.tables.getItem(tableName).columns.getItemAt(0);
@@ -267,7 +287,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.TableColumn:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var tableName = 'Table1';
               var column = ctx.workbook.tables.getItem(tableName).columns.getItem(0);

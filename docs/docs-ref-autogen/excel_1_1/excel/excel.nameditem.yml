@@ -86,7 +86,11 @@ methods:
       Returns the range object that is associated with the name. Throws an error if the named item's type is not a
       range.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Returns the Range object that is associated with the name. 
       // null if the name is not of the type Range.
       // Note: This API currently supports only the Workbook scoped items.
@@ -148,7 +152,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.NamedItem:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var names = ctx.workbook.names;
               var namedItem = names.getItem('MyRange');

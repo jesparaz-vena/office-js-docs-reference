@@ -5,7 +5,10 @@ package: custom-functions-runtime!
 fullName: CustomFunctions.StreamingInvocation
 summary: >-
   Provides information about the invocation of a streaming custom function. A streaming custom function can provide
-  results which can change over time.  Call `setResult()` one or more times to provide the result instead of returning a result from the function.
+  results which can change over time.
+
+
+  Call `setResult()` one or more times to provide the result instead of returning a result from the function.
 remarks: ''
 isPreview: false
 isDeprecated: false

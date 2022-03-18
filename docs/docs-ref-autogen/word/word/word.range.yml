@@ -70,12 +70,26 @@ properties:
     summary: Gets the collection of footnotes in the range. Read-only.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-footnotes.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-footnotes.yaml
+
+      await Word.run(async (context) => {
         const footnotes = context.document.getSelection().footnotes;
         footnotes.load("length");
-        await context.sync();        console.log("Number of footnotes in the selected range: " + footnotes.items.length);
-      });      ```
+        await context.sync();
+
+        console.log("Number of footnotes in the selected range: " + footnotes.items.length);
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -360,12 +374,22 @@ methods:
     fullName: clear()
     summary: Clears the contents of the range object. The user can perform the undo operation on the cleared content.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to clear the contents of the proxy range object.
-          range.clear();          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to clear the contents of the proxy range object.
+          range.clear();
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Cleared the selection (range object)');
@@ -408,12 +432,22 @@ methods:
     fullName: delete()
     summary: Deletes the range and its content from the document.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to delete the range object.
-          range.delete();          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to delete the range object.
+          range.delete();
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Deleted the selection (range object)');
@@ -506,13 +540,29 @@ methods:
     summary: Gets comments associated with the range.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
-        let comments = context.document.getSelection().getComments();        // Load objects for display in Script Lab console.
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
+        let comments = context.document.getSelection().getComments();
+
+        // Load objects for display in Script Lab console.
         comments.load();
-        await context.sync();        console.log("Comments:");
+        await context.sync();
+
+        console.log("Comments:");
         console.log(comments);
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -530,12 +580,22 @@ methods:
       HTML for the same document on different platforms (Windows, Mac, Word on the web, etc.). If you need exact
       fidelity, or consistency across platforms, use `Range.getOoxml()` and convert the returned XML to HTML.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to get the HTML of the current selection.
-          var html = range.getHtml();          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to get the HTML of the current selection.
+          var html = range.getHtml();
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The HTML read from the document was: ' + html.value);
@@ -624,12 +684,22 @@ methods:
     fullName: getOoxml()
     summary: Gets the OOXML representation of the range object.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to get the OOXML of the current selection.
-          var ooxml = range.getOoxml();          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to get the OOXML of the current selection.
+          var ooxml = range.getOoxml();
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The OOXML read from the document was:  ' + ooxml.value);
@@ -690,13 +760,29 @@ methods:
     summary: Gets reviewed text based on ChangeTrackingVersion selection.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml
+
+      await Word.run(async (context) => {
         const range = context.document.getSelection();
         let before = range.getReviewedText(Word.ChangeTrackingVersion.original);
-        let after = range.getReviewedText(Word.ChangeTrackingVersion.current);        await context.sync();        console.log(`Reviewed text (before):\n${before.value}`);
+        let after = range.getReviewedText(Word.ChangeTrackingVersion.current);
+
+        await context.sync();
+
+        console.log(`Reviewed text (before):\n${before.value}`);
         console.log(`Reviewed text (after):\n${after.value}`);
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -733,14 +819,26 @@ methods:
     fullName: 'getTextRanges(endingMarks, trimSpacing)'
     summary: Gets the text child ranges in the range by using punctuation marks and/or other ending marks.
     remarks: >-
-      \[ [API set: WordApi 1.3](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/get-paragraph-on-insertion-point.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.3](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/get-paragraph-on-insertion-point.yaml
+
+      await Word.run(async (context) => {
         // Gets the complete sentence (as range) associated with the insertion point.
         let sentences = context.document
           .getSelection()
           .getTextRanges(["."] /* Using the "." as delimiter */, false /*means without trimming spaces*/);
         sentences.load("$none");
-        await context.sync();        // Expands the range to the end of the paragraph to get all the complete sentences.
+        await context.sync();
+
+        // Expands the range to the end of the paragraph to get all the complete sentences.
         let sentencesToTheEndOfParagraph = sentences.items[0]
           .getRange()
           .expandTo(
@@ -751,10 +849,14 @@ methods:
           )
           .getTextRanges(["."], false /* Don't trim spaces*/);
         sentencesToTheEndOfParagraph.load("text");
-        await context.sync();        for (let i = 0; i < sentencesToTheEndOfParagraph.items.length; i++) {
+        await context.sync();
+
+        for (let i = 0; i < sentencesToTheEndOfParagraph.items.length; i++) {
           console.log(sentencesToTheEndOfParagraph.items[i].text);
         }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -819,12 +921,22 @@ methods:
     fullName: 'insertBreak(breakTypeString, insertLocation)'
     summary: Inserts a break at the specified location in the main document.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert a page break after the selected text.
-          range.insertBreak('page', 'After');          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to insert a page break after the selected text.
+          range.insertBreak('page', 'After');
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Inserted a page break after the selected text.');
@@ -860,16 +972,32 @@ methods:
     summary: Insert a comment on the range.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-comments.yaml
+
+      await Word.run(async (context) => {
         let text = $("#comment-text")
           .val()
           .toString();
-        let comment = context.document.getSelection().insertComment(text);        // Load object for display in Script Lab console.
+        let comment = context.document.getSelection().insertComment(text);
+
+        // Load object for display in Script Lab console.
         comment.load();
-        await context.sync();        console.log("Comment inserted:");
+        await context.sync();
+
+        console.log("Comment inserted:");
         console.log(comment);
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -887,13 +1015,27 @@ methods:
     fullName: insertContentControl()
     summary: Wraps the range object with a rich text content control.
     remarks: >-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/90-scenarios/doc-assembly.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/90-scenarios/doc-assembly.yaml
+
+      await Word.run(async (context) => {
           let results = context.document.body.search("Contractor");
-          results.load("font/bold");          // Check to make sure these content controls haven't been added yet.
+          results.load("font/bold");
+
+          // Check to make sure these content controls haven't been added yet.
           let customerContentControls = context.document.contentControls.getByTag("customer");
           customerContentControls.load("text");
-          await context.sync();        if (customerContentControls.items.length === 0) {
+          await context.sync();
+
+        if (customerContentControls.items.length === 0) {
           for (var i = 0; i < results.items.length; i++) { 
               results.items[i].font.bold = true;
               var cc = results.items[i].insertContentControl();
@@ -902,7 +1044,9 @@ methods:
           }
         }
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -935,13 +1079,23 @@ methods:
     fullName: 'insertFileFromBase64(base64File, insertLocation)'
     summary: Inserts a document at the specified location.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert base64 encoded .docx at the beginning of the range.
+          var range = context.document.getSelection();
+
+          // Queue a command to insert base64 encoded .docx at the beginning of the range.
           // You'll need to implement getBase64() to make this work.
-          range.insertFileFromBase64(getBase64(), Word.InsertLocation.start);          // Synchronize the document state by executing the queued commands,
+          range.insertFileFromBase64(getBase64(), Word.InsertLocation.start);
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Added base64 encoded text to the beginning of the range.');
@@ -997,14 +1151,28 @@ methods:
     summary: Inserts a footnote. The footnote reference is placed after the range.
     remarks: >-
       \[ [API set: WordApiOnline BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-footnotes.yaml      await Word.run(async (context) => {
+      ONLY)](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-footnotes.yaml
+
+      await Word.run(async (context) => {
         const text = $("#input-footnote")
           .val()
           .toString();
         const footnote = context.document.getSelection().insertFootnote(text);
-        await context.sync();        console.log("Inserted footnote.");
-      });      ```
+        await context.sync();
+
+        console.log("Inserted footnote.");
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -1022,12 +1190,22 @@ methods:
     fullName: 'insertHtml(html, insertLocation)'
     summary: Inserts HTML at the specified location.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert HTML in to the beginning of the range.
-          range.insertHtml('<strong>This is text inserted with range.insertHtml()</strong>', Word.InsertLocation.start);          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to insert HTML in to the beginning of the range.
+          range.insertHtml('<strong>This is text inserted with range.insertHtml()</strong>', Word.InsertLocation.start);
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('HTML added to the beginning of the range.');
@@ -1124,12 +1302,22 @@ methods:
     fullName: 'insertOoxml(ooxml, insertLocation)'
     summary: Inserts OOXML at the specified location.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert OOXML in to the beginning of the range.
-          range.insertOoxml("<pkg:package xmlns:pkg='http://schemas.microsoft.com/office/2006/xmlPackage'><pkg:part pkg:name='/_rels/.rels' pkg:contentType='application/vnd.openxmlformats-package.relationships+xml' pkg:padding='512'><pkg:xmlData><Relationships xmlns='http://schemas.openxmlformats.org/package/2006/relationships'><Relationship Id='rId1' Type='http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument' Target='word/document.xml'/></Relationships></pkg:xmlData></pkg:part><pkg:part pkg:name='/word/document.xml' pkg:contentType='application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml'><pkg:xmlData><w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main' ><w:body><w:p><w:pPr><w:spacing w:before='360' w:after='0' w:line='480' w:lineRule='auto'/><w:rPr><w:color w:val='70AD47' w:themeColor='accent6'/><w:sz w:val='28'/></w:rPr></w:pPr><w:r><w:rPr><w:color w:val='70AD47' w:themeColor='accent6'/><w:sz w:val='28'/></w:rPr><w:t>This text has formatting directly applied to achieve its font size, color, line spacing, and paragraph spacing.</w:t></w:r></w:p></w:body></w:document></pkg:xmlData></pkg:part></pkg:package>", Word.InsertLocation.start);          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to insert OOXML in to the beginning of the range.
+          range.insertOoxml("<pkg:package xmlns:pkg='http://schemas.microsoft.com/office/2006/xmlPackage'><pkg:part pkg:name='/_rels/.rels' pkg:contentType='application/vnd.openxmlformats-package.relationships+xml' pkg:padding='512'><pkg:xmlData><Relationships xmlns='http://schemas.openxmlformats.org/package/2006/relationships'><Relationship Id='rId1' Type='http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument' Target='word/document.xml'/></Relationships></pkg:xmlData></pkg:part><pkg:part pkg:name='/word/document.xml' pkg:contentType='application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml'><pkg:xmlData><w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main' ><w:body><w:p><w:pPr><w:spacing w:before='360' w:after='0' w:line='480' w:lineRule='auto'/><w:rPr><w:color w:val='70AD47' w:themeColor='accent6'/><w:sz w:val='28'/></w:rPr></w:pPr><w:r><w:rPr><w:color w:val='70AD47' w:themeColor='accent6'/><w:sz w:val='28'/></w:rPr><w:t>This text has formatting directly applied to achieve its font size, color, line spacing, and paragraph spacing.</w:t></w:r></w:p></w:body></w:document></pkg:xmlData></pkg:part></pkg:package>", Word.InsertLocation.start);
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('OOXML added to the beginning of the range.');
@@ -1140,7 +1328,9 @@ methods:
           if (error instanceof OfficeExtension.Error) {
               console.log('Debug info: ' + JSON.stringify(error.debugInfo));
           }
-      });      // Read "Create better add-ins for Word with Office Open XML" for guidance on working with OOXML.
+      });
+
+      // Read "Create better add-ins for Word with Office Open XML" for guidance on working with OOXML.
       // https://docs.microsoft.com/office/dev/add-ins/word/create-better-add-ins-for-word-with-office-open-xml
       ```
     isPreview: false
@@ -1183,12 +1373,22 @@ methods:
     fullName: 'insertParagraph(paragraphText, insertLocation)'
     summary: Inserts a paragraph at the specified location.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert the paragraph after the range.
-          range.insertParagraph('Content of a new paragraph', Word.InsertLocation.after);          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to insert the paragraph after the range.
+          range.insertParagraph('Content of a new paragraph', Word.InsertLocation.after);
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Paragraph added to the end of the range.');
@@ -1299,12 +1499,22 @@ methods:
     fullName: 'insertText(text, insertLocation)'
     summary: Inserts text at the specified location.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert the paragraph at the end of the range.
-          range.insertText('New text inserted into the range.', Word.InsertLocation.end);          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to insert the paragraph at the end of the range.
+          range.insertText('New text inserted into the range.', Word.InsertLocation.end);
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Text added to the end of the range.');
@@ -1502,13 +1712,25 @@ methods:
     fullName: select(selectionMode)
     summary: Selects and navigates the Word UI to the range.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Queue a command to get the current selection and then
+      Word.run(function (context) {
+
+          // Queue a command to get the current selection and then
           // create a proxy range object with the results.
-          var range = context.document.getSelection();          // Queue a command to insert HTML in to the beginning of the range.
-          range.insertHtml('<strong>This is text inserted with range.insertHtml()</strong>', Word.InsertLocation.start);          // Queue a command to select the HTML that was inserted.
-          range.select();          // Synchronize the document state by executing the queued commands,
+          var range = context.document.getSelection();
+
+          // Queue a command to insert HTML in to the beginning of the range.
+          range.insertHtml('<strong>This is text inserted with range.insertHtml()</strong>', Word.InsertLocation.start);
+
+          // Queue a command to select the HTML that was inserted.
+          range.select();
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('Selected the range.');

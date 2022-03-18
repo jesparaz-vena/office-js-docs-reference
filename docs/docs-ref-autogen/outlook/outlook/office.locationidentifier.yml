@@ -5,16 +5,32 @@ package: outlook!
 fullName: Office.LocationIdentifier
 summary: Represents the ID of a location.
 remarks: >-
-  \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-  Compose or Read  #### Examples  ```javascript  var locations = [
+  Compose or Read
+
+
+  #### Examples
+
+
+  ```javascript
+
+  var locations = [
       {
           "id": "Contoso",
           "type": Office.MailboxEnums.LocationType.Custom
       }
-  ];  ```
+  ];
+
+  ```
 isPreview: false
 isDeprecated: false
 type: interface
@@ -24,7 +40,11 @@ properties:
     package: outlook!
     fullName: id
     summary: |-
-      The location's unique ID.      For `Room` type, it's the room's email address.      For `Custom` type, it's the `displayName`<!-- -->.
+      The location's unique ID.
+
+      For `Room` type, it's the room's email address.
+
+      For `Custom` type, it's the `displayName`<!-- -->.
     remarks: ''
     isPreview: false
     isDeprecated: false

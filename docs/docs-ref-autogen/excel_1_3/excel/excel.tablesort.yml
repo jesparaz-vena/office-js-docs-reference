@@ -66,7 +66,11 @@ methods:
     fullName: 'apply(fields, matchCase, method)'
     summary: Perform a sort operation.
     remarks: |-
-      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.2](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var table = ctx.workbook.tables.getItem(tableName);

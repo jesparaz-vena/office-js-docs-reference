@@ -4,8 +4,15 @@ uid: 'visio!Visio.ShapeMouseLeaveEventArgs:interface'
 package: visio!
 fullName: Visio.ShapeMouseLeaveEventArgs
 summary: |-
-  Provides information about the shape that raised the ShapeMouseLeave event.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
-remarks: |-  #### Examples  ```javascript
+  Provides information about the shape that raised the ShapeMouseLeave event.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+remarks: |-
+
+
+  #### Examples
+
+  ```javascript
   Visio.run(session, function (ctx) {
       var document1= ctx.document;
       eventResult2 = document1.onShapeMouseLeave.add(
@@ -31,7 +38,9 @@ properties:
     package: visio!
     fullName: pageName
     summary: |-
-      Gets the name of the page which has the shape object that raised the ShapeMouseLeave event.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets the name of the page which has the shape object that raised the ShapeMouseLeave event.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -44,7 +53,9 @@ properties:
     package: visio!
     fullName: shapeName
     summary: |-
-      Gets the name of the shape object that raised the ShapeMouseLeave event.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets the name of the shape object that raised the ShapeMouseLeave event.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

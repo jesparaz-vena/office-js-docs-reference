@@ -44,11 +44,25 @@ methods:
     fullName: getFooter(type)
     summary: Gets one of the section's footers.
     remarks: >-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/insert-header-and-footer.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/insert-header-and-footer.yaml
+
+      await Word.run(async (context) => {
         context.document.sections.getFirst().getFooter("Primary")
-          .insertParagraph("This is a footer", "End");        await context.sync();
-      });      ```
+          .insertParagraph("This is a footer", "End");
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -66,17 +80,35 @@ methods:
     fullName: getFooter(typeString)
     summary: Gets one of the section's footers.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a proxy sectionsCollection object.
-          var mySections = context.document.sections;          // Queue a command to load the sections.
-          context.load(mySections, 'body/style');          // Synchronize the document state by executing the queued commands, 
+      Word.run(function (context) {
+          
+          // Create a proxy sectionsCollection object.
+          var mySections = context.document.sections;
+          
+          // Queue a command to load the sections.
+          context.load(mySections, 'body/style');
+          
+          // Synchronize the document state by executing the queued commands, 
           // and return a promise to indicate task completion.
-          return context.sync().then(function () {              // Create a proxy object the primary footer of the first section. 
+          return context.sync().then(function () {
+              
+              // Create a proxy object the primary footer of the first section. 
               // Note that the footer is a body object.
-              var myFooter = mySections.items[0].getFooter("primary");              // Queue a command to insert text at the end of the footer.
-              myFooter.insertText("This is a footer.", Word.InsertLocation.end);              // Queue a command to wrap the header in a content control.
-              myFooter.insertContentControl();              // Synchronize the document state by executing the queued commands, 
+              var myFooter = mySections.items[0].getFooter("primary");
+              
+              // Queue a command to insert text at the end of the footer.
+              myFooter.insertText("This is a footer.", Word.InsertLocation.end);
+              
+              // Queue a command to wrap the header in a content control.
+              myFooter.insertContentControl();
+                                    
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
                   console.log("Added a footer to the first section.");
@@ -107,11 +139,25 @@ methods:
     fullName: getHeader(type)
     summary: Gets one of the section's headers.
     remarks: >-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/insert-header-and-footer.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/insert-header-and-footer.yaml
+
+      await Word.run(async (context) => {
         context.document.sections.getFirst().getHeader("Primary")
-          .insertParagraph("This is a header", "End");        await context.sync();
-      });      ```
+          .insertParagraph("This is a header", "End");
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -129,17 +175,35 @@ methods:
     fullName: getHeader(typeString)
     summary: Gets one of the section's headers.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a proxy sectionsCollection object.
-          var mySections = context.document.sections;          // Queue a command to load the sections.
-          context.load(mySections, 'body/style');          // Synchronize the document state by executing the queued commands, 
+      Word.run(function (context) {
+          
+          // Create a proxy sectionsCollection object.
+          var mySections = context.document.sections;
+          
+          // Queue a command to load the sections.
+          context.load(mySections, 'body/style');
+          
+          // Synchronize the document state by executing the queued commands, 
           // and return a promise to indicate task completion.
-          return context.sync().then(function () {              // Create a proxy object the primary header of the first section. 
+          return context.sync().then(function () {
+              
+              // Create a proxy object the primary header of the first section. 
               // Note that the header is a body object.
-              var myHeader = mySections.items[0].getHeader("primary");              // Queue a command to insert text at the end of the header.
-              myHeader.insertText("This is a header.", Word.InsertLocation.end);              // Queue a command to wrap the header in a content control.
-              myHeader.insertContentControl();              // Synchronize the document state by executing the queued commands, 
+              var myHeader = mySections.items[0].getHeader("primary");
+              
+              // Queue a command to insert text at the end of the header.
+              myHeader.insertText("This is a header.", Word.InsertLocation.end);
+              
+              // Queue a command to wrap the header in a content control.
+              myHeader.insertContentControl();
+                                    
+              // Synchronize the document state by executing the queued commands, 
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
                   console.log("Added a header to the first section.");

@@ -85,20 +85,42 @@ properties:
     fullName: decimalSeparator
     summary: Gets the string used as the decimal separator for numeric values. This is based on the local Excel settings.
     remarks: >-
-      \[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/culture-info.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.11](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/culture-info.yaml
+
+      await Excel.run(async (context) => {
         context.application.load("decimalSeparator,thousandsSeparator");
         context.application.cultureInfo.numberFormat.load("numberDecimalSeparator,numberGroupSeparator");
-        await context.sync();        // Local settings are set under the "Options > Advanced" menu.
+        await context.sync();
+
+        // Local settings are set under the "Options > Advanced" menu.
         const localDecimalSeparator = context.application.decimalSeparator;
-        const localThousandsSeparator = context.application.thousandsSeparator;        const systemDecimalSeparator = context.application.cultureInfo.numberFormat.numberDecimalSeparator;
-        const systemThousandsSeparator = context.application.cultureInfo.numberFormat.numberGroupSeparator;        console.log("Local character settings: ");
+        const localThousandsSeparator = context.application.thousandsSeparator;
+
+        const systemDecimalSeparator = context.application.cultureInfo.numberFormat.numberDecimalSeparator;
+        const systemThousandsSeparator = context.application.cultureInfo.numberFormat.numberGroupSeparator;
+
+        console.log("Local character settings: ");
         console.log(`  Local decimal separator: ${localDecimalSeparator}`);
-        console.log(`  Local thousands separator: ${localThousandsSeparator}`);        console.log("System culture settings: ");
+        console.log(`  Local thousands separator: ${localThousandsSeparator}`);
+
+        console.log("System culture settings: ");
         console.log(`  System decimal separator: ${systemDecimalSeparator}`);
         console.log(`  System thousands separator: ${systemThousandsSeparator}`);
-        console.log(`  `);        await context.sync();
-      });      ```
+        console.log(`  `);
+
+        await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -154,10 +176,22 @@ methods:
     fullName: calculate(calculationType)
     summary: Recalculate all currently opened workbooks in Excel.
     remarks: >-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/performance-optimization.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/performance-optimization.yaml
+
+      await Excel.run(async (context) => {
         context.application.calculate(Excel.CalculationType.full);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -175,7 +209,11 @@ methods:
     fullName: calculate(calculationTypeString)
     summary: Recalculate all currently opened workbooks in Excel.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) {
           ctx.workbook.application.calculate('Full');
           return ctx.sync();
@@ -234,7 +272,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Application:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) {
               var application = ctx.workbook.application;
               application.load('calculationMode');
@@ -338,27 +381,54 @@ methods:
     package: excel!
     fullName: suspendScreenUpdatingUntilNextSync()
     summary: >-
-      Suspends screen updating until the next `context.sync()` is called.      *Note**: Don't call `suspendScreenUpdatingUntilNextSync` repeatedly (such as in a loop). Repeated calls will cause
+      Suspends screen updating until the next `context.sync()` is called.
+
+
+      *Note**: Don't call `suspendScreenUpdatingUntilNextSync` repeatedly (such as in a loop). Repeated calls will cause
       the Excel window to flicker.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/performance-optimization.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/90-scenarios/performance-optimization.yaml
+
+      await Excel.run(async (context) => {
         // Recreate the data in the worksheet with random data.
-        const sheet = context.workbook.worksheets.getActiveWorksheet();        const startTime = Date.now();
-        console.log("Starting...");        // If other parts of the sample have toggled screen painting off, this will stop screen updating until context.sync is called.
+        const sheet = context.workbook.worksheets.getActiveWorksheet();
+
+        const startTime = Date.now();
+        console.log("Starting...");
+
+        // If other parts of the sample have toggled screen painting off, this will stop screen updating until context.sync is called.
         if (pauseScreenPainting) {
           context.application.suspendScreenUpdatingUntilNextSync();
-        }        for (let i = 1; i < ROW_COUNT; i++) {
+        }
+
+        for (let i = 1; i < ROW_COUNT; i++) {
           for (let j = 1; j < COLUMN_COUNT; j++) {
             let cell = sheet.getCell(i, j);
-            cell.values = [[i * j * Math.random()]];            // If other parts of the sample have toggled tracking off, we will avoid tracking this range and having to manage the proxy objects.
+            cell.values = [[i * j * Math.random()]];
+
+            // If other parts of the sample have toggled tracking off, we will avoid tracking this range and having to manage the proxy objects.
             // For more information, see https://docs.microsoft.com/office/dev/add-ins/concepts/resource-limits-and-performance-optimization#untrack-unneeded-proxy-objects
             if (untrack) {
               cell.untrack();
             }
           }
-        }        await context.sync();        console.log(`Ending. Adding ${ROW_COUNT * COLUMN_COUNT} cells took ${Date.now() - startTime} milliseconds`);
-      });      ```
+        }
+
+        await context.sync();
+
+        console.log(`Ending. Adding ${ROW_COUNT * COLUMN_COUNT} cells took ${Date.now() - startTime} milliseconds`);
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

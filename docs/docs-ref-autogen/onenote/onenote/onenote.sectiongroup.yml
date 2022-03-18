@@ -130,16 +130,30 @@ methods:
     fullName: addSection(title)
     summary: Adds a new section to the end of the section group.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the section groups that are direct children of the current notebook.
-          var sectionGroups = context.application.getActiveNotebook().sectionGroups;          // Queue a command to load the section groups.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the section groups that are direct children of the current notebook.
+          var sectionGroups = context.application.getActiveNotebook().sectionGroups;
+          
+          // Queue a command to load the section groups.
           // For best performance, request specific properties.
-          sectionGroups.load("id");          // Run the queued commands, and return a promise to indicate task completion.
+          sectionGroups.load("id");
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function() {                  // Add a section to each section group.
+              .then(function() {
+                  
+                  // Add a section to each section group.
                   $.each(sectionGroups.items, function(index, sectionGroup) {
                       sectionGroup.addSection("Agenda");
-                  });                  // Run the queued commands.
+                  });
+                  
+                  // Run the queued commands.
                   return context.sync();
               });
       })
@@ -167,13 +181,25 @@ methods:
     fullName: addSectionGroup(name)
     summary: Adds a new section group to the end of this sectionGroup.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function (context) {
           var sectionGroup;
-          var nestedSectionGroup;          // Gets the active notebook.
-          var notebook = context.application.getActiveNotebook();          // Queue a command to add a new section group.
-          var sectionGroups = notebook.sectionGroups;          // Queue a command to load the new section group.
-          sectionGroups.load();          // Run the queued commands, and return a promise to indicate task completion.
+          var nestedSectionGroup;
+
+          // Gets the active notebook.
+          var notebook = context.application.getActiveNotebook();
+
+          // Queue a command to add a new section group.
+          var sectionGroups = notebook.sectionGroups;
+
+          // Queue a command to load the new section group.
+          sectionGroups.load();
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function(){
                   sectionGroup = sectionGroups.items[0];
@@ -257,15 +283,30 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.SectionGroup:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the parent section group that contains the current section.
-              var sectionGroup = context.application.getActiveSection().parentSectionGroup;              // Queue a command to load the section group. 
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+                  
+              // Get the parent section group that contains the current section.
+              var sectionGroup = context.application.getActiveSection().parentSectionGroup;
+                      
+              // Queue a command to load the section group. 
               // For best performance, request specific properties.           
-              sectionGroup.load("id,name");              // Run the queued commands, and return a promise to indicate task completion.
+              sectionGroup.load("id,name");
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      // Write the properties.
+                  .then(function () {
+                      
+                      // Write the properties.
                       console.log("Section group name: " + sectionGroup.name);
-                      console.log("Section group ID: " + sectionGroup.id);                  });
+                      console.log("Section group ID: " + sectionGroup.id);
+                      
+                  });
           })
           .catch(function(error) {
               console.log("Error: " + error);
@@ -275,11 +316,19 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the parent section group that contains the current section.
-              var sectionGroup = context.application.getActiveSection().parentSectionGroup;              // Queue a command to load the section group with the specified properties.           
-              sectionGroup.load("name,notebook/name");               // Run the queued commands, and return a promise to indicate task completion.
+          OneNote.run(function (context) {
+                  
+              // Get the parent section group that contains the current section.
+              var sectionGroup = context.application.getActiveSection().parentSectionGroup;
+                      
+              // Queue a command to load the section group with the specified properties.           
+              sectionGroup.load("name,notebook/name"); 
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      // Write the properties.
+                  .then(function () {
+
+                      // Write the properties.
                       console.log("Section group name: " + sectionGroup.name);
                       console.log("Parent notebook name: " + sectionGroup.notebook.name);
                   });
@@ -292,14 +341,26 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the section groups that are direct children of the current notebook.
-              var sectionGroups = context.application.getActiveNotebook().sectionGroups;              // Queue a command to load the section groups.
+          OneNote.run(function (context) {
+
+              // Get the section groups that are direct children of the current notebook.
+              var sectionGroups = context.application.getActiveNotebook().sectionGroups;
+
+              // Queue a command to load the section groups.
               // For best performance, request specific properties.
-              sectionGroups.load("name");              // Get the child section groups of the first section group in the notebook.
-              var nestedSectionGroups = sectionGroups._GetItem(0).sectionGroups;              // Queue a command to load the ID and name properties of the child section groups.
-              nestedSectionGroups.load("id,name");              // Run the queued commands, and return a promise to indicate task completion.
+              sectionGroups.load("name");
+              
+              // Get the child section groups of the first section group in the notebook.
+              var nestedSectionGroups = sectionGroups._GetItem(0).sectionGroups;
+              
+              // Queue a command to load the ID and name properties of the child section groups.
+              nestedSectionGroups.load("id,name");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function() {                      // Write the properties for each child section group.
+                  .then(function() {
+                      
+                      // Write the properties for each child section group.
                       $.each(nestedSectionGroups.items, function(index, sectionGroup) {
                           console.log("Section group name: " + sectionGroup.name);  
                           console.log("Section group ID: " + sectionGroup.id);  
@@ -314,12 +375,20 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the sections that are siblings of the current section.
-              var sections = context.application.getActiveSection().parentSectionGroup.sections;              // Queue a command to load the section groups.
+          OneNote.run(function (context) {
+
+              // Get the sections that are siblings of the current section.
+              var sections = context.application.getActiveSection().parentSectionGroup.sections;
+
+              // Queue a command to load the section groups.
               // For best performance, request specific properties.
-              sections.load("id,name");              // Run the queued commands, and return a promise to indicate task completion.
+              sections.load("id,name");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function() {                      // Write the properties for each section.
+                  .then(function() {
+                      
+                      // Write the properties for each section.
                       $.each(sections.items, function(index, section) {
                           console.log("Section name: " + section.name);  
                           console.log("Section ID: " + section.id);  

@@ -54,15 +54,31 @@ methods:
     fullName: getByName(name)
     summary: Gets the collection of sections with the specified name.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get the sections in the current notebook.
-          var sections = context.application.getActiveNotebook().sections;          // Queue a command to load the sections. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get the sections in the current notebook.
+          var sections = context.application.getActiveNotebook().sections;
+
+          // Queue a command to load the sections. 
           // For best performance, request specific properties.
-          sections.load("id");           // Get the sections with the specified name.
-          var groceriesSections = sections.getByName("Groceries");          // Queue a command to load the sections with the specified name.
-          groceriesSections.load("id,name");          // Run the queued commands, and return a promise to indicate task completion.
+          sections.load("id"); 
+          
+          // Get the sections with the specified name.
+          var groceriesSections = sections.getByName("Groceries");
+          
+          // Queue a command to load the sections with the specified name.
+          groceriesSections.load("id,name");
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Iterate through the collection or access items individually by index.
+              .then(function () {
+
+                  // Iterate through the collection or access items individually by index.
                   if (groceriesSections.items.length > 0) {
                       console.log("Section name: " + groceriesSections.items[0].name);
                       console.log("Section ID: " + groceriesSections.items[0].id);
@@ -162,13 +178,26 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.SectionCollection:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the sections in the current notebook.
-              var sections = context.application.getActiveNotebook().sections;              // Queue a command to load the sections. 
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+
+              // Get the sections in the current notebook.
+              var sections = context.application.getActiveNotebook().sections;
+
+              // Queue a command to load the sections. 
               // For best performance, request specific properties.
-              sections.load("name");               // Run the queued commands, and return a promise to indicate task completion.
+              sections.load("name"); 
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      // Iterate through the collection or access items individually by index, for example: sections.items[0]
+                  .then(function () {
+                      
+                      // Iterate through the collection or access items individually by index, for example: sections.items[0]
                       $.each(sections.items, function(index, section) {
                           if (section.name === "Homework") {
                               section.addPage("Biology");

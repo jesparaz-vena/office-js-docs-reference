@@ -4,7 +4,9 @@ uid: 'visio!Visio.Selection:class'
 package: visio!
 fullName: Visio.Selection
 summary: |-
-  Represents the Selection in the page.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the Selection in the page.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -29,7 +31,9 @@ properties:
     package: visio!
     fullName: shapes
     summary: |-
-      Gets the Shapes of the Selection. Read-only.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets the Shapes of the Selection. Read-only.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

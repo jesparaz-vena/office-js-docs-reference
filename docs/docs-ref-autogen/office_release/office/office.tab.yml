@@ -40,7 +40,10 @@ properties:
       When the `Tab` object is part of an [Office.RibbonUpdaterData](xref:office!Office.RibbonUpdaterData:interface)
       object passed to the `requestUpdate` method of [Office.Ribbon](xref:office!Office.Ribbon:interface)<!-- -->, the
       `controls` properties of the various [Office.Group](xref:office!Office.Group:interface) objects specify which
-      controls have their enabled status changed; the `controls` property of the `Tab` object is ignored.      **Requirement set**: [RibbonAPI
+      controls have their enabled status changed; the `controls` property of the `Tab` object is ignored.
+
+
+      **Requirement set**: [RibbonAPI
       1.1](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/ribbon-api-requirement-sets)
     isPreview: false
     isDeprecated: false

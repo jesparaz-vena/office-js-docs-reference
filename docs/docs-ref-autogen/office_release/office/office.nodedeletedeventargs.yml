@@ -41,7 +41,10 @@ properties:
     fullName: oldNode
     summary: >-
       Gets the node which was just deleted from the [Office.CustomXmlPart](xref:office!Office.CustomXmlPart:interface)
-      object.      Note that this node may have children, if a subtree is being removed from the document. Also, this node will be a
+      object.
+
+
+      Note that this node may have children, if a subtree is being removed from the document. Also, this node will be a
       "disconnected" node in that you can query down from the node, but you cannot query up the tree - the node appears
       to exist alone.
     remarks: ''

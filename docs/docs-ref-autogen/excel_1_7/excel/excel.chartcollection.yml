@@ -54,7 +54,11 @@ methods:
     fullName: 'add(type, sourceData, seriesBy)'
     summary: Creates a new chart.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Add a chart of chartType "ColumnClustered" on worksheet "Charts" 
       // with sourceData from Range "A1:B4" and seriresBy is set to be "auto".
       Excel.run(function (ctx) { 
@@ -165,7 +169,11 @@ methods:
     fullName: getItem(name)
     summary: 'Gets a chart using its name. If there are multiple charts with the same name, the first one will be returned.'
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Get the number of charts
       Excel.run(function (ctx) { 
           var charts = ctx.workbook.worksheets.getItem("Sheet1").charts;
@@ -197,7 +205,11 @@ methods:
     fullName: getItemAt(index)
     summary: Gets a chart based on its position in the collection.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var lastPosition = ctx.workbook.worksheets.getItem("Sheet1").charts.count - 1;
           var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItemAt(lastPosition);
@@ -285,7 +297,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.ChartCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var charts = ctx.workbook.worksheets.getItem("Sheet1").charts;
               charts.load('items');

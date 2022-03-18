@@ -92,7 +92,9 @@ methods:
     package: office!
     fullName: 'loadRecursive(object, options, maxDepth)'
     summary: |-
-      Queues up a command to recursively load the specified properties of the object and its navigation properties.      You must call `context.sync()` before reading the properties.
+      Queues up a command to recursively load the specified properties of the object and its navigation properties.
+
+      You must call `context.sync()` before reading the properties.
     remarks: ''
     isPreview: false
     isDeprecated: false

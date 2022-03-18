@@ -4,7 +4,10 @@ uid: 'office!Office.Group:interface'
 package: office!
 fullName: Office.Group
 summary: >-
-  Represents a group of controls on a ribbon tab.  **Requirement set**: [RibbonAPI
+  Represents a group of controls on a ribbon tab.
+
+
+  **Requirement set**: [RibbonAPI
   1.1](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/ribbon-api-requirement-sets)
 remarks: ''
 isPreview: false

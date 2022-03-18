@@ -107,7 +107,11 @@ methods:
       Gets the currently selected single range from the workbook. If there are multiple ranges selected, this method
       will throw an error.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var selectedRange = ctx.workbook.getSelectedRange();
           selectedRange.load('address');

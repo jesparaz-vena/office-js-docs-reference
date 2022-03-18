@@ -44,7 +44,11 @@ methods:
     fullName: getItem(name)
     summary: Gets a `NamedItem` object using its name.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = 'Sheet1';
           var nameditem = ctx.workbook.names.getItem(sheetName);
@@ -111,7 +115,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.NamedItemCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var nameditems = ctx.workbook.names;
               nameditems.load('items');

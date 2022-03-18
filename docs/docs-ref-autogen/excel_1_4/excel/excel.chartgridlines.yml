@@ -85,7 +85,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.ChartGridlines:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Set to show major gridlines on valueAxis of Chart1
           Excel.run(function (ctx) { 
               var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    

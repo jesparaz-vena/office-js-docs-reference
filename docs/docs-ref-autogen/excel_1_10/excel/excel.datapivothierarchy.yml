@@ -53,14 +53,28 @@ properties:
     fullName: name
     summary: Name of the DataPivotHierarchy.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml
+
+      await Excel.run(async (context) => {
           const dataHierarchies = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales").dataHierarchies
           dataHierarchies.load("no-properties-needed");
-          await context.sync();          dataHierarchies.items[0].name = "Farm Sales";
+          await context.sync();
+
+          dataHierarchies.items[0].name = "Farm Sales";
           dataHierarchies.items[1].name = "Wholesale";
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -97,22 +111,40 @@ properties:
     fullName: showAs
     summary: Specifies if the data should be shown as a specific summary calculation.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-calculations.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-calculations.yaml
+
+      await Excel.run(async (context) => {
           const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
           const farmDataHierarchy: Excel.DataPivotHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold at Farm");        
-          const wholesaleDataHierarchy: Excel.DataPivotHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold Wholesale");          farmDataHierarchy.load("showAs");
+          const wholesaleDataHierarchy: Excel.DataPivotHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold Wholesale");
+
+          farmDataHierarchy.load("showAs");
           wholesaleDataHierarchy.load("showAs");
-          await context.sync();          // Show the crates of each fruit type sold at the farm as a percentage of the column's total.
+          await context.sync();
+
+          // Show the crates of each fruit type sold at the farm as a percentage of the column's total.
           let farmShowAs = farmDataHierarchy.showAs;
           farmShowAs.calculation = Excel.ShowAsCalculation.percentOfColumnTotal;
           farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Type").fields.getItem("Type");
-          farmDataHierarchy.showAs = farmShowAs;          let wholesaleShowAs = wholesaleDataHierarchy.showAs;
+          farmDataHierarchy.showAs = farmShowAs;
+
+          let wholesaleShowAs = wholesaleDataHierarchy.showAs;
           wholesaleShowAs.calculation = Excel.ShowAsCalculation.percentOfColumnTotal;
           wholesaleShowAs.baseField = pivotTable.rowHierarchies.getItem("Type").fields.getItem("Type");
           wholesaleDataHierarchy.showAs = wholesaleShowAs;
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

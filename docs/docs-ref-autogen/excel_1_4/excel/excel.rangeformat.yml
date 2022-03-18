@@ -205,7 +205,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.RangeFormat:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Below example selects all of the Range's format properties. 
           Excel.run(function (ctx) { 
               var sheetName = "Sheet1";

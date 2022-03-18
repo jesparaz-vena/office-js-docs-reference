@@ -97,11 +97,20 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.InkAnalysisLine:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           OneNote.run(function (ctx) {        
-              var app = ctx.application;              // Gets the active page.
+              var app = ctx.application;
+              
+              // Gets the active page.
               var page = app.getActivePage();
-              page.load('inkAnalysisOrNull/paragraphs/lines/words');              return ctx.sync()
+              page.load('inkAnalysisOrNull/paragraphs/lines/words');
+              
+              return ctx.sync()
                   .then(function() {
                       var inkParagraphs = page.inkAnalysisOrNull.paragraphs;
                       $.each(inkParagraphs.items, function(i, inkParagraph) {

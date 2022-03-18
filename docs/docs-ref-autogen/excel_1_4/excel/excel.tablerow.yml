@@ -4,7 +4,10 @@ uid: 'excel!Excel.TableRow:class'
 package: excel!
 fullName: Excel.TableRow
 summary: >-
-  Represents a row in a table.  Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
+  Represents a row in a table.
+
+
+  Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
   object represents the physical location of the table row, but not the data. That is, if the data is sorted or if new
   rows are added, a table row will continue to point at the index for which it was created.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
@@ -60,7 +63,11 @@ methods:
     fullName: delete()
     summary: Deletes the row from the table.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var row = ctx.workbook.tables.getItem(tableName).rows.getItemAt(2);
@@ -86,7 +93,11 @@ methods:
     fullName: getRange()
     summary: Returns the range object associated with the entire row.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tableName = 'Table1';
           var row = ctx.workbook.tables.getItem(tableName).rows.getItemAt(0);
@@ -146,7 +157,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.TableRow:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var tableName = 'Table1';
               var row = ctx.workbook.tables.getItem(tableName).rows.getItem(0);

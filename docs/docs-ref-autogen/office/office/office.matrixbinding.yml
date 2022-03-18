@@ -23,7 +23,12 @@ properties:
       content: 'columnCount: number;'
       return:
         type: number
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           function showBindingColumnCount() {
               Office.context.document.bindings.getByIdAsync("myBinding", function (asyncResult) {
                   write("Column: " + asyncResult.value.columnCount);
@@ -46,7 +51,12 @@ properties:
       content: 'rowCount: number;'
       return:
         type: number
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           function showBindingRowCount() {
               Office.context.document.bindings.getByIdAsync("myBinding", function (asyncResult) {
                   write("Rows: " + asyncResult.value.rowCount);

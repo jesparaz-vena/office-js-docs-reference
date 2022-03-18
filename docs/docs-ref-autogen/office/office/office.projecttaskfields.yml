@@ -8,7 +8,10 @@ summary: >-
   [Document](xref:office!Office.Document:interface)<!-- -->.getTaskFieldAsync method.
 remarks: >-
   A ProjectTaskFields constant can be used as a parameter of the [Document](xref:office!Office.Document:interface)<!--
-  -->.getTaskFieldAsync method.  For more information about working with fields in Project, see the [Available
+  -->.getTaskFieldAsync method.
+
+
+  For more information about working with fields in Project, see the [Available
   fields](https://support.microsoft.com/office/615a4563-1cc3-40f4-b66f-1b17e793a460) reference. In Project Help, search
   for Available fields.
 isPreview: false

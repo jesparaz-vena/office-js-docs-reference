@@ -71,11 +71,19 @@ methods:
     fullName: getItemAt(index)
     summary: Gets a page content on its position in the collection.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          var page = context.application.getActivePage();
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          var page = context.application.getActivePage();
           var pageContents = page.contents;
           var firstPageContent = pageContents.getItemAt(0);
-          firstPageContent.load('type');          // Run the queued commands, and return a promise to indicate task completion.
+          firstPageContent.load('type');
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function () {
                   console.log("The first page content item is of type: " + firstPageContent.type);
@@ -141,12 +149,25 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.PageContentCollection:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the collection of pageContent items from the page.
-              var pageContents = context.application.getActivePage().contents;              // Queue a command to load the type of each pageContent.
-              pageContents.load("type");              // Run the queued commands, and return a promise to indicate task completion.
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+
+              // Get the collection of pageContent items from the page.
+              var pageContents = context.application.getActivePage().contents;
+
+              // Queue a command to load the type of each pageContent.
+              pageContents.load("type");
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      $.each(pageContents.items, function(index, pageContent) {
+                  .then(function () {
+
+                      $.each(pageContents.items, function(index, pageContent) {
                           console.log("PageContent type: " + pageContent.type);
                       });
                   });

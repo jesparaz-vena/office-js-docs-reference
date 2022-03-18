@@ -91,13 +91,33 @@ properties:
     fullName: displayUnit
     summary: Represents the axis display unit. See `Excel.ChartAxisDisplayUnit` for details.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-axis.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getItem("Sample");          let chart = sheet.charts.getItemAt(0);
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-axis.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getItem("Sample");
+
+          let chart = sheet.charts.getItemAt(0);
           let categoryAxis = chart.axes.categoryAxis;
-          let valueAxis = chart.axes.valueAxis;          // Load to get display unit.
-          valueAxis.load("displayUnit");          await context.sync();          console.log("The vertical axis display unit is: " + valueAxis.displayUnit);
-      });      ```
+          let valueAxis = chart.axes.valueAxis;
+
+          // Load to get display unit.
+          valueAxis.load("displayUnit");
+
+          await context.sync();
+
+          console.log("The vertical axis display unit is: " + valueAxis.displayUnit);
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -410,13 +430,29 @@ properties:
     fullName: showDisplayUnitLabel
     summary: Specifies if the axis display unit label is visible.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-axis.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-axis.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           let chart = sheet.charts.getItemAt(0);
-          let axis = chart.axes.valueAxis;          // Remove display unit.
-          axis.showDisplayUnitLabel = false;          await context.sync();
-      });      ```
+          let axis = chart.axes.valueAxis;
+
+          // Remove display unit.
+          axis.showDisplayUnitLabel = false;
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -577,7 +613,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.ChartAxis:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Get the maximum of Chart Axis from Chart1
           Excel.run(function (ctx) { 
               var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    

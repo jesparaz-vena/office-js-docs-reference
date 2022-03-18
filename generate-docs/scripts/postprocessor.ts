@@ -157,16 +157,14 @@ tryCatch(async () => {
                             fsx.writeFileSync(
                                 packageFolder + '/' + packageFileName, 
                                 fsx.readFileSync(packageFolder + '/' + packageFileName).toString()
-                                    .replace(/^\s*example: \[\]\s*$/gm, "") // Remove example field from yml as the OPS schema does not support it.
-                                    .replace(/^\s*\r\n/gm, "")); // Remove blank lines.
+                                    .replace(/^\s*example: \[\]\s*$/gm, "")); // Remove example field from yml as the OPS schema does not support it.
                         });
                     } else if (subfilename.indexOf(".yml") > 0) {
                         fsx.writeFileSync(
                             subfolder + '/' + subfilename, 
                             fsx.readFileSync(subfolder + '/' + subfilename).toString()
                                 .replace(/^\s*example: \[\]\s*$/gm, "") // Remove example field from yml as the OPS schema does not support it.
-                                .replace(/-.*\.Interfaces\.*.*\'/g, "")  // Remove entries for the *.Interfaces.* files - they add too much clutter.
-                                .replace(/^\s*\r\n/gm, "")); // Remove blank lines.
+                                .replace(/-.*\.Interfaces\.*.*\'/g, "")); // Remove entries for the *.Interfaces.* files - they add too much clutter.
                     }
                 });
         });

@@ -214,14 +214,26 @@ methods:
     fullName: 'connectBeginShape(shape, connectionSite)'
     summary: Attaches the beginning of the specified connector to a specified shape.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml
+
+      await Excel.run(async (context) => {
           const shapes = context.workbook.worksheets.getItem("Shapes").shapes;
           const line = shapes.getItem("StraightLine").line;
           line.connectBeginShape(shapes.getItem("Left"), 2);
           line.connectEndShape(shapes.getItem("Right"), 0);
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -244,14 +256,26 @@ methods:
     fullName: 'connectEndShape(shape, connectionSite)'
     summary: Attaches the end of the specified connector to a specified shape.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml
+
+      await Excel.run(async (context) => {
           const shapes = context.workbook.worksheets.getItem("Shapes").shapes;
           const line = shapes.getItem("StraightLine").line;
           line.connectBeginShape(shapes.getItem("Left"), 2);
           line.connectEndShape(shapes.getItem("Right"), 0);
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -274,14 +298,26 @@ methods:
     fullName: disconnectBeginShape()
     summary: Detaches the beginning of the specified connector from a shape.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml
+
+      await Excel.run(async (context) => {
           const shapes = context.workbook.worksheets.getItem("Shapes").shapes;
           const line = shapes.getItem("StraightLine").line;
           line.disconnectBeginShape();
           line.disconnectEndShape();
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -295,14 +331,26 @@ methods:
     fullName: disconnectEndShape()
     summary: Detaches the end of the specified connector from a shape.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/44-shape/shape-lines.yaml
+
+      await Excel.run(async (context) => {
           const shapes = context.workbook.worksheets.getItem("Shapes").shapes;
           const line = shapes.getItem("StraightLine").line;
           line.disconnectBeginShape();
           line.disconnectEndShape();
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

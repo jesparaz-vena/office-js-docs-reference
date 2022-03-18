@@ -42,8 +42,18 @@ methods:
     fullName: 'add(slicerSource, sourceField, slicerDestination)'
     summary: Adds a new slicer to the workbook.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-slicer.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-slicer.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Pivot");
           const slicer = sheet.slicers.add(
               "Farm Sales", /* The slicer data source. For PivotTables, this can be the PivotTable object reference or name. */
@@ -51,7 +61,9 @@ methods:
           );
           slicer.name = "Fruit Slicer";
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -98,8 +110,18 @@ methods:
     fullName: getItem(key)
     summary: Gets a slicer object using its name or ID.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-slicer.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-slicer.yaml
+
+      await Excel.run(async (context) => {
           const slicer = context.workbook.slicers.getItem("Fruit Slicer");
           slicer.caption = "Fruit Types";
           slicer.left = 395;
@@ -107,7 +129,9 @@ methods:
           slicer.height = 135;
           slicer.width = 150;
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

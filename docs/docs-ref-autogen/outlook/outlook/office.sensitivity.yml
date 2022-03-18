@@ -5,9 +5,15 @@ package: outlook!
 fullName: Office.Sensitivity
 summary: Provides methods to get and set the appointment sensitivity of a meeting in an Outlook add-in.
 remarks: >-
-  \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose
 isPreview: true
@@ -20,9 +26,15 @@ methods:
     fullName: 'getAsync(options, callback)'
     summary: Gets the value of the appointment sensitivity.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose
     isPreview: true
@@ -53,18 +65,36 @@ methods:
     fullName: getAsync(callback)
     summary: Gets the value of the appointment sensitivity.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml      Office.context.mailbox.item.sensitivity.getAsync(function(asyncResult) {
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml
+
+      Office.context.mailbox.item.sensitivity.getAsync(function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
           console.log("Sensitivity: " + asyncResult.value);
         } else {
           console.log("Failed to get sensitivity: " + JSON.stringify(asyncResult.error));
         }
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -86,12 +116,28 @@ methods:
     fullName: 'setAsync(sensitivity, options, callback)'
     summary: Sets the value of the appointment sensitivity.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml      Office.context.mailbox.item.sensitivity.setAsync(
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml
+
+      Office.context.mailbox.item.sensitivity.setAsync(
         Office.MailboxEnums.AppointmentSensitivityType.Confidential,
         function callback(asyncResult) {
           if (asyncResult.status === Office.AsyncResultStatus.Failed) {
@@ -100,7 +146,9 @@ methods:
             console.log("Successfully set appointment sensitivity.");
           }
         }
-      );      ```
+      );
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -130,9 +178,15 @@ methods:
     fullName: 'setAsync(sensitivity, callback)'
     summary: Sets the value of the appointment sensitivity.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose
     isPreview: true

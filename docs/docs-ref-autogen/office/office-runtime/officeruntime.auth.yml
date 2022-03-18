@@ -23,7 +23,10 @@ methods:
       flow](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of)<!--
       -->. This API requires a single sign-on configuration that bridges the add-in to an Azure application. Office
       users sign-in with Organizational Accounts and Microsoft Accounts. Microsoft Azure returns tokens intended for
-      both user account types to access resources in the Microsoft Graph.      **Important**: In Outlook, this API is not supported if the add-in is loaded in an Outlook.com or Gmail mailbox.
+      both user account types to access resources in the Microsoft Graph.
+
+
+      **Important**: In Outlook, this API is not supported if the add-in is loaded in an Outlook.com or Gmail mailbox.
     remarks: '**Hosts**: Excel, Outlook, PowerPoint, Word'
     isPreview: false
     isDeprecated: false

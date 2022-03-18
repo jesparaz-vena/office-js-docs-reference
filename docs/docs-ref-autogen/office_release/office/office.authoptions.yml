@@ -82,7 +82,10 @@ properties:
     fullName: forceAddAccount
     summary: >-
       Prompts the user to add their Office account (or to switch to it, if it is already added). Default value is
-      `false`<!-- -->.      **Warning**: `forceAddAccount` has been deprecated. Use `allowSignInPrompt` instead.
+      `false`<!-- -->.
+
+
+      **Warning**: `forceAddAccount` has been deprecated. Use `allowSignInPrompt` instead.
     remarks: ''
     isPreview: false
     isDeprecated: true
@@ -97,7 +100,10 @@ properties:
     fullName: forceConsent
     summary: >-
       Causes Office to display the add-in consent experience. Useful if the add-in's Azure permissions have changed or
-      if the user's consent has been revoked. Default value is `false`<!-- -->.      **Warning**: `forceConsent` has been deprecated. Use `allowConsentPrompt` instead.
+      if the user's consent has been revoked. Default value is `false`<!-- -->.
+
+
+      **Warning**: `forceConsent` has been deprecated. Use `allowConsentPrompt` instead.
     remarks: ''
     isPreview: false
     isDeprecated: true

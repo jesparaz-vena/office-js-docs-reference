@@ -42,8 +42,18 @@ methods:
     fullName: add(type)
     summary: Adds a new conditional format to the collection at the first/top priority.
     remarks: >-
-      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/14-conditional-formatting/conditional-formatting-basic.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/14-conditional-formatting/conditional-formatting-basic.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const range = sheet.getRange("B2:M5");
           const conditionalFormat = range.conditionalFormats
@@ -53,8 +63,12 @@ methods:
               midpoint: { formula: "50", type: Excel.ConditionalFormatColorCriterionType.percent, color: "yellow" },
               maximum: { formula: null, type: Excel.ConditionalFormatColorCriterionType.highestValue, color: "red" }
           };
-          conditionalFormat.colorScale.criteria = criteria;          await context.sync();
-      });      ```
+          conditionalFormat.colorScale.criteria = criteria;
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -93,12 +107,28 @@ methods:
     fullName: clearAll()
     summary: Clears all conditional formats active on the current specified range.
     remarks: >-
-      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/14-conditional-formatting/conditional-formatting-basic.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/14-conditional-formatting/conditional-formatting-basic.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const range = sheet.getRange();
-          range.conditionalFormats.clearAll();          await context.sync();          $(".conditional-formats").hide();
-      });      ```
+          range.conditionalFormats.clearAll();
+
+          await context.sync();
+
+          $(".conditional-formats").hide();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -112,14 +142,20 @@ methods:
     fullName: getCount()
     summary: Returns the number of conditional formats in the workbook.
     remarks: |-
-      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) {
           var sheetName = "Sheet1";
           var rangeAddress = "A1:C3";
           var range = ctx.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
           var conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.iconSet);
           conditionalFormat.iconOrNull.style = Excel.IconSet.fourTrafficLights;
-          var cfCount = range.conditionalFormats.getCount();           return ctx.sync().then(function () {
+          var cfCount = range.conditionalFormats.getCount(); 
+
+          return ctx.sync().then(function () {
               console.log("Count: " + cfCount.value);
           });
       }).catch(function (error) {
@@ -142,7 +178,11 @@ methods:
     fullName: getItem(id)
     summary: Returns a conditional format for the given ID.
     remarks: |-
-      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) {
           var sheetName = "Sheet1";
           var rangeAddress = "A1:C3";
@@ -176,24 +216,44 @@ methods:
     fullName: getItemAt(index)
     summary: Returns a conditional format at the given index.
     remarks: >-
-      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/14-conditional-formatting/conditional-formatting-basic.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.6](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/14-conditional-formatting/conditional-formatting-basic.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
           const worksheetRange = sheet.getRange();
-          worksheetRange.conditionalFormats.load("type");          await context.sync();          let cfRangePairs: { cf: Excel.ConditionalFormat, range: Excel.Range }[] = [];
+          worksheetRange.conditionalFormats.load("type");
+
+          await context.sync();
+
+          let cfRangePairs: { cf: Excel.ConditionalFormat, range: Excel.Range }[] = [];
           worksheetRange.conditionalFormats.items.forEach(item => {
               cfRangePairs.push({
                   cf: item,
                   range: item.getRange().load("address")
               });
-          });          await context.sync();          if (cfRangePairs.length > 0) {
+          });
+
+          await context.sync();
+
+          if (cfRangePairs.length > 0) {
               cfRangePairs.forEach(item => {
                   console.log(item.cf.type);
               });
           } else {
               console.log("No conditional formats applied.");
           }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

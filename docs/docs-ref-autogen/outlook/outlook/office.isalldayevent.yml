@@ -5,9 +5,15 @@ package: outlook!
 fullName: Office.IsAllDayEvent
 summary: Provides methods to get and set the all-day event status of a meeting in an Outlook add-in.
 remarks: >-
-  \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose
 isPreview: true
@@ -20,9 +26,15 @@ methods:
     fullName: 'getAsync(options, callback)'
     summary: Gets the boolean value indicating whether the event is all day or not.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose
     isPreview: true
@@ -51,18 +63,36 @@ methods:
     fullName: getAsync(callback)
     summary: Gets the boolean value indicating whether the event is all day or not.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml      Office.context.mailbox.item.isAllDayEvent.getAsync(function(asyncResult) {
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml
+
+      Office.context.mailbox.item.isAllDayEvent.getAsync(function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
           console.log("Is this an all-day event? " + asyncResult.value);
         } else {
           console.log("Failed to get if this is an all-day event. Error: " + JSON.stringify(asyncResult.error));
         }
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -82,19 +112,40 @@ methods:
     fullName: 'setAsync(isAllDayEvent, options, callback)'
     summary: Sets the all-day event status of an appointment.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      If an appointment is marked as an all-day event: - Start and end time will be marked as 12:00 AM (just like in the
-      Outlook UI). Start time will return 12:00 AM and end time will be 12:00 AM the next day.      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      If an appointment is marked as an all-day event: - Start and end time will be marked as 12:00 AM (just like in the
+      Outlook UI). Start time will return 12:00 AM and end time will be 12:00 AM the next day.
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml      Office.context.mailbox.item.isAllDayEvent.setAsync(true, function(asyncResult) {
+      Compose
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/99-preview-apis/calendar-properties-apis.yaml
+
+      Office.context.mailbox.item.isAllDayEvent.setAsync(true, function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Failed) {
           console.log("Failed to set all-day event: " + JSON.stringify(asyncResult.error));
         } else {
           console.log("Appointment set to all-day event.");
         }
-      });      ```
+      });
+
+      ```
     isPreview: true
     isDeprecated: false
     syntax:
@@ -124,10 +175,19 @@ methods:
     fullName: 'setAsync(isAllDayEvent, callback)'
     summary: Sets the all-day event status of an appointment.
     remarks: >-
-      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      If an appointment is marked as an all-day event: - Start and end time will be marked as 12:00 AM (just like in the
-      Outlook UI). Start time will return 12:00 AM and end time will be 12:00 AM the next day.      **[Minimum permission
+      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      If an appointment is marked as an all-day event: - Start and end time will be marked as 12:00 AM (just like in the
+      Outlook UI). Start time will return 12:00 AM and end time will be 12:00 AM the next day.
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadWriteItem`      **[Applicable Outlook
+      `ReadWriteItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Compose
     isPreview: true

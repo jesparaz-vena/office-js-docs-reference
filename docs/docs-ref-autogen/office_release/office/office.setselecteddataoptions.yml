@@ -30,7 +30,10 @@ properties:
     summary: >-
       Use only with binding type table and when a TableData object is passed for the data parameter. An array of objects
       that specify a range of columns, rows, or cells and specify, as key-value pairs, the cell formatting to apply to
-      that range.      Example: `[{cells: Office.Table.Data, format: {fontColor: "yellow"}}, {cells: {row: 3, column: 4}, format:
+      that range.
+
+
+      Example: `[{cells: Office.Table.Data, format: {fontColor: "yellow"}}, {cells: {row: 3, column: 4}, format:
       {borderColor: "white", fontStyle: "bold"}}]`
     remarks: ''
     isPreview: false

@@ -16,7 +16,10 @@ methods:
     summary: Asynchronously adds a prefix to namespace mapping to use when querying an item.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      If no namespace is assigned to the requested prefix, the method returns an empty string ("").
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      If no namespace is assigned to the requested prefix, the method returns an empty string ("").
     isPreview: false
     isDeprecated: false
     syntax:
@@ -48,7 +51,10 @@ methods:
     summary: Asynchronously adds a prefix to namespace mapping to use when querying an item.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      If no namespace is assigned to the requested prefix, the method returns an empty string ("").
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      If no namespace is assigned to the requested prefix, the method returns an empty string ("").
     isPreview: false
     isDeprecated: false
     syntax:
@@ -75,7 +81,10 @@ methods:
     summary: Asynchronously gets the namespace mapped to the specified prefix.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      If the prefix already exists in the namespace manager, this method will overwrite the mapping of that prefix
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      If the prefix already exists in the namespace manager, this method will overwrite the mapping of that prefix
       except when the prefix is one added or used by the data store internally, in which case it will return an error.
     isPreview: false
     isDeprecated: false
@@ -106,7 +115,10 @@ methods:
     summary: Asynchronously gets the namespace mapped to the specified prefix.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      If the prefix already exists in the namespace manager, this method will overwrite the mapping of that prefix
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      If the prefix already exists in the namespace manager, this method will overwrite the mapping of that prefix
       except when the prefix is one added or used by the data store internally, in which case it will return an error.
     isPreview: false
     isDeprecated: false
@@ -132,7 +144,10 @@ methods:
     summary: Asynchronously gets the prefix for the specified namespace.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      If no prefix is assigned to the requested namespace, the method returns an empty string (""). If there are
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      If no prefix is assigned to the requested namespace, the method returns an empty string (""). If there are
       multiple prefixes specified in the namespace manager, the method returns the first prefix that matches the
       supplied namespace.
     isPreview: false
@@ -164,7 +179,10 @@ methods:
     summary: Asynchronously gets the prefix for the specified namespace.
     remarks: >-
       **Requirement set**:
-      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)      If no prefix is assigned to the requested namespace, the method returns an empty string (""). If there are
+      [CustomXmlParts](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#customxmlparts)
+
+
+      If no prefix is assigned to the requested namespace, the method returns an empty string (""). If there are
       multiple prefixes specified in the namespace manager, the method returns the first prefix that matches the
       supplied namespace.
     isPreview: false

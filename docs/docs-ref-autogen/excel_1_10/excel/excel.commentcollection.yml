@@ -44,12 +44,26 @@ methods:
       Creates a new comment with the given content on the given cell. An `InvalidArgument` error is thrown if the
       provided range is larger than one cell.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/12-comment/comment-basics.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getItem("Comments");          // Note that an InvalidArgument error will be thrown if multiple cells passed to `comment.add`.
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/12-comment/comment-basics.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getItem("Comments");
+
+          // Note that an InvalidArgument error will be thrown if multiple cells passed to `comment.add`.
           sheet.comments.add("A2", "TODO: add data.");
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

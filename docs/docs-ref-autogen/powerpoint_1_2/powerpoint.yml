@@ -13,13 +13,38 @@ enums:
   - 'powerpoint!PowerPoint.ErrorCodes:enum'
   - 'powerpoint!PowerPoint.InsertSlideFormatting:enum'
 interfaces:
-  - 'powerpoint!PowerPoint.InsertSlideOptions:interface'functions:
+  - 'powerpoint!PowerPoint.InsertSlideOptions:interface'
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+functions:
   - name: PowerPoint.createPresentation(base64File)
     uid: 'powerpoint!PowerPoint.createPresentation:function(1)'
     package: powerpoint!
     summary: >-
       Creates and opens a new presentation. Optionally, the presentation can be pre-populated with a base64-encoded
-      .pptx file.      \[ [API set: PowerPointApi 1.1](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]
+      .pptx file.
+
+
+      \[ [API set: PowerPointApi 1.1](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -31,13 +56,24 @@ interfaces:
           type: string
       return:
         type: Promise&lt;void&gt;
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           var myFile = document.getElementById("file");
-          var reader = new FileReader();          reader.onload = function (event) {
+          var reader = new FileReader();
+
+          reader.onload = function (event) {
               // strip off the metadata before the base64-encoded string
               var startIndex = event.target.result.indexOf("base64,");
-              var copyBase64 = event.target.result.substr(startIndex + 7);              PowerPoint.createPresentation(copyBase64);        
-          };          // read in the file as a data URL so we can parse the base64-encoded string
+              var copyBase64 = event.target.result.substr(startIndex + 7);
+
+              PowerPoint.createPresentation(copyBase64);        
+          };
+
+          // read in the file as a data URL so we can parse the base64-encoded string
           reader.readAsDataURL(myFile.files[0]);
           ```
   - name: PowerPoint.run(batch)

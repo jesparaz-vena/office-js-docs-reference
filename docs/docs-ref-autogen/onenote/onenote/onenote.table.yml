@@ -104,13 +104,23 @@ methods:
       Adds a column to the end of the table. Values, if specified, are set in the new column. Otherwise the column is
       empty.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, append a column.
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, append a column.
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -147,13 +157,23 @@ methods:
     fullName: appendRow(values)
     summary: 'Adds a row to the end of the table. Values, if specified, are set in the new row. Otherwise the row is empty.'
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, append a column.
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, append a column.
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -203,13 +223,23 @@ methods:
     fullName: 'getCell(rowIndex, cellIndex)'
     summary: Gets the table cell at a specified row and column.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, get a cell in the second row and third column.
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, get a cell in the second row and third column.
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -249,13 +279,23 @@ methods:
       Inserts a column at the given index in the table. Values, if specified, are set in the new column. Otherwise the
       column is empty.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, insert a column at index two.
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, insert a column at index two.
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -297,13 +337,23 @@ methods:
       Inserts a row at the given index in the table. Values, if specified, are set in the new row. Otherwise the row is
       empty.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, insert a row at index two.
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, insert a row at index two.
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -374,13 +424,24 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.Table:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           OneNote.run(function(ctx) {
               var app = ctx.application;
-              var outline = app.getActiveOutline();              // Queue a command to load outline.paragraphs and their types.
-              ctx.load(outline, "paragraphs/type");              // Run the queued commands, and return a promise to indicate task completion.
+              var outline = app.getActiveOutline();
+              
+              // Queue a command to load outline.paragraphs and their types.
+              ctx.load(outline, "paragraphs/type");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return ctx.sync().then(function () {
-                  var paragraphs = outline.paragraphs;                  // For each table, log properties.
+                  var paragraphs = outline.paragraphs;
+                  
+                  // For each table, log properties.
                   for (var i = 0; i < paragraphs.items.length; i++) {
                       var paragraph = paragraphs.items[i];
                       if (paragraph.type == "Table") {
@@ -406,10 +467,16 @@ methods:
           ```javascript
           OneNote.run(function(ctx) {
               var app = ctx.application;
-              var outline = app.getActiveOutline();              // Queue a command to load outline.paragraphs and their types.
-              ctx.load(outline, "paragraphs, paragraphs/type");              // Run the queued commands, and return a promise to indicate task completion.
+              var outline = app.getActiveOutline();
+              
+              // Queue a command to load outline.paragraphs and their types.
+              ctx.load(outline, "paragraphs, paragraphs/type");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return ctx.sync().then(function () {
-                  var paragraphs = outline.paragraphs;                  // for each table, log its paragraph id.
+                  var paragraphs = outline.paragraphs;
+                  
+                  // for each table, log its paragraph id.
                   for (var i = 0; i < paragraphs.items.length; i++) {
                       var paragraph = paragraphs.items[i];
                       if (paragraph.type == "Table") {
@@ -417,7 +484,9 @@ methods:
                           ctx.load(table, "paragraph/id, rows/id");
                           return ctx.sync().then(function() {
                               console.log("Paragraph Id: " + table.paragraph.id);
-                              var rows = table.rows;                              // for each rows in the table, log row index and id.
+                              var rows = table.rows;
+                              
+                              // for each rows in the table, log row index and id.
                               for (var i = 0; i < rows.items.length; i++) {
                                   console.log("Row " + i + " Id: " + rows.items[i].id);
                               }

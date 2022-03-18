@@ -4,7 +4,9 @@ uid: 'visio!Visio.DocumentView:class'
 package: visio!
 fullName: Visio.DocumentView
 summary: |-
-  Represents the DocumentView class.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the DocumentView class.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -29,7 +31,9 @@ properties:
     package: visio!
     fullName: disableHyperlinks
     summary: |-
-      Disable Hyperlinks.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Disable Hyperlinks.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -37,7 +41,12 @@ properties:
       content: 'disableHyperlinks: boolean;'
       return:
         type: boolean
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Visio.run(session, function (ctx) {
               var documentView = ctx.document.view;
               documentView.disableHyperlinks();
@@ -54,7 +63,9 @@ properties:
     package: visio!
     fullName: disablePan
     summary: |-
-      Disable Pan.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Disable Pan.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -67,7 +78,9 @@ properties:
     package: visio!
     fullName: disablePanZoomWindow
     summary: |-
-      Disable PanZoomWindow.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Disable PanZoomWindow.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -80,7 +93,9 @@ properties:
     package: visio!
     fullName: disableZoom
     summary: |-
-      Disable Zoom.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Disable Zoom.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -93,7 +108,9 @@ properties:
     package: visio!
     fullName: hideDiagramBoundary
     summary: |-
-      Hide Diagram Boundary.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Hide Diagram Boundary.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -177,7 +194,9 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: |-
-      This method has the following additional signature:      `set(properties: Visio.DocumentView): void`
+      This method has the following additional signature:
+
+      `set(properties: Visio.DocumentView): void`
     isPreview: false
     isDeprecated: false
     syntax:

@@ -4,7 +4,9 @@ uid: 'visio!Visio.Interfaces.CommentCollectionLoadOptions:interface'
 package: visio!
 fullName: Visio.Interfaces.CommentCollectionLoadOptions
 summary: |-
-  Represents the CommentCollection for a given Shape.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the CommentCollection for a given Shape.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -29,7 +31,9 @@ properties:
     package: visio!
     fullName: author
     summary: |-
-      For EACH ITEM in the collection: A string that specifies the name of the author of the comment.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      For EACH ITEM in the collection: A string that specifies the name of the author of the comment.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -42,7 +46,9 @@ properties:
     package: visio!
     fullName: date
     summary: |-
-      For EACH ITEM in the collection: A string that specifies the date when the comment was created.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      For EACH ITEM in the collection: A string that specifies the date when the comment was created.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -55,7 +61,9 @@ properties:
     package: visio!
     fullName: text
     summary: |-
-      For EACH ITEM in the collection: A string that contains the comment text.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      For EACH ITEM in the collection: A string that contains the comment text.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

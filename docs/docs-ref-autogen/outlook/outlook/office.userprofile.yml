@@ -9,7 +9,10 @@ summary: >-
 remarks: >-
   **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
   Compose or Read
 isPreview: false
@@ -21,17 +24,41 @@ properties:
     package: outlook!
     fullName: accountType
     summary: |-
-      Gets the account type of the user associated with the mailbox.      **Note**: This member is currently only supported in Outlook 2016 or later on Mac, build 16.9.1212 and greater.
+      Gets the account type of the user associated with the mailbox.
+
+      **Note**: This member is currently only supported in Outlook 2016 or later on Mac, build 16.9.1212 and greater.
     remarks: >-
-      \[ [API set: Mailbox 1.6](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.6](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      The possible account types are listed in the following table.      <table> <tr> <th>Value</th> <th>Description?</th> </tr> <tr> <td>enterprise</td> <td>The mailbox is on an
+      Compose or Read
+
+
+      The possible account types are listed in the following table.
+
+
+      <table> <tr> <th>Value</th> <th>Description?</th> </tr> <tr> <td>enterprise</td> <td>The mailbox is on an
       on-premises Exchange server.</td> </tr> <tr> <td>gmail</td> <td>The mailbox is associated with a Gmail
       account.</td> </tr> <tr> <td>office365</td> <td>The mailbox is associated with a Microsoft 365 work or school
       account.</td> </tr> <tr> <td>outlookCom</td> <td>The mailbox is associated with a personal Outlook.com
-      account.</td> </tr> </table>      #### Examples      ```javascript      console.log(Office.context.mailbox.userProfile.accountType);      ```
+      account.</td> </tr> </table>
+
+
+      #### Examples
+
+
+      ```javascript
+
+      console.log(Office.context.mailbox.userProfile.accountType);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -46,9 +73,24 @@ properties:
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // Example: Allie Bellew      console.log(Office.context.mailbox.userProfile.displayName);      ```
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Example: Allie Bellew
+
+      console.log(Office.context.mailbox.userProfile.displayName);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,9 +105,24 @@ properties:
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // Example: allieb@contoso.com      console.log(Office.context.mailbox.userProfile.emailAddress);      ```
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Example: allieb@contoso.com
+
+      console.log(Office.context.mailbox.userProfile.emailAddress);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -77,14 +134,32 @@ properties:
     package: outlook!
     fullName: timeZone
     summary: >-
-      Gets the user's time zone in Windows format.      The system time zone is usually returned. However, in Outlook on the web, the default time zone in the calendar
+      Gets the user's time zone in Windows format.
+
+
+      The system time zone is usually returned. However, in Outlook on the web, the default time zone in the calendar
       preferences is returned instead.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Compose or Read      #### Examples      ```javascript      // Example: Pacific Standard Time      console.log(Office.context.mailbox.userProfile.timeZone);      ```
+      Compose or Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Example: Pacific Standard Time
+
+      console.log(Office.context.mailbox.userProfile.timeZone);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

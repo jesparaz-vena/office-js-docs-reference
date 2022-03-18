@@ -55,12 +55,20 @@ properties:
       Specifies the angle to which the text is oriented for the chart axis title. The value should either be an integer
       from -90 to 90 or the integer 180 for vertically-oriented text.
     remarks: |-
-      \[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript
+      \[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```typescript
       await Excel.run(async (context) => {
         // Get a chart named "Sales Chart" from the "Sample" worksheet.
         const sheet = context.workbook.worksheets.getItem("Sample");
-        let chart = sheet.charts.getItem("Sales Chart");        // Set the value axis title to "Profits".
-        chart.axes.valueAxis.title.text = "Profits";        /* Set the value axis text orientation to 0.
+        let chart = sheet.charts.getItem("Sales Chart");
+
+        // Set the value axis title to "Profits".
+        chart.axes.valueAxis.title.text = "Profits";
+
+        /* Set the value axis text orientation to 0.
           For charts with a y-axis, this makes the label on the y-axis horizontal, 
           instead of the default look of rotated-vertically.
           */ 
@@ -124,7 +132,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.ChartAxisTitle:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Add "Values" as the title for the value Axis 
           Excel.run(function (ctx) { 
               var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1"); 

@@ -4,7 +4,9 @@ uid: 'visio!Visio.ColumnType:enum'
 package: visio!
 fullName: Visio.ColumnType
 summary: |-
-  Represents the type of column values.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the type of column values.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

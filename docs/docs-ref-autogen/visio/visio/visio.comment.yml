@@ -4,7 +4,9 @@ uid: 'visio!Visio.Comment:class'
 package: visio!
 fullName: Visio.Comment
 summary: |-
-  Represents the Comment.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the Comment.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -15,7 +17,9 @@ properties:
     package: visio!
     fullName: author
     summary: |-
-      A string that specifies the name of the author of the comment.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      A string that specifies the name of the author of the comment.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -42,7 +46,9 @@ properties:
     package: visio!
     fullName: date
     summary: |-
-      A string that specifies the date when the comment was created.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      A string that specifies the date when the comment was created.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -55,7 +61,9 @@ properties:
     package: visio!
     fullName: text
     summary: |-
-      A string that contains the comment text.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      A string that contains the comment text.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -82,7 +90,12 @@ methods:
           type: '<xref uid="visio!Visio.Interfaces.CommentLoadOptions:interface" />'
       return:
         type: '<xref uid="visio!Visio.Comment:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Visio.run(session, function (ctx) {
               var activePage = ctx.document.getActivePage();
               var shapeName = "Position Belt.41";
@@ -161,7 +174,9 @@ methods:
       Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate
       properties, or another API object of the same type.
     remarks: |-
-      This method has the following additional signature:      `set(properties: Visio.Comment): void`
+      This method has the following additional signature:
+
+      `set(properties: Visio.Comment): void`
     isPreview: false
     isDeprecated: false
     syntax:

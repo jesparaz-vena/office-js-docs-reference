@@ -42,12 +42,26 @@ methods:
     fullName: 'add(name, source, destination)'
     summary: Add a PivotTable based on the specified source data and insert it at the top-left cell of the destination range.
     remarks: >-
-      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-create-and-modify.yaml
+
+      await Excel.run(async (context) => {
           const rangeToAnalyze = context.workbook.worksheets.getItem("Data").getRange("A1:E21");
           const rangeToPlacePivot = context.workbook.worksheets.getItem("Pivot").getRange("A2");
-          context.workbook.worksheets.getItem("Pivot").pivotTables.add("Farm Sales", rangeToAnalyze, rangeToPlacePivot);          await context.sync();
-      });      ```
+          context.workbook.worksheets.getItem("Pivot").pivotTables.add("Farm Sales", rangeToAnalyze, rangeToPlacePivot);
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

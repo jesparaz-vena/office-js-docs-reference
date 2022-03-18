@@ -42,11 +42,29 @@ methods:
     fullName: add(type)
     summary: Adds a new trendline to trendline collection.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-trendlines.yaml      await Excel.run(async (context) => {
-          const sheet = context.workbook.worksheets.getItem("Sample");          let seriesCollection = sheet.charts.getItemAt(0).series;           // Add a trendline.  
-          seriesCollection.getItemAt(0).trendlines.add("Linear");          await context.sync();
-      });      ```
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-trendlines.yaml
+
+      await Excel.run(async (context) => {
+          const sheet = context.workbook.worksheets.getItem("Sample");
+
+          let seriesCollection = sheet.charts.getItemAt(0).series;
+
+           // Add a trendline.  
+          seriesCollection.getItemAt(0).trendlines.add("Linear");
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

@@ -4,7 +4,9 @@ uid: 'visio!Visio.DataVisualizerDiagramResultType:enum'
 package: visio!
 fullName: Visio.DataVisualizerDiagramResultType
 summary: |-
-  Result of Data Visualizer Diagram operations.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Result of Data Visualizer Diagram operations.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

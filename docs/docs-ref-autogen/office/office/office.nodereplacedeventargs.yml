@@ -26,7 +26,9 @@ properties:
     package: office!
     fullName: newNode
     summary: |-
-      Gets the node that was just added to the CustomXMLPart object.      Note that this node may have children, if a subtree was just added to the document.
+      Gets the node that was just added to the CustomXMLPart object.
+
+      Note that this node may have children, if a subtree was just added to the document.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -39,7 +41,10 @@ properties:
     package: office!
     fullName: oldNode
     summary: >-
-      Gets the node which was just deleted (replaced) from the CustomXmlPart object.      Note that this node may have children, if a subtree is being removed from the document. Also, this node will be a
+      Gets the node which was just deleted (replaced) from the CustomXmlPart object.
+
+
+      Note that this node may have children, if a subtree is being removed from the document. Also, this node will be a
       "disconnected" node in that you can query down from the node, but you cannot query up the tree - the node appears
       to exist alone.
     remarks: ''

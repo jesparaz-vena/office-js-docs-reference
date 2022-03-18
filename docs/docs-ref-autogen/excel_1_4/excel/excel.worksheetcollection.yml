@@ -44,7 +44,11 @@ methods:
       Adds a new worksheet to the workbook. The worksheet will be added at the end of existing worksheets. If you wish
       to activate the newly added worksheet, call `.activate()` on it.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var wSheetName = 'Sample Name';
           var worksheet = ctx.workbook.worksheets.add(wSheetName);
@@ -78,7 +82,11 @@ methods:
     fullName: getActiveWorksheet()
     summary: Gets the currently active worksheet in the workbook.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) {  
           var activeWorksheet = ctx.workbook.worksheets.getActiveWorksheet();
           activeWorksheet.load('name');
@@ -195,7 +203,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.WorksheetCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var worksheets = ctx.workbook.worksheets;
               worksheets.load('items');

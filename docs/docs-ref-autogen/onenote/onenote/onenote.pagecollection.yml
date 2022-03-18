@@ -54,17 +54,35 @@ methods:
     fullName: getByTitle(title)
     summary: Gets the collection of pages with the specified title.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Get all the pages in the current section.
-          var allPages = context.application.getActiveSection().pages;          // Queue a command to load the pages. 
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Get all the pages in the current section.
+          var allPages = context.application.getActiveSection().pages;
+
+          // Queue a command to load the pages. 
           // For best performance, request specific properties.
-          allPages.load("id");           // Run the queued commands, and return a promise to indicate task completion.
+          allPages.load("id"); 
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
-              .then(function () {                  // Get the sections with the specified name.
-                  var todoPages = allPages.getByTitle("Todo list");                  // Queue a command to load the section. 
+              .then(function () {
+
+                  // Get the sections with the specified name.
+                  var todoPages = allPages.getByTitle("Todo list");
+
+                  // Queue a command to load the section. 
                   // For best performance, request specific properties.
-                  todoPages.load("id,title");                   return context.sync()
-                      .then(function () {                          // Iterate through the collection or access items individually by index.
+                  todoPages.load("id,title"); 
+
+                  return context.sync()
+                      .then(function () {
+
+                          // Iterate through the collection or access items individually by index.
                           if (todoPages.items.length > 0) {
                               console.log("Page title: " + todoPages.items[0].title);
                               console.log("Page ID: " + todoPages.items[0].id);
@@ -165,12 +183,25 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.PageCollection:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the pages in the current section.
-              var pages = context.application.getActiveSection().pages;              // Queue a command to load the id and title for each page.            
-              pages.load('id,title');              // Run the queued commands, and return a promise to indicate task completion.
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+              
+              // Get the pages in the current section.
+              var pages = context.application.getActiveSection().pages;
+              
+              // Queue a command to load the id and title for each page.            
+              pages.load('id,title');
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
-                  .then(function () {                      // Display the properties.
+                  .then(function () {
+                      
+                      // Display the properties.
                       $.each(pages.items, function(index, page) {
                           console.log(page.title);
                           console.log(page.id);

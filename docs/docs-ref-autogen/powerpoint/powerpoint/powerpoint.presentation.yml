@@ -78,14 +78,28 @@ methods:
     fullName: 'insertSlidesFromBase64(base64File, options)'
     summary: Inserts the specified slides from a presentation into the current presentation.
     remarks: >-
-      \[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/slide-management/insert-slides.yaml      await PowerPoint.run(async function(context) {
-          const selectedSlideID = await getSelectedSlideID();          context.presentation.insertSlidesFromBase64(chosenFileBase64, {
+      \[ [API set: PowerPointApi 1.2](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/slide-management/insert-slides.yaml
+
+      await PowerPoint.run(async function(context) {
+          const selectedSlideID = await getSelectedSlideID();
+
+          context.presentation.insertSlidesFromBase64(chosenFileBase64, {
               formatting: PowerPoint.InsertSlideFormatting.useDestinationTheme,
               targetSlideId: selectedSlideID + "#"
           });
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

@@ -4,7 +4,9 @@ uid: 'visio!Visio.ConnectorDirection:enum'
 package: visio!
 fullName: Visio.ConnectorDirection
 summary: |-
-  Direction of connector in DataVisualizer diagram.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Direction of connector in DataVisualizer diagram.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false

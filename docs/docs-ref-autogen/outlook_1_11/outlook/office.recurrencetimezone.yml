@@ -5,11 +5,30 @@ package: outlook!
 fullName: Office.RecurrenceTimeZone
 summary: Represents the time zone of the recurrence.
 remarks: >-
-  \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-  Compose or Read  #### Examples  ```javascript  // This example gets the Recurrence object of an appointment item.  Office.context.mailbox.item.recurrence.getAsync(callback);  function callback(asyncResult) {
+  Compose or Read
+
+
+  #### Examples
+
+
+  ```javascript
+
+  // This example gets the Recurrence object of an appointment item.
+
+  Office.context.mailbox.item.recurrence.getAsync(callback);
+
+
+  function callback(asyncResult) {
       var context = asyncResult.context;
       var recurrence = asyncResult.value;
       if (!recurrence) {
@@ -18,12 +37,25 @@ remarks: >-
       } else {
           console.log(JSON.stringify(recurrence));
       }
-  }  // The following example shows the results of the getAsync call that retrieves the recurrence for a series.  // NOTE: In this example, seriesTimeObject is a placeholder for the JSON representing the  // recurrence.seriesTime property. You should use the SeriesTime object's methods to get the  // recurrence date and time properties.  Recurrence = {
+  }
+
+
+  // The following example shows the results of the getAsync call that retrieves the recurrence for a series.
+
+  // NOTE: In this example, seriesTimeObject is a placeholder for the JSON representing the
+
+  // recurrence.seriesTime property. You should use the SeriesTime object's methods to get the
+
+  // recurrence date and time properties.
+
+  Recurrence = {
       "recurrenceType": "weekly",
       "recurrenceProperties": {"interval": 2, "days": ["mon","thu","fri"], "firstDayOfWeek": "sun"},
       "seriesTime": {seriesTimeObject},
       "recurrenceTimeZone": {"name": "Pacific Standard Time", "offset": -480}
-  }  ```
+  }
+
+  ```
 isPreview: false
 isDeprecated: false
 type: interface

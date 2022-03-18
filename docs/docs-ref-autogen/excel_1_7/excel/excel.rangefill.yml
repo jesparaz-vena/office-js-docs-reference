@@ -44,7 +44,11 @@ methods:
     fullName: clear()
     summary: Resets the range background.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = "Sheet1";
           var rangeAddress = "F:G";
@@ -104,7 +108,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.RangeFill:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var sheetName = "Sheet1";
               var rangeAddress = "F:G";

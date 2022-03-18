@@ -4,10 +4,22 @@ uid: 'outlook!Office.MessageRead:interface'
 package: outlook!
 fullName: Office.MessageRead
 summary: >-
-  The message read mode of [Office.context.mailbox.item](xref:outlook!Office.Item:interface)<!-- -->.  **Important**: This is an internal Outlook object, not directly exposed through existing interfaces. You should treat
+  The message read mode of [Office.context.mailbox.item](xref:outlook!Office.Item:interface)<!-- -->.
+
+
+  **Important**: This is an internal Outlook object, not directly exposed through existing interfaces. You should treat
   this as a mode of `Office.context.mailbox.item`<!-- -->. For more information, refer to the [Object
   Model](https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/office.context.mailbox.item)
-  page.  Parent interfaces:  - [ItemRead](xref:outlook!Office.ItemRead:interface)  - [Message](xref:outlook!Office.Message:interface)
+  page.
+
+
+  Parent interfaces:
+
+
+  - [ItemRead](xref:outlook!Office.ItemRead:interface)
+
+
+  - [Message](xref:outlook!Office.Message:interface)
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -21,11 +33,32 @@ properties:
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      **Note**: Certain types of files are blocked by Outlook due to potential security issues and are therefore not
+      Message Read
+
+
+      **Note**: Certain types of files are blocked by Outlook due to potential security issues and are therefore not
       returned. For more information, see [Blocked attachments in
-      Outlook](https://support.microsoft.com/office/434752e1-02d3-4e90-9124-8b81e49a8519)<!-- -->.      #### Examples      ```javascript      // The following code builds an HTML string with details of all attachments on the current item.      var item = Office.context.mailbox.item;      var outputString = "";      if (item.attachments.length > 0) {
+      Outlook](https://support.microsoft.com/office/434752e1-02d3-4e90-9124-8b81e49a8519)<!-- -->.
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following code builds an HTML string with details of all attachments on the current item.
+
+      var item = Office.context.mailbox.item;
+
+      var outputString = "";
+
+
+      if (item.attachments.length > 0) {
           for (i = 0 ; i < item.attachments.length ; i++) {
               var attachment = item.attachments[i];
               outputString += "<BR>" + i + ". Name: ";
@@ -36,8 +69,23 @@ properties:
               outputString += "<BR>attachmentType: " + attachment.attachmentType;
               outputString += "<BR>isInline: " + attachment.isInline;
           }
-      }      console.log(outputString);      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/40-attachments/get-attachments-read.yaml      var attachments = Office.context.mailbox.item.attachments;      console.log(attachments);      ```
+      }
+
+
+      console.log(outputString);
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/40-attachments/get-attachments-read.yaml
+
+      var attachments = Office.context.mailbox.item.attachments;
+
+      console.log(attachments);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -50,20 +98,42 @@ properties:
     fullName: body
     summary: Gets an object that provides methods for manipulating the body of an item.
     remarks: >-
-      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.1](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // This example gets the body of the item as plain text.      Office.context.mailbox.item.body.getAsync(
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // This example gets the body of the item as plain text.
+
+      Office.context.mailbox.item.body.getAsync(
           "text",
           { asyncContext: "This is passed to the callback" },
           function callback(result) {
               // Do something with the result.
-          });      // The following is an example of the result parameter passed to the callback function.      {
+          });
+
+      // The following is an example of the result parameter passed to the callback function.
+
+      {
           "value": "TEXT of whole body (including threads below)",
           "status": "succeeded",
           "asyncContext": "This is passed to the callback"
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -76,12 +146,28 @@ properties:
     fullName: categories
     summary: Gets an object that provides methods for managing the item's categories.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/45-categories/work-with-categories.yaml      Office.context.mailbox.item.categories.getAsync(function(asyncResult) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/45-categories/work-with-categories.yaml
+
+      Office.context.mailbox.item.categories.getAsync(function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
           var categories = asyncResult.value;
           if (categories && categories.length > 0) {
@@ -93,8 +179,21 @@ properties:
         } else {
           console.error(asyncResult.error);
         }
-      });      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/45-categories/work-with-categories.yaml      // Note: In order for you to successfully add a category,      // it must be in the mailbox categories master list.      Office.context.mailbox.masterCategories.getAsync(function(asyncResult) {
+      });
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/45-categories/work-with-categories.yaml
+
+      // Note: In order for you to successfully add a category,
+
+      // it must be in the mailbox categories master list.
+
+
+      Office.context.mailbox.masterCategories.getAsync(function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
           var masterCategories = asyncResult.value;
           if (masterCategories && masterCategories.length > 0) {
@@ -113,8 +212,16 @@ properties:
         } else {
           console.error(asyncResult.error);
         }
-      });      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/45-categories/work-with-categories.yaml      Office.context.mailbox.item.categories.getAsync(function(asyncResult) {
+      });
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/45-categories/work-with-categories.yaml
+
+      Office.context.mailbox.item.categories.getAsync(function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
           var categories = asyncResult.value;
           if (categories && categories.length > 0) {
@@ -133,7 +240,9 @@ properties:
         } else {
           console.error(asyncResult.error);
         }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -146,18 +255,52 @@ properties:
     fullName: cc
     summary: >-
       Provides access to the Cc (carbon copy) recipients of a message. The type of object and level of access depend on
-      the mode of the current item.      The `cc` property returns an array that contains an
+      the mode of the current item.
+
+
+      The `cc` property returns an array that contains an
       [EmailAddressDetails](xref:outlook!Office.EmailAddressDetails:interface) object for each recipient listed on the
-      **Cc** line of the message. Collection size limits:      - Windows: 500 members      - Mac: 100 members      - Web browser: 20 members      - Other: No limit
+      **Cc** line of the message. Collection size limits:
+
+
+      - Windows: 500 members
+
+
+      - Mac: 100 members
+
+
+      - Web browser: 20 members
+
+
+      - Other: No limit
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-cc-message-read.yaml      var msgCc = Office.context.mailbox.item.cc;      console.log("Message copied to:");      for (var i = 0; i < msgCc.length; i++) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-cc-message-read.yaml
+
+      var msgCc = Office.context.mailbox.item.cc;
+
+      console.log("Message copied to:");
+
+      for (var i = 0; i < msgCc.length; i++) {
         console.log(msgCc[i].displayName + " (" + msgCc[i].emailAddress + ")");
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -169,17 +312,38 @@ properties:
     package: outlook!
     fullName: conversationId
     summary: >-
-      Gets an identifier for the email conversation that contains a particular message.      You can get an integer for this property if your mail app is activated in read forms or responses in compose
+      Gets an identifier for the email conversation that contains a particular message.
+
+
+      You can get an integer for this property if your mail app is activated in read forms or responses in compose
       forms. If subsequently the user changes the subject of the reply message, upon sending the reply, the conversation
-      ID for that message will change and that value you obtained earlier will no longer apply.      You get null for this property for a new item in a compose form. If the user sets a subject and saves the item,
+      ID for that message will change and that value you obtained earlier will no longer apply.
+
+
+      You get null for this property for a new item in a compose form. If the user sets a subject and saves the item,
       the `conversationId` property will return a value.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-conversation-id-message.yaml      console.log(`Conversation ID: ${Office.context.mailbox.item.conversationId}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-conversation-id-message.yaml
+
+      console.log(`Conversation ID: ${Office.context.mailbox.item.conversationId}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -194,10 +358,25 @@ properties:
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-date-time-created-read.yaml      console.log(`Creation date and time: ${Office.context.mailbox.item.dateTimeCreated}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-date-time-created-read.yaml
+
+      console.log(`Creation date and time: ${Office.context.mailbox.item.dateTimeCreated}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -209,14 +388,31 @@ properties:
     package: outlook!
     fullName: dateTimeModified
     summary: |-
-      Gets the date and time that an item was last modified.      **Note**: This member is not supported in Outlook on iOS or Android.
+      Gets the date and time that an item was last modified.
+
+      **Note**: This member is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-date-time-modified-read.yaml      console.log(`Date and time item last modified: ${Office.context.mailbox.item.dateTimeModified}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-date-time-modified-read.yaml
+
+      console.log(`Date and time item last modified: ${Office.context.mailbox.item.dateTimeModified}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -228,16 +424,37 @@ properties:
     package: outlook!
     fullName: end
     summary: >-
-      Gets the date and time that the appointment is to end.      The `end` property is a `Date` object expressed as a Coordinated Universal Time (UTC) date and time value. You can
-      use the `convertToLocalClientTime` method to convert the `end` property value to the client's local date and time.      When you use the `Time.setAsync` method to set the end time, you should use the `convertToUtcClientTime` method to
+      Gets the date and time that the appointment is to end.
+
+
+      The `end` property is a `Date` object expressed as a Coordinated Universal Time (UTC) date and time value. You can
+      use the `convertToLocalClientTime` method to convert the `end` property value to the client's local date and time.
+
+
+      When you use the `Time.setAsync` method to set the end time, you should use the `convertToUtcClientTime` method to
       convert the local time on the client to UTC for the server.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-end-read.yaml      console.log(`Appointment ends: ${Office.context.mailbox.item.end}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-end-read.yaml
+
+      console.log(`Appointment ends: ${Office.context.mailbox.item.end}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -249,15 +466,41 @@ properties:
     package: outlook!
     fullName: from
     summary: >-
-      Gets the email address of the sender of a message.      The `from` and `sender` properties represent the same person unless the message is sent by a delegate. In that
-      case, the `from` property represents the delegator, and the `sender` property represents the delegate.      **Note**: The `recipientType` property of the `EmailAddressDetails` object in the `from` property is undefined.      The `from` property returns an `EmailAddressDetails` object.
+      Gets the email address of the sender of a message.
+
+
+      The `from` and `sender` properties represent the same person unless the message is sent by a delegate. In that
+      case, the `from` property represents the delegator, and the `sender` property represents the delegate.
+
+
+      **Note**: The `recipientType` property of the `EmailAddressDetails` object in the `from` property is undefined.
+
+
+      The `from` property returns an `EmailAddressDetails` object.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-from-message-read.yaml      var msgFrom = Office.context.mailbox.item.from;      console.log("Message received from: " + msgFrom.displayName + " (" + msgFrom.emailAddress + ")");      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-from-message-read.yaml
+
+      var msgFrom = Office.context.mailbox.item.from;
+
+      console.log("Message received from: " + msgFrom.displayName + " (" + msgFrom.emailAddress + ")");
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -269,17 +512,35 @@ properties:
     package: outlook!
     fullName: internetMessageId
     summary: >-
-      Gets the internet message identifier for an email message.      **Important**: In the **Sent Items** folder, the `internetMessageId` may not be available yet on recently sent
+      Gets the internet message identifier for an email message.
+
+
+      **Important**: In the **Sent Items** folder, the `internetMessageId` may not be available yet on recently sent
       items. In that case, consider using [Exchange Web
       Services](https://docs.microsoft.com/office/dev/add-ins/outlook/web-services) to get this [property from the
       server](https://docs.microsoft.com/exchange/client-developer/web-service-reference/internetmessageid)<!-- -->.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-internet-message-id-read.yaml      console.log(`Internet message ID: ${Office.context.mailbox.item.internetMessageId}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-internet-message-id-read.yaml
+
+      console.log(`Internet message ID: ${Office.context.mailbox.item.internetMessageId}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -291,22 +552,46 @@ properties:
     package: outlook!
     fullName: itemClass
     summary: >-
-      Gets the Exchange Web Services item class of the selected item.      You can create custom message classes that extends a default message class, for example, a custom appointment
+      Gets the Exchange Web Services item class of the selected item.
+
+
+      You can create custom message classes that extends a default message class, for example, a custom appointment
       message class `IPM.Appointment.Contoso`<!-- -->.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      The `itemClass` property specifies the message class of the selected item. The following are the default message
-      classes for the message or appointment item.      <table> <tr> <th>Type</th> <th>Description</th> <th>Item Class</th> </tr> <tr> <td>Appointment items</td>
+      Message Read
+
+
+      The `itemClass` property specifies the message class of the selected item. The following are the default message
+      classes for the message or appointment item.
+
+
+      <table> <tr> <th>Type</th> <th>Description</th> <th>Item Class</th> </tr> <tr> <td>Appointment items</td>
       <td>These are calendar items of the item class IPM.Appointment or IPM.Appointment.Occurrence.</td>
       <td>IPM.Appointment,IPM.Appointment.Occurrence</td> </tr> <tr> <td>Message items</td> <td>These include email
       messages that have the default message class IPM.Note, and meeting requests, responses, and cancellations, that
       use IPM.Schedule.Meeting as the base message class.</td>
       <td>IPM.Note,IPM.Schedule.Meeting.Request,IPM.Schedule.Meeting.Neg,IPM.Schedule.Meeting.Pos,IPM.Schedule.Meeting.Tent,IPM.Schedule.Meeting.Canceled</td>
-      </tr> </table>      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-item-class-read.yaml      console.log(`Item class: ${Office.context.mailbox.item.itemClass}`);      ```
+      </tr> </table>
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-item-class-read.yaml
+
+      console.log(`Item class: ${Office.context.mailbox.item.itemClass}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -320,9 +605,15 @@ properties:
     summary: >-
       Gets the [Exchange Web Services item
       identifier](https://docs.microsoft.com/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange)
-      for the current item.      The `itemId` property is not available in compose mode. If an item identifier is required, the `saveAsync` method
+      for the current item.
+
+
+      The `itemId` property is not available in compose mode. If an item identifier is required, the `saveAsync` method
       can be used to save the item to the store, which will return the item identifier in the `asyncResult.value`
-      parameter in the callback function.      **Note**: The identifier returned by the `itemId` property is the same as the [Exchange Web Services item
+      parameter in the callback function.
+
+
+      **Note**: The identifier returned by the `itemId` property is the same as the [Exchange Web Services item
       identifier](https://docs.microsoft.com/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange)<!--
       -->. The `itemId` property is not identical to the Outlook Entry ID or the ID used by the Outlook REST API. Before
       making REST API calls using this value, it should be converted using `Office.context.mailbox.convertToRestId`<!--
@@ -331,13 +622,40 @@ properties:
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // The following code checks for the presence of an item      // identifier. If the `itemId` property returns `null` or      // `undefined`, it saves the item to the store and gets the      // item identifier from the asynchronous result.      // **Important**: `saveAsync` was introduced with requirement set 1.3      // so you can't get the `itemId` in Compose mode in earlier sets.      var itemId = Office.context.mailbox.item.itemId;      if (itemId === null || itemId == undefined) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following code checks for the presence of an item
+
+      // identifier. If the `itemId` property returns `null` or
+
+      // `undefined`, it saves the item to the store and gets the
+
+      // item identifier from the asynchronous result.
+
+      // **Important**: `saveAsync` was introduced with requirement set 1.3
+
+      // so you can't get the `itemId` in Compose mode in earlier sets.
+
+      var itemId = Office.context.mailbox.item.itemId;
+
+      if (itemId === null || itemId == undefined) {
           Office.context.mailbox.item.saveAsync(function(result) {
               itemId = result.value;
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -349,15 +667,33 @@ properties:
     package: outlook!
     fullName: itemType
     summary: >-
-      Gets the type of item that an instance represents.      The `itemType` property returns one of the `ItemType` enumeration values, indicating whether the item object
+      Gets the type of item that an instance represents.
+
+
+      The `itemType` property returns one of the `ItemType` enumeration values, indicating whether the item object
       instance is a message or an appointment.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-item-type.yaml      console.log(`Item type: ${Office.context.mailbox.item.itemType}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-item-type.yaml
+
+      console.log(`Item type: ${Office.context.mailbox.item.itemType}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -369,14 +705,31 @@ properties:
     package: outlook!
     fullName: location
     summary: |-
-      Gets the location of a meeting request.      The `location` property returns a string that contains the location of the appointment.
+      Gets the location of a meeting request.
+
+      The `location` property returns a string that contains the location of the appointment.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-location-read.yaml      console.log(`Appointment location: ${Office.context.mailbox.item.location}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-location-read.yaml
+
+      console.log(`Appointment location: ${Office.context.mailbox.item.location}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -388,16 +741,34 @@ properties:
     package: outlook!
     fullName: normalizedSubject
     summary: >-
-      Gets the subject of an item, with all prefixes removed (including RE: and FWD:).      The `normalizedSubject` property gets the subject of the item, with any standard prefixes (such as RE: and FW:)
+      Gets the subject of an item, with all prefixes removed (including RE: and FWD:).
+
+
+      The `normalizedSubject` property gets the subject of the item, with any standard prefixes (such as RE: and FW:)
       that are added by email programs. To get the subject of the item with the prefixes intact, use the `subject`
       property.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-normalized-subject-read.yaml      console.log(`Normalized subject: ${Office.context.mailbox.item.normalizedSubject}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-normalized-subject-read.yaml
+
+      console.log(`Normalized subject: ${Office.context.mailbox.item.normalizedSubject}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -410,35 +781,91 @@ properties:
     fullName: notificationMessages
     summary: Gets the notification messages for an item.
     remarks: >-
-      \[ [API set: Mailbox 1.3](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.3](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml      var id = $("#notificationId").val();      var details =
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml
+
+      var id = $("#notificationId").val();
+
+      var details =
         {
           type: "progressIndicator",
           message: "Progress indicator with id = " + id
         };
-      Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml      var id = $("#notificationId").val();      var details =
+      Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml
+
+      var id = $("#notificationId").val();
+
+      var details =
         {
           type: "informationalMessage",
           message: "Non-persistent informational notification message with id = " + id,
           icon: "icon1",
           persistent: false
         };
-      Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml      var id = $("#notificationId").val();      var details =
+      Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml
+
+      var id = $("#notificationId").val();
+
+      var details =
         {
           type: "informationalMessage",
           message: "Persistent informational notification message with id = " + id,
           icon: "icon1",
           persistent: true
         };
-      Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml      Office.context.mailbox.item.notificationMessages.getAllAsync(handleResult);                ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml      var id = $("#notificationId").val();      Office.context.mailbox.item.notificationMessages.replaceAsync(
+      Office.context.mailbox.item.notificationMessages.addAsync(id, details, handleResult);
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml
+
+      Office.context.mailbox.item.notificationMessages.getAllAsync(handleResult);          
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml
+
+      var id = $("#notificationId").val();
+
+      Office.context.mailbox.item.notificationMessages.replaceAsync(
         id,
         {
           type: "informationalMessage",
@@ -447,8 +874,18 @@ properties:
           persistent: false
         },
         handleResult);
-      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml      var id = $("#notificationId").val();      Office.context.mailbox.item.notificationMessages.removeAsync(id, handleResult);      ```
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/35-notifications/add-getall-remove.yaml
+
+      var id = $("#notificationId").val();
+
+      Office.context.mailbox.item.notificationMessages.removeAsync(id, handleResult);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -461,23 +898,53 @@ properties:
     fullName: recurrence
     summary: >-
       Gets the recurrence pattern of an appointment. Gets the recurrence pattern of a meeting request. Read and compose
-      modes for appointment items. Read mode for meeting request items.      The `recurrence` property returns a `Recurrence` object for recurring appointments or meetings requests if an item
+      modes for appointment items. Read mode for meeting request items.
+
+
+      The `recurrence` property returns a `Recurrence` object for recurring appointments or meetings requests if an item
       is a series or an instance in a series. `null` is returned for single appointments and meeting requests of single
-      appointments. `undefined` is returned for messages that are not meeting requests.      **Note**: Meeting requests have an itemClass value of `IPM.Schedule.Meeting.Request`<!-- -->.      **Note**: If the `recurrence` object is null, this indicates that the object is a single appointment or a meeting
+      appointments. `undefined` is returned for messages that are not meeting requests.
+
+
+      **Note**: Meeting requests have an itemClass value of `IPM.Schedule.Meeting.Request`<!-- -->.
+
+
+      **Note**: If the `recurrence` object is null, this indicates that the object is a single appointment or a meeting
       request of a single appointment and NOT a part of a series.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/50-recurrence/get-recurrence-read.yaml      var recurrence = Office.context.mailbox.item.recurrence;      if (recurrence === undefined) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/50-recurrence/get-recurrence-read.yaml
+
+      var recurrence = Office.context.mailbox.item.recurrence;
+
+
+      if (recurrence === undefined) {
         console.log("This item is a message but not a meeting request.");
       } else if (recurrence === null) {
         console.log("This is a single appointment.");
       } else {
         console.log(JSON.stringify(recurrence));
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -489,15 +956,38 @@ properties:
     package: outlook!
     fullName: sender
     summary: >-
-      Gets the email address of the sender of an email message.      The `from` and `sender` properties represent the same person unless the message is sent by a delegate. In that
-      case, the `from` property represents the delegator, and the `sender` property represents the delegate.      **Note**: The `recipientType` property of the `EmailAddressDetails` object in the `sender` property is undefined.
+      Gets the email address of the sender of an email message.
+
+
+      The `from` and `sender` properties represent the same person unless the message is sent by a delegate. In that
+      case, the `from` property represents the delegator, and the `sender` property represents the delegate.
+
+
+      **Note**: The `recipientType` property of the `EmailAddressDetails` object in the `sender` property is undefined.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-sender-message-read.yaml      var msgSender = Office.context.mailbox.item.sender;      console.log("Sender: " + msgSender.displayName + " (" + msgSender.emailAddress + ")");      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-sender-message-read.yaml
+
+      var msgSender = Office.context.mailbox.item.sender;
+
+      console.log("Sender: " + msgSender.displayName + " (" + msgSender.emailAddress + ")");
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -509,27 +999,57 @@ properties:
     package: outlook!
     fullName: seriesId
     summary: >-
-      Gets the id of the series that an instance belongs to.      In Outlook on the web and desktop clients, the `seriesId` returns the Exchange Web Services (EWS) ID of the parent
+      Gets the id of the series that an instance belongs to.
+
+
+      In Outlook on the web and desktop clients, the `seriesId` returns the Exchange Web Services (EWS) ID of the parent
       (series) item that this item belongs to. However, on iOS and Android, the `seriesId` returns the REST ID of the
-      parent item.      **Note**: The identifier returned by the `seriesId` property is the same as the Exchange Web Services item
+      parent item.
+
+
+      **Note**: The identifier returned by the `seriesId` property is the same as the Exchange Web Services item
       identifier. The `seriesId` property is not identical to the Outlook IDs used by the Outlook REST API. Before
       making REST API calls using this value, it should be converted using `Office.context.mailbox.convertToRestId`<!--
       -->. For more details, see [Use the Outlook REST APIs from an Outlook
-      add-in](https://docs.microsoft.com/office/dev/add-ins/outlook/use-rest-api)<!-- -->.      The `seriesId` property returns `null` for items that do not have parent items such as single appointments, series
+      add-in](https://docs.microsoft.com/office/dev/add-ins/outlook/use-rest-api)<!-- -->.
+
+
+      The `seriesId` property returns `null` for items that do not have parent items such as single appointments, series
       items, or meeting requests and returns `undefined` for any other items that are not meeting requests.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/50-recurrence/get-series-id.yaml      var seriesId = Office.context.mailbox.item.seriesId;      if (seriesId === undefined) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/50-recurrence/get-series-id.yaml
+
+      var seriesId = Office.context.mailbox.item.seriesId;
+
+
+      if (seriesId === undefined) {
         console.log("This is a message that's not a meeting request.");
       } else if (seriesId === null) {
         console.log("This is a single appointment, a parent series, or a meeting request for a series or single meeting.");
       } else {
         console.log("This is an instance belonging to series with ID " + seriesId);
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -541,15 +1061,33 @@ properties:
     package: outlook!
     fullName: start
     summary: >-
-      Gets the date and time that the appointment is to begin.      The `start` property is a `Date` object expressed as a Coordinated Universal Time (UTC) date and time value. You
+      Gets the date and time that the appointment is to begin.
+
+
+      The `start` property is a `Date` object expressed as a Coordinated Universal Time (UTC) date and time value. You
       can use the `convertToLocalClientTime` method to convert the value to the client's local date and time.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-start-read.yaml      console.log(`Appointment starts: ${Office.context.mailbox.item.start}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-start-read.yaml
+
+      console.log(`Appointment starts: ${Office.context.mailbox.item.start}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -561,15 +1099,36 @@ properties:
     package: outlook!
     fullName: subject
     summary: >-
-      Gets the description that appears in the subject field of an item.      The `subject` property gets or sets the entire subject of the item, as sent by the email server.      The `subject` property returns a string. Use the `normalizedSubject` property to get the subject minus any leading
+      Gets the description that appears in the subject field of an item.
+
+
+      The `subject` property gets or sets the entire subject of the item, as sent by the email server.
+
+
+      The `subject` property returns a string. Use the `normalizedSubject` property to get the subject minus any leading
       prefixes such as RE: and FW:.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-subject-read.yaml      console.log(`Subject: ${Office.context.mailbox.item.subject}`);      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/90-other-item-apis/get-subject-read.yaml
+
+      console.log(`Subject: ${Office.context.mailbox.item.subject}`);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -582,18 +1141,52 @@ properties:
     fullName: to
     summary: >-
       Provides access to the recipients on the **To** line of a message. The type of object and level of access depend
-      on the mode of the current item.      The `to` property returns an array that contains an
+      on the mode of the current item.
+
+
+      The `to` property returns an array that contains an
       [EmailAddressDetails](xref:outlook!Office.EmailAddressDetails:interface) object for each recipient listed on the
-      **To** line of the message. Collection size limits:      - Windows: 500 members      - Mac: 100 members      - Web browser: 20 members      - Other: No limit
+      **To** line of the message. Collection size limits:
+
+
+      - Windows: 500 members
+
+
+      - Mac: 100 members
+
+
+      - Web browser: 20 members
+
+
+      - Other: No limit
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-to-message-read.yaml      var msgTo = Office.context.mailbox.item.to;      console.log("Message sent to:");      for (var i = 0; i < msgTo.length; i++) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/30-recipients-and-attendees/get-to-message-read.yaml
+
+      var msgTo = Office.context.mailbox.item.to;
+
+      console.log("Message sent to:");
+
+      for (var i = 0; i < msgTo.length; i++) {
         console.log(msgTo[i].displayName + " (" + msgTo[i].emailAddress + ")");
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -606,21 +1199,43 @@ methods:
     package: outlook!
     fullName: 'addHandlerAsync(eventType, handler, options, callback)'
     summary: >-
-      Adds an event handler for a supported event. **Note**: Events are only available with task pane implementation.      For supported events, refer to the Item object model [events
+      Adds an event handler for a supported event. **Note**: Events are only available with task pane implementation.
+
+
+      For supported events, refer to the Item object model [events
       section](https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/office.context.mailbox.item#events)<!--
       -->.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      function myHandlerFunction(eventarg) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      function myHandlerFunction(eventarg) {
           if (eventarg.attachmentStatus === Office.MailboxEnums.AttachmentStatus.Added) {
               var attachment = eventarg.attachmentDetails;
               console.log("Event Fired and Attachment Added!");
               getAttachmentContentAsync(attachment.id, options, callback);
           }
-      }      Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged, myHandlerFunction, myCallback);      ```
+      }
+
+
+      Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged, myHandlerFunction, myCallback);
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -655,13 +1270,22 @@ methods:
     package: outlook!
     fullName: 'addHandlerAsync(eventType, handler, callback)'
     summary: >-
-      Adds an event handler for a supported event. **Note**: Events are only available with task pane implementation.      For supported events, refer to the Item object model [events
+      Adds an event handler for a supported event. **Note**: Events are only available with task pane implementation.
+
+
+      For supported events, refer to the Item object model [events
       section](https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/office.context.mailbox.item#events)<!--
       -->.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Message Read
     isPreview: false
@@ -694,16 +1318,66 @@ methods:
     fullName: displayReplyAllForm(formData)
     summary: >-
       Displays a reply form that includes either the sender and all recipients of the selected message or the organizer
-      and all attendees of the selected appointment.      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
-      2-column or 1-column view.      If any of the string parameters exceed their limits, `displayReplyAllForm` throws an exception.      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
+      and all attendees of the selected appointment.
+
+
+      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
+      2-column or 1-column view.
+
+
+      If any of the string parameters exceed their limits, `displayReplyAllForm` throws an exception.
+
+
+      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
       attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form
-      UI. If this isn't possible, then no error message is thrown.      **Note**: This method is not supported in Outlook on iOS or Android.
+      UI. If this isn't possible, then no error message is thrown.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // The following code passes a string to the `displayReplyAllForm` function.      Office.context.mailbox.item.displayReplyAllForm('hello there');      Office.context.mailbox.item.displayReplyAllForm('<b>hello there</b>');      // Reply with an empty body.      Office.context.mailbox.item.displayReplyAllForm({});      // Reply with just a body.      Office.context.mailbox.item.displayReplyAllForm(      {      'htmlBody' : 'hi'      });      // Reply with a body and a file attachment.      Office.context.mailbox.item.displayReplyAllForm(      {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following code passes a string to the `displayReplyAllForm` function.
+
+      Office.context.mailbox.item.displayReplyAllForm('hello there');
+
+      Office.context.mailbox.item.displayReplyAllForm('<b>hello there</b>');
+
+
+      // Reply with an empty body.
+
+      Office.context.mailbox.item.displayReplyAllForm({});
+
+
+      // Reply with just a body.
+
+      Office.context.mailbox.item.displayReplyAllForm(
+
+      {
+
+      'htmlBody' : 'hi'
+
+      });
+
+
+      // Reply with a body and a file attachment.
+
+      Office.context.mailbox.item.displayReplyAllForm(
+
+      {
           'htmlBody' : 'hi',
           'attachments' :
           [
@@ -713,7 +1387,14 @@ methods:
               'url' : 'http://i.imgur.com/sRgTlGR.jpg'
               }
           ]
-      });      // Reply with a body and an item attachment.      Office.context.mailbox.item.displayReplyAllForm(      {
+      });
+
+
+      // Reply with a body and an item attachment.
+
+      Office.context.mailbox.item.displayReplyAllForm(
+
+      {
           'htmlBody' : 'hi',
           'attachments' :
           [
@@ -723,7 +1404,14 @@ methods:
               'itemId' : Office.context.mailbox.item.itemId
               }
           ]
-      });      // Reply with a body, file attachment, item attachment, and a callback.      Office.context.mailbox.item.displayReplyAllForm(      {
+      });
+
+
+      // Reply with a body, file attachment, item attachment, and a callback.
+
+      Office.context.mailbox.item.displayReplyAllForm(
+
+      {
           'htmlBody' : 'hi',
           'attachments' :
           [
@@ -742,8 +1430,18 @@ methods:
           {
               console.log(asyncResult.value);
           }
-      });      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml      Office.context.mailbox.item.displayReplyAllForm("This is a reply ALL with <b>some bold text</b>.");      ```
+      });
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml
+
+      Office.context.mailbox.item.displayReplyAllForm("This is a reply ALL with <b>some bold text</b>.");
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -764,21 +1462,51 @@ methods:
     fullName: 'displayReplyAllFormAsync(formData, options, callback)'
     summary: >-
       Displays a reply form that includes either the sender and all recipients of the selected message or the organizer
-      and all attendees of the selected appointment.      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
-      2-column or 1-column view.      If any of the string parameters exceed their limits, `displayReplyAllFormAsync` throws an exception.      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
+      and all attendees of the selected appointment.
+
+
+      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
+      2-column or 1-column view.
+
+
+      If any of the string parameters exceed their limits, `displayReplyAllFormAsync` throws an exception.
+
+
+      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
       attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form
-      UI. If this isn't possible, then no error message is thrown.      **Note**: This method is not supported in Outlook on iOS or Android.
+      UI. If this isn't possible, then no error message is thrown.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml      Office.context.mailbox.item.displayReplyAllFormAsync("This is a reply ALL with <b>some bold text</b>.", function(
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml
+
+      Office.context.mailbox.item.displayReplyAllFormAsync("This is a reply ALL with <b>some bold text</b>.", function(
         asyncResult
       ) {
         console.log(JSON.stringify(asyncResult));
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -811,14 +1539,32 @@ methods:
     fullName: 'displayReplyAllFormAsync(formData, callback)'
     summary: >-
       Displays a reply form that includes either the sender and all recipients of the selected message or the organizer
-      and all attendees of the selected appointment.      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
-      2-column or 1-column view.      If any of the string parameters exceed their limits, `displayReplyAllFormAsync` throws an exception.      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
+      and all attendees of the selected appointment.
+
+
+      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
+      2-column or 1-column view.
+
+
+      If any of the string parameters exceed their limits, `displayReplyAllFormAsync` throws an exception.
+
+
+      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
       attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form
-      UI. If this isn't possible, then no error message is thrown.      **Note**: This method is not supported in Outlook on iOS or Android.
+      UI. If this isn't possible, then no error message is thrown.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Message Read
     isPreview: false
@@ -848,18 +1594,64 @@ methods:
     fullName: displayReplyForm(formData)
     summary: >-
       Displays a reply form that includes only the sender of the selected message or the organizer of the selected
-      appointment.      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
-      2-column or 1-column view.      If any of the string parameters exceed their limits, `displayReplyForm` throws an exception.      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
+      appointment.
+
+
+      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
+      2-column or 1-column view.
+
+
+      If any of the string parameters exceed their limits, `displayReplyForm` throws an exception.
+
+
+      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
       attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form
-      UI. If this isn't possible, then no error message is thrown.      **Note**: This method is not supported in Outlook on iOS or Android.
+      UI. If this isn't possible, then no error message is thrown.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // The following code passes a string to the `displayReplyForm` function.      Office.context.mailbox.item.displayReplyForm('hello there');      Office.context.mailbox.item.displayReplyForm('<b>hello there</b>');      // Reply with an empty body.      Office.context.mailbox.item.displayReplyForm({});      // Reply with just a body.      Office.context.mailbox.item.displayReplyForm(      {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following code passes a string to the `displayReplyForm` function.
+
+      Office.context.mailbox.item.displayReplyForm('hello there');
+
+      Office.context.mailbox.item.displayReplyForm('<b>hello there</b>');
+
+
+      // Reply with an empty body.
+
+      Office.context.mailbox.item.displayReplyForm({});
+
+
+      // Reply with just a body.
+
+      Office.context.mailbox.item.displayReplyForm(
+
+      {
           'htmlBody' : 'hi'
-      });      // Reply with a body and a file attachment.      Office.context.mailbox.item.displayReplyForm(      {
+      });
+
+
+      // Reply with a body and a file attachment.
+
+      Office.context.mailbox.item.displayReplyForm(
+
+      {
           'htmlBody' : 'hi',
           'attachments' :
           [
@@ -869,7 +1661,14 @@ methods:
                   'url' : 'http://i.imgur.com/sRgTlGR.jpg'
               }
           ]
-      });      // Reply with a body and an item attachment.      Office.context.mailbox.item.displayReplyForm(      {
+      });
+
+
+      // Reply with a body and an item attachment.
+
+      Office.context.mailbox.item.displayReplyForm(
+
+      {
           'htmlBody' : 'hi',
           'attachments' :
           [
@@ -879,7 +1678,14 @@ methods:
                   'itemId' : Office.context.mailbox.item.itemId
               }
           ]
-      });      // Reply with a body, file attachment, item attachment, and a callback.      Office.context.mailbox.item.displayReplyForm(      {
+      });
+
+
+      // Reply with a body, file attachment, item attachment, and a callback.
+
+      Office.context.mailbox.item.displayReplyForm(
+
+      {
           'htmlBody' : 'hi',
           'attachments' :
           [
@@ -898,9 +1704,25 @@ methods:
           {
               console.log(asyncResult.value);
           }
-      });      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml      Office.context.mailbox.item.displayReplyForm("This is a reply with <i>some text in italics</i>.");      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-with-attachments.yaml      Office.context.mailbox.item.displayReplyForm({
+      });
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml
+
+      Office.context.mailbox.item.displayReplyForm("This is a reply with <i>some text in italics</i>.");
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-with-attachments.yaml
+
+      Office.context.mailbox.item.displayReplyForm({
         htmlBody: "This is a reply with a couple of attachments - an inline image and an item<br><img src='cid:dog.jpg'>",
         attachments: [
           { type: "file", url: "http://i.imgur.com/9S36xvA.jpg", name: "dog.jpg", isInline: true },
@@ -912,7 +1734,9 @@ methods:
             console.error(`Action failed with message ${result.error.message}`);
           }
         }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -933,22 +1757,62 @@ methods:
     fullName: 'displayReplyFormAsync(formData, options, callback)'
     summary: >-
       Displays a reply form that includes only the sender of the selected message or the organizer of the selected
-      appointment.      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
-      2-column or 1-column view.      If any of the string parameters exceed their limits, `displayReplyFormAsync` throws an exception.      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
+      appointment.
+
+
+      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
+      2-column or 1-column view.
+
+
+      If any of the string parameters exceed their limits, `displayReplyFormAsync` throws an exception.
+
+
+      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
       attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form
-      UI. If this isn't possible, then no error message is thrown.      **Note**: This method is not supported in Outlook on iOS or Android.
+      UI. If this isn't possible, then no error message is thrown.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml      Office.context.mailbox.item.displayReplyFormAsync("This is a reply with <i>some text in italics</i>.", function(
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-forms.yaml
+
+      Office.context.mailbox.item.displayReplyFormAsync("This is a reply with <i>some text in italics</i>.", function(
         asyncResult
       ) {
         console.log(JSON.stringify(asyncResult));
-      });      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-with-attachments.yaml      // The async version is only available starting with requirement set 1.9,      // and provides a callback when the new appointment form has been created.      Office.context.mailbox.item.displayReplyFormAsync(
+      });
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/55-display-items/display-reply-with-attachments.yaml
+
+      // The async version is only available starting with requirement set 1.9,
+
+      // and provides a callback when the new appointment form has been created.
+
+      Office.context.mailbox.item.displayReplyFormAsync(
         {
           htmlBody: "This is a reply with a couple of attachments - an inline image and an item<br><img src='cid:dog.jpg'>",
           attachments: [
@@ -959,7 +1823,9 @@ methods:
         function(asyncResult) {
           console.log(JSON.stringify(asyncResult));
         }
-      );      ```
+      );
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -992,14 +1858,32 @@ methods:
     fullName: 'displayReplyFormAsync(formData, callback)'
     summary: >-
       Displays a reply form that includes only the sender of the selected message or the organizer of the selected
-      appointment.      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
-      2-column or 1-column view.      If any of the string parameters exceed their limits, `displayReplyFormAsync` throws an exception.      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
+      appointment.
+
+
+      In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the
+      2-column or 1-column view.
+
+
+      If any of the string parameters exceed their limits, `displayReplyFormAsync` throws an exception.
+
+
+      When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all
       attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form
-      UI. If this isn't possible, then no error message is thrown.      **Note**: This method is not supported in Outlook on iOS or Android.
+      UI. If this isn't possible, then no error message is thrown.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.9](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Message Read
     isPreview: false
@@ -1028,15 +1912,34 @@ methods:
     package: outlook!
     fullName: 'getAllInternetHeadersAsync(options, callback)'
     summary: >-
-      Gets all the internet headers for the message as a string.      To learn more, see [Get and set internet headers on a message in an Outlook
+      Gets all the internet headers for the message as a string.
+
+
+      To learn more, see [Get and set internet headers on a message in an Outlook
       add-in](https://docs.microsoft.com/office/dev/add-ins/outlook/internet-headers)<!-- -->.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/70-mime-headers/get-internet-headers-message-read.yaml      Office.context.mailbox.item.getAllInternetHeadersAsync(function (asyncResult) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/70-mime-headers/get-internet-headers-message-read.yaml
+
+      Office.context.mailbox.item.getAllInternetHeadersAsync(function (asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
           console.log("Internet headers received successfully");
           if (asyncResult.value.match(/x-preferred-fruit:.*/gim)) {
@@ -1054,7 +1957,9 @@ methods:
         } else {
           console.log("Error getting internet headers: " + JSON.stringify(asyncResult.error));
         }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1083,12 +1988,21 @@ methods:
     package: outlook!
     fullName: getAllInternetHeadersAsync(callback)
     summary: >-
-      Gets all the internet headers for the message as a string.      To learn more, see [Get and set internet headers on a message in an Outlook
+      Gets all the internet headers for the message as a string.
+
+
+      To learn more, see [Get and set internet headers on a message in an Outlook
       add-in](https://docs.microsoft.com/office/dev/add-ins/outlook/internet-headers)<!-- -->.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Message Read
     isPreview: false
@@ -1112,26 +2026,64 @@ methods:
     package: outlook!
     fullName: 'getAttachmentContentAsync(attachmentId, options, callback)'
     summary: >-
-      Gets an attachment from a message or appointment and returns it as an `AttachmentContent` object.      The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item. As a best
+      Gets an attachment from a message or appointment and returns it as an `AttachmentContent` object.
+
+
+      The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item. As a best
       practice, you should use the identifier to retrieve an attachment in the same session that the attachmentIds were
       retrieved with the `getAttachmentsAsync` or `item.attachments` call. In Outlook on the web and mobile devices, the
       attachment identifier is valid only within the same session. A session is over when the user closes the app, or if
       the user starts composing an inline form then subsequently pops out the form to continue in a separate window.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      **Errors**:      - `AttachmentTypeNotSupported`<!-- -->: The attachment type isn't supported. Unsupported types include embedded
+      Message Read
+
+
+      **Errors**:
+
+
+      - `AttachmentTypeNotSupported`<!-- -->: The attachment type isn't supported. Unsupported types include embedded
       images in Rich Text Format, or item attachment types other than email or calendar items (such as a contact or task
-      item).      - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/40-attachments/get-attachment-content.yaml      var item = Office.context.mailbox.item;      var options = {asyncContext: {currentItem: item}};      item.getAttachmentsAsync(options, callback);      function callback(result) {
+      item).
+
+
+      - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/40-attachments/get-attachment-content.yaml
+
+      var item = Office.context.mailbox.item;
+
+      var options = {asyncContext: {currentItem: item}};
+
+      item.getAttachmentsAsync(options, callback);
+
+
+      function callback(result) {
           if (result.value.length > 0) {
               for (i = 0 ; i < result.value.length ; i++) {
                   result.asyncContext.currentItem.getAttachmentContentAsync(result.value[i].id, handleAttachmentsCallback);
               }
           }
-      }      function handleAttachmentsCallback(result) {
+      }
+
+
+      function handleAttachmentsCallback(result) {
           // Parse string to be a url, an .eml file, a base64-encoded string, or an .icalendar file.
           switch (result.value.format) {
               case Office.MailboxEnums.AttachmentContentFormat.Base64:
@@ -1153,7 +2105,9 @@ methods:
               default:
                   // Handle attachment formats that are not supported.
           }
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1185,19 +2139,37 @@ methods:
     package: outlook!
     fullName: 'getAttachmentContentAsync(attachmentId, callback)'
     summary: >-
-      Gets an attachment from a message or appointment and returns it as an `AttachmentContent` object.      The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item. As a best
+      Gets an attachment from a message or appointment and returns it as an `AttachmentContent` object.
+
+
+      The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item. As a best
       practice, you should use the identifier to retrieve an attachment in the same session that the attachmentIds were
       retrieved with the `getAttachmentsAsync` or `item.attachments` call. In Outlook on the web and mobile devices, the
       attachment identifier is valid only within the same session. A session is over when the user closes the app, or if
       the user starts composing an inline form then subsequently pops out the form to continue in a separate window.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      **Errors**:      - `AttachmentTypeNotSupported`<!-- -->: The attachment type isn't supported. Unsupported types include embedded
+      Message Read
+
+
+      **Errors**:
+
+
+      - `AttachmentTypeNotSupported`<!-- -->: The attachment type isn't supported. Unsupported types include embedded
       images in Rich Text Format, or item attachment types other than email or calendar items (such as a contact or task
-      item).      - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
+      item).
+
+
+      - `InvalidAttachmentId`<!-- -->: The attachment identifier does not exist.
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1224,44 +2196,81 @@ methods:
     package: outlook!
     fullName: getEntities()
     summary: |-
-      Gets the entities found in the selected item's body.      **Note**: This method is not supported in Outlook on iOS or Android.
+      Gets the entities found in the selected item's body.
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/basic-entities.yaml      var entities = Office.context.mailbox.item.getEntities();      var entityTypesFound = 0;      if (entities.addresses.length > 0) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/basic-entities.yaml
+
+      var entities = Office.context.mailbox.item.getEntities();
+
+      var entityTypesFound = 0;
+
+      if (entities.addresses.length > 0) {
           console.warn("physical addresses: ");
           console.log(entities.addresses);
           entityTypesFound++;
-      }      if (entities.contacts.length > 0) {
+      }
+
+      if (entities.contacts.length > 0) {
           console.warn("contacts: ");
           entities.contacts.forEach(function (contact) { console.log(contact.personName); })
           entityTypesFound++;
-      }      if (entities.emailAddresses.length > 0) {
+      }
+
+      if (entities.emailAddresses.length > 0) {
           console.warn("email addresses: ");
           console.log(entities.emailAddresses);
           entityTypesFound++;
-      }      if (entities.meetingSuggestions.length > 0) {
+      }
+
+      if (entities.meetingSuggestions.length > 0) {
           console.warn("meetings suggestions: ");
           entities.meetingSuggestions.forEach(function (meetingSuggestion) { console.log(meetingSuggestion.meetingString); })
           entityTypesFound++;
-      }      if (entities.phoneNumbers.length > 0) {
+      }
+
+      if (entities.phoneNumbers.length > 0) {
           console.warn("phone numbers: ");
           entities.phoneNumbers.forEach(function (phoneNumber) { console.log(phoneNumber.originalPhoneString); })
           entityTypesFound++;
-      }      if (entities.taskSuggestions.length > 0) {
+      }
+
+      if (entities.taskSuggestions.length > 0) {
           console.warn("task suggestions: ");
           entities.taskSuggestions.forEach(function (taskSuggestion) { console.log(taskSuggestion.taskString); })
           entityTypesFound++;
-      }      if (entities.urls.length > 0) {
+      }
+
+      if (entities.urls.length > 0) {
           console.warn("URLs: ");
           console.log(entities.urls);
           entityTypesFound++;
-      }      if (entityTypesFound == 0)      {
+      }
+
+      if (entityTypesFound == 0)
+
+      {
           console.log("No entities found on this item.");
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1274,14 +2283,31 @@ methods:
     package: outlook!
     fullName: getEntitiesByType(entityType)
     summary: |-
-      Gets an array of all the entities of the specified entity type found in the selected item's body.      **Note**: This method is not supported in Outlook on iOS or Android.
+      Gets an array of all the entities of the specified entity type found in the selected item's body.
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `Restricted`      **[Applicable Outlook
+      `Restricted`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/basic-entities.yaml      console.log(Office.context.mailbox.item.getEntitiesByType(Office.MailboxEnums.EntityType.Address));      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/basic-entities.yaml
+
+      console.log(Office.context.mailbox.item.getEntitiesByType(Office.MailboxEnums.EntityType.Address));
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1291,8 +2317,14 @@ methods:
       parameters:
         - id: entityType
           description: >-
-            One of the `EntityType` enumeration values.            While the minimum permission level to use this method is `Restricted`<!-- -->, some entity types require
-            `ReadItem` to access, as specified in the following table.            <table> <tr> <th>Value of entityType</th> <th>Type of objects in returned array</th> <th>Required Permission
+            One of the `EntityType` enumeration values.
+
+
+            While the minimum permission level to use this method is `Restricted`<!-- -->, some entity types require
+            `ReadItem` to access, as specified in the following table.
+
+
+            <table> <tr> <th>Value of entityType</th> <th>Type of objects in returned array</th> <th>Required Permission
             Level</th> </tr> <tr> <td>Address</td> <td>String</td> <td>Restricted</td> </tr> <tr> <td>Contact</td>
             <td>Contact</td> <td>ReadItem</td> </tr> <tr> <td>EmailAddress</td> <td>String</td> <td>ReadItem</td> </tr>
             <tr> <td>MeetingSuggestion</td> <td>MeetingSuggestion</td> <td>ReadItem</td> </tr> <tr> <td>PhoneNumber</td>
@@ -1314,15 +2346,38 @@ methods:
     package: outlook!
     fullName: getFilteredEntitiesByName(name)
     summary: >-
-      Returns well-known entities in the selected item that pass the named filter defined in the manifest XML file.      The `getFilteredEntitiesByName` method returns the entities that match the regular expression defined in the
-      `ItemHasKnownEntity` rule element in the manifest XML file with the specified `FilterName` element value.      **Note**: This method is not supported in Outlook on iOS or Android.
+      Returns well-known entities in the selected item that pass the named filter defined in the manifest XML file.
+
+
+      The `getFilteredEntitiesByName` method returns the entities that match the regular expression defined in the
+      `ItemHasKnownEntity` rule element in the manifest XML file with the specified `FilterName` element value.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/contextual.yaml      // This API would only work when you click on highlighted physical address that has the word "Way" in it.      console.log(Office.context.mailbox.item.getFilteredEntitiesByName("sampleFilterName"));      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/contextual.yaml
+
+      // This API would only work when you click on highlighted physical address that has the word "Way" in it.
+
+      console.log(Office.context.mailbox.item.getFilteredEntitiesByName("sampleFilterName"));
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1348,22 +2403,92 @@ methods:
     package: outlook!
     fullName: getRegExMatches()
     summary: >-
-      Returns string values in the selected item that match the regular expressions defined in the manifest XML file.      The `getRegExMatches` method returns the strings that match the regular expression defined in each
+      Returns string values in the selected item that match the regular expressions defined in the manifest XML file.
+
+
+      The `getRegExMatches` method returns the strings that match the regular expression defined in each
       `ItemHasRegularExpressionMatch` or `ItemHasKnownEntity` rule element in the manifest XML file. For an
       `ItemHasRegularExpressionMatch` rule, a matching string has to occur in the property of the item that is specified
-      by that rule. The `PropertyName` simple type defines the supported properties.      If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression
+      by that rule. The `PropertyName` simple type defines the supported properties.
+
+
+      If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression
       should further filter the body and should not attempt to return the entire body of the item. Using a regular
       expression such as .* to obtain the entire body of an item does not always return the expected results. Instead,
-      use the `Body.getAsync` method to retrieve the entire body.      **Note**: This method is not supported in Outlook on iOS or Android.
+      use the `Body.getAsync` method to retrieve the entire body.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Consider an add-in manifest has the following `Rule` element:      //<Rule xsi:type="RuleCollection" Mode="And">      //  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />      //  <Rule xsi:type="RuleCollection" Mode="Or">      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut"
-      PropertyName="BodyAsPlaintext" IgnoreCase="true" />      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies"
-      RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />      //  </Rule>      //</Rule>      // The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.      //{      //'fruits': ['apple','banana','Banana','coconut'],      //'veggies': ['tomato','onion','spinach','broccoli']      //}      // The following example shows how to access the array of      // matches for the regular expression rule elements `fruits`      // and `veggies`, which are specified in the manifest.      var allMatches = Office.context.mailbox.item.getRegExMatches();      var fruits = allMatches.fruits;      var veggies = allMatches.veggies;      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/contextual.yaml      // This API would only work when you click on highlighted word "ScriptLab".      console.log(Office.context.mailbox.item.getRegExMatches());      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Consider an add-in manifest has the following `Rule` element:
+
+      //<Rule xsi:type="RuleCollection" Mode="And">
+
+      //  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />
+
+      //  <Rule xsi:type="RuleCollection" Mode="Or">
+
+      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut"
+      PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+
+      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies"
+      RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+
+      //  </Rule>
+
+      //</Rule>
+
+
+      // The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.
+
+      //{
+
+      //'fruits': ['apple','banana','Banana','coconut'],
+
+      //'veggies': ['tomato','onion','spinach','broccoli']
+
+      //}
+
+
+      // The following example shows how to access the array of
+
+      // matches for the regular expression rule elements `fruits`
+
+      // and `veggies`, which are specified in the manifest.
+
+      var allMatches = Office.context.mailbox.item.getRegExMatches();
+
+      var fruits = allMatches.fruits;
+
+      var veggies = allMatches.veggies;
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/contextual.yaml
+
+      // This API would only work when you click on highlighted word "ScriptLab".
+
+      console.log(Office.context.mailbox.item.getRegExMatches());
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1380,20 +2505,82 @@ methods:
     fullName: getRegExMatchesByName(name)
     summary: >-
       Returns string values in the selected item that match the named regular expression defined in the manifest XML
-      file.      The `getRegExMatchesByName` method returns the strings that match the regular expression defined in the
+      file.
+
+
+      The `getRegExMatchesByName` method returns the strings that match the regular expression defined in the
       `ItemHasRegularExpressionMatch` rule element in the manifest XML file with the specified `RegExName` element
-      value.      If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression
+      value.
+
+
+      If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression
       should further filter the body and should not attempt to return the entire body of the item. Using a regular
-      expression such as .* to obtain the entire body of an item does not always return the expected results.      **Note**: This method is not supported in Outlook on iOS or Android.
+      expression such as .* to obtain the entire body of an item does not always return the expected results.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Consider an add-in manifest has the following `Rule` element:      //<Rule xsi:type="RuleCollection" Mode="And">      //  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />      //  <Rule xsi:type="RuleCollection" Mode="Or">      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut"
-      PropertyName="BodyAsPlaintext" IgnoreCase="true" />      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies"
-      RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />      //  </Rule>      //</Rule>      // The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.      //{      //'fruits': ['apple','banana','Banana','coconut'],      //'veggies': ['tomato','onion','spinach','broccoli']      //}      var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");      var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/contextual.yaml      // This API would only work when you click on highlighted word "ScriptLab".      console.log(Office.context.mailbox.item.getRegExMatchesByName("sampleRegexName"));      ```
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Consider an add-in manifest has the following `Rule` element:
+
+      //<Rule xsi:type="RuleCollection" Mode="And">
+
+      //  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />
+
+      //  <Rule xsi:type="RuleCollection" Mode="Or">
+
+      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut"
+      PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+
+      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies"
+      RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+
+      //  </Rule>
+
+      //</Rule>
+
+
+      // The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.
+
+      //{
+
+      //'fruits': ['apple','banana','Banana','coconut'],
+
+      //'veggies': ['tomato','onion','spinach','broccoli']
+
+      //}
+
+
+      var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");
+
+      var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/contextual.yaml
+
+      // This API would only work when you click on highlighted word "ScriptLab".
+
+      console.log(Office.context.mailbox.item.getRegExMatchesByName("sampleRegexName"));
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1411,44 +2598,85 @@ methods:
     fullName: getSelectedEntities()
     summary: >-
       Gets the entities found in a highlighted match a user has selected. Highlighted matches apply to contextual
-      add-ins.      **Note**: This method is not supported in Outlook on iOS or Android.
+      add-ins.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.6](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.6](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/selected.yaml      var entities = Office.context.mailbox.item.getSelectedEntities();      var entityTypesFound = 0;      if (entities.addresses.length > 0) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/selected.yaml
+
+      var entities = Office.context.mailbox.item.getSelectedEntities();
+
+      var entityTypesFound = 0;
+
+      if (entities.addresses.length > 0) {
           console.warn("physical addresses: ");
           console.log(entities.addresses);
           entityTypesFound++;
-      }      if (entities.contacts.length > 0) {
+      }
+
+      if (entities.contacts.length > 0) {
           console.warn("contacts: ");
           entities.contacts.forEach(function (contact) { console.log(contact.personName); })
           entityTypesFound++;
-      }      if (entities.emailAddresses.length > 0) {
+      }
+
+      if (entities.emailAddresses.length > 0) {
           console.warn("email addresses: ");
           console.log(entities.emailAddresses);
           entityTypesFound++;
-      }      if (entities.meetingSuggestions.length > 0) {
+      }
+
+      if (entities.meetingSuggestions.length > 0) {
           console.warn("meetings suggestions: ");
           entities.meetingSuggestions.forEach(function (meetingSuggestion) { console.log(meetingSuggestion.meetingString); })
           entityTypesFound++;
-      }      if (entities.phoneNumbers.length > 0) {
+      }
+
+      if (entities.phoneNumbers.length > 0) {
           console.warn("phone numbers: ");
           entities.phoneNumbers.forEach(function (phoneNumber) { console.log(phoneNumber.originalPhoneString); })
           entityTypesFound++;
-      }      if (entities.taskSuggestions.length > 0) {
+      }
+
+      if (entities.taskSuggestions.length > 0) {
           console.warn("task suggestions: ");
           entities.taskSuggestions.forEach(function (taskSuggestion) { console.log(taskSuggestion.taskString); })
           entityTypesFound++;
-      }      if (entities.urls.length > 0) {
+      }
+
+      if (entities.urls.length > 0) {
           console.warn("URLs: ");
           console.log(entities.urls);
           entityTypesFound++;
-      }      if (entityTypesFound == 0)      {
+      }
+
+      if (entityTypesFound == 0)
+
+      {
           console.error("Open add-in by clicking on a highlighted entity, for this API to return something useful.");
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1462,26 +2690,101 @@ methods:
     fullName: getSelectedRegExMatches()
     summary: >-
       Returns string values in a highlighted match that match the regular expressions defined in the manifest XML file.
-      Highlighted matches apply to contextual add-ins.      The `getSelectedRegExMatches` method returns the strings that match the regular expression defined in each
+      Highlighted matches apply to contextual add-ins.
+
+
+      The `getSelectedRegExMatches` method returns the strings that match the regular expression defined in each
       `ItemHasRegularExpressionMatch` or `ItemHasKnownEntity` rule element in the manifest XML file. For an
       `ItemHasRegularExpressionMatch` rule, a matching string has to occur in the property of the item that is specified
-      by that rule. The `PropertyName` simple type defines the supported properties.      If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression
+      by that rule. The `PropertyName` simple type defines the supported properties.
+
+
+      If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression
       should further filter the body and should not attempt to return the entire body of the item. Using a regular
       expression such as .* to obtain the entire body of an item does not always return the expected results. Instead,
-      use the `Body.getAsync` method to retrieve the entire body.      **Note**: This method is not supported in Outlook on iOS or Android.
+      use the `Body.getAsync` method to retrieve the entire body.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.6](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.6](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Consider an add-in manifest has the following `Rule` element:      //<Rule xsi:type="RuleCollection" Mode="And">      //  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />      //  <Rule xsi:type="RuleCollection" Mode="Or">      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut"
-      PropertyName="BodyAsPlaintext" IgnoreCase="true" />      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies"
-      RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />      //  </Rule>      //</Rule>      // The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.      //{      //'fruits': ['apple','banana','Banana','coconut'],      //'veggies': ['tomato','onion','spinach','broccoli']      //}      // The following example shows how to access the array of matches for the      // regular expression rule elements `fruits` and `veggies`, which are      // specified in the manifest.      var selectedMatches = Office.context.mailbox.item.getSelectedRegExMatches();      var fruits = selectedMatches.fruits;      var veggies = selectedMatches.veggies;      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/selected.yaml      var matches = Office.context.mailbox.item.getSelectedRegExMatches();      if (matches) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Consider an add-in manifest has the following `Rule` element:
+
+      //<Rule xsi:type="RuleCollection" Mode="And">
+
+      //  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />
+
+      //  <Rule xsi:type="RuleCollection" Mode="Or">
+
+      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut"
+      PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+
+      //    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies"
+      RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+
+      //  </Rule>
+
+      //</Rule>
+
+
+      // The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.
+
+      //{
+
+      //'fruits': ['apple','banana','Banana','coconut'],
+
+      //'veggies': ['tomato','onion','spinach','broccoli']
+
+      //}
+
+
+      // The following example shows how to access the array of matches for the
+
+      // regular expression rule elements `fruits` and `veggies`, which are
+
+      // specified in the manifest.
+
+      var selectedMatches = Office.context.mailbox.item.getSelectedRegExMatches();
+
+      var fruits = selectedMatches.fruits;
+
+      var veggies = selectedMatches.veggies;
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/75-entities-and-regex-matches/selected.yaml
+
+      var matches = Office.context.mailbox.item.getSelectedRegExMatches();
+
+      if (matches) {
           console.log(matches);
-      }      else {
+      }
+
+      else {
           console.error("Open add-in by clicking on a highlighted regex match, for this API to return something useful.");
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1497,18 +2800,43 @@ methods:
     package: outlook!
     fullName: 'getSharedPropertiesAsync(options, callback)'
     summary: >-
-      Gets the properties of an appointment or message in a shared folder.      For more information around using this API, see the [delegate
-      access](https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access) article.      **Note**: This method is not supported in Outlook on iOS or Android.
+      Gets the properties of an appointment or message in a shared folder.
+
+
+      For more information around using this API, see the [delegate
+      access](https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access) article.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/65-delegates-and-shared-folders/get-shared-properties.yaml      if (!Office.context.mailbox.item.getSharedPropertiesAsync) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/65-delegates-and-shared-folders/get-shared-properties.yaml
+
+      if (!Office.context.mailbox.item.getSharedPropertiesAsync) {
         console.error("Try this sample on a message from a shared folder.");
         return;
-      }      Office.context.mailbox.getCallbackTokenAsync({ isRest: true }, function(result) {
+      }
+
+
+      Office.context.mailbox.getCallbackTokenAsync({ isRest: true }, function(result) {
         if (result.status === Office.AsyncResultStatus.Succeeded && result.value !== "") {
           Office.context.mailbox.item.getSharedPropertiesAsync(
             {
@@ -1517,12 +2845,16 @@ methods:
             },
             function(result2) {
               let sharedProperties = result2.value;
-              let delegatePermissions = sharedProperties.delegatePermissions;              // Determine if user has the appropriate permission to do the operation.
+              let delegatePermissions = sharedProperties.delegatePermissions;
+
+              // Determine if user has the appropriate permission to do the operation.
               if ((delegatePermissions & Office.MailboxEnums.DelegatePermissions.Read) != 0) {
                 var ewsId = Office.context.mailbox.item.itemId;
                 var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.RestVersion.v2_0);
                 let rest_url =
-                  sharedProperties.targetRestUrl + "/v2.0/users/" + sharedProperties.targetMailbox + "/messages/" + restId;                $.ajax({
+                  sharedProperties.targetRestUrl + "/v2.0/users/" + sharedProperties.targetMailbox + "/messages/" + restId;
+
+                $.ajax({
                   url: rest_url,
                   dataType: "json",
                   headers: { Authorization: "Bearer " + result2.asyncContext }
@@ -1537,7 +2869,9 @@ methods:
             }
           );
         }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1566,20 +2900,47 @@ methods:
     package: outlook!
     fullName: getSharedPropertiesAsync(callback)
     summary: >-
-      Gets the properties of an appointment or message in a shared folder.      For more information around using this API, see the [delegate
-      access](https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access) article.      **Note**: This method is not supported in Outlook on iOS or Android.
+      Gets the properties of an appointment or message in a shared folder.
+
+
+      For more information around using this API, see the [delegate
+      access](https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access) article.
+
+
+      **Note**: This method is not supported in Outlook on iOS or Android.
     remarks: >-
-      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.8](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/65-delegates-and-shared-folders/get-shared-properties.yaml      if (!Office.context.mailbox.item.getSharedPropertiesAsync) {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/65-delegates-and-shared-folders/get-shared-properties.yaml
+
+      if (!Office.context.mailbox.item.getSharedPropertiesAsync) {
         console.error("Try this sample on an item from a shared folder.");
         return;
-      }      Office.context.mailbox.item.getSharedPropertiesAsync(function(result) {
+      }
+
+
+      Office.context.mailbox.item.getSharedPropertiesAsync(function(result) {
         console.log(result.value);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1601,30 +2962,79 @@ methods:
     package: outlook!
     fullName: 'loadCustomPropertiesAsync(callback, userContext)'
     summary: >-
-      Asynchronously loads custom properties for this add-in on the selected item.      Custom properties are stored as key/value pairs on a per-app, per-item basis. This method returns a
+      Asynchronously loads custom properties for this add-in on the selected item.
+
+
+      Custom properties are stored as key/value pairs on a per-app, per-item basis. This method returns a
       `CustomProperties` object in the callback, which provides methods to access the custom properties specific to the
       current item and the current add-in. Custom properties are not encrypted on the item, so this should not be used
-      as secure storage.      The custom properties are provided as a `CustomProperties` object in the `asyncResult.value` property. This object
+      as secure storage.
+
+
+      The custom properties are provided as a `CustomProperties` object in the `asyncResult.value` property. This object
       can be used to get, set, and remove custom properties from the item and save changes to the custom property set
       back to the server.
     remarks: >-
       **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-      Message Read      #### Examples      ```javascript      // The following example shows how to use the loadCustomPropertiesAsync method      // to asynchronously load custom properties that are specific to the current item.      // The example also shows how to use the saveAsync method to save these properties      // back to the server. After loading the custom properties, the example uses the      // get method to read the custom property myProp, the set method to write the      // custom property otherProp, and then finally calls the saveAsync method to save      // the custom properties.      Office.initialize = function () {
+      Message Read
+
+
+      #### Examples
+
+
+      ```javascript
+
+      // The following example shows how to use the loadCustomPropertiesAsync method
+
+      // to asynchronously load custom properties that are specific to the current item.
+
+      // The example also shows how to use the saveAsync method to save these properties
+
+      // back to the server. After loading the custom properties, the example uses the
+
+      // get method to read the custom property myProp, the set method to write the
+
+      // custom property otherProp, and then finally calls the saveAsync method to save
+
+      // the custom properties.
+
+      Office.initialize = function () {
           // Checks for the DOM to load using the jQuery ready function.
           $(document).ready(function () {
               // After the DOM is loaded, add-in-specific code can run.
               var mailbox = Office.context.mailbox;
               mailbox.item.loadCustomPropertiesAsync(customPropsCallback);
           });
-      };      function customPropsCallback(asyncResult) {
+      };
+
+
+      function customPropsCallback(asyncResult) {
           var customProps = asyncResult.value;
-          var myProp = customProps.get("myProp");          customProps.set("otherProp", "value");
+          var myProp = customProps.get("myProp");
+
+          customProps.set("otherProp", "value");
           customProps.saveAsync(saveCallback);
-      }      function saveCallback(asyncResult) {      }      ```      ```javascript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/15-item-custom-properties/load-set-get-save.yaml      Office.context.mailbox.item.loadCustomPropertiesAsync(function (result) {
+      }
+
+
+      function saveCallback(asyncResult) {
+
+      }
+
+      ```
+
+      ```javascript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/outlook/15-item-custom-properties/load-set-get-save.yaml
+
+      Office.context.mailbox.item.loadCustomPropertiesAsync(function (result) {
         if (result.status === Office.AsyncResultStatus.Succeeded) {
           console.log("Loaded following custom properties:");
           customProps = result.value;
@@ -1639,7 +3049,9 @@ methods:
         else {
           console.error(`loadCustomPropertiesAsync failed with message ${result.error.message}`);
         }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1668,13 +3080,22 @@ methods:
     fullName: 'removeHandlerAsync(eventType, options, callback)'
     summary: >-
       Removes the event handlers for a supported event type. **Note**: Events are only available with task pane
-      implementation.      For supported events, refer to the Item object model [events
+      implementation.
+
+
+      For supported events, refer to the Item object model [events
       section](https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/office.context.mailbox.item#events)<!--
       -->.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Message Read
     isPreview: false
@@ -1706,13 +3127,22 @@ methods:
     fullName: 'removeHandlerAsync(eventType, callback)'
     summary: >-
       Removes the event handlers for a supported event type. **Note**: Events are only available with task pane
-      implementation.      For supported events, refer to the Item object model [events
+      implementation.
+
+
+      For supported events, refer to the Item object model [events
       section](https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/office.context.mailbox.item#events)<!--
       -->.
     remarks: >-
-      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]      **[Minimum permission
+      \[ [API set: Mailbox 1.7](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+      **[Minimum permission
       level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-      `ReadItem`      **[Applicable Outlook
+      `ReadItem`
+
+
+      **[Applicable Outlook
       mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
       Message Read
     isPreview: false

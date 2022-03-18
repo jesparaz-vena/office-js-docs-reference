@@ -48,11 +48,21 @@ methods:
       Gets a content control by its identifier. Throws an error if there isn't a content control with the identifier in
       this collection.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a proxy object for the content control that contains a specific id.
-          var contentControl = context.document.contentControls.getById(30086310);          // Queue a command to load the text property for a content control.
-          context.load(contentControl, 'text');          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a proxy object for the content control that contains a specific id.
+          var contentControl = context.document.contentControls.getById(30086310);
+
+          // Queue a command to load the text property for a content control.
+          context.load(contentControl, 'text');
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The content control with that Id has been found in this document.');
@@ -82,13 +92,31 @@ methods:
     fullName: getByTag(tag)
     summary: Gets the content controls that have the specified tag.
     remarks: >-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/90-scenarios/doc-assembly.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/90-scenarios/doc-assembly.yaml
+
+      await Word.run(async (context) => {
           let contentControls = context.document.contentControls.getByTag("customer");
-          contentControls.load("text");          await context.sync();          for (let i = 0; i < contentControls.items.length; i++) {
+          contentControls.load("text");
+
+          await context.sync();
+
+          for (let i = 0; i < contentControls.items.length; i++) {
             contentControls.items[i].insertText("Fabrikam", "Replace");
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -106,11 +134,21 @@ methods:
     fullName: getByTitle(title)
     summary: Gets the content controls that have the specified title.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a proxy object for the content controls collection that contains a specific title.
-          var contentControlsWithTitle = context.document.contentControls.getByTitle('Enter Customer Address Here');          // Queue a command to load the text property for all of content controls with a specific title.
-          context.load(contentControlsWithTitle, 'text');          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a proxy object for the content controls collection that contains a specific title.
+          var contentControlsWithTitle = context.document.contentControls.getByTitle('Enter Customer Address Here');
+
+          // Queue a command to load the text property for all of content controls with a specific title.
+          context.load(contentControlsWithTitle, 'text');
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               if (contentControlsWithTitle.items.length === 0) {
@@ -120,14 +158,18 @@ methods:
                   console.log(
                       "The first content control with the title of 'Enter Customer Address Here' has this text: " + 
                       contentControlsWithTitle.items[0].text);
-              }          });
+              }
+
+          });
       })
       .catch(function (error) {
           console.log('Error: ' + JSON.stringify(error));
           if (error instanceof OfficeExtension.Error) {
               console.log('Debug info: ' + JSON.stringify(error.debugInfo));
           }
-      });      // The Word-Add-in-DocumentAssembly sample has another example of using the getByTitle method.
+      });
+
+      // The Word-Add-in-DocumentAssembly sample has another example of using the getByTitle method.
       // https://github.com/OfficeDev/Word-Add-in-DocumentAssembly
       ```
     isPreview: false
@@ -180,11 +222,22 @@ methods:
             uid="word!Word.Interfaces.CollectionLoadOptions:interface" />
       return:
         type: '<xref uid="word!Word.ContentControlCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Run a batch operation against the Word object model.
-          Word.run(function (context) {              // Create a proxy object for the content controls collection.
-              var contentControls = context.document.contentControls;              // Queue a command to load the id property for all of the content controls.
-              context.load(contentControls, 'id');              // Synchronize the document state by executing the queued commands,
+          Word.run(function (context) {
+
+              // Create a proxy object for the content controls collection.
+              var contentControls = context.document.contentControls;
+
+              // Queue a command to load the id property for all of the content controls.
+              context.load(contentControls, 'id');
+
+              // Synchronize the document state by executing the queued commands,
               // and return a promise to indicate task completion.
               return context.sync().then(function () {
                   if (contentControls.items.length === 0) {
@@ -206,7 +259,9 @@ methods:
                                                       'tag,' +
                                                       'font/size,' +
                                                       'font/name,' +
-                                                      'font/color');                      // Synchronize the document state by executing the queued commands,
+                                                      'font/color');
+
+                      // Synchronize the document state by executing the queued commands,
                       // and return a promise to indicate task completion.
                       return context.sync()
                           .then(function () {
@@ -235,7 +290,9 @@ methods:
               if (error instanceof OfficeExtension.Error) {
                   console.log('Debug info: ' + JSON.stringify(error.debugInfo));
               }
-          });          // The Silly stories add-in sample shows how the load method is used
+          });
+
+          // The Silly stories add-in sample shows how the load method is used
           // to load the content control collection with the tag and title properties.
           // https://aka.ms/sillystorywordaddin
           ```

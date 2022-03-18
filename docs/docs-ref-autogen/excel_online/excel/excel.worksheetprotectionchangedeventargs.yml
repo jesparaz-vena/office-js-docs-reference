@@ -17,8 +17,18 @@ properties:
     fullName: isProtected
     summary: Gets the current protection status of the worksheet.
     remarks: >-
-      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-worksheet-protection.yaml      async function checkProtection(event: Excel.WorksheetProtectionChangedEventArgs) {
+      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-worksheet-protection.yaml
+
+      async function checkProtection(event: Excel.WorksheetProtectionChangedEventArgs) {
           await Excel.run(async (context) => {
               // This method is an event handler that returns the protection status of a worksheet and information about the changed worksheet.
               const protectionStatus = event.isProtected;
@@ -28,7 +38,9 @@ properties:
               console.log("    ID of changed worksheet: " + worksheetId + ".");
               console.log("    Source of change event: " + source + ".");
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -41,8 +53,18 @@ properties:
     fullName: source
     summary: The source of the event. It can be local or remote (through co-authoring).
     remarks: >-
-      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-worksheet-protection.yaml      async function checkProtection(event: Excel.WorksheetProtectionChangedEventArgs) {
+      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-worksheet-protection.yaml
+
+      async function checkProtection(event: Excel.WorksheetProtectionChangedEventArgs) {
           await Excel.run(async (context) => {
               // This method is an event handler that returns the protection status of a worksheet and information about the changed worksheet.
               const protectionStatus = event.isProtected;
@@ -52,7 +74,9 @@ properties:
               console.log("    ID of changed worksheet: " + worksheetId + ".");
               console.log("    Source of change event: " + source + ".");
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -77,8 +101,18 @@ properties:
     fullName: worksheetId
     summary: Gets the ID of the worksheet in which the protection status is changed.
     remarks: >-
-      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-worksheet-protection.yaml      async function checkProtection(event: Excel.WorksheetProtectionChangedEventArgs) {
+      \[ [API set: ExcelApi 1.14](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-worksheet-protection.yaml
+
+      async function checkProtection(event: Excel.WorksheetProtectionChangedEventArgs) {
           await Excel.run(async (context) => {
               // This method is an event handler that returns the protection status of a worksheet and information about the changed worksheet.
               const protectionStatus = event.isProtected;
@@ -88,7 +122,9 @@ properties:
               console.log("    ID of changed worksheet: " + worksheetId + ".");
               console.log("    Source of change event: " + source + ".");
           });
-      }      ```
+      }
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

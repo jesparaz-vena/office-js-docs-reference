@@ -661,12 +661,26 @@ methods:
     fullName: 'getCell(rowIndex, cellIndex)'
     summary: Gets the table cell at a specified row and column. Throws an error if the specified table cell does not exist.
     remarks: >-
-      \[ [API set: WordApi 1.3](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/40-tables/table-cell-access.yaml      await Word.run(async (context) => {
+      \[ [API set: WordApi 1.3](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/40-tables/table-cell-access.yaml
+
+      await Word.run(async (context) => {
         let firstCell = context.document.body.tables.getFirst().getCell(0, 0).body;
-        firstCell.load("text");        await context.sync();
+        firstCell.load("text");
+
+        await context.sync();
         console.log("First cell text is " + firstCell.text);
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

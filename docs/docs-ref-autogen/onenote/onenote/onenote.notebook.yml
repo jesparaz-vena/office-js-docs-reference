@@ -114,11 +114,23 @@ methods:
     fullName: addSection(name)
     summary: Adds a new section to the end of the notebook.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Gets the active notebook.
-          var notebook = context.application.getActiveNotebook();          // Queue a command to add a new section. 
-          var section = notebook.addSection("Sample section");          // Queue a command to load the new section. This example reads the name property later.
-          section.load("name");          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Gets the active notebook.
+          var notebook = context.application.getActiveNotebook();
+
+          // Queue a command to add a new section. 
+          var section = notebook.addSection("Sample section");
+          
+          // Queue a command to load the new section. This example reads the name property later.
+          section.load("name");
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function() {
                   console.log("New section name is " + section.name);
@@ -148,11 +160,23 @@ methods:
     fullName: addSectionGroup(name)
     summary: Adds a new section group to the end of the notebook.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
-      OneNote.run(function (context) {          // Gets the active notebook.
-          var notebook = context.application.getActiveNotebook();          // Queue a command to add a new section group.
-          var sectionGroup = notebook.addSectionGroup("Sample section group");          // Queue a command to load the new section group.
-          sectionGroup.load();          // Run the queued commands, and return a promise to indicate task completion.
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
+      OneNote.run(function (context) {
+
+          // Gets the active notebook.
+          var notebook = context.application.getActiveNotebook();
+
+          // Queue a command to add a new section group.
+          var sectionGroup = notebook.addSectionGroup("Sample section group");
+
+          // Queue a command to load the new section group.
+          sectionGroup.load();
+
+          // Run the queued commands, and return a promise to indicate task completion.
           return context.sync()
               .then(function() {
                   console.log("New section group name is " + sectionGroup.name);
@@ -182,11 +206,17 @@ methods:
     fullName: getRestApiId()
     summary: Gets the REST API ID.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx){
           // Get the current notebook.         
           var notebook = ctx.application.getActiveNotebook();
-          var restApiId = notebook.getRestApiId();          return ctx.sync().
+          var restApiId = notebook.getRestApiId();
+
+          return ctx.sync().
               then(function(){
                   console.log("The REST API ID is " + restApiId.value);
                   // Note that the REST API ID isn't all you need to interact with the OneNote REST API. 
@@ -241,11 +271,22 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.Notebook:class" />'
-        description: |-          #### Examples          ```javascript
-          OneNote.run(function (context) {              // Get the current notebook.
-              var notebook = context.application.getActiveNotebook();              // Queue a command to load the notebook. 
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
+          OneNote.run(function (context) {
+                  
+              // Get the current notebook.
+              var notebook = context.application.getActiveNotebook();
+                      
+              // Queue a command to load the notebook. 
               // For best performance, request specific properties.           
-              notebook.load('baseUrl');              // Run the queued commands, and return a promise to indicate task completion.
+              notebook.load('baseUrl');
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
                       console.log("Base url: " + notebook.baseUrl);
@@ -262,13 +303,21 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the current notebook.
-              var notebook = context.application.getActiveNotebook();              // Queue a command to load the notebook. 
+          OneNote.run(function (context) {
+                  
+              // Get the current notebook.
+              var notebook = context.application.getActiveNotebook();
+                      
+              // Queue a command to load the notebook. 
               // For best performance, request specific properties.           
-              notebook.load('id');              // Run the queued commands, and return a promise to indicate task completion.
+              notebook.load('id');
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
-                      console.log("Notebook ID: " + notebook.id);                  });
+                      console.log("Notebook ID: " + notebook.id);
+                      
+                  });
           })
           .catch(function(error) {
               console.log("Error: " + error);
@@ -278,13 +327,21 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the current notebook.
-              var notebook = context.application.getActiveNotebook();              // Queue a command to load the notebook. 
+          OneNote.run(function (context) {
+                  
+              // Get the current notebook.
+              var notebook = context.application.getActiveNotebook();
+                      
+              // Queue a command to load the notebook. 
               // For best performance, request specific properties.           
-              notebook.load('name');              // Run the queued commands, and return a promise to indicate task completion.
+              notebook.load('name');
+                      
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function () {
-                      console.log("Notebook name: " + notebook.name);                  });
+                      console.log("Notebook name: " + notebook.name);
+                      
+                  });
           })
           .catch(function(error) {
               console.log("Error: " + error);
@@ -294,9 +351,15 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Get the section groups in the notebook. 
-              var sectionGroups = context.application.getActiveNotebook().sectionGroups;              // Queue a command to load the sectionGroups. 
-              sectionGroups.load("name");              // Run the queued commands, and return a promise to indicate task completion.
+          OneNote.run(function (context) {
+
+              // Get the section groups in the notebook. 
+              var sectionGroups = context.application.getActiveNotebook().sectionGroups;
+
+              // Queue a command to load the sectionGroups. 
+              sectionGroups.load("name");
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function() {
                       $.each(sectionGroups.items, function(index, sectionGroup) {
@@ -312,10 +375,18 @@ methods:
           });
           ```
           ```javascript
-          OneNote.run(function (context) {              // Gets the active notebook.
-              var notebook = context.application.getActiveNotebook();              // Queue a command to get immediate child sections of the notebook. 
-              var childSections = notebook.sections;              // Queue a command to load the childSections. 
-              context.load(childSections);              // Run the queued commands, and return a promise to indicate task completion.
+          OneNote.run(function (context) {
+
+              // Gets the active notebook.
+              var notebook = context.application.getActiveNotebook();
+              
+              // Queue a command to get immediate child sections of the notebook. 
+              var childSections = notebook.sections;
+
+              // Queue a command to load the childSections. 
+              context.load(childSections);
+
+              // Run the queued commands, and return a promise to indicate task completion.
               return context.sync()
                   .then(function() {
                       $.each(childSections.items, function(index, childSection) {

@@ -18,7 +18,11 @@ methods:
     package: office!
     fullName: 'addEventHandler(eventType, handler)'
     summary: |-
-      Registers an event handler. The two supported events are:      - DialogMessageReceived. Triggered when the dialog box sends a message to its parent.      - DialogEventReceived. Triggered when the dialog box has been closed or otherwise unloaded.
+      Registers an event handler. The two supported events are:
+
+      - DialogMessageReceived. Triggered when the dialog box sends a message to its parent.
+
+      - DialogEventReceived. Triggered when the dialog box has been closed or otherwise unloaded.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -47,7 +51,10 @@ methods:
     package: office!
     fullName: close()
     summary: >-
-      Called from a parent page to close the corresponding dialog box.      This method is asynchronous. It does not take a callback parameter and it does not return a Promise object, so it
+      Called from a parent page to close the corresponding dialog box.
+
+
+      This method is asynchronous. It does not take a callback parameter and it does not return a Promise object, so it
       cannot be awaited with either the `await` keyword or the `then` function. See this best practice for more
       information: [Opening another dialog immediately after closing
       one](https://docs.microsoft.com/office/dev/add-ins/develop/dialog-best-practices#opening-another-dialog-immediately-after-closing-one)
@@ -67,9 +74,21 @@ methods:
       Delivers a message from the host page, such as a task pane or a UI-less function file, to a dialog that was opened
       from the page.
     remarks: >-
-      **Hosts**: Excel, Outlook (Minimum requirement set: Mailbox 1.9), PowerPoint, Word      **Requirement sets**:      - [DialogAPI
-      1.2](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets)      - [Mailbox
-      1.9](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)      - If the `messageOptions` parameter is used, [DialogOrigin
+      **Hosts**: Excel, Outlook (Minimum requirement set: Mailbox 1.9), PowerPoint, Word
+
+
+      **Requirement sets**:
+
+
+      - [DialogAPI
+      1.2](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets)
+
+
+      - [Mailbox
+      1.9](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)
+
+
+      - If the `messageOptions` parameter is used, [DialogOrigin
       1.1](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-origin-requirement-sets) is
       also required.
     isPreview: false

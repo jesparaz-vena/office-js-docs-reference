@@ -168,13 +168,29 @@ properties:
       to 90, or 180 for vertically-oriented text. If the orientation within a range are not uniform, then `null` will be
       returned.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-text-orientation.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-text-orientation.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
-          const range = sheet.getRange("B2:E2");          // Set textOrientation to either an integer between -90 and 90
+          const range = sheet.getRange("B2:E2");
+
+          // Set textOrientation to either an integer between -90 and 90
           // or to 180 for vertically-oriented text.
-          range.format.textOrientation = 90;          await context.sync();
-      });      ```
+          range.format.textOrientation = 90;
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -307,7 +323,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.RangeFormat:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           // Below example selects all of the Range's format properties. 
           Excel.run(function (ctx) { 
               var sheetName = "Sheet1";

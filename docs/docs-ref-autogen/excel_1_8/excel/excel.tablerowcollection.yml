@@ -4,7 +4,10 @@ uid: 'excel!Excel.TableRowCollection:class'
 package: excel!
 fullName: Excel.TableRowCollection
 summary: >-
-  Represents a collection of all the rows that are part of the table.  Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
+  Represents a collection of all the rows that are part of the table.
+
+
+  Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
   object represents the physical location of the table row, but not the data. That is, if the data is sorted or if new
   rows are added, a table row will continue to point at the index for which it was created.
 remarks: '\[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]'
@@ -56,12 +59,23 @@ methods:
     package: excel!
     fullName: 'add(index, values, alwaysInsert)'
     summary: >-
-      Adds one or more rows to the table. The return object will be the top of the newly added row(s).      Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
+      Adds one or more rows to the table. The return object will be the top of the newly added row(s).
+
+
+      Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
       object represents the physical location of the table row, but not the data. That is, if the data is sorted or if
       new rows are added, a table row will continue to point at the index for which it was created.
     remarks: >-
       \[ [API set: ExcelApi 1.1 for adding a single row; 1.4 allows adding of multiple
-      rows.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript      Excel.run(function (ctx) { 
+      rows.](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```javascript
+
+      Excel.run(function (ctx) { 
           var tables = ctx.workbook.tables;
           var values = [["Sample", "Values", "For", "New", "Row"]];
           var row = tables.getItem("Table1").rows.add(null, values);
@@ -74,7 +88,9 @@ methods:
           if (error instanceof OfficeExtension.Error) {
               console.log("Debug info: " + JSON.stringify(error.debugInfo));
           }
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -114,11 +130,18 @@ methods:
     package: excel!
     fullName: getItemAt(index)
     summary: >-
-      Gets a row based on its position in the collection.      Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
+      Gets a row based on its position in the collection.
+
+
+      Note that unlike ranges or columns, which will adjust if new rows or columns are added before them, a `TableRow`
       object represents the physical location of the table row, but not the data. That is, if the data is sorted or if
       new rows are added, a table row will continue to point at the index for which it was created.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var tablerow = ctx.workbook.tables.getItem('Table1').rows.getItemAt(0);
           tablerow.load('name');
@@ -184,7 +207,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.TableRowCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var tablerows = ctx.workbook.tables.getItem('Table1').rows;
               tablerows.load('items');

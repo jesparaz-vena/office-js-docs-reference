@@ -44,12 +44,26 @@ methods:
     fullName: 'add(key, value)'
     summary: Sets or adds the specified setting to the workbook.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml
+
+      await Excel.run(async (context) => {
           const settings = context.workbook.settings; 
-          settings.onSettingsChanged.add(onChangedSetting);          await context.sync();
+          settings.onSettingsChanged.add(onChangedSetting);
+
+          await context.sync();
           console.log("Settings changed handler registered.");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -104,17 +118,35 @@ methods:
       properties](https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties)<!--
       -->.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/create-get-change-delete-settings.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/create-get-change-delete-settings.yaml
+
+      await Excel.run(async (context) => {
           const settings = context.workbook.settings;
           let needsReview = settings.getItem("NeedsReview");
           needsReview.delete();
-          needsReview = settings.getItemOrNullObject("NeedsReview");          await context.sync();          if (needsReview.isNullObject) {
+          needsReview = settings.getItemOrNullObject("NeedsReview");
+
+          await context.sync();
+
+          if (needsReview.isNullObject) {
               console.log("The setting has been deleted");
           } else {
               console.log("The setting was not deleted");
-          }          await context.sync();
-      });      ```
+          }
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -214,12 +246,26 @@ events:
     fullName: onSettingsChanged
     summary: Occurs when the settings in the document are changed.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml
+
+      await Excel.run(async (context) => {
           const settings = context.workbook.settings; 
-          settings.onSettingsChanged.add(onChangedSetting);          await context.sync();
+          settings.onSettingsChanged.add(onChangedSetting);
+
+          await context.sync();
           console.log("Settings changed handler registered.");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

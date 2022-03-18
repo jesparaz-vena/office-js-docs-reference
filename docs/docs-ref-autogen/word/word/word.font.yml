@@ -17,12 +17,22 @@ properties:
       Gets or sets a value that indicates whether the font is bold. True if the font is formatted as bold, otherwise,
       false.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Bold format text
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to make the current selection bold.
-          selection.font.bold = true;          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to make the current selection bold.
+          selection.font.bold = true;
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The selection is now bold.');
@@ -49,12 +59,22 @@ properties:
       Gets or sets the color for the specified font. You can provide the value in the '\#RRGGBB' format or the color
       name.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Change the font color
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to change the font color of the current selection.
-          selection.font.color = 'blue';          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to change the font color of the current selection.
+          selection.font.color = 'blue';
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The font color of the selection has been changed.');
@@ -113,12 +133,22 @@ properties:
       "DarkBlue", "Teal", "Green", "Purple", "DarkRed", "Olive", "Gray", "LightGray", and "Black". When the add-in runs
       in Office for Windows Desktop, any other color is converted to the closest color when applied to the font.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Highlight selected text
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to highlight the current selection.
-          selection.font.highlightColor = '#FFFF00'; // Yellow          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to highlight the current selection.
+          selection.font.highlightColor = '#FFFF00'; // Yellow
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The selection has been highlighted.');
@@ -157,12 +187,22 @@ properties:
     fullName: name
     summary: Gets or sets a value that represents the name of the font.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Change the font name
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to change the current selection's font name.
-          selection.font.name = 'Arial';          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to change the current selection's font name.
+          selection.font.name = 'Arial';
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The font name has changed.');
@@ -187,12 +227,22 @@ properties:
     fullName: size
     summary: Gets or sets a value that represents the font size in points.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Change the font size
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to change the current selection's font size.
-          selection.font.size = 20;          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to change the current selection's font size.
+          selection.font.size = 20;
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The font size has changed.');
@@ -219,12 +269,22 @@ properties:
       Gets or sets a value that indicates whether the font has a strikethrough. True if the font is formatted as
       strikethrough text, otherwise, false.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Strike format text
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to strikethrough the font of the current selection.
-          selection.font.strikeThrough = true;          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to strikethrough the font of the current selection.
+          selection.font.strikeThrough = true;
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The selection now has a strikethrough.');
@@ -277,12 +337,22 @@ properties:
     fullName: underline
     summary: Gets or sets a value that indicates the font's underline type. 'None' if the font is not underlined.
     remarks: |-
-      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: WordApi 1.1](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       // Underline format text
       // Run a batch operation against the Word object model.
-      Word.run(function (context) {          // Create a range proxy object for the current selection.
-          var selection = context.document.getSelection();          // Queue a command to underline the current selection.
-          selection.font.underline = Word.UnderlineType.single;          // Synchronize the document state by executing the queued commands,
+      Word.run(function (context) {
+
+          // Create a range proxy object for the current selection.
+          var selection = context.document.getSelection();
+
+          // Queue a command to underline the current selection.
+          selection.font.underline = Word.UnderlineType.single;
+
+          // Synchronize the document state by executing the queued commands,
           // and return a promise to indicate task completion.
           return context.sync().then(function () {
               console.log('The selection now has an underline style.');

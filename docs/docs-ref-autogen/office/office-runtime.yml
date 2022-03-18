@@ -15,7 +15,9 @@ functions:
     uid: 'office-runtime!OfficeRuntime.displayWebDialog:function(1)'
     package: office-runtime!
     summary: |-
-      Method that enables a pop up web dialog box.      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
+      Method that enables a pop up web dialog box.
+
+      \[ [API set: SharedRuntime 1.1](/office/dev/add-ins/reference/javascript-api-for-office) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

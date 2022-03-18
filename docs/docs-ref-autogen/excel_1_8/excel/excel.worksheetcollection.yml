@@ -44,7 +44,11 @@ methods:
       Adds a new worksheet to the workbook. The worksheet will be added at the end of existing worksheets. If you wish
       to activate the newly added worksheet, call `.activate()` on it.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var wSheetName = 'Sample Name';
           var worksheet = ctx.workbook.worksheets.add(wSheetName);
@@ -78,7 +82,11 @@ methods:
     fullName: getActiveWorksheet()
     summary: Gets the currently active worksheet in the workbook.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) {  
           var activeWorksheet = ctx.workbook.worksheets.getActiveWorksheet();
           activeWorksheet.load('name');
@@ -122,21 +130,43 @@ methods:
     fullName: getFirst(visibleOnly)
     summary: Gets the first worksheet in the collection.
     remarks: >-
-      \[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/reference-worksheets-by-relative-position.yaml      await Excel.run(async (context) => {
-          const sheets = context.workbook.worksheets;          // We don't want to include the default worksheet that was created
+      \[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/reference-worksheets-by-relative-position.yaml
+
+      await Excel.run(async (context) => {
+          const sheets = context.workbook.worksheets;
+
+          // We don't want to include the default worksheet that was created
           // when the workbook was created, so our "firstSheet" will be the one
           // after the literal first. Note chaining of navigation methods.
           const firstSheet = sheets.getFirst().getNext();
           const lastSheet = sheets.getLast();
           const firstTaxRateRange = firstSheet.getRange("B2");
-          const lastTaxRateRange = lastSheet.getRange("B2");          firstSheet.load("name");
+          const lastTaxRateRange = lastSheet.getRange("B2");
+
+          firstSheet.load("name");
           lastSheet.load("name");
           firstTaxRateRange.load("text");
-          lastTaxRateRange.load("text");          await context.sync();          let firstYear = firstSheet.name.substr(5, 4);
+          lastTaxRateRange.load("text");
+
+          await context.sync();
+
+          let firstYear = firstSheet.name.substr(5, 4);
           let lastYear = lastSheet.name.substr(5, 4);
-          console.log(`Tax Rate change from ${firstYear} to ${lastYear}`, `Tax rate for ${firstYear}: ${firstTaxRateRange.text[0][0]}\nTax rate for ${lastYear}: ${lastTaxRateRange.text[0][0]}`)          await context.sync();
-      });      ```
+          console.log(`Tax Rate change from ${firstYear} to ${lastYear}`, `Tax rate for ${firstYear}: ${firstTaxRateRange.text[0][0]}\nTax rate for ${lastYear}: ${lastTaxRateRange.text[0][0]}`)
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -192,21 +222,43 @@ methods:
     fullName: getLast(visibleOnly)
     summary: Gets the last worksheet in the collection.
     remarks: >-
-      \[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/reference-worksheets-by-relative-position.yaml      await Excel.run(async (context) => {
-          const sheets = context.workbook.worksheets;          // We don't want to include the default worksheet that was created
+      \[ [API set: ExcelApi 1.5](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/54-worksheet/reference-worksheets-by-relative-position.yaml
+
+      await Excel.run(async (context) => {
+          const sheets = context.workbook.worksheets;
+
+          // We don't want to include the default worksheet that was created
           // when the workbook was created, so our "firstSheet" will be the one
           // after the literal first. Note chaining of navigation methods.
           const firstSheet = sheets.getFirst().getNext();
           const lastSheet = sheets.getLast();
           const firstTaxRateRange = firstSheet.getRange("B2");
-          const lastTaxRateRange = lastSheet.getRange("B2");          firstSheet.load("name");
+          const lastTaxRateRange = lastSheet.getRange("B2");
+
+          firstSheet.load("name");
           lastSheet.load("name");
           firstTaxRateRange.load("text");
-          lastTaxRateRange.load("text");          await context.sync();          let firstYear = firstSheet.name.substr(5, 4);
+          lastTaxRateRange.load("text");
+
+          await context.sync();
+
+          let firstYear = firstSheet.name.substr(5, 4);
           let lastYear = lastSheet.name.substr(5, 4);
-          console.log(`Tax Rate change from ${firstYear} to ${lastYear}`, `Tax rate for ${firstYear}: ${firstTaxRateRange.text[0][0]}\nTax rate for ${lastYear}: ${lastTaxRateRange.text[0][0]}`)          await context.sync();
-      });      ```
+          console.log(`Tax Rate change from ${firstYear} to ${lastYear}`, `Tax rate for ${firstYear}: ${firstTaxRateRange.text[0][0]}\nTax rate for ${lastYear}: ${lastTaxRateRange.text[0][0]}`)
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -259,7 +311,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.WorksheetCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var worksheets = ctx.workbook.worksheets;
               worksheets.load('items');
@@ -323,12 +380,26 @@ events:
     fullName: onActivated
     summary: Occurs when any worksheet in the workbook is activated.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml
+
+      await Excel.run(async (context) => {
           let sheets = context.workbook.worksheets;
-          sheets.onActivated.add(onActivate);          await context.sync();
+          sheets.onActivated.add(onActivate);
+
+          await context.sync();
           console.log("A handler has been registered for the OnActivate event.");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -343,12 +414,26 @@ events:
     fullName: onAdded
     summary: Occurs when a new worksheet is added to the workbook.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml
+
+      await Excel.run(async (context) => {
           let sheet = context.workbook.worksheets;
-          sheet.onAdded.add(onWorksheetAdd);          await context.sync();
+          sheet.onAdded.add(onWorksheetAdd);
+
+          await context.sync();
           console.log("A handler has been registered for the OnAdded event.");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -377,12 +462,26 @@ events:
     fullName: onDeactivated
     summary: Occurs when any worksheet in the workbook is deactivated.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/30-events/events-workbook-and-worksheet-collection.yaml
+
+      await Excel.run(async (context) => {
           let sheets = context.workbook.worksheets;
-          sheets.onDeactivated.add(onDeactivate);          await context.sync();
+          sheets.onDeactivated.add(onDeactivate);
+
+          await context.sync();
           console.log("A handler has been registered for the OnDeactivate event.");
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

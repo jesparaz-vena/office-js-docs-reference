@@ -44,14 +44,32 @@ methods:
       Adds a new custom property that maps to the provided key. This overwrites existing custom properties with that
       key.
     remarks: >-
-      \[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/26-document/custom-properties.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.12](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/26-document/custom-properties.yaml
+
+      await Excel.run(async (context) => {
         // Get the key/value pair from the task pane.
         const userKey = $("#key").text();
-        const userValue = $("#value").text();        // Add the custom property.
+        const userValue = $("#value").text();
+
+        // Add the custom property.
         const customWorksheetProperties = context.workbook.worksheets.getActiveWorksheet().customProperties;
-        customWorksheetProperties.add(userKey, userValue);        await context.sync();        console.log(`Successfully set custom worksheet property ${userKey}:${userValue}.`);
-      });      ```
+        customWorksheetProperties.add(userKey, userValue);
+
+        await context.sync();
+
+        console.log(`Successfully set custom worksheet property ${userKey}:${userValue}.`);
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

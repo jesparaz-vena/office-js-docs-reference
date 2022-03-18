@@ -180,17 +180,31 @@ properties:
     fullName: pivotTables
     summary: Represents a collection of PivotTables associated with the workbook.
     remarks: >-
-      \[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-get-pivottables.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.3](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-get-pivottables.yaml
+
+      await Excel.run(async (context) => {
         // Get the names of all the PivotTables in the workbook.
         const pivotTables = context.workbook.pivotTables;
         pivotTables.load("name");
-        await context.sync();        // Display the names in the console.
+        await context.sync();
+
+        // Display the names in the console.
         console.log("PivotTables in the workbook:")
         pivotTables.items.forEach((pivotTable) => {
           console.log(`\t${pivotTable.name}`);
         });
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -227,23 +241,43 @@ properties:
     fullName: properties
     summary: Gets the workbook properties.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/26-document/properties.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/26-document/properties.yaml
+
+      await Excel.run(async (context) => {
           let titleValue = "Excel document properties API";
           let subjectValue = "Set and get document properties";
           let keywordsValue = "Set and get operations";
           let commentsValue = "This is an Excel document properties API code sample";
           let categoryValue = "Office Add-ins";
           let managerValue = "John";
-          let companyValue = "Microsoft";          let docProperties = context.workbook.properties;          // Set the writeable document properties.
+          let companyValue = "Microsoft";
+
+          let docProperties = context.workbook.properties;
+
+          // Set the writeable document properties.
           docProperties.title = titleValue;
           docProperties.subject = subjectValue;
           docProperties.keywords = keywordsValue;
           docProperties.comments = commentsValue;
           docProperties.category = categoryValue;
           docProperties.manager = managerValue;
-          docProperties.company = companyValue;          await context.sync();          console.log("Set the following document properties: title, subject, keywords, comments, category, manager, company.");
-      });      ```
+          docProperties.company = companyValue;
+
+          await context.sync();
+
+          console.log("Set the following document properties: title, subject, keywords, comments, category, manager, company.");
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -316,17 +350,39 @@ properties:
     fullName: styles
     summary: Represents a collection of styles associated with the workbook.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml      await Excel.run(async (context) => {
-          let styles = context.workbook.styles;          // Add a new style to the style collection.
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/style.yaml
+
+      await Excel.run(async (context) => {
+          let styles = context.workbook.styles;
+
+          // Add a new style to the style collection.
           // Styles is in the Home tab ribbon.
-          styles.add("Diagonal Orientation Style");          let newStyle = styles.getItem("Diagonal Orientation Style");          // The "Diagonal Orientation Style" properties.
+          styles.add("Diagonal Orientation Style");
+                
+          let newStyle = styles.getItem("Diagonal Orientation Style");
+          
+          // The "Diagonal Orientation Style" properties.
           newStyle.textOrientation = 38;
           newStyle.autoIndent = true;
           newStyle.includeProtection = true;
           newStyle.shrinkToFit = true;
-          newStyle.locked = false;          await context.sync();          console.log("Successfully added a new style with diagonal orientation to the Home tab ribbon.");
-      });      ```
+          newStyle.locked = false;
+          
+          await context.sync();
+
+          console.log("Successfully added a new style with diagonal orientation to the Home tab ribbon.");
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -402,11 +458,29 @@ methods:
     fullName: getActiveCell()
     summary: Gets the currently active cell from the workbook.
     remarks: >-
-      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/workbook-get-active-cell.yaml      await Excel.run(async (context) => {          let myWorkbook = context.workbook;
+      \[ [API set: ExcelApi 1.7](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/50-workbook/workbook-get-active-cell.yaml
+
+      await Excel.run(async (context) => {
+
+          let myWorkbook = context.workbook;
           let activeCell = myWorkbook.getActiveCell();
-          activeCell.load("address");          await context.sync();          console.log("The active cell is " + activeCell.address);
-      });      ```
+          activeCell.load("address");
+
+          await context.sync();
+          
+          console.log("The active cell is " + activeCell.address);
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -502,7 +576,11 @@ methods:
       Gets the currently selected single range from the workbook. If there are multiple ranges selected, this method
       will throw an error.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var selectedRange = ctx.workbook.getSelectedRange();
           selectedRange.load('address');
@@ -531,10 +609,26 @@ methods:
       Gets the currently selected one or more ranges from the workbook. Unlike `getSelectedRange()`<!-- -->, this method
       returns a `RangeAreas` object that represents all the selected ranges.
     remarks: >-
-      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-areas.yaml      await Excel.run(async (context) => {          const selectedRanges = context.workbook.getSelectedRanges();
-          selectedRanges.format.fill.color = "lightblue";          await context.sync();
-      })      ```
+      \[ [API set: ExcelApi 1.9](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/42-range/range-areas.yaml
+
+      await Excel.run(async (context) => {
+
+          const selectedRanges = context.workbook.getSelectedRanges();
+          selectedRanges.format.fill.color = "lightblue";
+
+          await context.sync();
+      })
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

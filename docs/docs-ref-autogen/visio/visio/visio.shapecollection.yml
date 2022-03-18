@@ -4,7 +4,9 @@ uid: 'visio!Visio.ShapeCollection:class'
 package: visio!
 fullName: Visio.ShapeCollection
 summary: |-
-  Represents the Shape Collection.  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+  Represents the Shape Collection.
+
+  \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -42,7 +44,9 @@ methods:
     package: visio!
     fullName: getCount()
     summary: |-
-      Gets the number of Shapes in the collection.      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets the number of Shapes in the collection.
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -50,7 +54,12 @@ methods:
       content: 'getCount(): OfficeExtension.ClientResult<number>;'
       return:
         type: '<xref uid="office!OfficeExtension.ClientResult:class" />&lt;number&gt;'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Visio.run(session, function (ctx) {
               var activePage = ctx.document.getActivePage();
               var numShapesActivePage = activePage.shapes.getCount();
@@ -69,7 +78,9 @@ methods:
     package: visio!
     fullName: getItem(key)
     summary: |-
-      Gets a Shape using its key (name or Index).      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
+      Gets a Shape using its key (name or Index).
+
+      \[ [API set: 1.1](/office/dev/add-ins/reference/overview/visio-javascript-reference-overview) \]
     remarks: ''
     isPreview: false
     isDeprecated: false

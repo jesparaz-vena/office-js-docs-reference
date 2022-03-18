@@ -15,56 +15,75 @@ fields:
     uid: 'excel!Excel.LabelFilterCondition.beginsWith:member'
     package: excel!
     summary: |-
-      Label begins with substring criterion.      Required Criteria: {`substring`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
+      Label begins with substring criterion.
+
+      Required Criteria: {`substring`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
     value: '"BeginsWith"'
   - name: between
     uid: 'excel!Excel.LabelFilterCondition.between:member'
     package: excel!
     summary: >-
-      Between `lowerBound` and `upperBound` criteria.      Required Criteria: {`lowerBound`<!-- -->, `upperBound`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!--
+      Between `lowerBound` and `upperBound` criteria.
+
+
+      Required Criteria: {`lowerBound`<!-- -->, `upperBound`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!--
       -->}<!-- -->.
     value: '"Between"'
   - name: contains
     uid: 'excel!Excel.LabelFilterCondition.contains:member'
     package: excel!
     summary: |-
-      Label contains substring criterion.      Required Criteria: {`substring`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
+      Label contains substring criterion.
+
+      Required Criteria: {`substring`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
     value: '"Contains"'
   - name: endsWith
     uid: 'excel!Excel.LabelFilterCondition.endsWith:member'
     package: excel!
     summary: |-
-      Label ends with substring criterion.      Required Criteria: {`substring`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
+      Label ends with substring criterion.
+
+      Required Criteria: {`substring`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
     value: '"EndsWith"'
   - name: equals
     uid: 'excel!Excel.LabelFilterCondition.equals:member'
     package: excel!
     summary: |-
-      Equals comparator criterion.      Required Criteria: {`comparator`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
+      Equals comparator criterion.
+
+      Required Criteria: {`comparator`<!-- -->}<!-- -->. Optional Criteria: {`exclusive`<!-- -->}<!-- -->.
     value: '"Equals"'
   - name: greaterThan
     uid: 'excel!Excel.LabelFilterCondition.greaterThan:member'
     package: excel!
     summary: |-
-      Greater than comparator criterion.      Required Criteria: {`comparator`<!-- -->}<!-- -->.
+      Greater than comparator criterion.
+
+      Required Criteria: {`comparator`<!-- -->}<!-- -->.
     value: '"GreaterThan"'
   - name: greaterThanOrEqualTo
     uid: 'excel!Excel.LabelFilterCondition.greaterThanOrEqualTo:member'
     package: excel!
     summary: |-
-      Greater than or equal to comparator criterion.      Required Criteria: {`comparator`<!-- -->}<!-- -->.
+      Greater than or equal to comparator criterion.
+
+      Required Criteria: {`comparator`<!-- -->}<!-- -->.
     value: '"GreaterThanOrEqualTo"'
   - name: lessThan
     uid: 'excel!Excel.LabelFilterCondition.lessThan:member'
     package: excel!
     summary: |-
-      Less than comparator criterion.      Required Criteria: {`comparator`<!-- -->}<!-- -->.
+      Less than comparator criterion.
+
+      Required Criteria: {`comparator`<!-- -->}<!-- -->.
     value: '"LessThan"'
   - name: lessThanOrEqualTo
     uid: 'excel!Excel.LabelFilterCondition.lessThanOrEqualTo:member'
     package: excel!
     summary: |-
-      Less than or equal to comparator criterion.      Required Criteria: {`comparator`<!-- -->}<!-- -->.
+      Less than or equal to comparator criterion.
+
+      Required Criteria: {`comparator`<!-- -->}<!-- -->.
     value: '"LessThanOrEqualTo"'
   - name: unknown
     uid: 'excel!Excel.LabelFilterCondition.unknown:member'

@@ -4,13 +4,31 @@ uid: 'outlook!Office.NotificationMessageAction:interface'
 package: outlook!
 fullName: Office.NotificationMessageAction
 summary: |-
-  The definition of the action for a notification message.  **Important**: In modern Outlook on the web, the `NotificationMessageAction` object is available in Compose mode only.
+  The definition of the action for a notification message.
+
+  **Important**: In modern Outlook on the web, the `NotificationMessageAction` object is available in Compose mode only.
 remarks: >-
-  \[ [API set: Mailbox 1.10](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]  **[Minimum permission
+  \[ [API set: Mailbox 1.10](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) \]
+
+
+  **[Minimum permission
   level](https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions)<!-- -->**:
-  `ReadItem`  **[Applicable Outlook
+  `ReadItem`
+
+
+  **[Applicable Outlook
   mode](https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points)<!-- -->**:
-  Compose or Read  #### Examples  ```javascript  // Define notification.  const insightMessage = {
+  Compose or Read
+
+
+  #### Examples
+
+
+  ```javascript
+
+  // Define notification.
+
+  const insightMessage = {
       type: Office.MailboxEnums.ItemNotificationMessageType.InsightMessage,
       message: "This is an insight notification",
       icon: "Icon.80x80",
@@ -20,16 +38,32 @@ remarks: >-
           commandId: "msgComposeOpenPaneButton",
           contextData: JSON.stringify({a: "aValue", b: "bValue"})
       }]
-  };  // Show notification.  Office.context.mailbox.item.notificationMessages.replaceAsync("messageKey", insightMessage, (result) => {
+  };
+
+
+  // Show notification.
+
+  Office.context.mailbox.item.notificationMessages.replaceAsync("messageKey", insightMessage, (result) => {
       console.log("Added notification:");
       console.log(result);
-  });  // Retrieve contextData.  // IMPORTANT: At present, this property is in preview and only works in Outlook on Windows.  Office.context.mailbox.item.getInitializationContextAsync(function (asyncResult) {
+  });
+
+
+  // Retrieve contextData.
+
+  // IMPORTANT: At present, this property is in preview and only works in Outlook on Windows.
+
+  Office.context.mailbox.item.getInitializationContextAsync(function (asyncResult) {
       console.log("Initialization context:");
-      console.log(asyncResult);      // Note: Use JSON.parse(asyncResult.value) to read the result. Example:
+      console.log(asyncResult);
+
+      // Note: Use JSON.parse(asyncResult.value) to read the result. Example:
       var contextData = JSON.parse(asyncResult.value);
       console.log("a:")
       console.log(contextData.a);
-  });  ```
+  });
+
+  ```
 isPreview: false
 isDeprecated: false
 type: interface

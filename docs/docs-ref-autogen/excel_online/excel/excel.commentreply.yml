@@ -39,17 +39,31 @@ properties:
     fullName: content
     summary: The comment reply's content. The string is plain text.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/12-comment/comment-replies.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/12-comment/comment-replies.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Comments");
           const comment = sheet.comments.getItemAt(0);
           const reply = comment.replies.getItemAt(0);
           reply.load("content");
           // Sync to load the content of the comment reply.
-          await context.sync();          // Append "Please!" to the end of the comment reply.
+          await context.sync();
+
+          // Append "Please!" to the end of the comment reply.
           reply.content += " Please!";
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -151,14 +165,26 @@ methods:
     fullName: delete()
     summary: Deletes the comment reply.
     remarks: >-
-      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/12-comment/comment-replies.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.10](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/12-comment/comment-replies.yaml
+
+      await Excel.run(async (context) => {
           // Remove the first comment reply from this worksheet's first comment.
           const sheet = context.workbook.worksheets.getItem("Comments");
           const comment = sheet.comments.getItemAt(0);
           comment.replies.getItemAt(0).delete();
           await context.sync();
-      });      ```
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:

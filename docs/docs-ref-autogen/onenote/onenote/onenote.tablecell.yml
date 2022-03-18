@@ -102,13 +102,23 @@ methods:
     fullName: appendHtml(html)
     summary: Adds the specified HTML to the bottom of the TableCell.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, get a table cell at row one and column two and add "Hello".
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, get a table cell at row one and column two and add "Hello".
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -170,14 +180,24 @@ methods:
     fullName: appendRichText(paragraphText)
     summary: Adds the specified text to table cell.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
           var outline = app.getActiveOutline();
-          var appendedRichText = null;          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var appendedRichText = null;
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, get a table cell at row one and column two and add "Hello".
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, get a table cell at row one and column two and add "Hello".
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
@@ -280,18 +300,31 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.TableCell:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           OneNote.run(function(ctx) {
               var app = ctx.application;
-              var outline = app.getActiveOutline();              // Queue a command to load outline.paragraphs and their types.
-              ctx.load(outline, "paragraphs, paragraphs/type");              // Run the queued commands, and return a promise to indicate task completion.
+              var outline = app.getActiveOutline();
+              
+              // Queue a command to load outline.paragraphs and their types.
+              ctx.load(outline, "paragraphs, paragraphs/type");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return ctx.sync().then(function () {
-                  var paragraphs = outline.paragraphs;                  // for each table, get a table cell at row one and column two.
+                  var paragraphs = outline.paragraphs;
+                  
+                  // for each table, get a table cell at row one and column two.
                   for (var i = 0; i < paragraphs.items.length; i++) {
                       var paragraph = paragraphs.items[i];
                       if (paragraph.type == "Table") {
                           var table = paragraph.table;
-                          var cell = table.getCell(1 /*Row Index*/, 2 /*Column Index*/);                          // Queue a command to load the table cell.
+                          var cell = table.getCell(1 /*Row Index*/, 2 /*Column Index*/);
+                          
+                          // Queue a command to load the table cell.
                           ctx.load(cell);
                           ctx.sync().then(function() {
                               console.log("Cell Id: " + cell.id);
@@ -314,19 +347,31 @@ methods:
           ParentTable, ParentRow, Paragraphs
           OneNote.run(function(ctx) {
               var app = ctx.application;
-              var outline = app.getActiveOutline();              // Queue a command to load outline.paragraphs and their types.
-              ctx.load(outline, "paragraphs, paragraphs/type");              // Run the queued commands, and return a promise to indicate task completion.
+              var outline = app.getActiveOutline();
+              
+              // Queue a command to load outline.paragraphs and their types.
+              ctx.load(outline, "paragraphs, paragraphs/type");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return ctx.sync().then(function () {
-                  var paragraphs = outline.paragraphs;                  // for each table, get a table cell at row one and column two.
+                  var paragraphs = outline.paragraphs;
+                  
+                  // for each table, get a table cell at row one and column two.
                   for (var i = 0; i < paragraphs.items.length; i++) {
                       var paragraph = paragraphs.items[i];
                       if (paragraph.type == "Table") {
                           var table = paragraph.table;
-                          var cell = table.getCell(1 /*Row Index*/, 2 /*Column Index*/);                          // Queue a command to load parentTable, parentRow and paragraphs of the table cell.
-                          ctx.load(cell, "parentTable, parentRow, paragraphs");                          ctx.sync().then(function() {
+                          var cell = table.getCell(1 /*Row Index*/, 2 /*Column Index*/);
+                          
+                          // Queue a command to load parentTable, parentRow and paragraphs of the table cell.
+                          ctx.load(cell, "parentTable, parentRow, paragraphs");
+                          
+                          ctx.sync().then(function() {
                               console.log("Parent Table Id: " + cell.parentTable.id);
                               console.log("Parent Row Id: " + cell.parentRow.id);
-                              var paragraphs = cell.paragraphs;                              for (var i = 0; i < paragraphs.items.length; i++) {
+                              var paragraphs = cell.paragraphs;
+                              
+                              for (var i = 0; i < paragraphs.items.length; i++) {
                                   console.log("Paragraph Id: " + paragraphs.items[i].id);
                               }
                           });

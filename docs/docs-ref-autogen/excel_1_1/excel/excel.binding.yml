@@ -54,7 +54,11 @@ methods:
     fullName: getRange()
     summary: Returns the range represented by the binding. Will throw an error if the binding is not of the correct type.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var binding = ctx.workbook.bindings.getItemAt(0);
           var range = binding.getRange();
@@ -82,7 +86,11 @@ methods:
     fullName: getTable()
     summary: Returns the table represented by the binding. Will throw an error if the binding is not of the correct type.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var binding = ctx.workbook.bindings.getItemAt(0);
           var table = binding.getTable();
@@ -110,7 +118,11 @@ methods:
     fullName: getText()
     summary: Returns the text represented by the binding. Will throw an error if the binding is not of the correct type.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var binding = ctx.workbook.bindings.getItemAt(0);
           var text = binding.getText();
@@ -169,7 +181,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.Binding:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var binding = ctx.workbook.bindings.getItemAt(0);
               binding.load('type');

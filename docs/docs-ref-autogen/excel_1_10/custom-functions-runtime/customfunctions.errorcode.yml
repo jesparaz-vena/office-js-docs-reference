@@ -4,7 +4,10 @@ uid: 'custom-functions-runtime!CustomFunctions.ErrorCode:enum'
 package: custom-functions-runtime!
 fullName: CustomFunctions.ErrorCode
 summary: >-
-  Error codes for custom functions. The error codes will appear in the cell that invoked the function.  Custom error messages appear in addition to these error codes. Custom messages display in the error indicator menu,
+  Error codes for custom functions. The error codes will appear in the cell that invoked the function.
+
+
+  Custom error messages appear in addition to these error codes. Custom messages display in the error indicator menu,
   which is accessed by hovering over the error flag on each cell with an error.
 remarks: ''
 isPreview: false

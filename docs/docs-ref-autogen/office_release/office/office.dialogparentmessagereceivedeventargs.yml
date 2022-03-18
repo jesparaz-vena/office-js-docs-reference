@@ -4,7 +4,10 @@ uid: 'office!Office.DialogParentMessageReceivedEventArgs:interface'
 package: office!
 fullName: Office.DialogParentMessageReceivedEventArgs
 summary: >-
-  Provides information about the message from the parent page that raised the `DialogParentMessageReceived` event.  To add an event handler for the `DialogParentMessageReceived` event, use the `addHandlerAsync` method of the
+  Provides information about the message from the parent page that raised the `DialogParentMessageReceived` event.
+
+
+  To add an event handler for the `DialogParentMessageReceived` event, use the `addHandlerAsync` method of the
   [Office.UI](xref:office!Office.UI:interface) object.
 remarks: ''
 isPreview: false

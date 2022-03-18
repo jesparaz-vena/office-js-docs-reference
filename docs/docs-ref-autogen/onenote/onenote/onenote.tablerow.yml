@@ -103,18 +103,32 @@ methods:
     fullName: 'insertRowAsSibling(insertLocation, values)'
     summary: Inserts a row before or after the current row.
     remarks: |-
-      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: OneNoteApi 1.1](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       OneNote.run(function(ctx) {
           var app = ctx.application;
-          var outline = app.getActiveOutline();          // Queue a command to load outline.paragraphs and their types.
-          ctx.load(outline, "paragraphs, paragraphs/type");          // Run the queued commands, and return a promise to indicate task completion.
+          var outline = app.getActiveOutline();
+          
+          // Queue a command to load outline.paragraphs and their types.
+          ctx.load(outline, "paragraphs, paragraphs/type");
+          
+          // Run the queued commands, and return a promise to indicate task completion.
           return ctx.sync().then(function () {
-              var paragraphs = outline.paragraphs;              // for each table, get table rows.
+              var paragraphs = outline.paragraphs;
+              
+              // for each table, get table rows.
               for (var i = 0; i < paragraphs.items.length; i++) {
                   var paragraph = paragraphs.items[i];
                   if (paragraph.type == "Table") {
-                      var table = paragraph.table;                      // Queue a command to load table.rows.
-                      ctx.load(table, "rows");                      // Run the queued commands
+                      var table = paragraph.table;
+                      
+                      // Queue a command to load table.rows.
+                      ctx.load(table, "rows");
+                      
+                      // Run the queued commands
                       return ctx.sync().then(function() {
                           var rows = table.rows;
                           rows.items[1].insertRowAsSibling("Before", ["cell0", "cell1"]);
@@ -206,20 +220,35 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="onenote!OneNote.TableRow:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           OneNote.run(function(ctx) {
               var app = ctx.application;
-              var outline = app.getActiveOutline();              // Queue a command to load outline.paragraphs and their types.
-              ctx.load(outline, "paragraphs, paragraphs/type");              // Run the queued commands, and return a promise to indicate task completion.
+              var outline = app.getActiveOutline();
+              
+              // Queue a command to load outline.paragraphs and their types.
+              ctx.load(outline, "paragraphs, paragraphs/type");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return ctx.sync().then(function () {
-                  var paragraphs = outline.paragraphs;                  // for each table, get table rows.
+                  var paragraphs = outline.paragraphs;
+                  
+                  // for each table, get table rows.
                   for (var i = 0; i < paragraphs.items.length; i++) {
                       var paragraph = paragraphs.items[i];
                       if (paragraph.type == "Table") {
-                          var table = paragraph.table;                          // Queue a command to load table.rows.
+                          var table = paragraph.table;
+                          
+                          // Queue a command to load table.rows.
                           ctx.load(table, "rows");
                           return ctx.sync().then(function() {
-                              var rows = table.rows;                              // for each table row, log cell count and row index.
+                              var rows = table.rows;
+                              
+                              // for each table row, log cell count and row index.
                               for (var i = 0; i < rows.items.length; i++) {
                                   console.log("Row " + i + " Id: " + rows.items[i].id);
                                   console.log("Row " + i + " Cell Count: " + rows.items[i].cellCount);
@@ -241,17 +270,27 @@ methods:
           ```javascript
           OneNote.run(function(ctx) {
               var app = ctx.application;
-              var outline = app.getActiveOutline();              // Queue a command to load outline.paragraphs and their types.
-              ctx.load(outline, "paragraphs, paragraphs/type");              // Run the queued commands, and return a promise to indicate task completion.
+              var outline = app.getActiveOutline();
+              
+              // Queue a command to load outline.paragraphs and their types.
+              ctx.load(outline, "paragraphs, paragraphs/type");
+              
+              // Run the queued commands, and return a promise to indicate task completion.
               return ctx.sync().then(function () {
-                  var paragraphs = outline.paragraphs;                  // for each table, get table rows.
+                  var paragraphs = outline.paragraphs;
+                  
+                  // for each table, get table rows.
                   for (var i = 0; i < paragraphs.items.length; i++) {
                       var paragraph = paragraphs.items[i];
                       if (paragraph.type == "Table") {
-                          var table = paragraph.table;                          // Queue a command to load parentTable and cells of each row in the table.
+                          var table = paragraph.table;
+                          
+                          // Queue a command to load parentTable and cells of each row in the table.
                           ctx.load(table, "rows/parentTable, rows/cells");
                           return ctx.sync().then(function() {
-                              var rows = table.rows;                              // for each row, log parentTable and cells
+                              var rows = table.rows;
+                              
+                              // for each row, log parentTable and cells
                               for (var i = 0; i < rows.items.length; i++) {
                                   console.log("Row " + i + " Parent Table Id: " + rows.items[i].parentTable.id);
                                   var cells = rows.items[i].cells;

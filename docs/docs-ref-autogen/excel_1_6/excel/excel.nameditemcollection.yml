@@ -44,12 +44,28 @@ methods:
     fullName: 'add(name, reference, comment)'
     summary: Adds a new name to the collection of the given scope.
     remarks: >-
-      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```typescript      // Link to full sample:
-      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/34-named-item/create-and-remove-named-item.yaml      await Excel.run(async (context) => {
+      \[ [API set: ExcelApi 1.4](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+
+      #### Examples
+
+
+      ```typescript
+
+      // Link to full sample:
+      https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/34-named-item/create-and-remove-named-item.yaml
+
+      await Excel.run(async (context) => {
           const sheet = context.workbook.worksheets.getItem("Sample");
-          const headerRange = sheet.getRange("A1:D1");          sheet.names.add("ExpensesHeader", headerRange);
-          const namedItems = sheet.names.load("name, type");          await context.sync();
-      });      ```
+          const headerRange = sheet.getRange("A1:D1");
+
+          sheet.names.add("ExpensesHeader", headerRange);
+          const namedItems = sheet.names.load("name, type");
+
+          await context.sync();
+      });
+
+      ```
     isPreview: false
     isDeprecated: false
     syntax:
@@ -109,7 +125,11 @@ methods:
     fullName: getItem(name)
     summary: Gets a `NamedItem` object using its name.
     remarks: |-
-      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]      #### Examples      ```javascript
+      \[ [API set: ExcelApi 1.1](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+
+      #### Examples
+
+      ```javascript
       Excel.run(function (ctx) { 
           var sheetName = 'Sheet1';
           var nameditem = ctx.workbook.names.getItem(sheetName);
@@ -197,7 +217,12 @@ methods:
           type: 'string | string[]'
       return:
         type: '<xref uid="excel!Excel.NamedItemCollection:class" />'
-        description: |-          #### Examples          ```javascript
+        description: |-
+
+
+          #### Examples
+
+          ```javascript
           Excel.run(function (ctx) { 
               var nameditems = ctx.workbook.names;
               nameditems.load('items');
