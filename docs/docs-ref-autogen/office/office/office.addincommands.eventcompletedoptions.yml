@@ -1,1 +1,43 @@
-### YamlMime:TSTypename: Office.AddinCommands.EventCompletedOptionsuid: 'office!Office.AddinCommands.EventCompletedOptions:interface'package: office!fullName: Office.AddinCommands.EventCompletedOptionssummary: Specifies the behavior for when the event is completed.remarks: ''isPreview: falseisDeprecated: falsetype: interfaceproperties:  - name: allowEvent    uid: 'office!Office.AddinCommands.EventCompletedOptions#allowEvent:member'    package: office!    fullName: allowEvent    summary: >-      A boolean value. When the completed method is used to signal completion of an event handler, this value indicates      if the handled event should continue execution or be canceled. For example, an add-in that handles the `ItemSend`      event can set `allowEvent` to `false` to cancel sending of the message.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'allowEvent: boolean;'      return:        type: boolean  - name: errorMessage    uid: 'office!Office.AddinCommands.EventCompletedOptions#errorMessage:member'    package: office!    fullName: errorMessage    summary: >-      A string value. When the completed method is used to signal completion of an event handler and if the `allowEvent`      option is set to `false`<!-- -->, this value sets the error message that will be displayed to the user. For an      example, refer to [Smart Alerts      walkthrough](https://docs.microsoft.com/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough)<!--      -->.      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/javascript-api-for-office) \]    remarks: ''    isPreview: true    isDeprecated: false    syntax:      content: 'errorMessage?: string;'      return:        type: string
+### YamlMime:TSType
+name: Office.AddinCommands.EventCompletedOptions
+uid: 'office!Office.AddinCommands.EventCompletedOptions:interface'
+package: office!
+fullName: Office.AddinCommands.EventCompletedOptions
+summary: Specifies the behavior for when the event is completed.
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: allowEvent
+    uid: 'office!Office.AddinCommands.EventCompletedOptions#allowEvent:member'
+    package: office!
+    fullName: allowEvent
+    summary: >-
+      A boolean value. When the completed method is used to signal completion of an event handler, this value indicates
+      if the handled event should continue execution or be canceled. For example, an add-in that handles the `ItemSend`
+      event can set `allowEvent` to `false` to cancel sending of the message.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'allowEvent: boolean;'
+      return:
+        type: boolean
+  - name: errorMessage
+    uid: 'office!Office.AddinCommands.EventCompletedOptions#errorMessage:member'
+    package: office!
+    fullName: errorMessage
+    summary: >-
+      A string value. When the completed method is used to signal completion of an event handler and if the `allowEvent`
+      option is set to `false`<!-- -->, this value sets the error message that will be displayed to the user. For an
+      example, refer to [Smart Alerts
+      walkthrough](https://docs.microsoft.com/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough)<!--
+      -->.      \[ [API set: Mailbox preview](/office/dev/add-ins/reference/javascript-api-for-office) \]
+    remarks: ''
+    isPreview: true
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage?: string;'
+      return:
+        type: string

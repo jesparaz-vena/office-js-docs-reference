@@ -1,1 +1,301 @@
-### YamlMime:TSPackageuid: excel!name: exceltype: packagesummary: ''classes:  - 'excel!Excel.Application:class'  - 'excel!Excel.Binding:class'  - 'excel!Excel.BindingCollection:class'  - 'excel!Excel.Chart:class'  - 'excel!Excel.ChartAreaFormat:class'  - 'excel!Excel.ChartAxes:class'  - 'excel!Excel.ChartAxis:class'  - 'excel!Excel.ChartAxisFormat:class'  - 'excel!Excel.ChartAxisTitle:class'  - 'excel!Excel.ChartAxisTitleFormat:class'  - 'excel!Excel.ChartCollection:class'  - 'excel!Excel.ChartDataLabelFormat:class'  - 'excel!Excel.ChartDataLabels:class'  - 'excel!Excel.ChartFill:class'  - 'excel!Excel.ChartFont:class'  - 'excel!Excel.ChartGridlines:class'  - 'excel!Excel.ChartGridlinesFormat:class'  - 'excel!Excel.ChartLegend:class'  - 'excel!Excel.ChartLegendFormat:class'  - 'excel!Excel.ChartLineFormat:class'  - 'excel!Excel.ChartPoint:class'  - 'excel!Excel.ChartPointFormat:class'  - 'excel!Excel.ChartPointsCollection:class'  - 'excel!Excel.ChartSeries:class'  - 'excel!Excel.ChartSeriesCollection:class'  - 'excel!Excel.ChartSeriesFormat:class'  - 'excel!Excel.ChartTitle:class'  - 'excel!Excel.ChartTitleFormat:class'  - 'excel!Excel.Filter:class'  - 'excel!Excel.FormatProtection:class'  - 'excel!Excel.FunctionResult:class'  - 'excel!Excel.Functions:class'  - 'excel!Excel.NamedItem:class'  - 'excel!Excel.NamedItemCollection:class'  - 'excel!Excel.Range:class'  - 'excel!Excel.RangeBorder:class'  - 'excel!Excel.RangeBorderCollection:class'  - 'excel!Excel.RangeFill:class'  - 'excel!Excel.RangeFont:class'  - 'excel!Excel.RangeFormat:class'  - 'excel!Excel.RangeSort:class'  - 'excel!Excel.RequestContext:class'  - 'excel!Excel.Table:class'  - 'excel!Excel.TableCollection:class'  - 'excel!Excel.TableColumn:class'  - 'excel!Excel.TableColumnCollection:class'  - 'excel!Excel.TableRow:class'  - 'excel!Excel.TableRowCollection:class'  - 'excel!Excel.TableSort:class'  - 'excel!Excel.Workbook:class'  - 'excel!Excel.Worksheet:class'  - 'excel!Excel.WorksheetCollection:class'  - 'excel!Excel.WorksheetProtection:class'interfaces:  - 'excel!Excel.BindingDataChangedEventArgs:interface'  - 'excel!Excel.BindingSelectionChangedEventArgs:interface'  - 'excel!Excel.FilterCriteria:interface'  - 'excel!Excel.FilterDatetime:interface'  - 'excel!Excel.FiveArrowsGraySet:interface'  - 'excel!Excel.FiveArrowsSet:interface'  - 'excel!Excel.FiveBoxesSet:interface'  - 'excel!Excel.FiveQuartersSet:interface'  - 'excel!Excel.FiveRatingSet:interface'  - 'excel!Excel.FourArrowsGraySet:interface'  - 'excel!Excel.FourArrowsSet:interface'  - 'excel!Excel.FourRatingSet:interface'  - 'excel!Excel.FourRedToBlackSet:interface'  - 'excel!Excel.FourTrafficLightsSet:interface'  - 'excel!Excel.Icon:interface'  - 'excel!Excel.IconCollections:interface'  - 'excel!Excel.RangeReference:interface'  - 'excel!Excel.RunOptions:interface'  - 'excel!Excel.SelectionChangedEventArgs:interface'  - 'excel!Excel.Session:interface'  - 'excel!Excel.SortField:interface'  - 'excel!Excel.ThreeArrowsGraySet:interface'  - 'excel!Excel.ThreeArrowsSet:interface'  - 'excel!Excel.ThreeFlagsSet:interface'  - 'excel!Excel.ThreeSignsSet:interface'  - 'excel!Excel.ThreeStarsSet:interface'  - 'excel!Excel.ThreeSymbols2Set:interface'  - 'excel!Excel.ThreeSymbolsSet:interface'  - 'excel!Excel.ThreeTrafficLights1Set:interface'  - 'excel!Excel.ThreeTrafficLights2Set:interface'  - 'excel!Excel.ThreeTrianglesSet:interface'  - 'excel!Excel.WorksheetProtectionOptions:interface'enums:  - 'excel!Excel.BindingType:enum'  - 'excel!Excel.BorderIndex:enum'  - 'excel!Excel.BorderLineStyle:enum'  - 'excel!Excel.BorderWeight:enum'  - 'excel!Excel.CalculationMode:enum'  - 'excel!Excel.CalculationType:enum'  - 'excel!Excel.ChartDataLabelPosition:enum'  - 'excel!Excel.ChartLegendPosition:enum'  - 'excel!Excel.ChartSeriesBy:enum'  - 'excel!Excel.ChartType:enum'  - 'excel!Excel.ChartUnderlineStyle:enum'  - 'excel!Excel.ClearApplyTo:enum'  - 'excel!Excel.DeleteShiftDirection:enum'  - 'excel!Excel.DynamicFilterCriteria:enum'  - 'excel!Excel.ErrorCodes:enum'  - 'excel!Excel.FilterDatetimeSpecificity:enum'  - 'excel!Excel.FilterOn:enum'  - 'excel!Excel.FilterOperator:enum'  - 'excel!Excel.HorizontalAlignment:enum'  - 'excel!Excel.IconSet:enum'  - 'excel!Excel.ImageFittingMode:enum'  - 'excel!Excel.InsertShiftDirection:enum'  - 'excel!Excel.NamedItemType:enum'  - 'excel!Excel.RangeUnderlineStyle:enum'  - 'excel!Excel.RangeValueType:enum'  - 'excel!Excel.SheetVisibility:enum'  - 'excel!Excel.SortDataOption:enum'  - 'excel!Excel.SortMethod:enum'  - 'excel!Excel.SortOn:enum'  - 'excel!Excel.SortOrientation:enum'  - 'excel!Excel.VerticalAlignment:enum'functions:  - name: 'Excel.getDataCommonPostprocess(response, callArgs)'    uid: 'excel!Excel.getDataCommonPostprocess:function(1)'    package: excel!    summary: ''    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function getDataCommonPostprocess(response: any, callArgs: any): any;'      parameters:        - id: response          description: ''          type: any        - id: callArgs          description: ''          type: any      return:        type: any        description: ''  - name: Excel.postprocessBindingDescriptor(response)    uid: 'excel!Excel.postprocessBindingDescriptor:function(1)'    package: excel!    summary: ''    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function postprocessBindingDescriptor(response: any): any;'      parameters:        - id: response          description: ''          type: any      return:        type: any        description: ''  - name: Excel.run(batch)    uid: 'excel!Excel.run:function(1)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using a new RequestContext. When the      promise is resolved, any tracked objects that were automatically allocated during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function run<T>(batch: (context: Excel.RequestContext) => Promise<T>): Promise<T>;'      parameters:        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(object, batch)'    uid: 'excel!Excel.run:function(2)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated      during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(object: OfficeExtension.ClientObject, batch: (context: Excel.RequestContext) =>        Promise<T>): Promise<T>;      parameters:        - id: object          description: >-            A previously-created API object. The batch will use the same RequestContext as the passed-in object, which            means that any changes applied to the object will be picked up by "context.sync()".          type: '<xref uid="office!OfficeExtension.ClientObject:class" />'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(objects, batch)'    uid: 'excel!Excel.run:function(3)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of      previously-created API objects.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(objects: OfficeExtension.ClientObject[], batch: (context: Excel.RequestContext) =>        Promise<T>): Promise<T>;      parameters:        - id: objects          description: >-            An array of previously-created API objects. The array will be validated to make sure that all of the objects            share the same context. The batch will use this shared RequestContext, which means that any changes applied            to these objects will be picked up by "context.sync()".          type: '<xref uid="office!OfficeExtension.ClientObject:class" />[]'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(options, batch)'    uid: 'excel!Excel.run:function(4)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated      during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(options: Excel.RunOptions, batch: (context: Excel.RequestContext) => Promise<T>):        Promise<T>;      parameters:        - id: options          description: >-            The additional options for this Excel.run which specify previous objects, whether to delay the request for            cell edit, session info, etc.          type: '<xref uid="excel!Excel.RunOptions:interface" />'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(context, batch)'    uid: 'excel!Excel.run:function(5)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a      previously-created object. When the promise is resolved, any tracked objects that were automatically allocated      during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(context: OfficeExtension.ClientRequestContext, batch: (context: Excel.RequestContext) =>        Promise<T>): Promise<T>;      parameters:        - id: context          description: >-            A previously-created object. The batch will use the same RequestContext as the passed-in object, which means            that any changes applied to the object will be picked up by "context.sync()".          type: '<xref uid="office!OfficeExtension.ClientRequestContext:class" />'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''
+### YamlMime:TSPackage
+uid: excel!
+name: excel
+type: package
+summary: ''
+classes:
+  - 'excel!Excel.Application:class'
+  - 'excel!Excel.Binding:class'
+  - 'excel!Excel.BindingCollection:class'
+  - 'excel!Excel.Chart:class'
+  - 'excel!Excel.ChartAreaFormat:class'
+  - 'excel!Excel.ChartAxes:class'
+  - 'excel!Excel.ChartAxis:class'
+  - 'excel!Excel.ChartAxisFormat:class'
+  - 'excel!Excel.ChartAxisTitle:class'
+  - 'excel!Excel.ChartAxisTitleFormat:class'
+  - 'excel!Excel.ChartCollection:class'
+  - 'excel!Excel.ChartDataLabelFormat:class'
+  - 'excel!Excel.ChartDataLabels:class'
+  - 'excel!Excel.ChartFill:class'
+  - 'excel!Excel.ChartFont:class'
+  - 'excel!Excel.ChartGridlines:class'
+  - 'excel!Excel.ChartGridlinesFormat:class'
+  - 'excel!Excel.ChartLegend:class'
+  - 'excel!Excel.ChartLegendFormat:class'
+  - 'excel!Excel.ChartLineFormat:class'
+  - 'excel!Excel.ChartPoint:class'
+  - 'excel!Excel.ChartPointFormat:class'
+  - 'excel!Excel.ChartPointsCollection:class'
+  - 'excel!Excel.ChartSeries:class'
+  - 'excel!Excel.ChartSeriesCollection:class'
+  - 'excel!Excel.ChartSeriesFormat:class'
+  - 'excel!Excel.ChartTitle:class'
+  - 'excel!Excel.ChartTitleFormat:class'
+  - 'excel!Excel.Filter:class'
+  - 'excel!Excel.FormatProtection:class'
+  - 'excel!Excel.FunctionResult:class'
+  - 'excel!Excel.Functions:class'
+  - 'excel!Excel.NamedItem:class'
+  - 'excel!Excel.NamedItemCollection:class'
+  - 'excel!Excel.Range:class'
+  - 'excel!Excel.RangeBorder:class'
+  - 'excel!Excel.RangeBorderCollection:class'
+  - 'excel!Excel.RangeFill:class'
+  - 'excel!Excel.RangeFont:class'
+  - 'excel!Excel.RangeFormat:class'
+  - 'excel!Excel.RangeSort:class'
+  - 'excel!Excel.RequestContext:class'
+  - 'excel!Excel.Table:class'
+  - 'excel!Excel.TableCollection:class'
+  - 'excel!Excel.TableColumn:class'
+  - 'excel!Excel.TableColumnCollection:class'
+  - 'excel!Excel.TableRow:class'
+  - 'excel!Excel.TableRowCollection:class'
+  - 'excel!Excel.TableSort:class'
+  - 'excel!Excel.Workbook:class'
+  - 'excel!Excel.Worksheet:class'
+  - 'excel!Excel.WorksheetCollection:class'
+  - 'excel!Excel.WorksheetProtection:class'
+interfaces:
+  - 'excel!Excel.BindingDataChangedEventArgs:interface'
+  - 'excel!Excel.BindingSelectionChangedEventArgs:interface'
+  - 'excel!Excel.FilterCriteria:interface'
+  - 'excel!Excel.FilterDatetime:interface'
+  - 'excel!Excel.FiveArrowsGraySet:interface'
+  - 'excel!Excel.FiveArrowsSet:interface'
+  - 'excel!Excel.FiveBoxesSet:interface'
+  - 'excel!Excel.FiveQuartersSet:interface'
+  - 'excel!Excel.FiveRatingSet:interface'
+  - 'excel!Excel.FourArrowsGraySet:interface'
+  - 'excel!Excel.FourArrowsSet:interface'
+  - 'excel!Excel.FourRatingSet:interface'
+  - 'excel!Excel.FourRedToBlackSet:interface'
+  - 'excel!Excel.FourTrafficLightsSet:interface'
+  - 'excel!Excel.Icon:interface'
+  - 'excel!Excel.IconCollections:interface'  - 'excel!Excel.RangeReference:interface'
+  - 'excel!Excel.RunOptions:interface'
+  - 'excel!Excel.SelectionChangedEventArgs:interface'
+  - 'excel!Excel.Session:interface'
+  - 'excel!Excel.SortField:interface'
+  - 'excel!Excel.ThreeArrowsGraySet:interface'
+  - 'excel!Excel.ThreeArrowsSet:interface'
+  - 'excel!Excel.ThreeFlagsSet:interface'
+  - 'excel!Excel.ThreeSignsSet:interface'
+  - 'excel!Excel.ThreeStarsSet:interface'
+  - 'excel!Excel.ThreeSymbols2Set:interface'
+  - 'excel!Excel.ThreeSymbolsSet:interface'
+  - 'excel!Excel.ThreeTrafficLights1Set:interface'
+  - 'excel!Excel.ThreeTrafficLights2Set:interface'
+  - 'excel!Excel.ThreeTrianglesSet:interface'
+  - 'excel!Excel.WorksheetProtectionOptions:interface'
+enums:
+  - 'excel!Excel.BindingType:enum'
+  - 'excel!Excel.BorderIndex:enum'
+  - 'excel!Excel.BorderLineStyle:enum'
+  - 'excel!Excel.BorderWeight:enum'
+  - 'excel!Excel.CalculationMode:enum'
+  - 'excel!Excel.CalculationType:enum'
+  - 'excel!Excel.ChartDataLabelPosition:enum'
+  - 'excel!Excel.ChartLegendPosition:enum'
+  - 'excel!Excel.ChartSeriesBy:enum'
+  - 'excel!Excel.ChartType:enum'
+  - 'excel!Excel.ChartUnderlineStyle:enum'
+  - 'excel!Excel.ClearApplyTo:enum'
+  - 'excel!Excel.DeleteShiftDirection:enum'
+  - 'excel!Excel.DynamicFilterCriteria:enum'
+  - 'excel!Excel.ErrorCodes:enum'
+  - 'excel!Excel.FilterDatetimeSpecificity:enum'
+  - 'excel!Excel.FilterOn:enum'
+  - 'excel!Excel.FilterOperator:enum'
+  - 'excel!Excel.HorizontalAlignment:enum'
+  - 'excel!Excel.IconSet:enum'
+  - 'excel!Excel.ImageFittingMode:enum'
+  - 'excel!Excel.InsertShiftDirection:enum'
+  - 'excel!Excel.NamedItemType:enum'
+  - 'excel!Excel.RangeUnderlineStyle:enum'
+  - 'excel!Excel.RangeValueType:enum'
+  - 'excel!Excel.SheetVisibility:enum'
+  - 'excel!Excel.SortDataOption:enum'
+  - 'excel!Excel.SortMethod:enum'
+  - 'excel!Excel.SortOn:enum'
+  - 'excel!Excel.SortOrientation:enum'
+  - 'excel!Excel.VerticalAlignment:enum'
+functions:
+  - name: 'Excel.getDataCommonPostprocess(response, callArgs)'
+    uid: 'excel!Excel.getDataCommonPostprocess:function(1)'
+    package: excel!
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function getDataCommonPostprocess(response: any, callArgs: any): any;'
+      parameters:
+        - id: response
+          description: ''
+          type: any
+        - id: callArgs
+          description: ''
+          type: any
+      return:
+        type: any
+        description: ''
+  - name: Excel.postprocessBindingDescriptor(response)
+    uid: 'excel!Excel.postprocessBindingDescriptor:function(1)'
+    package: excel!
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function postprocessBindingDescriptor(response: any): any;'
+      parameters:
+        - id: response
+          description: ''
+          type: any
+      return:
+        type: any
+        description: ''
+  - name: Excel.run(batch)
+    uid: 'excel!Excel.run:function(1)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using a new RequestContext. When the
+      promise is resolved, any tracked objects that were automatically allocated during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function run<T>(batch: (context: Excel.RequestContext) => Promise<T>): Promise<T>;'
+      parameters:
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(object, batch)'
+    uid: 'excel!Excel.run:function(2)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a
+      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated
+      during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(object: OfficeExtension.ClientObject, batch: (context: Excel.RequestContext) =>
+        Promise<T>): Promise<T>;
+      parameters:
+        - id: object
+          description: >-
+            A previously-created API object. The batch will use the same RequestContext as the passed-in object, which
+            means that any changes applied to the object will be picked up by "context.sync()".
+          type: '<xref uid="office!OfficeExtension.ClientObject:class" />'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(objects, batch)'
+    uid: 'excel!Excel.run:function(3)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of
+      previously-created API objects.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(objects: OfficeExtension.ClientObject[], batch: (context: Excel.RequestContext) =>
+        Promise<T>): Promise<T>;
+      parameters:
+        - id: objects
+          description: >-
+            An array of previously-created API objects. The array will be validated to make sure that all of the objects
+            share the same context. The batch will use this shared RequestContext, which means that any changes applied
+            to these objects will be picked up by "context.sync()".
+          type: '<xref uid="office!OfficeExtension.ClientObject:class" />[]'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(options, batch)'
+    uid: 'excel!Excel.run:function(4)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a
+      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated
+      during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(options: Excel.RunOptions, batch: (context: Excel.RequestContext) => Promise<T>):
+        Promise<T>;
+      parameters:
+        - id: options
+          description: >-
+            The additional options for this Excel.run which specify previous objects, whether to delay the request for
+            cell edit, session info, etc.
+          type: '<xref uid="excel!Excel.RunOptions:interface" />'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(context, batch)'
+    uid: 'excel!Excel.run:function(5)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a
+      previously-created object. When the promise is resolved, any tracked objects that were automatically allocated
+      during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(context: OfficeExtension.ClientRequestContext, batch: (context: Excel.RequestContext) =>
+        Promise<T>): Promise<T>;
+      parameters:
+        - id: context
+          description: >-
+            A previously-created object. The batch will use the same RequestContext as the passed-in object, which means
+            that any changes applied to the object will be picked up by "context.sync()".
+          type: '<xref uid="office!OfficeExtension.ClientRequestContext:class" />'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''

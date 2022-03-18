@@ -1,1 +1,588 @@
-### YamlMime:TSPackageuid: excel!name: exceltype: packagesummary: ''enums:  - 'excel!Excel.AggregationFunction:enum'  - 'excel!Excel.ArrowheadLength:enum'  - 'excel!Excel.ArrowheadStyle:enum'  - 'excel!Excel.ArrowheadWidth:enum'  - 'excel!Excel.AutoFillType:enum'  - 'excel!Excel.BindingType:enum'  - 'excel!Excel.BorderIndex:enum'  - 'excel!Excel.BorderLineStyle:enum'  - 'excel!Excel.BorderWeight:enum'  - 'excel!Excel.BuiltInStyle:enum'  - 'excel!Excel.CalculationMode:enum'  - 'excel!Excel.CalculationState:enum'  - 'excel!Excel.CalculationType:enum'  - 'excel!Excel.ChartAxisCategoryType:enum'  - 'excel!Excel.ChartAxisDisplayUnit:enum'  - 'excel!Excel.ChartAxisGroup:enum'  - 'excel!Excel.ChartAxisPosition:enum'  - 'excel!Excel.ChartAxisScaleType:enum'  - 'excel!Excel.ChartAxisTickLabelPosition:enum'  - 'excel!Excel.ChartAxisTickMark:enum'  - 'excel!Excel.ChartAxisTimeUnit:enum'  - 'excel!Excel.ChartAxisType:enum'  - 'excel!Excel.ChartBinType:enum'  - 'excel!Excel.ChartBoxQuartileCalculation:enum'  - 'excel!Excel.ChartColorScheme:enum'  - 'excel!Excel.ChartDataLabelPosition:enum'  - 'excel!Excel.ChartDisplayBlanksAs:enum'  - 'excel!Excel.ChartErrorBarsInclude:enum'  - 'excel!Excel.ChartErrorBarsType:enum'  - 'excel!Excel.ChartGradientStyle:enum'  - 'excel!Excel.ChartGradientStyleType:enum'  - 'excel!Excel.ChartLegendPosition:enum'  - 'excel!Excel.ChartLineStyle:enum'  - 'excel!Excel.ChartMapAreaLevel:enum'  - 'excel!Excel.ChartMapLabelStrategy:enum'  - 'excel!Excel.ChartMapProjectionType:enum'  - 'excel!Excel.ChartMarkerStyle:enum'  - 'excel!Excel.ChartParentLabelStrategy:enum'  - 'excel!Excel.ChartPlotAreaPosition:enum'  - 'excel!Excel.ChartPlotBy:enum'  - 'excel!Excel.ChartSeriesBy:enum'  - 'excel!Excel.ChartSplitType:enum'  - 'excel!Excel.ChartTextHorizontalAlignment:enum'  - 'excel!Excel.ChartTextVerticalAlignment:enum'  - 'excel!Excel.ChartTickLabelAlignment:enum'  - 'excel!Excel.ChartTitlePosition:enum'  - 'excel!Excel.ChartTrendlineType:enum'  - 'excel!Excel.ChartType:enum'  - 'excel!Excel.ChartUnderlineStyle:enum'  - 'excel!Excel.ClearApplyTo:enum'  - 'excel!Excel.CloseBehavior:enum'  - 'excel!Excel.ConditionalCellValueOperator:enum'  - 'excel!Excel.ConditionalDataBarAxisFormat:enum'  - 'excel!Excel.ConditionalDataBarDirection:enum'  - 'excel!Excel.ConditionalFormatColorCriterionType:enum'  - 'excel!Excel.ConditionalFormatDirection:enum'  - 'excel!Excel.ConditionalFormatIconRuleType:enum'  - 'excel!Excel.ConditionalFormatPresetCriterion:enum'  - 'excel!Excel.ConditionalFormatRuleType:enum'  - 'excel!Excel.ConditionalFormatType:enum'  - 'excel!Excel.ConditionalIconCriterionOperator:enum'  - 'excel!Excel.ConditionalRangeBorderIndex:enum'  - 'excel!Excel.ConditionalRangeBorderLineStyle:enum'  - 'excel!Excel.ConditionalRangeFontUnderlineStyle:enum'  - 'excel!Excel.ConditionalTextOperator:enum'  - 'excel!Excel.ConditionalTopBottomCriterionType:enum'  - 'excel!Excel.ConnectorType:enum'  - 'excel!Excel.DataChangeType:enum'  - 'excel!Excel.DataValidationAlertStyle:enum'  - 'excel!Excel.DataValidationOperator:enum'  - 'excel!Excel.DataValidationType:enum'  - 'excel!Excel.DeleteShiftDirection:enum'  - 'excel!Excel.DocumentPropertyItem:enum'  - 'excel!Excel.DocumentPropertyType:enum'  - 'excel!Excel.DynamicFilterCriteria:enum'  - 'excel!Excel.ErrorCodes:enum'  - 'excel!Excel.EventSource:enum'  - 'excel!Excel.EventType:enum'  - 'excel!Excel.FillPattern:enum'  - 'excel!Excel.FilterDatetimeSpecificity:enum'  - 'excel!Excel.FilterOn:enum'  - 'excel!Excel.FilterOperator:enum'  - 'excel!Excel.GeometricShapeType:enum'  - 'excel!Excel.HeaderFooterState:enum'  - 'excel!Excel.HorizontalAlignment:enum'  - 'excel!Excel.IconSet:enum'  - 'excel!Excel.ImageFittingMode:enum'  - 'excel!Excel.InsertShiftDirection:enum'  - 'excel!Excel.LinkedDataTypeState:enum'  - 'excel!Excel.NamedItemScope:enum'  - 'excel!Excel.NamedItemType:enum'  - 'excel!Excel.PageOrientation:enum'  - 'excel!Excel.PaperType:enum'  - 'excel!Excel.PictureFormat:enum'  - 'excel!Excel.PivotAxis:enum'  - 'excel!Excel.PivotFilterTopBottomCriterion:enum'  - 'excel!Excel.PivotLayoutType:enum'  - 'excel!Excel.Placement:enum'  - 'excel!Excel.PrintComments:enum'  - 'excel!Excel.PrintErrorType:enum'  - 'excel!Excel.PrintMarginUnit:enum'  - 'excel!Excel.PrintOrder:enum'  - 'excel!Excel.ProtectionSelectionMode:enum'  - 'excel!Excel.RangeCopyType:enum'  - 'excel!Excel.RangeUnderlineStyle:enum'  - 'excel!Excel.RangeValueType:enum'  - 'excel!Excel.ReadingOrder:enum'  - 'excel!Excel.RibbonTab:enum'  - 'excel!Excel.SaveBehavior:enum'  - 'excel!Excel.SearchDirection:enum'  - 'excel!Excel.ShapeAutoSize:enum'  - 'excel!Excel.ShapeFillType:enum'  - 'excel!Excel.ShapeFontUnderlineStyle:enum'  - 'excel!Excel.ShapeLineDashStyle:enum'  - 'excel!Excel.ShapeLineStyle:enum'  - 'excel!Excel.ShapeScaleFrom:enum'  - 'excel!Excel.ShapeScaleType:enum'  - 'excel!Excel.ShapeTextHorizontalAlignment:enum'  - 'excel!Excel.ShapeTextHorizontalOverflow:enum'  - 'excel!Excel.ShapeTextOrientation:enum'  - 'excel!Excel.ShapeTextReadingOrder:enum'  - 'excel!Excel.ShapeTextVerticalAlignment:enum'  - 'excel!Excel.ShapeTextVerticalOverflow:enum'  - 'excel!Excel.ShapeType:enum'  - 'excel!Excel.ShapeZOrder:enum'  - 'excel!Excel.SheetVisibility:enum'  - 'excel!Excel.ShowAsCalculation:enum'  - 'excel!Excel.SortBy:enum'  - 'excel!Excel.SortDataOption:enum'  - 'excel!Excel.SortMethod:enum'  - 'excel!Excel.SortOn:enum'  - 'excel!Excel.SortOrientation:enum'  - 'excel!Excel.SpecialCellType:enum'  - 'excel!Excel.SpecialCellValueType:enum'  - 'excel!Excel.SubtotalLocationType:enum'  - 'excel!Excel.VerticalAlignment:enum'  - 'excel!Excel.WorksheetPositionType:enum'classes:  - 'excel!Excel.Application:class'  - 'excel!Excel.AutoFilter:class'  - 'excel!Excel.Binding:class'  - 'excel!Excel.BindingCollection:class'  - 'excel!Excel.CellValueConditionalFormat:class'  - 'excel!Excel.Chart:class'  - 'excel!Excel.ChartAreaFormat:class'  - 'excel!Excel.ChartAxes:class'  - 'excel!Excel.ChartAxis:class'  - 'excel!Excel.ChartAxisFormat:class'  - 'excel!Excel.ChartAxisTitle:class'  - 'excel!Excel.ChartAxisTitleFormat:class'  - 'excel!Excel.ChartBinOptions:class'  - 'excel!Excel.ChartBorder:class'  - 'excel!Excel.ChartBoxwhiskerOptions:class'  - 'excel!Excel.ChartCollection:class'  - 'excel!Excel.ChartDataLabel:class'  - 'excel!Excel.ChartDataLabelFormat:class'  - 'excel!Excel.ChartDataLabels:class'  - 'excel!Excel.ChartErrorBars:class'  - 'excel!Excel.ChartErrorBarsFormat:class'  - 'excel!Excel.ChartFill:class'  - 'excel!Excel.ChartFont:class'  - 'excel!Excel.ChartFormatString:class'  - 'excel!Excel.ChartGridlines:class'  - 'excel!Excel.ChartGridlinesFormat:class'  - 'excel!Excel.ChartLegend:class'  - 'excel!Excel.ChartLegendEntry:class'  - 'excel!Excel.ChartLegendEntryCollection:class'  - 'excel!Excel.ChartLegendFormat:class'  - 'excel!Excel.ChartLineFormat:class'  - 'excel!Excel.ChartMapOptions:class'  - 'excel!Excel.ChartPivotOptions:class'  - 'excel!Excel.ChartPlotArea:class'  - 'excel!Excel.ChartPlotAreaFormat:class'  - 'excel!Excel.ChartPoint:class'  - 'excel!Excel.ChartPointFormat:class'  - 'excel!Excel.ChartPointsCollection:class'  - 'excel!Excel.ChartSeries:class'  - 'excel!Excel.ChartSeriesCollection:class'  - 'excel!Excel.ChartSeriesFormat:class'  - 'excel!Excel.ChartTitle:class'  - 'excel!Excel.ChartTitleFormat:class'  - 'excel!Excel.ChartTrendline:class'  - 'excel!Excel.ChartTrendlineCollection:class'  - 'excel!Excel.ChartTrendlineFormat:class'  - 'excel!Excel.ChartTrendlineLabel:class'  - 'excel!Excel.ChartTrendlineLabelFormat:class'  - 'excel!Excel.ColorScaleConditionalFormat:class'  - 'excel!Excel.ConditionalDataBarNegativeFormat:class'  - 'excel!Excel.ConditionalDataBarPositiveFormat:class'  - 'excel!Excel.ConditionalFormat:class'  - 'excel!Excel.ConditionalFormatCollection:class'  - 'excel!Excel.ConditionalFormatRule:class'  - 'excel!Excel.ConditionalRangeBorder:class'  - 'excel!Excel.ConditionalRangeBorderCollection:class'  - 'excel!Excel.ConditionalRangeFill:class'  - 'excel!Excel.ConditionalRangeFont:class'  - 'excel!Excel.ConditionalRangeFormat:class'  - 'excel!Excel.CustomConditionalFormat:class'  - 'excel!Excel.CustomProperty:class'  - 'excel!Excel.CustomPropertyCollection:class'  - 'excel!Excel.CustomXmlPart:class'  - 'excel!Excel.CustomXmlPartCollection:class'  - 'excel!Excel.CustomXmlPartScopedCollection:class'  - 'excel!Excel.DataBarConditionalFormat:class'  - 'excel!Excel.DataConnectionCollection:class'  - 'excel!Excel.DataPivotHierarchy:class'  - 'excel!Excel.DataPivotHierarchyCollection:class'  - 'excel!Excel.DataValidation:class'  - 'excel!Excel.DocumentProperties:class'  - 'excel!Excel.Filter:class'  - 'excel!Excel.FilterPivotHierarchy:class'  - 'excel!Excel.FilterPivotHierarchyCollection:class'  - 'excel!Excel.FormatProtection:class'  - 'excel!Excel.FunctionResult:class'  - 'excel!Excel.Functions:class'  - 'excel!Excel.GeometricShape:class'  - 'excel!Excel.GroupShapeCollection:class'  - 'excel!Excel.HeaderFooter:class'  - 'excel!Excel.HeaderFooterGroup:class'  - 'excel!Excel.IconSetConditionalFormat:class'  - 'excel!Excel.Image:class'  - 'excel!Excel.IterativeCalculation:class'  - 'excel!Excel.Line:class'  - 'excel!Excel.NamedItem:class'  - 'excel!Excel.NamedItemArrayValues:class'  - 'excel!Excel.NamedItemCollection:class'  - 'excel!Excel.PageBreak:class'  - 'excel!Excel.PageBreakCollection:class'  - 'excel!Excel.PageLayout:class'  - 'excel!Excel.PivotField:class'  - 'excel!Excel.PivotFieldCollection:class'  - 'excel!Excel.PivotHierarchy:class'  - 'excel!Excel.PivotHierarchyCollection:class'  - 'excel!Excel.PivotItem:class'  - 'excel!Excel.PivotItemCollection:class'  - 'excel!Excel.PivotLayout:class'  - 'excel!Excel.PivotTable:class'  - 'excel!Excel.PivotTableCollection:class'  - 'excel!Excel.PresetCriteriaConditionalFormat:class'  - 'excel!Excel.Range:class'  - 'excel!Excel.RangeAreas:class'  - 'excel!Excel.RangeBorder:class'  - 'excel!Excel.RangeBorderCollection:class'  - 'excel!Excel.RangeCollection:class'  - 'excel!Excel.RangeFill:class'  - 'excel!Excel.RangeFont:class'  - 'excel!Excel.RangeFormat:class'  - 'excel!Excel.RangeSort:class'  - 'excel!Excel.RangeView:class'  - 'excel!Excel.RangeViewCollection:class'  - 'excel!Excel.RemoveDuplicatesResult:class'  - 'excel!Excel.RequestContext:class'  - 'excel!Excel.RowColumnPivotHierarchy:class'  - 'excel!Excel.RowColumnPivotHierarchyCollection:class'  - 'excel!Excel.Runtime:class'  - 'excel!Excel.Setting:class'  - 'excel!Excel.SettingCollection:class'  - 'excel!Excel.Shape:class'  - 'excel!Excel.ShapeCollection:class'  - 'excel!Excel.ShapeFill:class'  - 'excel!Excel.ShapeFont:class'  - 'excel!Excel.ShapeGroup:class'  - 'excel!Excel.ShapeLineFormat:class'  - 'excel!Excel.Style:class'  - 'excel!Excel.StyleCollection:class'  - 'excel!Excel.Table:class'  - 'excel!Excel.TableCollection:class'  - 'excel!Excel.TableColumn:class'  - 'excel!Excel.TableColumnCollection:class'  - 'excel!Excel.TableRow:class'  - 'excel!Excel.TableRowCollection:class'  - 'excel!Excel.TableScopedCollection:class'  - 'excel!Excel.TableSort:class'  - 'excel!Excel.TextConditionalFormat:class'  - 'excel!Excel.TextFrame:class'  - 'excel!Excel.TextRange:class'  - 'excel!Excel.TopBottomConditionalFormat:class'  - 'excel!Excel.Workbook:class'  - 'excel!Excel.WorkbookCreated:class'  - 'excel!Excel.WorkbookProtection:class'  - 'excel!Excel.Worksheet:class'  - 'excel!Excel.WorksheetCollection:class'  - 'excel!Excel.WorksheetFreezePanes:class'  - 'excel!Excel.WorksheetProtection:class'interfaces:  - 'excel!Excel.BasicDataValidation:interface'  - 'excel!Excel.BindingDataChangedEventArgs:interface'  - 'excel!Excel.BindingSelectionChangedEventArgs:interface'  - 'excel!Excel.CellBorder:interface'  - 'excel!Excel.CellBorderCollection:interface'  - 'excel!Excel.CellProperties:interface'  - 'excel!Excel.CellPropertiesBorderLoadOptions:interface'  - 'excel!Excel.CellPropertiesFill:interface'  - 'excel!Excel.CellPropertiesFillLoadOptions:interface'  - 'excel!Excel.CellPropertiesFont:interface'  - 'excel!Excel.CellPropertiesFontLoadOptions:interface'  - 'excel!Excel.CellPropertiesFormat:interface'  - 'excel!Excel.CellPropertiesFormatLoadOptions:interface'  - 'excel!Excel.CellPropertiesLoadOptions:interface'  - 'excel!Excel.CellPropertiesProtection:interface'  - 'excel!Excel.ChangedEventDetail:interface'  - 'excel!Excel.ChartActivatedEventArgs:interface'  - 'excel!Excel.ChartAddedEventArgs:interface'  - 'excel!Excel.ChartDeactivatedEventArgs:interface'  - 'excel!Excel.ChartDeletedEventArgs:interface'  - 'excel!Excel.ColumnProperties:interface'  - 'excel!Excel.ColumnPropertiesLoadOptions:interface'  - 'excel!Excel.ConditionalCellValueRule:interface'  - 'excel!Excel.ConditionalColorScaleCriteria:interface'  - 'excel!Excel.ConditionalColorScaleCriterion:interface'  - 'excel!Excel.ConditionalDataBarRule:interface'  - 'excel!Excel.ConditionalIconCriterion:interface'  - 'excel!Excel.ConditionalPresetCriteriaRule:interface'  - 'excel!Excel.ConditionalTextComparisonRule:interface'  - 'excel!Excel.ConditionalTopBottomRule:interface'  - 'excel!Excel.CustomDataValidation:interface'  - 'excel!Excel.DataValidationErrorAlert:interface'  - 'excel!Excel.DataValidationPrompt:interface'  - 'excel!Excel.DataValidationRule:interface'  - 'excel!Excel.DateTimeDataValidation:interface'  - 'excel!Excel.FilterCriteria:interface'  - 'excel!Excel.FilterDatetime:interface'  - 'excel!Excel.FiveArrowsGraySet:interface'  - 'excel!Excel.FiveArrowsSet:interface'  - 'excel!Excel.FiveBoxesSet:interface'  - 'excel!Excel.FiveQuartersSet:interface'  - 'excel!Excel.FiveRatingSet:interface'  - 'excel!Excel.FourArrowsGraySet:interface'  - 'excel!Excel.FourArrowsSet:interface'  - 'excel!Excel.FourRatingSet:interface'  - 'excel!Excel.FourRedToBlackSet:interface'  - 'excel!Excel.FourTrafficLightsSet:interface'  - 'excel!Excel.Icon:interface'  - 'excel!Excel.IconCollections:interface'  - 'excel!Excel.ListDataValidation:interface'  - 'excel!Excel.PageLayoutMarginOptions:interface'  - 'excel!Excel.PageLayoutZoomOptions:interface'  - 'excel!Excel.RangeHyperlink:interface'  - 'excel!Excel.RangeReference:interface'  - 'excel!Excel.ReplaceCriteria:interface'  - 'excel!Excel.RowProperties:interface'  - 'excel!Excel.RowPropertiesLoadOptions:interface'  - 'excel!Excel.RunOptions:interface'  - 'excel!Excel.SearchCriteria:interface'  - 'excel!Excel.SelectionChangedEventArgs:interface'  - 'excel!Excel.Session:interface'  - 'excel!Excel.SettableCellProperties:interface'  - 'excel!Excel.SettableColumnProperties:interface'  - 'excel!Excel.SettableRowProperties:interface'  - 'excel!Excel.SettingsChangedEventArgs:interface'  - 'excel!Excel.ShapeActivatedEventArgs:interface'  - 'excel!Excel.ShapeDeactivatedEventArgs:interface'  - 'excel!Excel.ShowAsRule:interface'  - 'excel!Excel.SortField:interface'  - 'excel!Excel.Subtotals:interface'  - 'excel!Excel.TableAddedEventArgs:interface'  - 'excel!Excel.TableChangedEventArgs:interface'  - 'excel!Excel.TableDeletedEventArgs:interface'  - 'excel!Excel.TableSelectionChangedEventArgs:interface'  - 'excel!Excel.ThreeArrowsGraySet:interface'  - 'excel!Excel.ThreeArrowsSet:interface'  - 'excel!Excel.ThreeFlagsSet:interface'  - 'excel!Excel.ThreeSignsSet:interface'  - 'excel!Excel.ThreeStarsSet:interface'  - 'excel!Excel.ThreeSymbols2Set:interface'  - 'excel!Excel.ThreeSymbolsSet:interface'  - 'excel!Excel.ThreeTrafficLights1Set:interface'  - 'excel!Excel.ThreeTrafficLights2Set:interface'  - 'excel!Excel.ThreeTrianglesSet:interface'  - 'excel!Excel.WorkbookAutoSaveSettingChangedEventArgs:interface'  - 'excel!Excel.WorksheetActivatedEventArgs:interface'  - 'excel!Excel.WorksheetAddedEventArgs:interface'  - 'excel!Excel.WorksheetCalculatedEventArgs:interface'  - 'excel!Excel.WorksheetChangedEventArgs:interface'  - 'excel!Excel.WorksheetDeactivatedEventArgs:interface'  - 'excel!Excel.WorksheetDeletedEventArgs:interface'  - 'excel!Excel.WorksheetFormatChangedEventArgs:interface'  - 'excel!Excel.WorksheetProtectionOptions:interface'  - 'excel!Excel.WorksheetSearchCriteria:interface'  - 'excel!Excel.WorksheetSelectionChangedEventArgs:interface'functions:  - name: Excel.createWorkbook(base64)    uid: 'excel!Excel.createWorkbook:function(1)'    package: excel!    summary: |-      Creates and opens a new workbook. Optionally, the workbook can be pre-populated with a base64-encoded .xlsx file.      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function createWorkbook(base64?: string): Promise<void>;'      parameters:        - id: base64          description: ''          type: string      return:        type: Promise&lt;void&gt;        description: |-          #### Examples          ```javascript          var myFile = document.getElementById("file");          var reader = new FileReader();          reader.onload = function (event) {              // strip off the metadata before the base64-encoded string              var startIndex = event.target.result.indexOf("base64,");              var copyBase64 = event.target.result.substr(startIndex + 7);              Excel.createWorkbook(copyBase64);                  };          // read in the file as a data URL so we can parse the base64-encoded string          reader.readAsDataURL(myFile.files[0]);          ```  - name: 'Excel.getDataCommonPostprocess(response, callArgs)'    uid: 'excel!Excel.getDataCommonPostprocess:function(1)'    package: excel!    summary: ''    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function getDataCommonPostprocess(response: any, callArgs: any): any;'      parameters:        - id: response          description: ''          type: any        - id: callArgs          description: ''          type: any      return:        type: any        description: ''  - name: Excel.postprocessBindingDescriptor(response)    uid: 'excel!Excel.postprocessBindingDescriptor:function(1)'    package: excel!    summary: ''    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function postprocessBindingDescriptor(response: any): any;'      parameters:        - id: response          description: ''          type: any      return:        type: any        description: ''  - name: Excel.run(batch)    uid: 'excel!Excel.run:function(1)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using a new RequestContext. When the      promise is resolved, any tracked objects that were automatically allocated during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: 'export function run<T>(batch: (context: Excel.RequestContext) => Promise<T>): Promise<T>;'      parameters:        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(object, batch)'    uid: 'excel!Excel.run:function(2)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated      during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(object: OfficeExtension.ClientObject, batch: (context: Excel.RequestContext) =>        Promise<T>): Promise<T>;      parameters:        - id: object          description: >-            A previously-created API object. The batch will use the same RequestContext as the passed-in object, which            means that any changes applied to the object will be picked up by "context.sync()".          type: '<xref uid="office!OfficeExtension.ClientObject:class" />'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(objects, batch)'    uid: 'excel!Excel.run:function(3)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of      previously-created API objects.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(objects: OfficeExtension.ClientObject[], batch: (context: Excel.RequestContext) =>        Promise<T>): Promise<T>;      parameters:        - id: objects          description: >-            An array of previously-created API objects. The array will be validated to make sure that all of the objects            share the same context. The batch will use this shared RequestContext, which means that any changes applied            to these objects will be picked up by "context.sync()".          type: '<xref uid="office!OfficeExtension.ClientObject:class" />[]'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(options, batch)'    uid: 'excel!Excel.run:function(4)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated      during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(options: Excel.RunOptions, batch: (context: Excel.RequestContext) => Promise<T>):        Promise<T>;      parameters:        - id: options          description: >-            The additional options for this Excel.run which specify previous objects, whether to delay the request for            cell edit, session info, etc.          type: '<xref uid="excel!Excel.RunOptions:interface" />'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''  - name: 'Excel.run(context, batch)'    uid: 'excel!Excel.run:function(5)'    package: excel!    summary: >-      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a      previously-created object. When the promise is resolved, any tracked objects that were automatically allocated      during execution will be released.    remarks: ''    isPreview: false    isDeprecated: false    syntax:      content: >-        export function run<T>(context: OfficeExtension.ClientRequestContext, batch: (context: Excel.RequestContext) =>        Promise<T>): Promise<T>;      parameters:        - id: context          description: >-            A previously-created object. The batch will use the same RequestContext as the passed-in object, which means            that any changes applied to the object will be picked up by "context.sync()".          type: '<xref uid="office!OfficeExtension.ClientRequestContext:class" />'        - id: batch          description: >-            A function that takes in a RequestContext and returns a promise (typically, just the result of            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office            add-in and the Excel application run in two different processes, the RequestContext is required to get            access to the Excel object model from the add-in.          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'      return:        type: Promise&lt;T&gt;        description: ''
+### YamlMime:TSPackage
+uid: excel!
+name: excel
+type: package
+summary: ''
+enums:
+  - 'excel!Excel.AggregationFunction:enum'
+  - 'excel!Excel.ArrowheadLength:enum'
+  - 'excel!Excel.ArrowheadStyle:enum'
+  - 'excel!Excel.ArrowheadWidth:enum'
+  - 'excel!Excel.AutoFillType:enum'
+  - 'excel!Excel.BindingType:enum'
+  - 'excel!Excel.BorderIndex:enum'
+  - 'excel!Excel.BorderLineStyle:enum'
+  - 'excel!Excel.BorderWeight:enum'
+  - 'excel!Excel.BuiltInStyle:enum'
+  - 'excel!Excel.CalculationMode:enum'
+  - 'excel!Excel.CalculationState:enum'
+  - 'excel!Excel.CalculationType:enum'
+  - 'excel!Excel.ChartAxisCategoryType:enum'
+  - 'excel!Excel.ChartAxisDisplayUnit:enum'
+  - 'excel!Excel.ChartAxisGroup:enum'
+  - 'excel!Excel.ChartAxisPosition:enum'
+  - 'excel!Excel.ChartAxisScaleType:enum'
+  - 'excel!Excel.ChartAxisTickLabelPosition:enum'
+  - 'excel!Excel.ChartAxisTickMark:enum'
+  - 'excel!Excel.ChartAxisTimeUnit:enum'
+  - 'excel!Excel.ChartAxisType:enum'
+  - 'excel!Excel.ChartBinType:enum'
+  - 'excel!Excel.ChartBoxQuartileCalculation:enum'
+  - 'excel!Excel.ChartColorScheme:enum'
+  - 'excel!Excel.ChartDataLabelPosition:enum'
+  - 'excel!Excel.ChartDisplayBlanksAs:enum'
+  - 'excel!Excel.ChartErrorBarsInclude:enum'
+  - 'excel!Excel.ChartErrorBarsType:enum'
+  - 'excel!Excel.ChartGradientStyle:enum'
+  - 'excel!Excel.ChartGradientStyleType:enum'
+  - 'excel!Excel.ChartLegendPosition:enum'
+  - 'excel!Excel.ChartLineStyle:enum'
+  - 'excel!Excel.ChartMapAreaLevel:enum'
+  - 'excel!Excel.ChartMapLabelStrategy:enum'
+  - 'excel!Excel.ChartMapProjectionType:enum'
+  - 'excel!Excel.ChartMarkerStyle:enum'
+  - 'excel!Excel.ChartParentLabelStrategy:enum'
+  - 'excel!Excel.ChartPlotAreaPosition:enum'
+  - 'excel!Excel.ChartPlotBy:enum'
+  - 'excel!Excel.ChartSeriesBy:enum'
+  - 'excel!Excel.ChartSplitType:enum'
+  - 'excel!Excel.ChartTextHorizontalAlignment:enum'
+  - 'excel!Excel.ChartTextVerticalAlignment:enum'
+  - 'excel!Excel.ChartTickLabelAlignment:enum'
+  - 'excel!Excel.ChartTitlePosition:enum'
+  - 'excel!Excel.ChartTrendlineType:enum'
+  - 'excel!Excel.ChartType:enum'
+  - 'excel!Excel.ChartUnderlineStyle:enum'
+  - 'excel!Excel.ClearApplyTo:enum'
+  - 'excel!Excel.CloseBehavior:enum'
+  - 'excel!Excel.ConditionalCellValueOperator:enum'
+  - 'excel!Excel.ConditionalDataBarAxisFormat:enum'
+  - 'excel!Excel.ConditionalDataBarDirection:enum'
+  - 'excel!Excel.ConditionalFormatColorCriterionType:enum'
+  - 'excel!Excel.ConditionalFormatDirection:enum'
+  - 'excel!Excel.ConditionalFormatIconRuleType:enum'
+  - 'excel!Excel.ConditionalFormatPresetCriterion:enum'
+  - 'excel!Excel.ConditionalFormatRuleType:enum'
+  - 'excel!Excel.ConditionalFormatType:enum'
+  - 'excel!Excel.ConditionalIconCriterionOperator:enum'
+  - 'excel!Excel.ConditionalRangeBorderIndex:enum'
+  - 'excel!Excel.ConditionalRangeBorderLineStyle:enum'
+  - 'excel!Excel.ConditionalRangeFontUnderlineStyle:enum'
+  - 'excel!Excel.ConditionalTextOperator:enum'
+  - 'excel!Excel.ConditionalTopBottomCriterionType:enum'
+  - 'excel!Excel.ConnectorType:enum'
+  - 'excel!Excel.DataChangeType:enum'
+  - 'excel!Excel.DataValidationAlertStyle:enum'
+  - 'excel!Excel.DataValidationOperator:enum'
+  - 'excel!Excel.DataValidationType:enum'
+  - 'excel!Excel.DeleteShiftDirection:enum'
+  - 'excel!Excel.DocumentPropertyItem:enum'
+  - 'excel!Excel.DocumentPropertyType:enum'
+  - 'excel!Excel.DynamicFilterCriteria:enum'
+  - 'excel!Excel.ErrorCodes:enum'
+  - 'excel!Excel.EventSource:enum'
+  - 'excel!Excel.EventType:enum'
+  - 'excel!Excel.FillPattern:enum'
+  - 'excel!Excel.FilterDatetimeSpecificity:enum'
+  - 'excel!Excel.FilterOn:enum'
+  - 'excel!Excel.FilterOperator:enum'
+  - 'excel!Excel.GeometricShapeType:enum'
+  - 'excel!Excel.HeaderFooterState:enum'
+  - 'excel!Excel.HorizontalAlignment:enum'
+  - 'excel!Excel.IconSet:enum'
+  - 'excel!Excel.ImageFittingMode:enum'
+  - 'excel!Excel.InsertShiftDirection:enum'
+  - 'excel!Excel.LinkedDataTypeState:enum'
+  - 'excel!Excel.NamedItemScope:enum'
+  - 'excel!Excel.NamedItemType:enum'
+  - 'excel!Excel.PageOrientation:enum'
+  - 'excel!Excel.PaperType:enum'
+  - 'excel!Excel.PictureFormat:enum'
+  - 'excel!Excel.PivotAxis:enum'
+  - 'excel!Excel.PivotFilterTopBottomCriterion:enum'
+  - 'excel!Excel.PivotLayoutType:enum'
+  - 'excel!Excel.Placement:enum'
+  - 'excel!Excel.PrintComments:enum'
+  - 'excel!Excel.PrintErrorType:enum'
+  - 'excel!Excel.PrintMarginUnit:enum'
+  - 'excel!Excel.PrintOrder:enum'
+  - 'excel!Excel.ProtectionSelectionMode:enum'
+  - 'excel!Excel.RangeCopyType:enum'
+  - 'excel!Excel.RangeUnderlineStyle:enum'
+  - 'excel!Excel.RangeValueType:enum'
+  - 'excel!Excel.ReadingOrder:enum'
+  - 'excel!Excel.RibbonTab:enum'
+  - 'excel!Excel.SaveBehavior:enum'
+  - 'excel!Excel.SearchDirection:enum'
+  - 'excel!Excel.ShapeAutoSize:enum'
+  - 'excel!Excel.ShapeFillType:enum'
+  - 'excel!Excel.ShapeFontUnderlineStyle:enum'
+  - 'excel!Excel.ShapeLineDashStyle:enum'
+  - 'excel!Excel.ShapeLineStyle:enum'
+  - 'excel!Excel.ShapeScaleFrom:enum'
+  - 'excel!Excel.ShapeScaleType:enum'
+  - 'excel!Excel.ShapeTextHorizontalAlignment:enum'
+  - 'excel!Excel.ShapeTextHorizontalOverflow:enum'
+  - 'excel!Excel.ShapeTextOrientation:enum'
+  - 'excel!Excel.ShapeTextReadingOrder:enum'
+  - 'excel!Excel.ShapeTextVerticalAlignment:enum'
+  - 'excel!Excel.ShapeTextVerticalOverflow:enum'
+  - 'excel!Excel.ShapeType:enum'
+  - 'excel!Excel.ShapeZOrder:enum'
+  - 'excel!Excel.SheetVisibility:enum'
+  - 'excel!Excel.ShowAsCalculation:enum'
+  - 'excel!Excel.SortBy:enum'
+  - 'excel!Excel.SortDataOption:enum'
+  - 'excel!Excel.SortMethod:enum'
+  - 'excel!Excel.SortOn:enum'
+  - 'excel!Excel.SortOrientation:enum'
+  - 'excel!Excel.SpecialCellType:enum'
+  - 'excel!Excel.SpecialCellValueType:enum'
+  - 'excel!Excel.SubtotalLocationType:enum'
+  - 'excel!Excel.VerticalAlignment:enum'
+  - 'excel!Excel.WorksheetPositionType:enum'
+classes:
+  - 'excel!Excel.Application:class'
+  - 'excel!Excel.AutoFilter:class'
+  - 'excel!Excel.Binding:class'
+  - 'excel!Excel.BindingCollection:class'
+  - 'excel!Excel.CellValueConditionalFormat:class'
+  - 'excel!Excel.Chart:class'
+  - 'excel!Excel.ChartAreaFormat:class'
+  - 'excel!Excel.ChartAxes:class'
+  - 'excel!Excel.ChartAxis:class'
+  - 'excel!Excel.ChartAxisFormat:class'
+  - 'excel!Excel.ChartAxisTitle:class'
+  - 'excel!Excel.ChartAxisTitleFormat:class'
+  - 'excel!Excel.ChartBinOptions:class'
+  - 'excel!Excel.ChartBorder:class'
+  - 'excel!Excel.ChartBoxwhiskerOptions:class'
+  - 'excel!Excel.ChartCollection:class'
+  - 'excel!Excel.ChartDataLabel:class'
+  - 'excel!Excel.ChartDataLabelFormat:class'
+  - 'excel!Excel.ChartDataLabels:class'
+  - 'excel!Excel.ChartErrorBars:class'
+  - 'excel!Excel.ChartErrorBarsFormat:class'
+  - 'excel!Excel.ChartFill:class'
+  - 'excel!Excel.ChartFont:class'
+  - 'excel!Excel.ChartFormatString:class'
+  - 'excel!Excel.ChartGridlines:class'
+  - 'excel!Excel.ChartGridlinesFormat:class'
+  - 'excel!Excel.ChartLegend:class'
+  - 'excel!Excel.ChartLegendEntry:class'
+  - 'excel!Excel.ChartLegendEntryCollection:class'
+  - 'excel!Excel.ChartLegendFormat:class'
+  - 'excel!Excel.ChartLineFormat:class'
+  - 'excel!Excel.ChartMapOptions:class'
+  - 'excel!Excel.ChartPivotOptions:class'
+  - 'excel!Excel.ChartPlotArea:class'
+  - 'excel!Excel.ChartPlotAreaFormat:class'
+  - 'excel!Excel.ChartPoint:class'
+  - 'excel!Excel.ChartPointFormat:class'
+  - 'excel!Excel.ChartPointsCollection:class'
+  - 'excel!Excel.ChartSeries:class'
+  - 'excel!Excel.ChartSeriesCollection:class'
+  - 'excel!Excel.ChartSeriesFormat:class'
+  - 'excel!Excel.ChartTitle:class'
+  - 'excel!Excel.ChartTitleFormat:class'
+  - 'excel!Excel.ChartTrendline:class'
+  - 'excel!Excel.ChartTrendlineCollection:class'
+  - 'excel!Excel.ChartTrendlineFormat:class'
+  - 'excel!Excel.ChartTrendlineLabel:class'
+  - 'excel!Excel.ChartTrendlineLabelFormat:class'
+  - 'excel!Excel.ColorScaleConditionalFormat:class'
+  - 'excel!Excel.ConditionalDataBarNegativeFormat:class'
+  - 'excel!Excel.ConditionalDataBarPositiveFormat:class'
+  - 'excel!Excel.ConditionalFormat:class'
+  - 'excel!Excel.ConditionalFormatCollection:class'
+  - 'excel!Excel.ConditionalFormatRule:class'
+  - 'excel!Excel.ConditionalRangeBorder:class'
+  - 'excel!Excel.ConditionalRangeBorderCollection:class'
+  - 'excel!Excel.ConditionalRangeFill:class'
+  - 'excel!Excel.ConditionalRangeFont:class'
+  - 'excel!Excel.ConditionalRangeFormat:class'
+  - 'excel!Excel.CustomConditionalFormat:class'
+  - 'excel!Excel.CustomProperty:class'
+  - 'excel!Excel.CustomPropertyCollection:class'
+  - 'excel!Excel.CustomXmlPart:class'
+  - 'excel!Excel.CustomXmlPartCollection:class'
+  - 'excel!Excel.CustomXmlPartScopedCollection:class'
+  - 'excel!Excel.DataBarConditionalFormat:class'
+  - 'excel!Excel.DataConnectionCollection:class'
+  - 'excel!Excel.DataPivotHierarchy:class'
+  - 'excel!Excel.DataPivotHierarchyCollection:class'
+  - 'excel!Excel.DataValidation:class'
+  - 'excel!Excel.DocumentProperties:class'
+  - 'excel!Excel.Filter:class'
+  - 'excel!Excel.FilterPivotHierarchy:class'
+  - 'excel!Excel.FilterPivotHierarchyCollection:class'
+  - 'excel!Excel.FormatProtection:class'
+  - 'excel!Excel.FunctionResult:class'
+  - 'excel!Excel.Functions:class'
+  - 'excel!Excel.GeometricShape:class'
+  - 'excel!Excel.GroupShapeCollection:class'
+  - 'excel!Excel.HeaderFooter:class'
+  - 'excel!Excel.HeaderFooterGroup:class'
+  - 'excel!Excel.IconSetConditionalFormat:class'
+  - 'excel!Excel.Image:class'
+  - 'excel!Excel.IterativeCalculation:class'
+  - 'excel!Excel.Line:class'
+  - 'excel!Excel.NamedItem:class'
+  - 'excel!Excel.NamedItemArrayValues:class'
+  - 'excel!Excel.NamedItemCollection:class'
+  - 'excel!Excel.PageBreak:class'
+  - 'excel!Excel.PageBreakCollection:class'
+  - 'excel!Excel.PageLayout:class'
+  - 'excel!Excel.PivotField:class'
+  - 'excel!Excel.PivotFieldCollection:class'
+  - 'excel!Excel.PivotHierarchy:class'
+  - 'excel!Excel.PivotHierarchyCollection:class'
+  - 'excel!Excel.PivotItem:class'
+  - 'excel!Excel.PivotItemCollection:class'
+  - 'excel!Excel.PivotLayout:class'
+  - 'excel!Excel.PivotTable:class'
+  - 'excel!Excel.PivotTableCollection:class'
+  - 'excel!Excel.PresetCriteriaConditionalFormat:class'
+  - 'excel!Excel.Range:class'
+  - 'excel!Excel.RangeAreas:class'
+  - 'excel!Excel.RangeBorder:class'
+  - 'excel!Excel.RangeBorderCollection:class'
+  - 'excel!Excel.RangeCollection:class'
+  - 'excel!Excel.RangeFill:class'
+  - 'excel!Excel.RangeFont:class'
+  - 'excel!Excel.RangeFormat:class'
+  - 'excel!Excel.RangeSort:class'
+  - 'excel!Excel.RangeView:class'
+  - 'excel!Excel.RangeViewCollection:class'
+  - 'excel!Excel.RemoveDuplicatesResult:class'
+  - 'excel!Excel.RequestContext:class'
+  - 'excel!Excel.RowColumnPivotHierarchy:class'
+  - 'excel!Excel.RowColumnPivotHierarchyCollection:class'
+  - 'excel!Excel.Runtime:class'
+  - 'excel!Excel.Setting:class'
+  - 'excel!Excel.SettingCollection:class'
+  - 'excel!Excel.Shape:class'
+  - 'excel!Excel.ShapeCollection:class'
+  - 'excel!Excel.ShapeFill:class'
+  - 'excel!Excel.ShapeFont:class'
+  - 'excel!Excel.ShapeGroup:class'
+  - 'excel!Excel.ShapeLineFormat:class'
+  - 'excel!Excel.Style:class'
+  - 'excel!Excel.StyleCollection:class'
+  - 'excel!Excel.Table:class'
+  - 'excel!Excel.TableCollection:class'
+  - 'excel!Excel.TableColumn:class'
+  - 'excel!Excel.TableColumnCollection:class'
+  - 'excel!Excel.TableRow:class'
+  - 'excel!Excel.TableRowCollection:class'
+  - 'excel!Excel.TableScopedCollection:class'
+  - 'excel!Excel.TableSort:class'
+  - 'excel!Excel.TextConditionalFormat:class'
+  - 'excel!Excel.TextFrame:class'
+  - 'excel!Excel.TextRange:class'
+  - 'excel!Excel.TopBottomConditionalFormat:class'
+  - 'excel!Excel.Workbook:class'
+  - 'excel!Excel.WorkbookCreated:class'
+  - 'excel!Excel.WorkbookProtection:class'
+  - 'excel!Excel.Worksheet:class'
+  - 'excel!Excel.WorksheetCollection:class'
+  - 'excel!Excel.WorksheetFreezePanes:class'
+  - 'excel!Excel.WorksheetProtection:class'
+interfaces:
+  - 'excel!Excel.BasicDataValidation:interface'
+  - 'excel!Excel.BindingDataChangedEventArgs:interface'
+  - 'excel!Excel.BindingSelectionChangedEventArgs:interface'
+  - 'excel!Excel.CellBorder:interface'
+  - 'excel!Excel.CellBorderCollection:interface'
+  - 'excel!Excel.CellProperties:interface'
+  - 'excel!Excel.CellPropertiesBorderLoadOptions:interface'
+  - 'excel!Excel.CellPropertiesFill:interface'
+  - 'excel!Excel.CellPropertiesFillLoadOptions:interface'
+  - 'excel!Excel.CellPropertiesFont:interface'
+  - 'excel!Excel.CellPropertiesFontLoadOptions:interface'
+  - 'excel!Excel.CellPropertiesFormat:interface'
+  - 'excel!Excel.CellPropertiesFormatLoadOptions:interface'
+  - 'excel!Excel.CellPropertiesLoadOptions:interface'
+  - 'excel!Excel.CellPropertiesProtection:interface'
+  - 'excel!Excel.ChangedEventDetail:interface'
+  - 'excel!Excel.ChartActivatedEventArgs:interface'
+  - 'excel!Excel.ChartAddedEventArgs:interface'
+  - 'excel!Excel.ChartDeactivatedEventArgs:interface'
+  - 'excel!Excel.ChartDeletedEventArgs:interface'
+  - 'excel!Excel.ColumnProperties:interface'
+  - 'excel!Excel.ColumnPropertiesLoadOptions:interface'
+  - 'excel!Excel.ConditionalCellValueRule:interface'
+  - 'excel!Excel.ConditionalColorScaleCriteria:interface'
+  - 'excel!Excel.ConditionalColorScaleCriterion:interface'
+  - 'excel!Excel.ConditionalDataBarRule:interface'
+  - 'excel!Excel.ConditionalIconCriterion:interface'
+  - 'excel!Excel.ConditionalPresetCriteriaRule:interface'
+  - 'excel!Excel.ConditionalTextComparisonRule:interface'
+  - 'excel!Excel.ConditionalTopBottomRule:interface'
+  - 'excel!Excel.CustomDataValidation:interface'
+  - 'excel!Excel.DataValidationErrorAlert:interface'
+  - 'excel!Excel.DataValidationPrompt:interface'
+  - 'excel!Excel.DataValidationRule:interface'
+  - 'excel!Excel.DateTimeDataValidation:interface'
+  - 'excel!Excel.FilterCriteria:interface'
+  - 'excel!Excel.FilterDatetime:interface'
+  - 'excel!Excel.FiveArrowsGraySet:interface'
+  - 'excel!Excel.FiveArrowsSet:interface'
+  - 'excel!Excel.FiveBoxesSet:interface'
+  - 'excel!Excel.FiveQuartersSet:interface'
+  - 'excel!Excel.FiveRatingSet:interface'
+  - 'excel!Excel.FourArrowsGraySet:interface'
+  - 'excel!Excel.FourArrowsSet:interface'
+  - 'excel!Excel.FourRatingSet:interface'
+  - 'excel!Excel.FourRedToBlackSet:interface'
+  - 'excel!Excel.FourTrafficLightsSet:interface'
+  - 'excel!Excel.Icon:interface'
+  - 'excel!Excel.IconCollections:interface'  - 'excel!Excel.ListDataValidation:interface'
+  - 'excel!Excel.PageLayoutMarginOptions:interface'
+  - 'excel!Excel.PageLayoutZoomOptions:interface'
+  - 'excel!Excel.RangeHyperlink:interface'
+  - 'excel!Excel.RangeReference:interface'
+  - 'excel!Excel.ReplaceCriteria:interface'
+  - 'excel!Excel.RowProperties:interface'
+  - 'excel!Excel.RowPropertiesLoadOptions:interface'
+  - 'excel!Excel.RunOptions:interface'
+  - 'excel!Excel.SearchCriteria:interface'
+  - 'excel!Excel.SelectionChangedEventArgs:interface'
+  - 'excel!Excel.Session:interface'
+  - 'excel!Excel.SettableCellProperties:interface'
+  - 'excel!Excel.SettableColumnProperties:interface'
+  - 'excel!Excel.SettableRowProperties:interface'
+  - 'excel!Excel.SettingsChangedEventArgs:interface'
+  - 'excel!Excel.ShapeActivatedEventArgs:interface'
+  - 'excel!Excel.ShapeDeactivatedEventArgs:interface'
+  - 'excel!Excel.ShowAsRule:interface'
+  - 'excel!Excel.SortField:interface'
+  - 'excel!Excel.Subtotals:interface'
+  - 'excel!Excel.TableAddedEventArgs:interface'
+  - 'excel!Excel.TableChangedEventArgs:interface'
+  - 'excel!Excel.TableDeletedEventArgs:interface'
+  - 'excel!Excel.TableSelectionChangedEventArgs:interface'
+  - 'excel!Excel.ThreeArrowsGraySet:interface'
+  - 'excel!Excel.ThreeArrowsSet:interface'
+  - 'excel!Excel.ThreeFlagsSet:interface'
+  - 'excel!Excel.ThreeSignsSet:interface'
+  - 'excel!Excel.ThreeStarsSet:interface'
+  - 'excel!Excel.ThreeSymbols2Set:interface'
+  - 'excel!Excel.ThreeSymbolsSet:interface'
+  - 'excel!Excel.ThreeTrafficLights1Set:interface'
+  - 'excel!Excel.ThreeTrafficLights2Set:interface'
+  - 'excel!Excel.ThreeTrianglesSet:interface'
+  - 'excel!Excel.WorkbookAutoSaveSettingChangedEventArgs:interface'
+  - 'excel!Excel.WorksheetActivatedEventArgs:interface'
+  - 'excel!Excel.WorksheetAddedEventArgs:interface'
+  - 'excel!Excel.WorksheetCalculatedEventArgs:interface'
+  - 'excel!Excel.WorksheetChangedEventArgs:interface'
+  - 'excel!Excel.WorksheetDeactivatedEventArgs:interface'
+  - 'excel!Excel.WorksheetDeletedEventArgs:interface'
+  - 'excel!Excel.WorksheetFormatChangedEventArgs:interface'
+  - 'excel!Excel.WorksheetProtectionOptions:interface'
+  - 'excel!Excel.WorksheetSearchCriteria:interface'
+  - 'excel!Excel.WorksheetSelectionChangedEventArgs:interface'
+functions:
+  - name: Excel.createWorkbook(base64)
+    uid: 'excel!Excel.createWorkbook:function(1)'
+    package: excel!
+    summary: |-
+      Creates and opens a new workbook. Optionally, the workbook can be pre-populated with a base64-encoded .xlsx file.      \[ [API set: ExcelApi 1.8](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) \]
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function createWorkbook(base64?: string): Promise<void>;'
+      parameters:
+        - id: base64
+          description: ''
+          type: string
+      return:
+        type: Promise&lt;void&gt;
+        description: |-          #### Examples          ```javascript
+          var myFile = document.getElementById("file");
+          var reader = new FileReader();          reader.onload = function (event) {
+              // strip off the metadata before the base64-encoded string
+              var startIndex = event.target.result.indexOf("base64,");
+              var copyBase64 = event.target.result.substr(startIndex + 7);              Excel.createWorkbook(copyBase64);        
+          };          // read in the file as a data URL so we can parse the base64-encoded string
+          reader.readAsDataURL(myFile.files[0]);
+          ```
+  - name: 'Excel.getDataCommonPostprocess(response, callArgs)'
+    uid: 'excel!Excel.getDataCommonPostprocess:function(1)'
+    package: excel!
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function getDataCommonPostprocess(response: any, callArgs: any): any;'
+      parameters:
+        - id: response
+          description: ''
+          type: any
+        - id: callArgs
+          description: ''
+          type: any
+      return:
+        type: any
+        description: ''
+  - name: Excel.postprocessBindingDescriptor(response)
+    uid: 'excel!Excel.postprocessBindingDescriptor:function(1)'
+    package: excel!
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function postprocessBindingDescriptor(response: any): any;'
+      parameters:
+        - id: response
+          description: ''
+          type: any
+      return:
+        type: any
+        description: ''
+  - name: Excel.run(batch)
+    uid: 'excel!Excel.run:function(1)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using a new RequestContext. When the
+      promise is resolved, any tracked objects that were automatically allocated during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'export function run<T>(batch: (context: Excel.RequestContext) => Promise<T>): Promise<T>;'
+      parameters:
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(object, batch)'
+    uid: 'excel!Excel.run:function(2)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a
+      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated
+      during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(object: OfficeExtension.ClientObject, batch: (context: Excel.RequestContext) =>
+        Promise<T>): Promise<T>;
+      parameters:
+        - id: object
+          description: >-
+            A previously-created API object. The batch will use the same RequestContext as the passed-in object, which
+            means that any changes applied to the object will be picked up by "context.sync()".
+          type: '<xref uid="office!OfficeExtension.ClientObject:class" />'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(objects, batch)'
+    uid: 'excel!Excel.run:function(3)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of
+      previously-created API objects.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(objects: OfficeExtension.ClientObject[], batch: (context: Excel.RequestContext) =>
+        Promise<T>): Promise<T>;
+      parameters:
+        - id: objects
+          description: >-
+            An array of previously-created API objects. The array will be validated to make sure that all of the objects
+            share the same context. The batch will use this shared RequestContext, which means that any changes applied
+            to these objects will be picked up by "context.sync()".
+          type: '<xref uid="office!OfficeExtension.ClientObject:class" />[]'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(options, batch)'
+    uid: 'excel!Excel.run:function(4)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a
+      previously-created API object. When the promise is resolved, any tracked objects that were automatically allocated
+      during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(options: Excel.RunOptions, batch: (context: Excel.RequestContext) => Promise<T>):
+        Promise<T>;
+      parameters:
+        - id: options
+          description: >-
+            The additional options for this Excel.run which specify previous objects, whether to delay the request for
+            cell edit, session info, etc.
+          type: '<xref uid="excel!Excel.RunOptions:interface" />'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
+  - name: 'Excel.run(context, batch)'
+    uid: 'excel!Excel.run:function(5)'
+    package: excel!
+    summary: >-
+      Executes a batch script that performs actions on the Excel object model, using the RequestContext of a
+      previously-created object. When the promise is resolved, any tracked objects that were automatically allocated
+      during execution will be released.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        export function run<T>(context: OfficeExtension.ClientRequestContext, batch: (context: Excel.RequestContext) =>
+        Promise<T>): Promise<T>;
+      parameters:
+        - id: context
+          description: >-
+            A previously-created object. The batch will use the same RequestContext as the passed-in object, which means
+            that any changes applied to the object will be picked up by "context.sync()".
+          type: '<xref uid="office!OfficeExtension.ClientRequestContext:class" />'
+        - id: batch
+          description: >-
+            A function that takes in a RequestContext and returns a promise (typically, just the result of
+            "context.sync()"). The context parameter facilitates requests to the Excel application. Since the Office
+            add-in and the Excel application run in two different processes, the RequestContext is required to get
+            access to the Excel object model from the add-in.
+          type: '(context: <xref uid="excel!Excel.RequestContext:class" />) =&gt; Promise&lt;T&gt;'
+      return:
+        type: Promise&lt;T&gt;
+        description: ''
