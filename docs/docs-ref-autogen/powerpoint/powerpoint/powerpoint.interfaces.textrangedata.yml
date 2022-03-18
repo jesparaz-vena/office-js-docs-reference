@@ -1,25 +1,1 @@
-### YamlMime:TSType
-name: PowerPoint.Interfaces.TextRangeData
-uid: 'powerpoint!PowerPoint.Interfaces.TextRangeData:interface'
-package: powerpoint!
-fullName: PowerPoint.Interfaces.TextRangeData
-summary: An interface describing the data returned by calling `textRange.toJSON()`<!-- -->.
-remarks: ''
-isPreview: false
-isDeprecated: false
-type: interface
-properties:
-  - name: text
-    uid: 'powerpoint!PowerPoint.Interfaces.TextRangeData#text:member'
-    package: powerpoint!
-    fullName: text
-    summary: Represents the plain text content of the text range.
-    remarks: >-
-      \[ [API set: PowerPointApi BETA (PREVIEW
-      ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]
-    isPreview: true
-    isDeprecated: false
-    syntax:
-      content: 'text?: string;'
-      return:
-        type: string
+### YamlMime:TSTypename: PowerPoint.Interfaces.TextRangeDatauid: 'powerpoint!PowerPoint.Interfaces.TextRangeData:interface'package: powerpoint!fullName: PowerPoint.Interfaces.TextRangeDatasummary: An interface describing the data returned by calling `textRange.toJSON()`<!-- -->.remarks: ''isPreview: falseisDeprecated: falsetype: interfaceproperties:  - name: text    uid: 'powerpoint!PowerPoint.Interfaces.TextRangeData#text:member'    package: powerpoint!    fullName: text    summary: Represents the plain text content of the text range.    remarks: >-      \[ [API set: PowerPointApi BETA (PREVIEW      ONLY)](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) \]    isPreview: true    isDeprecated: false    syntax:      content: 'text?: string;'      return:        type: string

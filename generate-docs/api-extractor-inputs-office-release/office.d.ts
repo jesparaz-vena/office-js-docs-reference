@@ -896,11 +896,11 @@ export declare namespace Office {
          */
         code: number;
         /**
-         * Gets the name of the error.
+         * Gets a detailed description of the error.
          */
         message: string;
         /**
-         * Gets a detailed description of the error.
+         * Gets the name of the error.
          */
         name: string;
     }
@@ -2074,7 +2074,7 @@ export declare namespace Office {
      */
     enum EventType {
         /**
-         * A Document.ActiveViewChanged event was raised.
+         * A Document.ActiveViewChanged event was raised in PowerPoint.
          * 
          * @remarks 
          * 
@@ -2239,7 +2239,11 @@ export declare namespace Office {
          */
         Text,
         /**
-         * Returns the entire document (.pptx, .docx, or .xlsx) in Office Open XML (OOXML) format as a byte array.
+         * Returns the entire document (.pptx, .docx, .xlsx, or .xlsm) in Office Open XML (OOXML) format as a byte array.
+         * 
+         * Note: The .xslm file type is supported in Excel on Windows and Mac. It's not supported in Excel on the web.
+         * In Excel on Windows, the file slices from the `getFileAsync` method include the VBA signature files for .xslm file types. The VBA signature files are vbaProjectSignature.bin, vbaProbjectSignatureAgile.bin, and vbaProjectSignatureV3.bin. 
+         * In Excel on Mac, the file slices from the `getFileAsync` method don't include the VBA signature files, because this platform doesn't support the VBA signature feature.
          */
         Compressed,
         /**
@@ -3799,8 +3803,8 @@ export declare namespace Office {
          * @param options - Provides an option for preserving context data of any type, unchanged, for use in a callback.
          * @param callback - Optional. A function that is invoked when the callback returns, whose only parameter is of type {@link Office.AsyncResult}.
          *                  The `value` property of the result is the state of the presentation's current view. 
-         *                  The value returned can be either "edit" or "read". "edit" corresponds to any of the views in which you can edit slides, 
-         *                  such as Normal or Outline View. "read" corresponds to either Slide Show or Reading View.
+         *                  The value returned can be either "edit" or "read". "edit" corresponds to any of the views in which you can edit slides:
+         *                  Normal, Slide Sorter, or Outline View. "read" corresponds to either Slide Show or Reading View.
          */
         getActiveViewAsync(options?: Office.AsyncContextOptions, callback?: (result: AsyncResult<"edit" | "read">) => void): void;
         /**
@@ -3814,8 +3818,8 @@ export declare namespace Office {
          *
          * @param callback - Optional. A function that is invoked when the callback returns, whose only parameter is of type {@link Office.AsyncResult}.
          *                  The `value` property of the result is the state of the presentation's current view. 
-         *                  The value returned can be either "edit" or "read". "edit" corresponds to any of the views in which you can edit slides, 
-         *                  such as Normal or Outline View. "read" corresponds to either Slide Show or Reading View.
+         *                  The value returned can be either "edit" or "read". "edit" corresponds to any of the views in which you can edit slides: 
+         *                  Normal, Slide Sorter, or Outline View. "read" corresponds to either Slide Show or Reading View.
          */
         getActiveViewAsync(callback?: (result: AsyncResult<"edit" | "read">) => void): void;
         /**
@@ -3991,7 +3995,7 @@ export declare namespace Office {
          *     <td>`Office.CoercionType.SlideRange`</td>
          *   </tr>
          *   <tr>
-         *     <td>Excel, PowerPoint, and Word</td>
+         *     <td>Excel on Windows and Mac, PowerPoint on Windows, Mac, and the web, and Word on Windows and Mac</td>
          *     <td>`Office.CoercionType.XmlSvg`</td>
          *   </tr>
          * </table>
@@ -4083,7 +4087,7 @@ export declare namespace Office {
          *     <td>`Office.CoercionType.SlideRange`</td>
          *   </tr>
          *   <tr>
-         *     <td>Excel, PowerPoint, and Word</td>
+         *     <td>Excel on Windows and Mac, PowerPoint on Windows, Mac, and the web, and Word on Windows and Mac</td>
          *     <td>`Office.CoercionType.XmlSvg`</td>
          *   </tr>
          * </table>
@@ -4323,7 +4327,7 @@ export declare namespace Office {
          *     <td>`Office.CoercionType.SlideRange`</td>
          *   </tr>
          *   <tr>
-         *     <td>Excel, PowerPoint, and Word</td>
+         *     <td>Excel on Windows and Mac, PowerPoint on Windows, Mac, and the web, and Word on Windows and Mac</td>
          *     <td>`Office.CoercionType.XmlSvg`</td>
          *   </tr>
          * </table>
@@ -4512,7 +4516,7 @@ export declare namespace Office {
          *     <td>`Office.CoercionType.SlideRange`</td>
          *   </tr>
          *   <tr>
-         *     <td>Excel, PowerPoint, and Word</td>
+         *     <td>Excel on Windows and Mac, PowerPoint on Windows, Mac, and the web, and Word on Windows and Mac</td>
          *     <td>`Office.CoercionType.XmlSvg`</td>
          *   </tr>
          * </table>

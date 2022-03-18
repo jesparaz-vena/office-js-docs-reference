@@ -1875,6 +1875,27 @@
 
         console.log("The trendline color has been set to:" + line.color);
     });
+'Excel.ChartType:enum':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/10-chart/chart-create-several-charts.yaml
+
+    await Excel.run(async (context) => {
+      let sheet = context.workbook.worksheets.getItem("Sample");
+      let salesTable = sheet.tables.getItem("SalesTable");
+
+      let dataRange = sheet.getRange("A1:E7");
+      let chart = sheet.charts.add(Excel.ChartType.line, dataRange, "Auto");
+
+      chart.setPosition("A22", "F35");
+      chart.legend.position = "Right";
+      chart.legend.format.fill.setSolidColor("white");
+      chart.dataLabels.format.font.size = 15;
+      chart.dataLabels.format.font.color = "black";
+      chart.title.text = "Bicycle Parts Quarterly Sales";
+
+      await context.sync();
+    });
 'Excel.ColorScaleConditionalFormat#criteria:member':
   - >-
     // Link to full sample:
@@ -3047,7 +3068,7 @@
         wholesaleDataHierarchy.load("showAs");
         await context.sync();
 
-        // show the crates of each fruit type sold at the farm as a percentage of the column's total
+        // Show the crates of each fruit type sold at the farm as a percentage of the column's total.
         let farmShowAs = farmDataHierarchy.showAs;
         farmShowAs.calculation = Excel.ShowAsCalculation.percentOfColumnTotal;
         farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Type").fields.getItem("Type");
@@ -3963,35 +3984,15 @@
     await Excel.run(async (context) => {
         const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
 
-        // the layout controls the ranges used by the PivotTable
+        // The layout controls the ranges used by the PivotTable.
         const range = pivotTable.layout.getDataBodyRange();
 
-        // get all the data hierarchy totals
+        // Get all the data hierarchy totals.
         const grandTotalRange = range.getLastRow();
         grandTotalRange.load("address");
         await context.sync();
         
-        // use the wholesale and farm sale totals to make a final sum
-        const masterTotalRange = context.workbook.worksheets.getActiveWorksheet().getRange("B27:C27");
-        masterTotalRange.formulas = [["All Crates", "=SUM(" + grandTotalRange.address + ")"]];
-        await context.sync();
-    });
-  - >-
-    // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/38-pivottable/pivottable-filters-and-summaries.yaml
-
-    await Excel.run(async (context) => {
-        const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
-
-        // the layout controls the ranges used by the PivotTable
-        const range = pivotTable.layout.getDataBodyRange();
-
-        // get all the data hierarchy totals
-        const grandTotalRange = range.getLastRow();
-        grandTotalRange.load("address");
-        await context.sync();
-        
-        // use the wholesale and farm sale totals to make a final sum
+        // Use the wholesale and farm sale totals to make a final sum.
         const masterTotalRange = context.workbook.worksheets.getActiveWorksheet().getRange("B27:C27");
         masterTotalRange.formulas = [["All Crates", "=SUM(" + grandTotalRange.address + ")"]];
         await context.sync();
@@ -4124,13 +4125,13 @@
     await Excel.run(async (context) => {
         const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");       
 
-        // check if the PivotTable already has a column
+        // Check if the PivotTable already has a column.
         const column = pivotTable.columnHierarchies.getItemOrNullObject("Farm");
         column.load("id");
         await context.sync();
 
         if (column.isNullObject) {
-            // adding the farm column to the column hierarchy automatically removes it from the row hierarchy
+            // Adding the farm column to the column hierarchy automatically removes it from the row hierarchy.
             pivotTable.columnHierarchies.add(pivotTable.hierarchies.getItem("Farm"));
         } else {
             pivotTable.columnHierarchies.remove(column);
@@ -4173,7 +4174,7 @@
             filter.load();
             await context.sync();
 
-            // add the Classification hierarchy to the filter, if it's not already there
+            // Add the Classification hierarchy to the filter, if it's not already there.
             if (filter.isNullObject) {
                 filters.add(pivotTable.hierarchies.getItem("Classification"));
                 await context.sync();
@@ -4190,7 +4191,7 @@
         pivotTable.layout.load("layoutType");
         await context.sync();
 
-        // cycle between the three layout types
+        // Cycle between the three layout types.
         if (pivotTable.layout.layoutType === "Compact") {
             pivotTable.layout.layoutType = "Outline";
         } else if (pivotTable.layout.layoutType === "Outline") {
@@ -4425,6 +4426,32 @@
         if (error instanceof OfficeExtension.Error) {
             console.log("Debug info: " + JSON.stringify(error.debugInfo));
         }
+    });
+'Excel.Range#getDependents:member(1)':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/85-preview-apis/range-dependents.yaml
+
+    await Excel.run(async (context) => {
+      // This method highlights all the dependent cells of the active cell.
+      // Dependent cells contain formulas that refer to other cells.
+
+      // Get addresses of the active cell's dependent cells.
+      const range = context.workbook.getActiveCell();
+      const dependents = range.getDependents();
+      range.load("address");
+      dependents.areas.load("address");
+      await context.sync();
+
+      console.log(`All dependent cells of ${range.address}:`);
+
+      // Use the dependents API to loop through dependents of the active cell.
+      for (let i = 0; i < dependents.areas.items.length; i++) {
+        // Highlight and print out the address of each dependent cell.
+        dependents.areas.items[i].format.fill.color = "Orange";
+        console.log(`  ${dependents.areas.items[i].address}`);
+      }
+      await context.sync();
     });
 'Excel.Range#getDirectDependents:member(1)':
   - >-
@@ -6158,8 +6185,8 @@
         wholesaleDataHierarchy.load("showAs");
         await context.sync();
 
-        // show the difference between crate sales of the "A Farms" and the other farms
-        // this difference is both aggregated and shown for individual fruit types (where applicable)
+        // Show the difference between crate sales of the "A Farms" and the other farms.
+        // This difference is both aggregated and shown for individual fruit types (where applicable).
         let farmShowAs = farmDataHierarchy.showAs;
         farmShowAs.calculation = Excel.ShowAsCalculation.differenceFrom;
         farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Farm").fields.getItem("Farm");
@@ -7006,6 +7033,67 @@
         const textbox = shapes.getItem("Textbox");
         textbox.textFrame.deleteText();
         await context.sync();
+    });
+'Excel.WebImageCellValue#address:member':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/85-preview-apis/data-types-web-image.yaml
+
+    await Excel.run(async (context) => {
+      // This method retrieves the image URL from the selected cell and opens that image in a new browser tab.
+
+      // Load the active cell information.
+      const activeCell = context.workbook.getActiveCell();
+      activeCell.load("valuesAsJson");
+      await context.sync();
+
+      // Get image URL from the active cell.
+      const values = activeCell.valuesAsJson;
+      const webImageData = values[0][0] as Excel.WebImageCellValue;
+      const webImageUrl = webImageData.address;
+
+      if (!webImageUrl) {
+        console.log("The selected cell is missing an image URL. Select a cell that contains an image.");
+        return;
+      }
+
+      // Open the image URL in a new browser tab.
+      const tab = window.open(webImageData.address, "_blank");
+    });
+'Excel.WebImageCellValue#type:member':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/excel/85-preview-apis/data-types-web-image.yaml
+
+    await Excel.run(async (context) => {
+      // This method inserts a web image into the currently selected cell.
+
+      // Retrieve image data from the task pane and then clear the input fields.
+      const imageUrl = $("#url").val() as string;
+      const imageAltText = $("#alt-text").val() as string;
+      clearForm();
+
+      // Load the active cell.
+      const activeCell = context.workbook.getActiveCell();
+      activeCell.load();
+      await context.sync();
+
+      if (!imageUrl) {
+        console.log("Please enter an image URL.");
+        return;
+      }
+
+      // Create a web image object and assign the image details.
+      const webImage: Excel.WebImageCellValue = {
+        type: "WebImage", /* The string equivalent of `Excel.CellValueType.webImage`. */
+        address: imageUrl,
+        altText: imageAltText     
+      };
+
+      // Insert web image into the active cell.
+      activeCell.valuesAsJson = [[webImage]];
+
+      await context.sync();
     });
 'Excel.Workbook#close:member(1)':
   - >-
@@ -21549,7 +21637,7 @@
 'PowerPoint.ShapeCollection#getItemAt:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/tags.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
 
     await PowerPoint.run(async function(context) {
       const slide = context.presentation.slides.getItemAt(0);
@@ -21568,7 +21656,7 @@
 'PowerPoint.Slide#delete:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/tags.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
 
     await PowerPoint.run(async function(context) {
       const slides = context.presentation.slides;
@@ -21591,7 +21679,7 @@
 'PowerPoint.SlideCollection#add:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/add-slides.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/slide-management/add-slides.yaml
 
     const chosenMaster = $("#master-id").val() as string;
 
@@ -21608,7 +21696,7 @@
 'PowerPoint.SlideCollection#getItemAt:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/tags.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
 
     await PowerPoint.run(async function(context) {
       let selectedSlideIndex = await getSelectedSlideIndex();
@@ -21631,7 +21719,7 @@
 'PowerPoint.TagCollection#add:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/tags.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
 
     await PowerPoint.run(async function(context) {
       const slide = context.presentation.slides.getItemAt(0);
@@ -21652,7 +21740,7 @@
 'PowerPoint.TagCollection#delete:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/tags.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
 
     await PowerPoint.run(async function (context) {
       let presentationTags = context.presentation.tags;
@@ -21666,7 +21754,7 @@
 'PowerPoint.TagCollection#getItem:member(1)':
   - >-
     // Link to full sample:
-    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/preview-apis/tags.yaml
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/powerpoint/tags/tags.yaml
 
     await PowerPoint.run(async function(context) {
       let selectedSlideIndex = await getSelectedSlideIndex();
@@ -22717,6 +22805,39 @@
             console.log("Debug info: " + JSON.stringify(error.debugInfo));
         }
     });
+'Word.ChangeTrackingMode:enum':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml
+
+    await Word.run(async (context) => {
+      const document = context.document;
+      document.load("changeTrackingMode");
+      await context.sync();
+
+      if (document.changeTrackingMode === Word.ChangeTrackingMode.trackMineOnly) {
+        console.log("Only my changes are being tracked.");
+      } else if (document.changeTrackingMode === Word.ChangeTrackingMode.trackAll) {
+        console.log("Everyone's changes are being tracked.");
+      } else {
+        console.log("No changes are being tracked.");
+      }
+    });
+'Word.ChangeTrackingVersion:enum':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml
+
+    await Word.run(async (context) => {
+      const range = context.document.getSelection();
+      let before = range.getReviewedText(Word.ChangeTrackingVersion.original);
+      let after = range.getReviewedText(Word.ChangeTrackingVersion.current);
+
+      await context.sync();
+
+      console.log(`Reviewed text (before):\n${before.value}`);
+      console.log(`Reviewed text (after):\n${after.value}`);
+    });
 'Word.Comment#content:member':
   - >-
     // Link to full sample:
@@ -22922,6 +23043,24 @@
         if (error instanceof OfficeExtension.Error) {
             console.log('Debug info: ' + JSON.stringify(error.debugInfo));
         }
+    });
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/content-control-ondeleted-event.yaml
+
+    await Word.run(async (context) => {
+      let contentControls = context.document.contentControls.getByTag("forTesting");
+      contentControls.load("items");
+      await context.sync();
+
+      if (contentControls.items.length === 0) {
+        console.log("There are no content controls in this document.");
+      } else {
+        console.log("Control to be deleted:");
+        console.log(contentControls.items[0]);
+        contentControls.items[0].delete(false);
+        await context.sync();
+      }
     });
 'Word.ContentControl#getHtml:member(1)':
   - |-
@@ -23255,6 +23394,40 @@
             console.log('Debug info: ' + JSON.stringify(error.debugInfo));
         }
     });
+'Word.ContentControl#onDeleted:member':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/content-control-ondeleted-event.yaml
+
+    await Word.run(async (context) => {
+      let contentControls = context.document.contentControls;
+      contentControls.load("items");
+      await context.sync();
+
+      // Register the onDeleted event handler on each content control.
+      if (contentControls.items.length === 0) {
+        console.log("There aren't any content controls in this document so can't register event handlers.");
+      } else {
+        for (let i = 0; i < contentControls.items.length; i++) {
+          eventContexts[i] = contentControls.items[i].onDeleted.add(contentControlDeleted);
+          contentControls.items[i].track();
+        }
+
+        await context.sync();
+
+        console.log("Added event handlers for when content controls are deleted.");
+      }
+    });
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/content-control-ondeleted-event.yaml
+
+    async function contentControlDeleted(event: Word.ContentControlEventArgs) {
+      await Word.run(async (context) => {
+        // Display the deleted content control's ID.
+        console.log(`Event detected. ID of content control that was deleted: ${event.contentControl.id}`);
+      });
+    }
 'Word.ContentControl#search:member(1)':
   - |-
     // Run a batch operation against the Word object model.
@@ -23559,6 +23732,17 @@
     // The Silly stories add-in sample shows how the load method is used
     // to load the content control collection with the tag and title properties.
     // https://aka.ms/sillystorywordaddin
+'Word.ContentControlEventArgs#contentControl:member':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/content-control-ondeleted-event.yaml
+
+    async function contentControlDeleted(event: Word.ContentControlEventArgs) {
+      await Word.run(async (context) => {
+        // Display the deleted content control's ID.
+        console.log(`Event detected. ID of content control that was deleted: ${event.contentControl.id}`);
+      });
+    }
 'Word.CustomPropertyCollection#add:member(1)':
   - >-
     // Link to full sample:
@@ -23592,6 +23776,24 @@
         await context.sync();
         for (var i = 0; i < properties.items.length; i++)
             console.log("Property Name:" + properties.items[i].key + "; Type=" + properties.items[i].type + "; Property Value=" + properties.items[i].value);
+    });
+'Word.Document#changeTrackingMode:member':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml
+
+    await Word.run(async (context) => {
+      const document = context.document;
+      document.load("changeTrackingMode");
+      await context.sync();
+
+      if (document.changeTrackingMode === Word.ChangeTrackingMode.trackMineOnly) {
+        console.log("Only my changes are being tracked.");
+      } else if (document.changeTrackingMode === Word.ChangeTrackingMode.trackAll) {
+        console.log("Everyone's changes are being tracked.");
+      } else {
+        console.log("No changes are being tracked.");
+      }
     });
 'Word.Document#getSelection:member(1)':
   - |-
@@ -24682,6 +24884,21 @@
             console.log('Debug info: ' + JSON.stringify(error.debugInfo));
         }
     });
+'Word.Range#getReviewedText:member(1)':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/99-preview-apis/manage-change-tracking.yaml
+
+    await Word.run(async (context) => {
+      const range = context.document.getSelection();
+      let before = range.getReviewedText(Word.ChangeTrackingVersion.original);
+      let after = range.getReviewedText(Word.ChangeTrackingVersion.current);
+
+      await context.sync();
+
+      console.log(`Reviewed text (before):\n${before.value}`);
+      console.log(`Reviewed text (after):\n${after.value}`);
+    });
 'Word.Range#getTextRanges:member(1)':
   - >-
     // Link to full sample:
@@ -25362,6 +25579,22 @@
         if (error instanceof OfficeExtension.Error) {
             console.log('Debug info: ' + JSON.stringify(error.debugInfo));
         }
+    });
+'Word.Style:enum':
+  - >-
+    // Link to full sample:
+    https://raw.githubusercontent.com/OfficeDev/office-js-snippets/prod/samples/word/25-paragraph/insert-formatted-text.yaml
+
+    await Word.run(async (context) => {
+      let sentence = context.document.body.insertParagraph(
+        "To be or not to be",
+        "End"
+      );
+
+      // Use styleBuiltIn to use an enumeration of existing styles. If your style is custom make sure to use: range.style = "name of your style";
+      sentence.styleBuiltIn = Word.Style.intenseReference;
+
+      await context.sync();
     });
 'Word.Table#getCell:member(1)':
   - >-
