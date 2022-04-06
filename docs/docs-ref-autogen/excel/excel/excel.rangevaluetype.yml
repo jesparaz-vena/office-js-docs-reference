@@ -39,7 +39,9 @@ fields:
     uid: 'excel!Excel.RangeValueType.richValue:member'
     package: excel!
     summary: ''
-    remarks: 'test'
+    remarks: >-
+      \[ [API set: ExcelApi 1.1 for Unknown, Empty, String, Integer, Double, Boolean, Error. 1.7 for
+      RichValue](/javascript/api/requirement-sets/excel/excel-api-requirement-sets) \]
     value: '"RichValue"'
   - name: string
     uid: 'excel!Excel.RangeValueType.string:member'
