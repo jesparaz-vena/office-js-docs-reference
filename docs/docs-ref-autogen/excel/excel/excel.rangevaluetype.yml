@@ -39,6 +39,7 @@ fields:
     uid: 'excel!Excel.RangeValueType.richValue:member'
     package: excel!
     summary: ''
+    remarks: 'test'
     value: '"RichValue"'
   - name: string
     uid: 'excel!Excel.RangeValueType.string:member'
